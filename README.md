@@ -66,6 +66,7 @@ Within the app folder there are modules and stacks folders.
     │   │   ├── instance
     │   │   ├── rds
     │   │   ├── security_group
+    │   │   ├── wordpress
     │   │   └── vpc
     │   └── stacks
     │       ├── core
@@ -79,7 +80,7 @@ Both modules and stacks are terraform modules. The difference is how you use the
 * Stacks are meant to be used to group together modules.
 * Whereas modules are smaller pieces that are meant to be reused.
 
-For example, the "core" stack could be designed to create using the "vpc" module. Also, the "wordpress" stack to launch and "rds" and "instance" modules.
+For example, the "core" stack could be designed to create using the "vpc" module. Also, the "wordpress" stack uses the "wordpress" modules, which in turn can include other modules like an "instance" and "rds" module.
 
 ## Tfvars
 
