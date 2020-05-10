@@ -1,6 +1,6 @@
 # Generators
 
-Terraspace providers generators in the form of the `new` command.  Here's an example of the starter structure it creates for you:
+Terraspace providers generators with the `new` command.  Here's an example of the starter structure it creates for you:
 
     $ terraspace new project hcl-aws --bucket my-bucket # default provider is aws
     => Creating new project called hcl-aws.
