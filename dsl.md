@@ -24,7 +24,7 @@ app/modules/vpc/main.rb
 
 ```ruby
 resource("aws_vpc", "vpc",
-  cidr_block: "var.cidr_block",
+  cidr_block: var("cidr_block"),
 )
 ```
 
