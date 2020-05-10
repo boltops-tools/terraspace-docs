@@ -54,21 +54,25 @@ Destroy infrastructure stacks:
     terraspace new module NAME
     terraspace new stack NAME
 
-More docs: [Generator Docs](generators.md)
+[Generator Docs](generators.md)
 
 ## Structure: Stacks vs Modules
 
 Within the app folder there are modules and stacks folders.
 
-    app
-    ├── modules
-    │   ├── instance
-    │   ├── rds
-    │   ├── security_group
-    │   └── vpc
-    └── stacks
-        ├── wordpress
-        └── core
+    .
+    ├── app
+    │   ├── modules
+    │   │   ├── instance
+    │   │   ├── rds
+    │   │   ├── security_group
+    │   │   └── vpc
+    │   └── stacks
+    │       ├── core
+    │       └── wordpress
+    └── config
+        ├── backend.rb
+        └── provider.rb
 
 Both modules and stacks are terraform modules. The difference is how you use them.
 
@@ -133,42 +137,7 @@ Of course, you can change the state file key path with whatever works for your s
 
 ## DSL Examples
 
-Terraspace supports an optional Ruby DSL.  It gives you access to the full power of Ruby, when HCL is not enough for your purposes.
-
-app/modules/instance/main.rb
-
-```ruby
-resource("aws_instance", "this",
-  ami: "ami-0ded0751341bcc45b", # amazonlinux2
-  instance_type: "t2.micro",
-)
-```
-
-app/modules/vpc/variables.rb
-
-```ruby
-variable("cidr_block",
-  default: "10.10.0.0/16",
-  description: "cidr block",
-)
-```
-
-app/modules/vpc/main.rb
-
-```ruby
-resource("aws_vpc", "vpc",
-  cidr_block: "var.cidr_block",
-)
-```
-
-app/modules/vpc/outputs.rb
-
-```ruby
-output("vpc_arn",
-  description: "VPC arn",
-  value: "${aws_vpc.vpc.arn}"
-)
-```
+[DSL Docs](dsl.md)
 
 ## Installation
 
