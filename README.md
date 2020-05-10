@@ -103,7 +103,7 @@ Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stac
                 ├── development.tfvars
                 └── production.tfvars
 
-[Tfvars Docs](tfvars.md)
+Tfvar files are in a separate directory to allow modules and stacks to be **reusable**. See: [Tfvars Docs](tfvars.md)
 
 ## Config Folder
 
