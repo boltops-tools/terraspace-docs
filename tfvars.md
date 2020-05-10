@@ -33,6 +33,8 @@ Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stac
                 ├── development.rb
                 └── production.rb
 
+You don't have to specify the `-var-file` option, the tfvars files are automatically processed.
+
 ## Tfvar Layering
 
 The the tfvar files are processed and "layered".  Example:
