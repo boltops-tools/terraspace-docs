@@ -54,7 +54,7 @@ Destroy infrastructure stacks:
     terraspace new module NAME
     terraspace new stack NAME
 
-More docs: [Terraspace Docs](https://github.com/boltops-tools/terraspace-docs)
+More docs: [Generator Docs](generators.md)
 
 ## Structure: Stacks vs Modules
 
