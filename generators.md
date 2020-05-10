@@ -18,10 +18,12 @@ Terraspace providers generators in the form of the `new` command.  Here's an exa
           create  hcl-aws/app/stacks/demo/outputs.tf
           create  hcl-aws/app/stacks/demo/variables.tf
     ================================================================
-    Congrats! You have successfully created a terraspace module.
+    Congrats! You have successfully created a terraspace project.
     Check out the created files. Adjust to your needs and then deploy with:
 
-        terraspace up hcl-aws -y
+        cd hcl-aws
+        terraspace up demo -y
+        terraspace down demo -y # to destroy
 
     More info: https://terraspace.cloud/
     $
