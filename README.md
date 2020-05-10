@@ -83,6 +83,25 @@ For example, the "core" stack could be designed to create using the "vpc" module
 
 ## Tfvars
 
+Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
+
+    seed
+    └── tfvars
+        ├── modules
+        │   ├── instance
+        │   │   ├── base.tfvars
+        │   │   ├── development.tfvars
+        │   │   └── production.tfvars
+        │   └── vpc
+        │       ├── base.tfvars
+        │       ├── development.tfvars
+        │       └── production.tfvars
+        └── stacks
+            └── core
+                ├── base.tfvars
+                ├── development.tfvars
+                └── production.tfvars
+
 [Tfvars Docs](tfvars.md)
 
 ## Config Folder

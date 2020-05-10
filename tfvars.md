@@ -4,24 +4,34 @@ Tfvar files are in a separate directory to allow modules and stacks to be **reus
 
 ## Structure
 
+Here's an example app modules and stacks folder structure.
+
+    app
+    ├── modules
+    │   ├── instance
+    │   └── vpc
+    └── stacks
+        ├── core
+        └── wordpress
+
 Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
 
     seed
     └── tfvars
         ├── modules
         │   ├── instance
-        │   │   ├── base.tfvars
-        │   │   ├── development.tfvars
-        │   │   └── production.tfvars
+        │   │   ├── base.rb
+        │   │   ├── development.rb
+        │   │   └── production.rb
         │   └── vpc
-        │       ├── base.tfvars
-        │       ├── development.tfvars
-        │       └── production.tfvars
+        │       ├── base.rb
+        │       ├── development.rb
+        │       └── production.rb
         └── stacks
             └── core
-                ├── base.tfvars
-                ├── development.tfvars
-                └── production.tfvars
+                ├── base.rb
+                ├── development.rb
+                └── production.rb
 
 ## Tfvar Layering
 
