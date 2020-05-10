@@ -83,18 +83,30 @@ For example, the "core" stack could be designed to create using the "vpc" module
 
 ## Tfvar Files
 
-Tfvar files can be placed in a `tfvars` folder within the stack or module.
+Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
 
-    app/stacks/core/
-    ├── main.rb
-    ├── outputs.rb
-    ├── tfvars
-    │   ├── base.rb
-    │   ├── development.rb
-    │   └── production.rb
-    └── variables.rb
+    seed
+    └── tfvars
+        ├── modules
+        │   ├── instance
+        │   │   ├── base.tfvars
+        │   │   ├── development.tfvars
+        │   │   └── production.tfvars
+        │   └── vpc
+        │       ├── base.tfvars
+        │       ├── development.tfvars
+        │       └── production.tfvars
+        └── stacks
+            └── core
+                ├── base.tfvars
+                ├── development.tfvars
+                └── production.tfvars
 
-These files are processed and "layered".  Example:
+Tfvar files are in a separate directory to allow modules and stacks to be *reusable*.  Remember modules and stacks are like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be similiar to hard coding parameters. So tfvars are in their own separate mirrored directory structure.
+
+## Tfvar Layering
+
+The the tfvar files are processed and "layered".  Example:
 
     TS_ENV=development terraspace up core -y # merges base and development
     TS_ENV=production  terraspace up core -y # merges base and production
