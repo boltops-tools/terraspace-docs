@@ -61,7 +61,7 @@ seed/tfvars/stacks/core/development.rb
 It produces
 
 
-.terraspace-cache/development/stacks/cor/terraform.tfvars.json
+.terraspace-cache/development/stacks/core/terraform.tfvars.json
 
 ```json
 {
