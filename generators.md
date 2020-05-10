@@ -41,14 +41,14 @@ HCL based AWS project
     terraspace new project hcl-aws --bucket my-bucket # default provider is aws
     cd hcl-aws
     terraspace up demo -y
-    terraspace destroy demo -y
+    terraspace down demo -y
 
 HCL based GCP project
 
     terraspace new project hcl-gcp --bucket my-bucket --provider gcp
     cd hcl-gcp
     terraspace up demo -y
-    terraspace destroy demo -y
+    terraspace down demo -y
 
 Blank project without examples
 
@@ -74,7 +74,7 @@ Ruby based AWS project
     terraspace new project ruby-aws --bucket my-bucket --lang ruby # default provider is aws
     cd ruby-aws
     terraspace up demo -y
-    terraspace destroy demo -y
+    terraspace down demo -y
 
 Ruby based GCP project
 
@@ -82,7 +82,7 @@ Ruby based GCP project
     terraspace new project ruby-gcp --bucket my-bucket --lang ruby --provider gcp
     cd ruby-gcp
     terraspace up demo -y
-    terraspace destroy demo -y
+    terraspace down demo -y
 
 Blank project without examples
 

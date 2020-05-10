@@ -26,7 +26,7 @@ Create infrastructure stacks:
 
 Destroy infrastructure stacks:
 
-    $ terraspace destroy core -y
+    $ terraspace down core -y
     Created .terraspace-cache/stacks/core/provider.tf.json
     Created .terraspace-cache/stacks/core/backend.tf.json
     ...
