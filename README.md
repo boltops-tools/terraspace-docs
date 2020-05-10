@@ -81,37 +81,9 @@ Both modules and stacks are terraform modules. The difference is how you use the
 
 For example, the "core" stack could be designed to create using the "vpc" module. Also, the "wordpress" stack to launch and "rds" and "instance" modules.
 
-## Tfvar Files
+## Tfvars
 
-Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
-
-    seed
-    └── tfvars
-        ├── modules
-        │   ├── instance
-        │   │   ├── base.tfvars
-        │   │   ├── development.tfvars
-        │   │   └── production.tfvars
-        │   └── vpc
-        │       ├── base.tfvars
-        │       ├── development.tfvars
-        │       └── production.tfvars
-        └── stacks
-            └── core
-                ├── base.tfvars
-                ├── development.tfvars
-                └── production.tfvars
-
-Tfvar files are in a separate directory to allow modules and stacks to be *reusable*.  Remember modules and stacks are like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be similiar to hard coding parameters. So tfvars are in their own separate mirrored directory structure.
-
-## Tfvar Layering
-
-The the tfvar files are processed and "layered".  Example:
-
-    TS_ENV=development terraspace up core -y # merges base and development
-    TS_ENV=production  terraspace up core -y # merges base and production
-
-The base file takes the lowest precedence.
+[Tfvars Docs](tfvars.md)
 
 ## Config Folder
 
