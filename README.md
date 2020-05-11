@@ -41,7 +41,7 @@ Destroy infrastructure stacks:
 
 ## Generation Only
 
-    $ terraspace generate vpc
+    $ terraspace build vpc
     Created .terraspace-cache/vpc/application.tf.json
     Created .terraspace-cache/vpc/variables.tf.json
     Created .terraspace-cache/vpc/main.tf.json

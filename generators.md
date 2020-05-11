@@ -2,26 +2,26 @@
 
 Terraspace providers generators with the `new` command.  Here's an example of the starter structure it creates for you:
 
-    $ terraspace new project hcl-aws --bucket my-bucket # default provider is aws
-    => Creating new project called hcl-aws.
-          create  hcl-aws
-          create  hcl-aws/config/backend.tf
-          create  hcl-aws/config/provider.tf
+    $ terraspace new project infra --bucket my-bucket # default provider is aws
+    => Creating new project called infra.
+          create  infra
+          create  infra/config/backend.tf
+          create  infra/config/provider.tf
     => Creating new module called example.
-          create  hcl-aws/app/modules/example
-          create  hcl-aws/app/modules/example/main.tf
-          create  hcl-aws/app/modules/example/outputs.tf
-          create  hcl-aws/app/modules/example/variables.tf
+          create  infra/app/modules/example
+          create  infra/app/modules/example/main.tf
+          create  infra/app/modules/example/outputs.tf
+          create  infra/app/modules/example/variables.tf
     => Creating new stack called demo.
-          create  hcl-aws/app/stacks/demo
-          create  hcl-aws/app/stacks/demo/main.tf
-          create  hcl-aws/app/stacks/demo/outputs.tf
-          create  hcl-aws/app/stacks/demo/variables.tf
+          create  infra/app/stacks/demo
+          create  infra/app/stacks/demo/main.tf
+          create  infra/app/stacks/demo/outputs.tf
+          create  infra/app/stacks/demo/variables.tf
     ================================================================
     Congrats! You have successfully created a terraspace project.
     Check out the created files. Adjust to your needs and then deploy with:
 
-        cd hcl-aws
+        cd infra
         terraspace up demo -y
         terraspace down demo -y # to destroy
 
