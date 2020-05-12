@@ -31,3 +31,14 @@ Terraspace may add other args also. IE: The `-get` option is usually used with t
     terraform init -get -lock-timeout=20m
 
 The env is also exported to the enviornment before the specified `terraform` command is ran.
+
+## Mutiple Commands at Once
+
+You can also specify multiple commands at once:
+
+```ruby
+command("init", "apply",
+  arguments: ["-lock-timeout=20m"],
+  env: {TF_VAR_var_from_environment: "value"},
+)
+```
