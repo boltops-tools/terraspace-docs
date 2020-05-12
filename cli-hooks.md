@@ -16,7 +16,7 @@ after("apply",
 )
 ```
 
-You can customize terraspace to call your commands.
+So you can customize terraspace to call your commands.
 
 ## exit on fail
 
@@ -28,6 +28,8 @@ before("init"
   exit_on_fail: false,
 )
 ```
+
+In this case, regardless of the hook command succeeding or failing, terraspace will continue right along.
 
 ## Mutiple Commands at Once
 
