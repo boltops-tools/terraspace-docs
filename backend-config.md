@@ -78,7 +78,7 @@ Common variables available:
 
 Variable | Example | Description
 --- | --- | ---
-build_dir | stacks/wordress | The build directory name.
+build_dir | stacks/wordpress | The build directory name.
 env | development | Terraspace env. Can be set like so `TS_ENV=development`
 mod_name | wordpress | The module name or stack name, which is also a module.
 type_dir | stacks | The type name. IE: stacks or modules
