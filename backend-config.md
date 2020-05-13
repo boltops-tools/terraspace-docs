@@ -24,7 +24,7 @@ Results in:
 
     us-west-2/development/stacks/wordpress/terraform.tfstate
 
-You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
+You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like. The expansion only happens for the key, region, and prefix properties. 
 
 Here's an example in HCL also:
 
