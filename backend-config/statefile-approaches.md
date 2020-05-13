@@ -68,7 +68,9 @@ App/Service | Could be the resources to deploy the app/services like kubernetes 
 
 The nice thing about this approach is the increased isolation of running `terraform apply`. We won't be touching the statefile that affects the VPC, so we know that it cannot be affected. Though there's rarely a one-size-that-fits-all approach, this approach provides good flexibility and isolation protection.
 
-A downside with this approach is the extra coordination is required. Essentially, "orchestration" now gets moved away from terraform itself to us/humans. For example, the VPC layer must be provisioned first. Then the other layers can be deployed. We have to either manually coordinate or add another build process outside of terraform to help coordinate. A CI/CD system here may help.
+A downside with this approach is the extra coordination is required. Essentially, "orchestration" now gets moved away from terraform itself to us/humans. For example, the VPC layer must be provisioned first. Then the other layers can be deployed.We have to either manually coordinate or add another build process outside of terraform to help coordinate. A CI/CD system here may help.
+
+You also have to "stitch" the layers together with outputs and inputs. IE: You'll feed the vpc id into the db, compute, app layers. The [terraform_remote_state](https://www.terraform.io/docs/providers/terraform/d/remote_state.html) data source may also help.
 
 An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservice will require more coordination than a monolith.
 
