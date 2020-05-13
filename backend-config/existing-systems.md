@@ -20,9 +20,9 @@ config/backend.rb
 #    app/stacks/wordpress
 #
 state_key = case mod_name
-            when core
+            when "core"
               "path1/to/existing/terraform.tfstate"
-            when wordpress
+            when "wordpress"
               "path2/to/existing/terraform.tfstate"
             else
               ":region/:env/:build_dir/terraform.tfstate" # fallback to default terraspace variable notation
