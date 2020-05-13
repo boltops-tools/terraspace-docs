@@ -57,7 +57,7 @@ backend("s3",
 
 ## A statefile per groups of modules
 
-Teams will then evolved their statefile approach to one that groups related-modules together.  Here are some possible examples:
+Teams will then evolve their statefile approach to one that groups related-modules together.  Here are some possible examples:
 
 Stack | Description
 --- | ---
