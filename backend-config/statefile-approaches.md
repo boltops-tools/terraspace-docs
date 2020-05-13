@@ -37,7 +37,7 @@ backend("s3",
 
 By isolating the statefile on a per-environment basis, we know that running `terraform apply` on development, staging, uat, production, etc will not affect each other. This is a nice leap forward.
 
-The next caveat with this approach is that there's no distinction within an environment of the resources being deployed. When `terraform apply` is ran, any resource *can* be affected. There's no regard for:
+The next caveat with this approach is that there's no distinction within an environment of the resources being deployed. When `terraform apply` is ran, any resource can be affected. There's no regard for:
 
 1. Risk-level: Is it high risk? Making a change can affect anything. For example, changes to the VPC are high-risk. Additionally, VPCs usually require less frequent updates.
 2. Type of Resource: Is it a database or is it stateless? Accidentally, deleting a stateful resource like a database has more impact than a stateless web server.
