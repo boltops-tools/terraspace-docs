@@ -16,7 +16,7 @@ backend("s3",
 )
 ```
 
-Notice, the variable notation available. Terraspace treats `key` and `prefix` values specially and expands them out, substituting actually values. The variables available are covered below. The generated default `key` string accounts for switching `account`, `region`, `env`, etc. Here's an expanded example:
+Notice, the variable notation available. Terraspace treats `key` and `prefix` values specially and expands them out, substituting actually values. The starter `backend.rb` accounts for `region`, `env`, etc. Here's an expanded example:
 
     :region/:env/:build_dir/terraform.tfstate
 
