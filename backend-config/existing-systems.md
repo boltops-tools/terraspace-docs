@@ -21,9 +21,9 @@ config/backend.rb
 #
 state_key = case mod_name
             when core
-              "path1/to/existing/state/terraform.tfstate"
+              "path1/to/existing/terraform.tfstate"
             when wordpress
-              "path2/to/existing/state/terraform.tfstate"
+              "path2/to/existing/terraform.tfstate"
             else
               ":region/:env/:build_dir/terraform.tfstate" # fallback to default terraspace variable notation
             end
@@ -48,7 +48,7 @@ So you can add a file like `app/stacks/wordpress/backend.tf` and add backend wit
 terraform {
   backend "s3" {
     bucket         = "my-bucket"
-    key            = "path/to/existing/state/terraform.tfstate"
+    key            = "path/to/existing/terraform.tfstate"
     region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform_locks"
