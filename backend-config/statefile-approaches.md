@@ -104,6 +104,6 @@ To:
 
     us-west-2/development/modules/instance/terraform.tfstate
 
-## Why on the default
+## Why the default?
 
 Terraspace default is to have a state file on a per stack basis, which is intended to group modules together. This allows fine-grain control and isolation protection when running `terraform apply`.
