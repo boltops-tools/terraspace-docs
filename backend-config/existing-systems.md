@@ -42,7 +42,7 @@ backend("s3",
 
 If an existing `backend.rb` or `backend.tf` is in the module's folder, terraspace will not overwrite it.
 
-So you can add a file like `app/stacks/wordpress/backend.tf` and add backend with a specific state key path in there, it'll be used. Example:
+So you can add a file like `app/stacks/wordpress/backend.tf` with a specific state key path, and it'll get used. Example:
 
 ```terraform
 terraform {
