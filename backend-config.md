@@ -4,8 +4,8 @@ You can configure the backend for terraform to use with `config/backend.rb` or `
 
 You may also be interested in:
 
-* Configuring Backends for Existing Systems: [backend-config/existing-systems.md]
-* Statefile Approaches and Thoughts: [backend-config/statefile-approaches.md]
+* [Configuring Backends for Existing Systems](backend-config/existing-systems.md)
+* [Statefile Approaches and Thoughts)(backend-config/statefile-approaches.md)
 
 ## S3 Backend
 
