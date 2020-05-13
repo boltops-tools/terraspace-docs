@@ -39,7 +39,7 @@ By isolating the statefile on a per-environment basis, we know that running `ter
 
 The next caveat with this approach is that there's no distinction within an environment of the resources being deployed. When `terraform apply` is ran, any resource *can* be affected. There's no regard for:
 
-1. Risk-level: Is it high risk? Can making a change to affect everything. For example, changes to the VPC are high-risk. Additionally, VPCs usually require less frequent updates.
+1. Risk-level: Is it high risk? Making a change can affect anything. For example, changes to the VPC are high-risk. Additionally, VPCs usually require less frequent updates.
 2. Type of Resource: Is it a database or is it stateless? Accidentally, deleting a stateful resource like a database has more impact than a stateless web server.
 3. Logical Grouping: Everything is deployed at once. It makes sense to group resources powering a specific app and service together.
 
