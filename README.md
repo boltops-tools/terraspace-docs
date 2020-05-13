@@ -111,17 +111,17 @@ The config folder contains the `provider.rb` and `backend.rb` files that get mat
 
 ## State Files
 
-The `default_state_path` method creates a key that is scoped to the environment, type, and module name.  An example explains:
+The state file location can be finely controlled. Example:
 
 config/backend.rb
 
 ```ruby
 backend("s3",
   bucket:         "my-bucket",
-  key:            default_state_path, # IE: development/stacks/core/terraform.tfstate
+  key:            ":region/:env/:build_dir/terraform.tfstate", # variable notation gets expanded out by terraspace
   region:         "us-west-2",
   encrypt:        true,
-  dynamodb_table: default_lock_table, # terraspace_locks
+  dynamodb_table: "terraform_locks"
 )
 ```
 
@@ -129,13 +129,13 @@ Let's say you launch the core stack.
 
     terraspace up core # provided app/stacks/core exists
 
-Will use the `development/stacks/core/terraform.tfstate` as the key for the state file.
+It will use something like `us-west-2/development/stacks/core/terraform.tfstate` as the key for the state file.
 
 If you want to just test a module
 
     terraspace up vpc # provided app/modules/vpc exists and app/stacks/vpc does not
 
-Will use the `development/modules/vpc/terraform.tfstate` as the key for the state file.
+It will use something like `us-west-2/development/modules/vpc/terraform.tfstate` as the key for the state file.
 
 Of course, you can change the state file key path with whatever works for your setup.
 
