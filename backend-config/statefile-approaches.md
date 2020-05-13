@@ -96,7 +96,7 @@ Gets expanded to actual values:
 
 ## A statefile per module
 
-The finest-grain approach is to have a statefile per module.  So instead of deploying stacks, which groups related modules together, we choose to deploy each module individually only.  While terraspace does allow you to deploy a module on a one-off basis, it's really meant to be used for convenient quick testing. You deploy a module the pretty much the same way as a stack. Terraspace will create a different statefile for that specific module.
+The finest-grain approach is to have a statefile per module.  So instead of deploying stacks, which groups related modules together, we choose to deploy each module individually.  While terraspace does allow you to deploy a module on a one-off basis, it's really meant to be used for convenient quick testing. You deploy a module the pretty much the same way as a stack. Terraspace will create a different statefile for that specific module.
 
 The `:build_dir` above includes the name of the "type_dir", which is either modules or stacks.  So if you happened to deploy a module from `app/modules/instance`, the statefile would expand out from
 
