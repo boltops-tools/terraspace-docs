@@ -19,7 +19,7 @@ command("apply",
 )
 ```
 
-The arguments results in terraspace calling call the specified `terraform` commands with the additional arguments:
+The arguments are added to the specified `terraform` commands when terraspace calls them:
 
     terraform init -lock-timeout=20m
     terraform apply -lock-timeout=21m -var-file=a.tfvars -var-file=b.tfvars
