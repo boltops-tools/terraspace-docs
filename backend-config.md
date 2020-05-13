@@ -1,6 +1,11 @@
 # Backend Config
 
-You can configure the backend for terraform to use with `config/backend.rb` or `config/backend.tf`. Here's are some examples:
+You can configure the backend for terraform to use with `config/backend.rb` or `config/backend.tf`. Below are examples.
+
+You may also be interested in:
+
+* Configuring Backends for Existing Systems: [backend-config/existing-systems.md]
+* Statefile Approaches and Thoughts: [backend-config/statefile-approaches.md]
 
 ## S3 Backend
 
@@ -10,7 +15,7 @@ config/backend.rb
 backend("s3",
   bucket:         "my-bucket",
   key:            ":region/:env/:build_dir/terraform.tfstate", # variable notation gets expanded out by terraspace
-  region:         ENV["AWS_REGION"],
+  region:         ":region",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
 )
@@ -24,7 +29,7 @@ Results in:
 
     us-west-2/development/stacks/wordpress/terraform.tfstate
 
-You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like. The expansion only happens for the key, region, and prefix properties. 
+You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like. The expansion only happens for the key, region, and prefix properties.
 
 Here's an example in HCL also:
 
@@ -33,7 +38,7 @@ terraform {
   backend "s3" {
     bucket         = "my-bucket"
     key            = "<%= backend_expand("s3", ":region/:env/:build_dir/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
-    region         = "<%= ENV["AWS_REGION"] %>"
+    region         = "<%= backend_expand("s3", ":region" %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }

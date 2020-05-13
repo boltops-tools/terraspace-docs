@@ -1,0 +1,107 @@
+# Terraform Statefile Approaches and Thoughts
+
+The statefile is an especially important part of Terraform. It stores information that Terraform uses to determine whether or not it should create, update, or *delete* resources.  As such, it's prudent to take some time thinking about a statefile approach that works best for you. Terraform leaves it up to you.
+
+## General Approaches
+
+In practice, folks have taken these different approaches:
+
+1. One statefile for everything
+2. A statefile for each environment
+3. A statefile per groups of modules
+4. A statefile per module
+
+Terraspace supports all approaches. Though terraspace default approach is pretty much #3, it is completely configurable.
+
+## Change as They Go
+
+Teams seem to go through a similar process where they graduate from one statefile approach to the next. This presentation [Evolving Your Infrastructure with Terraform](https://www.youtube.com/watch?v=wgzgVm7Sqlk) covers the evolution process well and is similar to what we cover below.
+
+## One statefile for everything
+
+In the beginning, Teams who are starting off with Terraform state might use approach #1, one statefile to rule them all. On its face, the approach is simple.
+
+However, it is fraught with a huge caveat. It is possible that `terraform apply` on development resources and unintentionally affect production resources, including accidental deletion.  There is no clear isolation between development and production resources.  You essentially have all your eggs in on-basket. The single statefile for everything is strongly not recommended for this reason. Here's an example of the setup with terraspace anyway:
+
+config/backend.rb
+
+```ruby
+backend("s3",
+  bucket:         "my-bucket",
+  key:            "/all/my/eggs/terraform.tfstate",
+  region:         ":region",
+)
+```
+
+## A statefile for each environment
+
+By isolating the statefile on a per-environment basis, we know that running `terraform apply` on development, staging, uat, production, etc will not affect each other. This is a nice leap forward.
+
+The next caveat with this approach is that there's no distinction within an environment of the resources being deployed. When `terraform apply` is ran, any resource *can* be affected. There's no regard for:
+
+1. Risk-level: Is it high risk? Can making a change to affect everything. For example, changes to the VPC are high-risk. Additionally, VPCs usually require less frequent updates.
+2. Type of Resource: Is it a database or is it stateless? Accidentally, deleting a stateful resource like a database has more impact than a stateless web server.
+3. Logical Grouping: Everything is deployed at once. It makes sense to group resources powering a specific app and service together.
+
+Essentially, it's a mud pie. It's like having one Admin permission policy for everyone. It's probably better to limit and control the blast radius of what can be affected. Here's an example of this setup with terraspace:
+
+config/backend.rb
+
+```ruby
+backend("s3",
+  bucket:         "my-bucket",
+  key:            ":region/:env/terraform.tfstate",
+  region:         ":region",
+)
+```
+
+## A statefile per groups of modules
+
+Teams will then evolved their statefile approach to one that groups related-modules together.  Here are some possible examples:
+
+* Core stack: Foundational layer with resources like vpc.
+* DB stack: Stateful database components. It may make sense to keep this as a separate stack or group them with the app/service stacks.
+* Compute stack: General compute capacity like EKS or GKE. Or if using traditional VMs, maybe ELBs, AutoScaling, Instance groups, etc.
+* App/Service stack: Could be the resources to deploy the app/services like kubernetes resource definitions. Some may also prefer to include the ELB, AutoScaling, Instance groups here instead.
+
+The nice thing about this approach is the increased isolation of running `terraform apply`. We won't be touching the statefile that affects the VPC, so we know that it cannot be affected. Though there's rarely a one-size-that-fits-all approach, this approach provides good flexibility and isolation protection.
+
+A downside with this approach is the extra coordination is required. Essentially, "orchestration" now gets moved away from terraform itself to us/humans. For example, the VPC layer must be provisioned first. Then the other layers can be deployed. We have to either manually coordinate or add another build process outside of terraform to help coordinate. A CI/CD system here may help.
+
+An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservice will require more coordination than a monolith.
+
+Here's an example of this setup with terraspace:
+
+config/backend.rb
+
+```ruby
+backend("s3",
+  bucket:         "my-bucket",
+  key:            ":region/:env/:build_dir/terraform.tfstate",
+  region:         ":region",
+)
+```
+
+The bucket key example:
+
+    :region/:env/:build_dir/terraform.tfstate
+
+Gets expanded to actual values:
+
+    us-west-2/development/stacks/wordpress/terraform.tfstate
+
+## A statefile per module
+
+The finest-grain approach is to have a statefile per module.  So instead of deploying stacks, which groups related modules together, we choose to deploy each module individually only.  While terraspace does allow you to deploy a module on a one-off basis, it's really meant to be used for convenient quick testing. You deploy a module the pretty much the same way as a stack. Terraspace will create a different statefile for that specific module.
+
+The `:build_dir` above includes the name of the "type_dir", which is either modules or stacks.  So if you happened to deploy a module from `app/modules/instance`, the statefile would expand out from
+
+    :region/:env/:build_dir/terraform.tfstate
+
+To:
+
+    us-west-2/development/modules/instance/terraform.tfstate
+
+## Why on the default
+
+Terraspace default is to have a state file on a per stack basis, which is intended to group modules together. This allows fine-grain control and isolation protection when running `terraform apply`.
