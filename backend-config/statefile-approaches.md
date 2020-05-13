@@ -21,7 +21,7 @@ Teams seem to go through a similar process where they graduate from one statefil
 
 In the beginning, teams who are starting off with Terraform state might use approach #1, one statefile to rule them all. On its face, the approach is simple.
 
-However, it is fraught with a huge caveat. It is possible that `terraform apply` intended only development resources, unintentionally affect production resources, including accidental deletion.  There is no clear isolation between development and production resources.  You essentially have all your eggs in on-basket. The single statefile for everything is strongly not recommended for this reason. Here's an example of the setup with terraspace anyway:
+However, it is fraught with a huge caveat. It is possible that `terraform apply` intended only for development resources, unintentionally affect production resources, including accidental deletion.  There is no clear isolation between development and production resources.  You essentially have all your eggs in on-basket. The single statefile for everything is strongly not recommended for this reason. Here's an example of the setup with terraspace anyway:
 
 config/backend.rb
 
