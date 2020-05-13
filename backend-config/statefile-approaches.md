@@ -59,10 +59,12 @@ backend("s3",
 
 Teams will then evolved their statefile approach to one that groups related-modules together.  Here are some possible examples:
 
-* Core stack: Foundational layer with resources like vpc.
-* DB stack: Stateful database components. It may make sense to keep this as a separate stack or group them with the app/service stacks.
-* Compute stack: General compute capacity like EKS or GKE. Or if using traditional VMs, maybe ELBs, AutoScaling, Instance groups, etc.
-* App/Service stack: Could be the resources to deploy the app/services like kubernetes resource definitions. Some may also prefer to include the ELB, AutoScaling, Instance groups here instead.
+Stack | Description
+--- | ---
+Core | Foundational layer with resources like vpc.
+DB | Stateful database components. It may make sense to keep this as a separate stack or group them with the app/service stacks.
+Compute | General compute capacity like EKS or GKE. Or if using traditional VMs, maybe ELBs, AutoScaling, Instance groups, etc.
+App/Service | Could be the resources to deploy the app/services like kubernetes resource definitions. Some may also prefer to include the ELB, AutoScaling, Instance groups here instead.
 
 The nice thing about this approach is the increased isolation of running `terraform apply`. We won't be touching the statefile that affects the VPC, so we know that it cannot be affected. Though there's rarely a one-size-that-fits-all approach, this approach provides good flexibility and isolation protection.
 
