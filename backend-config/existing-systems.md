@@ -34,7 +34,8 @@ backend("s3",
   region:         ":region",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
-)```
+)
+```
 
 
 ## Provide backend in the stack module itself
