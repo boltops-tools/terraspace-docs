@@ -11,7 +11,7 @@ In practice, folks have taken these different approaches:
 3. A statefile per groups of modules
 4. A statefile per module
 
-Terraspace supports all approaches. Though terraspace default approach is pretty much #3, it is completely configurable.
+Terraspace supports all approaches. Though terraspace's default approach is pretty much #3, it is completely configurable.
 
 ## Change as They Go
 
