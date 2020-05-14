@@ -72,7 +72,7 @@ A downside with this approach is the extra coordination is required. Essentially
 
 You also have to "stitch" the layers together with outputs and inputs. IE: You'll feed the vpc id into the db, compute, app layers. The [terraform_remote_state](https://www.terraform.io/docs/providers/terraform/d/remote_state.html) data source may also help.
 
-An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservice will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else cost of coordination will be high.
+An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else cost of coordination will be high.
 
 All that being said, here's an example of this setup with terraspace:
 
