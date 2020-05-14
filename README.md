@@ -119,7 +119,7 @@ config/backend.rb
 backend("s3",
   bucket:         "my-bucket",
   key:            ":region/:env/:build_dir/terraform.tfstate", # variable notation gets expanded out by terraspace
-  region:         "us-west-2",
+  region:         ":region",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
 )
