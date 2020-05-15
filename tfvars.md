@@ -1,73 +1,74 @@
 # Tfvars
 
-Tfvar files are in a separate directory to allow modules and stacks to be **reusable**.  Remember modules and stacks are like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be similiar to hard coding parameters. So tfvars are in their own separate mirrored directory structure.
+Terraspace supports looking up tfvar files in conventional locations. This encourages an organized structure.   Tfvar should generally be place within the `app/stacks/MOD/tfvars` folder. Example:
 
-## Structure
-
-Here's an example app modules and stacks folder structure.
-
-    app
-    ├── modules
-    │   ├── instance
-    │   └── vpc
-    └── stacks
-        ├── core
-        └── wordpress
-
-Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
-
-    seed
-    └── tfvars
-        ├── modules
-        │   ├── instance
-        │   │   ├── base.rb
-        │   │   ├── development.rb
-        │   │   └── production.rb
-        │   └── vpc
-        │       ├── base.rb
-        │       ├── development.rb
-        │       └── production.rb
-        └── stacks
-            └── core
-                ├── base.rb
-                ├── development.rb
-                └── production.rb
+    app/stacks/core
+    ├── main.tf
+    ├── tfvars
+    │   ├── base.tfvars
+    │   ├── dev.tfvars
+    │   └── prod.tfvars
+    └── variables.tf
 
 You don't have to specify the `-var-file` option, the tfvars files are automatically processed.
 
-## Tfvar Layering
+## Layering
 
-The the tfvar files are processed and "layered".  Example:
+Terraspace materializes `tfvars` and adds layering. Example:
 
-    TS_ENV=development terraspace up core -y # merges base and development
-    TS_ENV=production  terraspace up core -y # merges base and production
+    $ terraspace build core
+    $ cd .terraspace-cache/dev/stacks/core/
+    $ ls *.tfvars
+    1-base.auto.tfvars  2-dev.auto.tfvars
+    $
 
-The base file takes the lowest precedence.
+Layering combines the base layer with the TS_ENV specific layer. Another example:
 
-## Example
+    $ TS_ENV=prod terraspace build core
+    $ cd .terraspace-cache/prod/stacks/core/
+    $ ls *.tfvars
+    1-base.auto.tfvars  2-prod.auto.tfvars
+    $
 
-For example, given `base.rb` and `development.rb`:
+## Additional Lookup Locations
 
-seed/tfvars/stacks/core/base.rb
+It is generally encouraged to to create tfvars files in the `app/modules/MOD/tfvars` folder. Terraspace considers additional lookup paths though.  The lookup paths are:
 
-```ruby
-@vpc_id = "vpc-b12c67c8"
-```
+    seed/tfvars/stacks/MOD
+    seed/tfvars/modules/MOD
+    app/stacks/MOD/tfvars
 
-seed/tfvars/stacks/core/development.rb
+Terraspace offers this flexibility for one-off purposes.  For example:
 
-```ruby
-@cidr_block = "10.84.0.0/16"
-```
+You may also want to try out an app/modules/MOD quickly without having to define a stack.
+You may need to temporarily override the tfvars files embedded within the app/stacks/MOD/tfvar.
 
-It produces
+Note, `app/modules/*/tfvars` are **not** are not considered in the lookup paths at all. This is because modules should be reusable.
 
+Remember modules and like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be akin to hard coding parameters.
 
-.terraspace-cache/development/stacks/core/terraform.tfvars.json
+## Structure
 
-```json
-{
-  "vpc_id": "vpc-b12c67c8",
-  "cidr_block": "10.84.0.0/16"
-}
-```
+Here's an example folder structure. The tfvars files should mainly be in `app/stacks/MOD/tfvars` folders.  However, you can create one-off `seed/tfvars` folders that mirror the modules and stack structure.
+
+    .
+    ├── app
+    │   ├── modules
+    │   │   ├── instance
+    │   │   └── vpc
+    │   └── stacks
+    │       └── core
+    │           └── tfvars
+    │               └── dev.tfvars
+    └── seed
+        └── tfvars
+            └── modules
+                └── instance
+                    └── dev.tfvars
+
+## Why tfvars in Stacks?
+
+To understand why terraspace encourages creating your tfvars within the app/stack/MOD/tfvars folder, it is key to understand the difference between `app/modules` and `app/stacks`. The difference is how you use them.
+
+* Stacks are meant to be used to group together modules. It makes sense to include business-specific logic here.
+* Whereas modules are smaller pieces that are meant to be reused. It does not make sense to include business-specific logic in here.

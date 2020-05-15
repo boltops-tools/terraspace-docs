@@ -9,43 +9,33 @@ The Terraform Framework Docs.
 Create infrastructure stacks:
 
     $ terraspace up core -y
-    Created .terraspace-cache/stacks/core/provider.tf.json
-    Created .terraspace-cache/stacks/core/backend.tf.json
-    Created .terraspace-cache/stacks/core/variables.tf.json
-    Created .terraspace-cache/stacks/core/main.tf.json
-    Created .terraspace-cache/stacks/core/outputs.tf.json
-    ...
-    Within dir: .terraspace-cache/stacks/core
+    Materializing .terraspace-cache/dev/stacks/core
+    Within dir: .terraspace-cache/dev/stacks/core
     => terraform apply -auto-approve
-    module.sg_nested2.module.sg_child_test.aws_security_group.demo-sg-child: Refreshing state... [id=sg-0816d7ea938d031de]
-    module.vpc2.aws_vpc.vpc: Refreshing state... [id=vpc-0006839843392f564]
-    module.sg_nested2.aws_security_group.demo-sg-nested: Refreshing state... [id=sg-0f7bebaaaf7c1a194]
+    module.network.google_compute_network.network: Refreshing state... [id=projects/tung-275700/global/networks/dev]
+    ...
+    module.network.google_compute_router_nat.nat: Refreshing state... [id=tung-275700/us-central1/dev-router/dev-nat]
 
-    Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+    Apply complete! Resources: 5 added, 0 changed, 0 destroyed.
     $
 
-Destroy infrastructure stacks:
+Destroy infrastructure stack:
 
     $ terraspace down core -y
-    Created .terraspace-cache/stacks/core/provider.tf.json
-    Created .terraspace-cache/stacks/core/backend.tf.json
-    ...
-    Within dir: .terraspace-cache/stacks/core
+    Materializing .terraspace-cache/dev/stacks/core
+    Within dir: .terraspace-cache/dev/stacks/core
     => terraform destroy -auto-approve
-    module.vpc2.aws_vpc.vpc: Refreshing state... [id=vpc-0006839843392f564]
+    module.network.google_compute_subnetwork.subnetwork: Destruction complete after 12s
     ...
-    module.sg_nested2.module.sg_child_test.aws_security_group.demo-sg-child: Destruction complete after 0s
+    module.network.google_compute_network.network: Destruction complete after 12s
 
-    Destroy complete! Resources: 3 destroyed.
+    Destroy complete! Resources: 5 destroyed.
     $
 
-## Generation Only
+## Build Only
 
-    $ terraspace build vpc
-    Created .terraspace-cache/vpc/application.tf.json
-    Created .terraspace-cache/vpc/variables.tf.json
-    Created .terraspace-cache/vpc/main.tf.json
-    Created .terraspace-cache/vpc/outputs.tf.json
+    $ terraspace build core
+    Materializing .terraspace-cache/dev/stacks/core
     $
 
 ## Generators
@@ -84,26 +74,26 @@ For example, the "core" stack could be designed to create using the "vpc" module
 
 ## Tfvars
 
-Tfvar should be place in a `seed/tfvars` folder that mirror the modules and stack structure.
+Tfvar should be place within the `app/stacks/MOD` folder. Example:
 
-    seed
-    └── tfvars
-        ├── modules
-        │   ├── instance
-        │   │   ├── base.tfvars
-        │   │   ├── development.tfvars
-        │   │   └── production.tfvars
-        │   └── vpc
-        │       ├── base.tfvars
-        │       ├── development.tfvars
-        │       └── production.tfvars
-        └── stacks
-            └── core
-                ├── base.tfvars
-                ├── development.tfvars
-                └── production.tfvars
+    app/stacks/core
+    ├── main.tf
+    ├── tfvars
+    │   ├── base.tfvars
+    │   ├── dev.tfvars
+    │   └── prod.tfvars
+    └── variables.tf
 
-Tfvar files are in a separate directory to allow modules and stacks to be **reusable**. See: [Tfvars Docs](tfvars.md)
+You don't have to specify the `-var-file` option, the tfvars files are automatically processed.
+
+The the tfvar files are processed and "layered".  Example:
+
+    TS_ENV=dev terraspace up core -y   # merges base and dev
+    TS_ENV=prod  terraspace up core -y # merges base and prod
+
+The tfvars files should genreally be within the `app/stacks` folder, as stacks can include business-specific logic.  For overriding and one-off purposes, terraspace also supports tfvars files else where.
+
+For more details: [Tfvars Docs](tfvars.md)
 
 ## Config Folder
 
