@@ -67,8 +67,8 @@ Within the app folder there are modules and stacks folders.
 
 Both modules and stacks are terraform modules. The difference is how you use them.
 
-* Stacks are meant to be used to group together modules.
-* Whereas modules are smaller pieces that are meant to be reused.
+* Stacks are meant to be used to group together modules. It makes sense to include business-specific logic here.
+* Whereas modules are smaller pieces that are meant to be reused. It does not make sense to include business-specific logic in here.
 
 For example, the "core" stack could be designed to create using the "vpc" module. Also, the "wordpress" stack uses the "wordpress" modules, which in turn can include other modules like an "instance" and "rds" module.
 
@@ -97,7 +97,12 @@ For more details: [Tfvars Docs](tfvars.md)
 
 ## Config Folder
 
-The config folder contains the `provider.rb` and `backend.rb` files that get materialized to the root-level module that you launch. This keeps things DRY.
+The config folder contains the `provider.rb` and `backend.rb` files that get materialized to the root-level module that you launch. This keeps things DRY.  Example:
+
+    $ terraspace build core
+    $ ls .terraspace-cache/dev/stacks/core/
+    backend.tf.json  provider.tf.json
+    $
 
 ## State Files
 
