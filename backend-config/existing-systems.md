@@ -30,7 +30,7 @@ state_key = case mod_name
 
 backend("s3",
   bucket:         "my-bucket",
-  key:            state_key
+  key:            state_key,
   region:         ":region",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
