@@ -40,8 +40,8 @@ It is generally encouraged to to create tfvars files in the `app/modules/MOD/tfv
 
 Terraspace offers this flexibility for one-off purposes.  For example:
 
-You may also want to try out an app/modules/MOD quickly without having to define a stack.
-You may need to temporarily override the tfvars files embedded within the app/stacks/MOD/tfvar.
+* You may also want to try out an app/modules/MOD quickly without having to define a stack.
+* You may need to temporarily override the tfvars files embedded within the app/stacks/MOD/tfvar.
 
 Note, `app/modules/*/tfvars` are **not** are not considered in the lookup paths at all. This is because modules should be reusable.
 
