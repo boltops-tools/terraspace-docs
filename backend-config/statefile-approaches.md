@@ -55,6 +55,10 @@ backend("s3",
 )
 ```
 
+With this approach, use only one `app/stacks`. Example:
+
+    app/stacks/monolith
+
 ## A statefile per groups of modules
 
 Teams will then evolve their statefile approach to one that groups related-modules together.  Here are some possible examples:
