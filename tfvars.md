@@ -32,7 +32,7 @@ Layering combines the base layer with the TS_ENV specific layer. Another example
 
 ## Additional Lookup Locations
 
-It is generally encouraged to to create tfvars files in the `app/modules/MOD/tfvars` folder. Terraspace considers additional lookup paths though.  The lookup paths are:
+It is generally encouraged to create tfvars files in the `app/modules/MOD/tfvars` folder. Terraspace considers additional lookup paths though.  The lookup paths are:
 
     seed/tfvars/stacks/MOD
     seed/tfvars/modules/MOD
