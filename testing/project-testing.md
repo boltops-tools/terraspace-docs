@@ -65,6 +65,3 @@ To run the spec:
     bundle
     bundle exec rspec
 
-## Example
-
-A more complete example is in [examples/demo-project](examples/demo-project).
