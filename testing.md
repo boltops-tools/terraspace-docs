@@ -1,6 +1,6 @@
-## Terraspace Supports Testing
+## Terraspace Testing
 
-The usual testing process will:
+Terraspace supports testing with real-resources. The usual testing process will:
 
 1. Build a test harness. The test harness is a generated terraspace project with the specified modules and stacks.
 2. Runs a `terraspace up` (`terraform apply`) to create real resources.
