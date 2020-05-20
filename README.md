@@ -134,13 +134,24 @@ It will use something like `us-west-2/development/modules/vpc/terraform.tfstate`
 
 Of course, you can change the state file key path with whatever works for your setup.
 
+## Testing
+
+The usual testing process will:
+
+1. Build a test harness. The test harness is a generated terraspace project with the specified modules and stacks.
+2. Runs a `terraspace up` (`terraform apply`) to create real resources.
+3. Check the resources. In this case, it simply checks for the terraform output.
+4. Runs a `terraspace down` (`terraform destroy`) to clean up the real resources.
+
+
+More docs: [Testing](testing.md)
+
 ## More Docs
 
 * [Backend Config](backend-config.md)
 * [CLI Args](cli-args.md)
 * [CLI Hooks](cli-hooks.md)
 * [DSL Docs](dsl.md)
-* [Testing](testing.md)
 
 ## Installation
 
