@@ -1,6 +1,6 @@
 # Module-Level Testing
 
-Module-level testing refers to testing specific modules. Their tests live within the module folder itself and are meant to be ran independently.
+Module-level testing refers to testing specific modules. Their tests live within the module's folder itself and are meant to be ran independently.
 
 ## Structure
 
