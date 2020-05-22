@@ -43,10 +43,10 @@ describe "main" do
       modules: "app/modules",          # include all modules in this folder
       stacks:  "spec/fixtures/stacks", # include all stacks in this folder
     )
-    terraspace.up("example")
+    terraspace.up("example") # provision real resources 
   end
   after(:all) do
-    terraspace.down("example") # example is the module or stack name under testing
+    terraspace.down("example") # destroy real resources 
   end
 
   it "successful deploy" do
