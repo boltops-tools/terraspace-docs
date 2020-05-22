@@ -30,6 +30,18 @@ Layering combines the base layer with the TS_ENV specific layer. Another example
     1-base.auto.tfvars  2-prod.auto.tfvars
     $
 
+## Seed Command
+
+The `terraspace seed` command creates starter tfvars files for you. Examples:
+
+    $ terraspace seed network
+          create  app/stacks/network/tfvars/dev.tfvars
+    $ TS_ENV=prod terraspace seed network
+          create  app/stacks/network/tfvars/prod.tfvars
+    $
+
+[Tfvars Seed Docs](tfvars/seed.md).
+
 ## Additional Lookup Locations
 
 It is generally encouraged to create tfvars files in the `app/modules/MOD/tfvars` folder. Terraspace considers additional lookup paths though.  The lookup paths are:
