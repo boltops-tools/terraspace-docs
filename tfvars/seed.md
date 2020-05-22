@@ -18,7 +18,7 @@ app/stacks/network/tfvars/dev.tfvars:
     secondary_cidr_block = "string"
 
     # Optional variables:
-    name_prefix          = "string"
+    # name_prefix        = "string"
 
 To create starter tfvars file for a different environment, use `TS_ENV`. Example:
 
@@ -37,6 +37,25 @@ You can override this with the `--where` option. Example:
     Seeding tfvar files for network
           create  seed/tfvars/stacks/network/dev.tfvars
     $
+
+## Providing Example Values
+
+You can provide example starter values by providing them in the description. Anything after the `IE:` or `Example:` text is used as the starter parameter value.  Here's an example:
+
+```hcl
+variable "cidr_block" {
+  description = "VPC CIDR. IE: 10.0.0.0/16"
+  type        = string
+}
+```
+
+The `terraspace seed` command will produce:
+
+    # Required variables:
+    cidr_block = "10.0.0.0/16"
+
+The code self-documents the starter variables!
+
 
 ## Parsing Errors
 
