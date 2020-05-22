@@ -29,7 +29,7 @@ To create starter tfvars file for a different environment, use `TS_ENV`. Example
 
 ## Providing Example Values
 
-You can provide example starter values by providing them in the description. Anything after the `IE:` or `Example:` text is used as the starter parameter value.  Here's an example:
+You can provide example starter values by providing them in the description. Anything after the `IE:` or `Example:` text is used as the starter value.  Here's an example:
 
 ```hcl
 variable "cidr_block" {
