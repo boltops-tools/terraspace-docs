@@ -70,4 +70,4 @@ defaults:
       layout: default
 
 plugins_dir:
-  - jekyll-coffeescript
+  - jekyll-gzip

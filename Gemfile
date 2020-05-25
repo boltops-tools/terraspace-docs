@@ -7,6 +7,6 @@ gem "opal-jquery"
 gem "rake"
 gem "rerun"
 
-# group :jekyll_plugins do
-#   gem 'jekyll-opal'
-# end
+group :jekyll_plugins do
+  gem 'jekyll-gzip'
+end
