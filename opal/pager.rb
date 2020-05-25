@@ -1,6 +1,10 @@
 class Pager
+  def self.setup
+    new.setup
+  end
+
   def initialize
-    @subnav = Element.find("#subnav")
+    @sidebar = Element.find("#sidebar")
   end
 
   def setup
@@ -24,7 +28,6 @@ class Pager
   end
 
   def add_pro_tip
-    puts "add_pro_tip"
     html =<<~EOL
       <div class="prev-next-buttons">
         <a id="prev" class="btn btn-basic">Back</a>
@@ -70,7 +73,7 @@ class Pager
   @@sidebar_links = nil
   def sidebar_links
     return @@sidebar_links if @@sidebar_links
-    @@sidebar_links = @subnav.find("a")
+    @@sidebar_links = @sidebar.find("a")
   end
 
   def find_current

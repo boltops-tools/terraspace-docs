@@ -10,7 +10,7 @@ require "pager"
 # use bin/rerun to continuously generate js/app.js from this file
 
 Document.ready? do
-  Sidebar.new.setup
-  Pager.new.setup
+  Sidebar.setup
+  Pager.setup
 end
 

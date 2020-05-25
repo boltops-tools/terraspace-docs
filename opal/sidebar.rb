@@ -1,15 +1,27 @@
+require "sidebar/expander"
+
 class Sidebar
-  def initialize
-    @sidenav = Element.find('#subnav')
+  class << self
+    def setup
+      section = Element.find(".content-nav")
+      urls = section.children("ul")
+      urls.each do |ul|
+        new(ul).setup
+      end
+
+      Expander.setup
+    end
+  end
+
+  def initialize(el)
+    @sidenav = el
   end
 
   def setup
     add_carets(@sidenav)
     on_toggle_caret
-    on_toggle_sidebar
     init_carets
     expand_to_current
-    on_expand_all(@sidebar)
   end
 
   # Detects nested lists and only add carets as necessary
@@ -45,16 +57,6 @@ class Sidebar
     end
   end
 
-  def on_toggle_sidebar
-    menu = Element.find('#menu-toggle')
-    menu.on(:click) do |e|
-      e.prevent_default
-      sidebar = Element.find("#sidebar")
-      sidebar.toggle_class("toggled") # slide out sidebar menu
-      menu.toggle_class("cross") # change hamburger to cross
-    end
-  end
-
   # click on the all carets to initially close them
   def init_carets
     @sidenav.children.each do |child|
@@ -74,6 +76,7 @@ class Sidebar
       l.attr("href") == current_location
     end.first
 
+    return unless current_link
     current_link.add_class("current-page")
 
     uls = current_link.parents("ul")
@@ -81,33 +84,5 @@ class Sidebar
       span = ul.prevAll("span").first
       span.click if span
     end
-  end
-
-  def on_expand_all
-    expand_all = Element.find('#expand-all')
-    @html = expand_all.html
-    expand_all.on("click") do |e|
-      @html = @html == "expand all" ? "collapse all" : "expand all"
-      expand_all.html(@html)
-
-      carets = @sidenav.find("span.caret")
-      carets.each do |caret|
-        if @html == "expand all"
-          expand_carret(caret)
-        else
-          collapse_carret(caret)
-        end
-      end
-    end
-  end
-
-  def expand_carret(caret)
-    caret.removeClass("caret-down")
-    caret.siblings("ul").hide
-  end
-
-  def collapse_carret(caret)
-    caret.addClass("caret-down")
-    caret.siblings("ul").show
   end
 end
