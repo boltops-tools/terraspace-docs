@@ -27,13 +27,13 @@ state_key = case mod_name
             when "wordpress"
               "path2/to/existing/terraform.tfstate"
             else
-              ":region/:env/:build_dir/terraform.tfstate" # fallback to default terraspace variable notation
+              ":REGION/:ENV/:BUILD_DIR/terraform.tfstate" # fallback to default terraspace variable notation
             end
 
 backend("s3",
   bucket:         "my-bucket",
   key:            state_key,
-  region:         ":region",
+  region:         ":REGION",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
 )

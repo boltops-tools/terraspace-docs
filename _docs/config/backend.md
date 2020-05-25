@@ -34,23 +34,23 @@ Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/ba
 terraform {
   backend "s3" {
     bucket         = "my-bucket"
-    key            = "<%= backend_expand("s3", ":region/:env/:build_dir/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
-    region         = "<%= backend_expand("s3", ":region" %>"
+    key            = "<%= backend_expand("s3", ":REGION/:ENV/:BUILD_DIR/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
+    region         = "<%= backend_expand("s3", ":REGION" %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
 }
 ```
 
-Notice, the variable notation. Terraspace expands it out, substituting actually values. The starter `backend.rb` accounts for `region`, `env`, etc. Here's an expanded example:
+Notice, the variable notation. Terraspace expands it out, substituting actually values. The starter `backend.rb` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
 
-    :region/:env/:build_dir/terraform.tfstate
+    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
 Results in:
 
     us-west-2/development/stacks/wordpress/terraform.tfstate
 
-You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like. The expansion only happens for the `key`, `region`, and `prefix` properties.
+You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
 
 ## GCS Backend
 
@@ -58,14 +58,14 @@ You can fully control the state file path by adjusting this. The string substitu
 terraform {
   backend "gcs" {
     bucket = "my-bucket"
-    prefix = "<%= backend_expand("gcs", ":region/:env/:build_dir") %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
+    prefix = "<%= backend_expand("gcs", ":REGION/:ENV/:BUILD_DIR") %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
   }
 }
 ```
 
 So
 
-    :region/:env/:build_dir
+    :REGION/:ENV/:BUILD_DIR
 
 Results in:
 
@@ -77,25 +77,25 @@ Common variables available:
 
 Variable | Example | Description
 --- | --- | ---
-build_dir | stacks/wordpress | The build directory name.
-env | development | Terraspace env. Can be set like so `TS_ENV=development`
-mod_name | wordpress | The module name or stack name, which is also a module.
-type_dir | stacks | The type name. IE: stacks or modules
+BUILD_DIR | stacks/wordpress | The build directory name.
+ENV | development | Terraspace env. Can be set like so `TS_ENV=development`
+MOD_NAME | wordpress | The module name or stack name, which is also a module.
+TYPE_DIR | stacks | The type name. IE: stacks or modules
 
 s3 specific variables:
 
 Variable | Example | Description
 --- | --- | ---
-account | 112233445566 | AWS Account Id
-region | us-west-2 | AWS Region
+ACCOUNT | 112233445566 | AWS Account Id
+REGION | us-west-2 | AWS Region
 
 
 gcs specific variables:
 
 Variable | Example | Description
 --- | --- | ---
-project | project-12345 | Google project id
-region | us-central1 | Google region
+PROJECT | project-12345 | Google project id
+REGION | us-central1 | Google region
 
 ## Ruby Examples
 
@@ -108,8 +108,8 @@ config/backend.rb
 ```ruby
 backend("s3",
   bucket:         "my-bucket",
-  key:            ":region/:env/:build_dir/terraform.tfstate", # variable notation gets expanded out by terraspace
-  region:         ":region",
+  key:            ":REGION/:ENV/:BUILD_DIR/terraform.tfstate", # variable notation gets expanded out by terraspace
+  region:         ":REGION",
   encrypt:        true,
   dynamodb_table: "terraform_locks"
 )
@@ -124,6 +124,6 @@ config/backend.rb
 ```ruby
 backend("gcs",
   bucket: "my-bucket",
-  prefix: ":region/:env/:build_dir" # variable notation gets expanded out by terraspace
+  prefix: ":REGION/:ENV/:BUILD_DIR" # variable notation gets expanded out by terraspace
 )
 ```

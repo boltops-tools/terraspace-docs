@@ -4,4 +4,5 @@ title: Docs
 
 * Concepts
 * How Terraspace Works
-* Quick Start
+* Getting Started Tutorials
+* Terraspace vs Others

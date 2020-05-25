@@ -31,7 +31,7 @@ config/backend.rb
 backend("s3",
   bucket:         "my-bucket",
   key:            "/all/my/eggs/terraform.tfstate",
-  region:         ":region",
+  region:         ":REGION",
 )
 ```
 
@@ -52,8 +52,8 @@ config/backend.rb
 ```ruby
 backend("s3",
   bucket:         "my-bucket",
-  key:            ":region/:env/terraform.tfstate",
-  region:         ":region",
+  key:            ":REGION/:ENV/terraform.tfstate",
+  region:         ":REGION",
 )
 ```
 
@@ -87,14 +87,14 @@ config/backend.rb
 ```ruby
 backend("s3",
   bucket:         "my-bucket",
-  key:            ":region/:env/:build_dir/terraform.tfstate",
-  region:         ":region",
+  key:            ":REGION/:ENV/:BUILD_DIR/terraform.tfstate",
+  region:         ":REGION",
 )
 ```
 
 The bucket key example:
 
-    :region/:env/:build_dir/terraform.tfstate
+    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
 Gets expanded to actual values:
 
@@ -104,9 +104,9 @@ Gets expanded to actual values:
 
 The finest-grain approach is to have a statefile per module.  So instead of deploying stacks, which groups related modules together, we choose to deploy each module individually.  While terraspace does allow you to deploy a module on a one-off basis, it's really meant to be used for convenient quick testing. You deploy a module the pretty much the same way as a stack. Terraspace will create a different statefile for that specific module.
 
-The `:build_dir` above includes the name of the "type_dir", which is either modules or stacks.  So if you happened to deploy a module from `app/modules/instance`, the statefile would expand out from
+The `:BUILD_DIR` above includes the name of the "type_dir", which is either modules or stacks.  So if you happened to deploy a module from `app/modules/instance`, the statefile would expand out from
 
-    :region/:env/:build_dir/terraform.tfstate
+    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
 To:
 
