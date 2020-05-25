@@ -24,7 +24,7 @@ When you run `terraspace` commands, it will use the files in the config folder a
 
 Running:
 
-    terraspace up instance
+    terraspace up wordpress
 
 Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
 
