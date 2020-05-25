@@ -38,9 +38,9 @@ Notice, how you are able to use ERB templating in the HCL file.
 
 ```terraform
 provider "google" {
-  project = "<%= ENV['GOOGLE_PROJECT'] %>
-  region  = "<%= ENV['GOOGLE_REGION'] %>  # IE: us-central1
-  zone    = "<%= ENV['GOOGLE_ZONE'] %>    # IE: us-central1-c
+  project = "<%= ENV['GOOGLE_PROJECT'] %>"
+  region  = "<%= ENV['GOOGLE_REGION'] %>"  # IE: us-central1
+  zone    = "<%= ENV['GOOGLE_ZONE'] %>"    # IE: us-central1-c
 }
 ```
 
