@@ -26,7 +26,7 @@
 // to align the menu items
 .caret-spacing::before {
   content: "\25B6"; // so we can keep the same width
-  color: #f8f9fa; // matches with background so cannot be seen
+  color: white; // matches with background so cannot be seen
 }
 
 .nested {
