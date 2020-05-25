@@ -13,6 +13,6 @@ For larger fixes, you can run the site locally with the following:
     git clone https://github.com/boltops-tools/terraspace-docs.git
     cd terraspace-docs
     bundle
-    bin/web
+    foreman start
 
 You'll be able to view the site on [http://localhost:4000](http://localhost:4000).
