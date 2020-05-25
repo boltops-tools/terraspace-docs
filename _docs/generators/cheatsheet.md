@@ -1,0 +1,76 @@
+---
+title: Cheatsheet
+---
+
+## Commands Summary
+
+    terraspace new project NAME
+    terraspace new module NAME
+    terraspace new stack NAME
+
+## Projects: HCL Based
+
+HCL based AWS project
+
+    terraspace new project hcl-aws --bucket my-bucket # default provider is aws
+    cd hcl-aws
+    terraspace up demo -y
+    terraspace down demo -y
+
+HCL based GCP project
+
+    terraspace new project hcl-gcp --bucket my-bucket --provider gcp
+    cd hcl-gcp
+    terraspace up demo -y
+    terraspace down demo -y
+
+Blank project without examples
+
+    terraspace new project hcl-aws-blank --bucket my-bucket --no-examples
+    terraspace new project hcl-gcp-blank --bucket my-bucket --provider gcp --no-examples
+
+## Modules: HCL Based
+
+    cd project
+    terraspace new module ec2 # default provider is aws
+    terraspace new module vm --provider gcp
+
+## Stacks: HCL Based
+
+    cd project
+    terraspace new stack core # default provider is aws
+    terraspace new stack core --provider gcp
+
+## Projects: Ruby Based
+
+Ruby based AWS project
+
+    terraspace new project ruby-aws --bucket my-bucket --lang ruby # default provider is aws
+    cd ruby-aws
+    terraspace up demo -y
+    terraspace down demo -y
+
+Ruby based GCP project
+
+
+    terraspace new project ruby-gcp --bucket my-bucket --lang ruby --provider gcp
+    cd ruby-gcp
+    terraspace up demo -y
+    terraspace down demo -y
+
+Blank project without examples
+
+    terraspace new project ruby-aws-blank --bucket my-bucket --lang ruby --no-examples
+    terraspace new project ruby-gcp-blank --bucket my-bucket --lang ruby --provider gcp --no-examples
+
+## Modules: Ruby Based
+
+    cd project
+    terraspace new module ec2 --lang ruby # default provider is aws
+    terraspace new module vm --lang ruby --provider gcp
+
+## Stacks: Ruby Based
+
+    cd project
+    terraspace new stack core --lang ruby # default provider is aws
+    terraspace new stack core --lang ruby --provider gcp

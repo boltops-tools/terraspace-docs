@@ -1,0 +1,103 @@
+#wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+#sidebar {
+  padding-top: 20px;
+  padding-left: 20px;
+  min-width: 250px;
+  max-width: 250px;
+  background: #7386D5;
+  transition: all 0.3s;
+}
+
+#sidebar.toggled {
+  margin-left: -250px;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.toggled {
+    margin-left: 0;
+  }
+}
+
+// only show cross symbol on mobile. desktop will always have hamburger
+@media (max-width: 768px) {
+  .cross {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+      transform: rotate(-45deg) translate(-6px, 6px);
+    }
+    .bar2 {opacity: 0;}
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-5px, -5px);
+      transform: rotate(45deg) translate(-5px, -5px);
+    }
+  }
+}
+
+.content-nav {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+
+  ul#subnav, ul#subnav li {
+    padding-left: 0;
+  }
+
+  ul, li {
+    padding-bottom: 0; // reset defaults.scss
+    padding-left: 8px;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  a {
+    color: #0865ca;
+  }
+
+  a.current-page {
+    color: #d88a13;
+  }
+}
+
+.expand-all {
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+  a {
+    font-size: 0.9em;
+    color: #56585a;
+  }
+}
+
+// https://www.w3schools.com/howto/howto_css_menu_icon.asp
+.menu-top-bar {
+  padding: 15px; // to match with .container-fluid 15px
+}
+#menu-toggle {
+  .bar1, .bar2, .bar3 {
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+}
+
+#content {
+  width: 100%;
+  max-width: 900px;
+  padding: 5px; // .container-fluid has 15px already
+  min-height: 85vh; // not 100vh so footer shows a little bit
+  transition: all 0.3s;
+}

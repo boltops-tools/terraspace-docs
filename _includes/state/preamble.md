@@ -1,0 +1,1 @@
+The statefile is an especially important part of Terraform. It stores information that Terraform uses to determine whether or not it should create, update, or *delete* resources.  As such, it's prudent to take some time thinking about a statefile approach that works best for you. Terraform leaves it up to you.

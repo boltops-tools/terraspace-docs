@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -xeu
+
+root=`pwd` # save for later
+
+rm -rf /tmp/clone
+mkdir -p /tmp/clone
+cd /tmp/clone
+
+# clone and generate docs
+git clone https://github.com/boltops-tools/terraspace
+cd terraspace
+bundle
+rake docs
+
+cp docs/reference.md $root/reference.md
+rm -rf $root/_reference
+cp -r docs/_reference $root/_reference
