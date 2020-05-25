@@ -71,6 +71,7 @@ class Sidebar
   def expand_to_current
     current_location = $window.location.path # `window.location.pathname`
 
+    # walk down tree
     links = @sidenav.find("a")
     current_link = links.select do |l|
       l.attr("href") == current_location
@@ -79,6 +80,7 @@ class Sidebar
     return unless current_link
     current_link.add_class("current-page")
 
+    # walk back up tree
     uls = current_link.parents("ul")
     uls.each do |ul|
       span = ul.prevAll("span").first

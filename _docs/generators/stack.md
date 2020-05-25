@@ -14,4 +14,4 @@ You can use `terraspace new stack` to create the a starter stack structure. Exam
 
     $
 
-For the difference between a module and a stack, refer to [Project Structure]({% link _docs/structure.md %})
+For the difference between a module and a stack, refer to [Project Structure]({% link _docs/intro/structure.md %})

@@ -1,5 +1,8 @@
 ---
-title: What is Terraspace?
+title: Docs
 ---
 
-{% include reference.md %}
+* Concepts
+* How Terraspace Works
+* Getting Started Tutorials
+* Terraspace vs Others

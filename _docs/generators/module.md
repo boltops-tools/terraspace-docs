@@ -12,4 +12,4 @@ You can use `terraspace new module` to create the a starter module structure. Ex
           create  app/modules/example/variables.tf
     $
 
-For the difference between a module and a stack, refer to [Project Structure]({% link _docs/structure.md %})
+For the difference between a module and a stack, refer to [Project Structure]({% link _docs/intro/structure.md %})
