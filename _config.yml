@@ -70,4 +70,4 @@ defaults:
       layout: default
 
 plugins_dir:
-  - jekyll-gzip
+  # - jekyll-gzip - GitHub pages does not support this plugin.

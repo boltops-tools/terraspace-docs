@@ -7,6 +7,9 @@ gem "opal-jquery"
 gem "rake"
 gem "rerun"
 
-group :jekyll_plugins do
-  gem 'jekyll-gzip'
-end
+# GitHub pages does not support this plugin.
+# GitHub pages will not serve zipped assets even if we precompress them before hand.
+# Leaving comment as a note:
+# group :jekyll_plugins do
+#   gem 'jekyll-gzip'
+# end
