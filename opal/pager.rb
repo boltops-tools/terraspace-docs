@@ -9,7 +9,7 @@ class Pager
 
   def setup
     on_left_right
-    add_pro_tip
+    add_page_buttons
     on_prev_next
   end
 
@@ -27,7 +27,9 @@ class Pager
     end
   end
 
-  def add_pro_tip
+  def add_page_buttons
+    return unless Element.find("#sidebar").size > 0
+
     html =<<~EOL
       <div class="prev-next-buttons">
         <a id="prev" class="btn btn-basic">Back</a>
@@ -61,7 +63,8 @@ class Pager
              i = last ? 0 : current_index + 1
              links.at(i)
            else # prev
-             links.at(current_index-1)
+             i = current_index-1
+             links.at(i)
            end
 
     if link
