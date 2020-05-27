@@ -6,3 +6,4 @@ title: Docs
 * [How Terraspace Works]({% link _docs/intro/how-terraspace-works.md %})
 * [Concepts]({% link _docs/intro/concepts.md %})
 * [Getting Started Tutorials]({% link getting-started.md %})
+* [Terraspace vs Others]({% link _docs/vs.md %})

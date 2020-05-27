@@ -109,6 +109,14 @@
       </li>
       <li><a href="{% link _docs/lookups.md %}">Lookup Paths</a></li>
       <li><a href="{% link _docs/terrafile.md %}">Terrafile</a></li>
+      <li><a href="{% link _docs/vs.md %}">Terraspace vs Others</a>
+        <ul>
+        {% assign docs = site.docs | where: "categories","vs" %}
+        {% for doc in docs -%}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+        {% endfor %}
+        </ul>
+      </li>
       <li><a href="{% link _docs/dsl.md %}">DSL</a></li>
       <li>Misc
         <ul>
