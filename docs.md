@@ -6,4 +6,3 @@ title: Docs
 * Concepts
 * How Terraspace Works
 * [Getting Started Tutorials]({% link getting-started.md %})
-* Terraspace vs Others
