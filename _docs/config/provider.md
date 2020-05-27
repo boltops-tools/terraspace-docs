@@ -6,7 +6,7 @@ You can configure the backend for terraform to use with `config/provider.rb` or 
 
 ## Materialization
 
-When you run `terraspace` commands, it will use the files in the config folder and materialized them into each modules folder.  For example, let's say you have an `app/modules/instance` module:
+When you run `terraspace` commands, it will use the files in the config folder and materialized with the module being deployed.  For example, let's say you have an `app/modules/instance` module:
 
     .
     │── app
