@@ -80,7 +80,11 @@ class Sidebar
     return unless current_link
     current_link.add_class("current-page")
 
-    # walk back up tree
+    # walk back up tree starting with the sibling
+    sibling = current_link.prev("span")
+    sibling.click if sibling
+
+    # walk back up rest of the tree
     uls = current_link.parents("ul")
     uls.each do |ul|
       span = ul.prevAll("span").first

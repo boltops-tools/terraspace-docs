@@ -39092,7 +39092,7 @@ Opal.modules["sidebar"] = function(Opal) {
   }
   var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy, $gvars = Opal.gvars;
 
-  Opal.add_stubs(['$require', '$find', '$children', '$each', '$setup', '$new', '$add_carets', '$on_toggle_caret', '$init_carets', '$expand_to_current', '$==', '$tag_name', '$>', '$size', '$prepend', '$on', '$target', '$has_class?', '$toggleClass', '$siblings', '$toggle', '$click', '$path', '$location', '$first', '$select', '$attr', '$add_class', '$parents', '$prevAll']);
+  Opal.add_stubs(['$require', '$find', '$children', '$each', '$setup', '$new', '$add_carets', '$on_toggle_caret', '$init_carets', '$expand_to_current', '$==', '$tag_name', '$>', '$size', '$prepend', '$on', '$target', '$has_class?', '$toggleClass', '$siblings', '$toggle', '$click', '$path', '$location', '$first', '$select', '$attr', '$add_class', '$prev', '$parents', '$prevAll']);
   
   self.$require("sidebar/expander");
   return (function($base, $super, $parent_nesting) {
@@ -39199,7 +39199,7 @@ Opal.modules["sidebar"] = function(Opal) {
         return carets.$click();}, $$10.$$s = self, $$10.$$arity = 1, $$10))
     }, $Sidebar_init_carets$9.$$arity = 0);
     return (Opal.def(self, '$expand_to_current', $Sidebar_expand_to_current$11 = function $$expand_to_current() {
-      var $$12, $$13, self = this, current_location = nil, links = nil, current_link = nil, uls = nil;
+      var $$12, $$13, self = this, current_location = nil, links = nil, current_link = nil, sibling = nil, uls = nil;
       if ($gvars.window == null) $gvars.window = nil;
 
       
@@ -39218,6 +39218,9 @@ Opal.modules["sidebar"] = function(Opal) {
         return nil
       };
       current_link.$add_class("current-page");
+      sibling = current_link.$prev("span");
+      if ($truthy(sibling)) {
+        sibling.$click()};
       uls = current_link.$parents("ul");
       return $send(uls, 'each', [], ($$13 = function(ul){var self = $$13.$$s || this, span = nil;
 

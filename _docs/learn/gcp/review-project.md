@@ -2,7 +2,7 @@
 title: Review Project
 ---
 
-Let's explore the generated app folder to understand what infrastructure will be created.
+Let's explore the generated app folder.
 
 ## App Modules
 
