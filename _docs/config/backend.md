@@ -11,7 +11,7 @@ You may also be interested in:
 
 ## Materialization
 
-When you run `terraspace` commands, it will use the files in the config folder and materialized them into each modules folder.  For example, let's say you have an `app/stacks/wordpress` stack:
+When you run `terraspace` commands, it will use the files in the config folder and materialized them with the module being deployed.  For example, let's say you have an `app/stacks/wordpress` stack:
 
     .
     │── app
