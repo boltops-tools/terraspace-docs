@@ -55,7 +55,7 @@ credits:
 markdown: kramdown
 permalink: pretty
 
-gh_url: https://github.com/boltops-tools/terraspace
+gh_url: https://github.com/boltops-tools/terraspace-docs
 
 collections:
   docs:
