@@ -76,7 +76,7 @@ class Pager
   @@sidebar_links = nil
   def sidebar_links
     return @@sidebar_links if @@sidebar_links
-    @@sidebar_links = @sidebar.find("a")
+    @@sidebar_links = @sidebar.find(".content-nav a")
   end
 
   def find_current

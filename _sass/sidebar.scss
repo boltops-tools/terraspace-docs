@@ -87,17 +87,21 @@
   font-weight: bold;
 }
 
-.expand-all {
-  padding-top: 30px;
-  padding-bottom: 10px;
-
-  button {
-    font-size: 0.9em;
-    color: #56585a;
-    text-transform: none;
-  }
-}
-
 .content-nav > ul {
   padding-bottom: 15px;
 }
+
+.menu-options {
+  padding-left: 10px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  h2 {
+    font-size: 0.95em;
+    border: none;
+  }
+  li {
+    font-size: 0.85em;
+    padding-bottom: 4px;
+  }
+}
+
