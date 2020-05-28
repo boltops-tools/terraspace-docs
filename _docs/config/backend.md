@@ -33,7 +33,7 @@ Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/ba
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "my-bucket"
+    bucket         = "<%= backend_expand("s3", "terraform-state-:ACCOUNT-:REGION-:ENV") %>"
     key            = "<%= backend_expand("s3", ":REGION/:ENV/:BUILD_DIR/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
     region         = "<%= backend_expand("s3", ":REGION" %>"
     encrypt        = true
@@ -57,7 +57,7 @@ You can fully control the state file path by adjusting this. The string substitu
 ```terraform
 terraform {
   backend "gcs" {
-    bucket = "my-bucket"
+    bucket = "<%= backend_expand("gcs", "terraform-state-:PROJECT-:REGION-:ENV") %>"
     prefix = "<%= backend_expand("gcs", ":REGION/:ENV/:BUILD_DIR") %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
   }
 }
@@ -107,7 +107,7 @@ config/backend.rb
 
 ```ruby
 backend("s3",
-  bucket:         "my-bucket",
+  bucket:         "terraform-state-:ACCOUNT-:REGION-:ENV",
   key:            ":REGION/:ENV/:BUILD_DIR/terraform.tfstate", # variable notation gets expanded out by terraspace
   region:         ":REGION",
   encrypt:        true,
@@ -123,7 +123,7 @@ config/backend.rb
 
 ```ruby
 backend("gcs",
-  bucket: "my-bucket",
+  bucket: "terraform-state-:PROJECT-:REGION-:ENV",
   prefix: ":REGION/:ENV/:BUILD_DIR" # variable notation gets expanded out by terraspace
 )
 ```

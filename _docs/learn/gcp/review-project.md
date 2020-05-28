@@ -56,3 +56,5 @@ module "bucket" {
 You can see that it's just another terraform module, that will use the `app/modules/example` module. It uses the `random_pet` resource to provide a random but friendly name for the gcs bucket.
 
 {% include learn/modules-vs-stacks.md %}
+
+Next, we'll deploy the infrastructure.

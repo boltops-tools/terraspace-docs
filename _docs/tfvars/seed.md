@@ -62,4 +62,4 @@ You can override this with the `--where` option. Example:
 
 In order to generate the tfvars file, terraspace parses the `variables.tf` file. The parser may not always parse HCL successfully. In this case, you will receive an error message, and you will have to create the tfvars file manually.
 
-Improvements to the parsing library are welcomed. Here is the library used [tongueroo/hcl_variables](https://github.com/tongueroo/hcl_variables).
+Improvements to the parsing library are welcomed. Here is the library used [boltops-tools/hcl_parser](https://github.com/boltops-tools/hcl_parser).
