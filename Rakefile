@@ -30,9 +30,6 @@ namespace :html do
       # check_favicon: true,
       only_4xx: true,
       allow_hash_href: true,
-      href_ignore: [
-        "/#page-top",
-      ],
       empty_alt_ignore: true,
     ).run
   end
