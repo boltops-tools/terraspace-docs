@@ -20,3 +20,5 @@ You'll be able to view the site on [http://localhost:4000](http://localhost:4000
 ## Html Proofer
 
 Run it locally once in a while. Sometimes external sites are intermittently down, even GitHub.
+
+    bundle exec rake html:proof
