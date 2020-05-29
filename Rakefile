@@ -22,7 +22,7 @@ require 'html-proofer'
 namespace :html do
   desc "proof read the html links"
   task :proof do
-    system "jekyll build"
+    system "bundle exec jekyll build"
     HTMLProofer.check_directory(
       "./_site",
       # hacks to get html proof to pass links we wanted ignored
@@ -35,4 +35,4 @@ namespace :html do
   end
 end
 
-task :default => ["opal:build"]
+task :default => ["opal:build", "html:proof"]

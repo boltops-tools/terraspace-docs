@@ -39372,7 +39372,7 @@ Opal.modules["pager"] = function(Opal) {
       
       if ($truthy((($a = $nesting[0].$$cvars['@@sidebar_links']) == null ? nil : $a))) {
         return (($a = $nesting[0].$$cvars['@@sidebar_links']) == null ? nil : $a)};
-      return (Opal.class_variable_set($nesting[0], '@@sidebar_links', self.sidebar.$find("a")));
+      return (Opal.class_variable_set($nesting[0], '@@sidebar_links', self.sidebar.$find(".content-nav a")));
     }, $Pager_sidebar_links$11.$$arity = 0);
     return (Opal.def(self, '$find_current', $Pager_find_current$12 = function $$find_current() {
       var $$13, self = this, current_location = nil, links = nil;
