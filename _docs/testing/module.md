@@ -65,4 +65,4 @@ To run the spec:
 
 ## Example
 
-A code example is in [examples/testing/demo-module](/examples/testing/demo-module).
+A code example is in [examples/testing/demo-module](https://github.com/boltops-tools/terraspace-docs/tree/master/examples/testing/demo-module).

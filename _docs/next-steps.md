@@ -10,4 +10,4 @@ Hopefully, you have a good feel for how terraspace works now. From here, there a
 * Post on your favorite discussion about terraspace
 * Contribute a pull request
 
-Everyone can contribute to making terraspace better, including the documentation. These docs are the terraspace repo located the [docs folder](https://github.com/boltops-tools/terraspace/tree/master/docs). Please fork the project and open a pull request!  We love your pull requests. Contributions are encouraged and welcomed!
+Everyone can contribute to making terraspace better, including the documentation. These docs are the terraspace repo located the [docs folder](https://github.com/boltops-tools/terraspace-docs/tree/master). Please fork the project and open a pull request!  We love your pull requests. Contributions are encouraged and welcomed!

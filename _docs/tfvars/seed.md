@@ -49,7 +49,7 @@ The code self-documents the starter variables!
 
 ## Where Option
 
-By default, the `seed` command detects where the module came from IE: the `app/stacks` or `app/modules` folder. Based on this, it will generate starter files within the `app` or `seed` folder with a preference to the `app` folder per [TFVars Docs](../tfvars.md).
+By default, the `seed` command detects where the module came from IE: the `app/stacks` or `app/modules` folder. Based on this, it will generate starter files within the `app` or `seed` folder with a preference to the `app` folder per [TFVars Docs]({% link _docs/config/tfvars.md %}).
 
 You can override this with the `--where` option. Example:
 

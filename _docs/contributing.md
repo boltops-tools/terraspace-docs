@@ -52,7 +52,7 @@ That's it! You'll be automatically subscribed to receive updates as others revie
 3. Fetch submodules `git submodule init && git submodule update`.
 4. Create a new, descriptively named branch to contain your change ( `git checkout -b my-awesome-feature` ).
 5. Hack away, add tests. Not necessarily in that order.
-6. Make sure everything still passes by running `bundle exec rspec` (see [the tests section](#running-tests-locally) below)
+6. Make sure everything still passes by running `bundle exec rspec` (see [the tests section](#running-tests) below)
 7. Push the branch up ( `git push origin my-awesome-feature` ).
 8. Create a pull request by visiting `https://github.com/<your-username>/terraspace` and following the instructions at the top of the screen.
 
@@ -62,7 +62,7 @@ We want the Terraspace documentation to be the best it can be. We've open-source
 
 ### How to submit changes
 
-You can find the documentation for [https://terraspace.cloud.com](https://terraspace.cloud.com) in the [docs](https://github.com/boltops-tools/terraspace/tree/master/docs) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
+You can find the documentation for [https://terraspace.cloud.com](https://terraspace.cloud.com) in the [docs](https://github.com/boltops-tools/terraspace-docs/tree/master) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
 
 One gotcha, all pull requests should be directed at the `master` branch (the default branch).
 

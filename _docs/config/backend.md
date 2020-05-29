@@ -7,7 +7,7 @@ You can configure the backend for terraform to use with `config/backend.rb` or `
 You may also be interested in:
 
 * [Statefile Approaches and Thoughts]({% link _docs/state/approaches.md %})
-* [Configuring Backends for Existing Systems](backend-config/existing-systems.md)
+* [Configuring Backends for Existing Systems]({% link _docs/state/existing.md %})
 
 ## Materialization
 

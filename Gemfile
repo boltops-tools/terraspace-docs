@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "html-proofer"
 gem "jekyll"
 gem "opal"
 gem "opal-browser"
