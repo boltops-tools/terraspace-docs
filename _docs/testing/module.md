@@ -6,30 +6,32 @@ Module-level testing refers to testing specific modules. Their tests live within
 
 ## Structure
 
-Let's say you have terraform module named demo:
+Let's say you have terraform module named example:
 
-    app/modules/demo
+    app/modules/example
     ├── main.tf
     ├── outputs.tf
     └── variables.tf
 
-Create a `test` folder within the module's folder to add tests. So the structure will look something like this:
+We can use `terraspace new module_test` to create a `app/modules/example/test/spec/main_spec.rb` test.
 
-    app/modules/demo
-    ├── main.tf
-    ├── outputs.tf
-    ├── test
-    │   └── spec
-    │       ├── fixtures
-    │       ├── main_spec.rb
-    │       └── spec_helper.rb
-    └── variables.tf
+    terraspace new module_test example
+
+The structure will look something like this:
+
+    app/modules/example/test
+    └── spec
+        ├── fixtures
+        │   └── stack
+        │       ├── main.tf
+        │       └── outputs.tf
+        └── main_spec.rb
 
 ## Test Code
 
-Here's an example of a spec.
+Here's an example of the generate spec.
 
-test/spec/main_spec.rb:
+app/modules/example/test/spec/main_spec.rb:
 
 ```ruby
 describe "main" do
@@ -38,31 +40,32 @@ describe "main" do
     # Build terraspace project to use as a test harness
     # Will be located at: /tmp/terraspace/test-harnesses/network
     terraspace.build_test_harness(
-      name: "network", # terraspace project name
+      name: "example-harness",
       modules: {example: mod_path},
-      stacks:  {stack: "#{mod_path}/test/spec/fixtures/stack"},
+      stacks:  {example: "#{mod_path}/test/spec/fixtures/stack"}, # folder with the stack module files
     )
-    terraspace.up("stack") # provison real resources
+    terraspace.up("example")
   end
   after(:all) do
-    terraspace.down("stack") # destroy real resources
+    terraspace.down("example")
   end
 
   it "successful deploy" do
-    network_id = terraspace.output("stack", "network_id")
-    expect(network_id).to include("networks") # IE: projects/tung-xxx/global/networks/ladybug
+    # Replace with your own test
+    expect(true).to be true
+    # Example
+    # output_value = terraspace.output("example", "some-output")
+    # expect(output_value).to include("some-value")
   end
 end
 ```
 
 ### Run Tests
 
-To run the spec:
+To run the test, you should be in the module folder itself.
 
     cd demo/test # you should be in the test folder
     bundle
     terraspace test
 
-## Example
-
-A code example is in [examples/testing/demo-module](https://github.com/boltops-tools/terraspace-docs/tree/master/examples/testing/demo-module).
+{% include testing/what-happens.md %}
