@@ -61,7 +61,7 @@ To run the spec:
 
     cd demo/test # you should be in the test folder
     bundle
-    bundle exec rspec
+    terraspace test
 
 ## Example
 

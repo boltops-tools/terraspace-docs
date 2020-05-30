@@ -65,5 +65,4 @@ To run the spec:
 
     cd infra # you should be in the terraspace project folder
     bundle
-    bundle exec rspec
-
+    terraspace test
