@@ -13,8 +13,8 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
           create  infra
           create  infra/.gitignore
            exist  infra
-          create  infra/config/backend.tf
-          create  infra/config/provider.tf
+          create  infra/config/templates/backend.tf
+          create  infra/config/templates/provider.tf
     => Creating new module called example.
           create  infra/app/modules/example
           create  infra/app/modules/example/main.tf
@@ -29,7 +29,7 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
 
 ## Config Files
 
-Let's look at `infra/config/backend.tf`
+Let's look at `infra/config/templates/backend.tf`
 
 ```terraform
 terraform {
@@ -44,7 +44,7 @@ If you're already familiar with terraform, then you'll probably notice that ther
 
 When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the google cloud storage bucket for you.
 
-Next, let's take a look at the `infra/config/provider.tf` file.
+Next, let's take a look at the `infra/config/templates/provider.tf` file.
 
 ```terraform
 # provider "google" {

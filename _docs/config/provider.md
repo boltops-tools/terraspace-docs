@@ -2,24 +2,24 @@
 title: Provider Config
 ---
 
-You can configure the backend for terraform to use with `config/provider.rb` or `config/provider.tf`. The files in the config folder get materialized to each module you deploy.
+You can configure the backend for terraform to use with `config/templates/provider.rb` or `config/templates/provider.tf`. The files in the config folder get materialized to each module you deploy.
 
 ## Materialization
 
 When you run `terraspace` commands, it will use the files in the config folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
 
-    .
-    │── app
+    ├── app
     │   └── modules
     │       └── instance
     └── config
-        └── provider.tf
+        └── templates
+            └── provider.tf
 
 Running:
 
     terraspace up instance
 
-Builds a `.terrspace-cache/dev/modules/instance/provider.tf` using the `config/provider.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of providers.
+Builds a `.terrspace-cache/dev/modules/instance/provider.tf` using the `config/templates/provider.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of providers.
 
 ## Examples:
 
@@ -68,7 +68,7 @@ provider("google",
 
 ## Implicit Providers
 
-Most Terraform examples out there explicitly define the provider.  If you have your environment configured properly, you don't really need to explicitly declare your provider. So you don't even need the `config/provider.tf` file.
+Most Terraform examples out there explicitly define the provider.  If you have your environment configured properly, you don't really need to explicitly declare your provider. So you don't even need the `config/templates/provider.tf` file.
 
 ### AWS Implicit Provider
 
