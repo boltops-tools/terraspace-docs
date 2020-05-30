@@ -6,63 +6,89 @@ Project-level testing belongs with the terraspace project itself. Their tests li
 
 ## Structure
 
-Let's say you have terraspace structure with a `app/modules/demo` module you want to test:
+Let's say you have terraspace project with a `app/stacks/demo` module you want to test:
 
-    infra
     └── app
-        └── modules
+        ├── modules
+        │   └── example
+        └── stacks
             └── demo
 
-You can add a `spec/modules/demo/main_spec.rb` that will use the `spec/fixtures/stacks/example` fixture.
+We can use `terraspace new project_test` to create a `spec/stacks/demo/main_spec.rb` test.
 
-    infra
+    terraspace new project_test demo
+
+The structure would look something lik e this:
+
     ├── app
-    │   └── modules
+    │   ├── modules
+    │   │   └── example
+    │   └── stacks
     │       └── demo
     └── spec
         ├── fixtures
-        │   └── stacks
-        │       └── example
-        └── modules
+        │   └── tfvars
+        │       └── demo.tfvars
+        └── stacks
             └── demo
                 └── main_spec.rb
 
-The reason we use an example fixture for the stack code is because it will allow us to use test input variables.  Remember `the app/stacks` folder will have business logic already. So we use the fixture to override and replace business-specific logic and values with test logic.
+
+Notice the `spec/fixtures/tfvars/demo.tvars`. We'll be configuring the test harness to use those tfvars for testing.
 
 ## Test Code
 
-Here's an example of a spec.
+Here's an example of the generated starter spec.
 
-spec/modules/demo/main_spec.rb:
+spec/stacks/demo/main_spec.rb:
 
 ```ruby
 describe "main" do
   before(:all) do
     # Build terraspace project to use as a test harness
-    # Will be located at: /tmp/terraspace/test-harnesses/my-infra
+    # Will be located at: /tmp/terraspace/test-harnesses/demo-harness
     terraspace.build_test_harness(
-      name:    "my-infra",
+      name:    "demo-harness",
       modules: "app/modules",          # include all modules in this folder
-      stacks:  "spec/fixtures/stacks", # include all stacks in this folder
+      stacks:  "app/stacks",           # include all stacks in this folder
+      # override demo stack tfvars for testing
+      # copied over to test harness' app/stacks/demo/tfvars/test.tfvars
+      tfvars:  {demo: "spec/fixtures/tfvars/demo.tfvars"},
+      # create config if needed. The folder will be copied over
+      # config:  "spec/fixtures/config",
     )
-    terraspace.up("example") # provision real resources
+    terraspace.up("demo") # provision real resources
   end
   after(:all) do
-    terraspace.down("example") # destroy real resources
+    terraspace.down("demo") # destroy real resources
   end
 
   it "successful deploy" do
-    # example is the module or stack name under testing
-    network_id = terraspace.output("example", "network_id")
-    expect(network_id).to include("networks") # IE: projects/tung-xxx/global/networks/ladybug
+    # Replace with your actual test
+    expect(true).to be true
+    # Example
+    output_value = terraspace.output("demo", "bucket_name")
+    puts "output_value #{output_value}"
+    # expect(output_value).to include("some-value")
   end
 end
 ```
 
+The test harness is configured to use your project `app/modules` and `app/stacks` code. However, the `tfvars` will be overwritten with test tfvars. Additionally, if you can configure a `config` folder to be also created.
+
+The test harness allows you to use different input values to test your actual code.  You can update the code with an actual test. Perhaps check that the terraform outputs return an expected value.
+
 ### Run Tests
 
-To run the spec:
+To run:
 
     cd infra # you should be in the terraspace project folder
     bundle
     terraspace test
+
+This will:
+
+1. Generate a test harness, which is a terraspace project
+2. Run `terraspace up` to create actual resources
+3. Run your test logic
+4. Run `terraspace down` to destroy the resources
