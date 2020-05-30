@@ -1,5 +1,5 @@
 ---
-title: "Tfvars: Additional Lookup Locations"
+title: "Tfvars: Additional Lookups"
 ---
 
 It is generally encouraged to create tfvars files in the `app/stacks/MOD/tfvars` folder. Terraspace considers additional lookup paths though.  It's similar to how `LOAD_PATH` works. The lookup paths are:
