@@ -4,12 +4,12 @@ title: Configure Google Cloud
 
 Configure Google Cloud so Terraspace can connect to GCP. The recommended way is to:
 
-1. setting up the `~/.gcp/credentials.json`
+1. setting up the `~/.google/credentials.json`
 2. setting your `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, `GOOGLE_REGION`, and `GOOGLE_ZONE` environment variables
 
 ## Example
 
-~/.gcp/config
+~/.google/config
 
 ```json
 {
@@ -28,8 +28,8 @@ Configure Google Cloud so Terraspace can connect to GCP. The recommended way is 
 
 In your `~/.bashrc` or `~/.profile`, use these lines to set environment variables:
 
-    export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/credentials.json
-    export GOOGLE_PROJECT=$(cat ~/.gcp/credentials.json  | jq -r '.project_id')
+    export GOOGLE_APPLICATION_CREDENTIALS=~/.google/credentials.json
+    export GOOGLE_PROJECT=$(cat ~/.google/credentials.json  | jq -r '.project_id')
     export GOOGLE_REGION=us-central1
     export GOOGLE_ZONE=us-central1-a # only used by terraform provider
 
