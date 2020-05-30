@@ -13,8 +13,11 @@ new subcommands
 
 ## Subcommands
 
+* [terraspace new bootstrap_test]({% link _reference/terraspace-new-bootstrap_test.md %}) - Generates bootstrap test setup
 * [terraspace new module]({% link _reference/terraspace-new-module.md %}) - Generates new module
+* [terraspace new module_test]({% link _reference/terraspace-new-module_test.md %}) - Generates new module test
 * [terraspace new project]({% link _reference/terraspace-new-project.md %}) - Generates new project
+* [terraspace new project_test]({% link _reference/terraspace-new-project_test.md %}) - Generates new project test
 * [terraspace new stack]({% link _reference/terraspace-new-stack.md %}) - Generates new stack
 
 ## Options

@@ -19,8 +19,12 @@ Generates new project
 [--force]                      # Bypass overwrite are you sure prompt for existing files.
 [--lang=LANG]                  # Language to use: HCL/ERB or Ruby DSL
                                # Default: hcl
-[--provider=PROVIDER]          # Cloud Provider. Supports: aws, gcp
+[--provider=PROVIDER]          # Cloud Provider. Supports: aws, google
                                # Default: aws
-[--bucket=BUCKET]              # Bucket to store terraform.tfstate file
+[--provider-gem=PROVIDER_GEM]  # Useful if provider gem name doesnt follow terraspace_provider_XXX naming convention
+[--bundle], [--no-bundle]      # Runs bundle install on the project
+                               # Default: true
+[--config], [--no-config]      # Whether or not to generate config files.
+                               # Default: true
 ```
 

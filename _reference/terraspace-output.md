@@ -15,9 +15,9 @@ output
 ## Options
 
 ```
-[--json], [--no-json]        # output json
-[--out=OUT]                  # path to save the output
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
+    [--format=FORMAT]            # output formats: json, text
+o, [--out=OUT]                   # write the output to path
+    [--verbose], [--no-verbose]  
+    [--noop], [--no-noop]        
 ```
 

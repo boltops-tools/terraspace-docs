@@ -15,7 +15,8 @@ plan module
 ## Options
 
 ```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
+o, [--out=OUT]                   # write the output to path
+    [--verbose], [--no-verbose]  
+    [--noop], [--no-noop]        
 ```
 

@@ -22,6 +22,7 @@ update infrasturcture. IE: apply plan
 
 ```
 y, [--yes], [--no-yes]           # -auto-approve the terraform apply
+    [--var-files=one two three]  # list of var files
     [--verbose], [--no-verbose]  
     [--noop], [--no-noop]        
 ```
