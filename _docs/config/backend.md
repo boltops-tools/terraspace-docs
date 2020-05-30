@@ -42,7 +42,7 @@ terraform {
 }
 ```
 
-Notice, the variable notation. Terraspace expands it out, substituting actually values. The starter `backend.rb` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
+Notice, the variable notation. Terraspace expands it out, substituting actually values. The starter `backend.tf` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
 
     :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
