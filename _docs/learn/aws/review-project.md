@@ -56,11 +56,6 @@ module "bucket" {
 
 You can see that it's just another terraform module, that will use the `app/modules/example` module. It uses the `random_pet` resource to provide a random but friendly name for the s3 bucket.
 
-## App Modules vs Stacks
-
-In Terraspace, both `app/modules` and `app/stacks` folders contain Terraform modules. The difference is how they are meant to be used. Terraspace provides this structure as a guideline:
-
-* Stacks are meant to be used to group together modules. Generally, this is where business-specific logic goes.
-* Modules modules are smaller pieces of reusable code. Generally, it contains reusable and non-business-specific logic.
+{% include intro/modules-vs-stacks.md %}
 
 Next, we'll deploy the infrastructure.
