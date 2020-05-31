@@ -2,7 +2,7 @@
 title: Locals
 ---
 
-A useful example might be to create a glocal `locals.tf` file.
+A useful example might be to create a global `locals.tf` file.
 
 config/templates/locals.tf
 

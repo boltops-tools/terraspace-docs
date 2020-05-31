@@ -2,7 +2,7 @@
 title: Tfvars
 ---
 
-A useful example might be to create a glocal `terraform.tfvars` file.
+A useful example might be to create a global `terraform.tfvars` file.
 
 config/templates/terraform.tfvars
 
