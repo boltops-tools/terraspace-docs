@@ -41,16 +41,16 @@ Layering combines the base layer with the TS_ENV specific layer. Another example
 
 Terraspace supports multi-region layering support. This allows you to use the same infrastructure code and deploy to different regions. This is achieved by layering.  Here are is layering order:
 
-Name          | Pattern                      | Example
---------------|------------------------------|---------------
-base          | base                         | base.tfvars
-env           | env                          | dev.tfvars
-region base   | region/base                  | us-west-2/base.tfvars (provider specific)
-region env    | region/env                   | us-west-2/dev.tfvars (provider specific)
-provider base | provider/region/base         | aws/us-west-2/base.tfvars (provider specific)
-provider env  | provider/region/env          | aws/us-west-2/dev.tfvars (provider specific)
-account base  | account/provider/region/base | 112233445566/aws/us-west-2/base.tfvars (provider specific)
-account env   | account/provider/region/env  | 112233445566/aws/us-west-2/dev.tfvars (provider specific)
+Name                  | Pattern                      | Example
+----------------------|------------------------------|---------------
+base                  | base                         | base.tfvars
+env                   | env                          | dev.tfvars
+region base           | region/base                  | us-west-2/base.tfvars (provider specific)
+region env            | region/env                   | us-west-2/dev.tfvars (provider specific)
+provider base         | provider/region/base         | aws/us-west-2/base.tfvars (provider specific)
+provider env          | provider/region/env          | aws/us-west-2/dev.tfvars (provider specific)
+provider account base | provider/account/region/base | aws/112233445566/us-west-2/base.tfvars (provider specific)
+provider account env  | provider/account/region/env  | aws/112233445566/us-west-2/dev.tfvars (provider specific)
 
 The "account" depends on the provider. IE: For aws it's account. For google, account maps to the project.
 
