@@ -16,6 +16,4 @@ Terraspace uses Conventions Over Configuration to remove boilerplate setup and m
 
 Terraspace introduces [Tfvars Layering]({% link _docs/tfvars/layering.md %}). You can use the same infrastructure code with different tfvar files to create multiple environments like dev, prod, uat, stage, etc.  Layering DRYs up the usage of multiple tfvar files. Additionally, Layering allows you to use same infrastructure code to deploy to multiple regions and or accounts.
 
-## Testing
-
-Terraspace ships with a testing framework. It allows you to test with real resources. The testing works by creating a "test harness", which is a generated terraspace project. Then `terraspace up` is ran within the test harness. It's what you would normally do manually do to test, but it's is automated.
+{% include intro/testing.md %}

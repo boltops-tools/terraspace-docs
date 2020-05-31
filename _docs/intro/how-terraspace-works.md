@@ -29,6 +29,4 @@ If you really prefer not to use HCL, then Terraspace also has a Ruby DSL. The DS
 
 Terraspace automatically creates backend state storage resources like s3 buckets, dynamodb tables, gcs buckets. This added convenience is one less thing you don't have to worry about. You can focus on code instead.
 
-## Testing
-
-Terraspace ships with a testing framework. It allows you to test with real resources. The testing works by creating a "test harness", which is a generated terraspace project. Then `terraspace up` is ran within the test harness. It's what you would normally do manually do to test, but it's is automated.
+{% include intro/testing.md %}
