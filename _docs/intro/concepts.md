@@ -10,7 +10,7 @@ The `terraspace up` and `terraspace down` commands are how you create infrastruc
 
 ## Conventions Over Configuration
 
-Terraspace uses Conventions Over Configuration to remove boilerplate setup and mental overhead.  The `app/modules`, `app/stacks`, and `config/templates` are where you organized your code by convention and it should just work.  You also put [Tfvars]({% link _docs/config/tfvars.md %}) files in conventional folders and Terraspace will automatically use them. The "batteries are included", but they are replaceable. You can override things as necessary.
+Terraspace uses Conventions Over Configuration to remove boilerplate setup and mental overhead.  The `app/modules`, `app/stacks`, and `config/templates` are where you organized your code by convention and it should just work.  You also put [Tfvars]({% link _docs/config/tfvars.md %}) files in conventional folders and Terraspace will automatically use them. The "batteries are included but replaceable" You can override things as necessary.
 
 ## Tfvars Layering
 
