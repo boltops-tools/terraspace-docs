@@ -13,11 +13,11 @@ The tfvar files are processed and "layered".  Example:
 
 The tfvars files should generally be within the `app/stacks` folder, as stacks can include business-specific logic.  There are other ways to specific tfvar files:
 
-You can also specify tfvar files in the top-level `seed` folder. Covered more in [Additional Lookups]({% link _docs/tfvars/lookups.md %}).
-You can also specify the terraspace `--var-files` option on-the-fly.
-You can also specify var files with [CLI Args]({% link _docs/cli/args.md %}).
-You can also create a `config/terraform.tfvars` file that will get materialized.
-You can also also use the Terraform native `TF_VAR_name` env variables. Covered here: [Terraform Env Vars](https://www.terraform.io/docs/commands/environment-variables.html)
+* Specify tfvar files in the top-level `seed` folder. Covered more in [Additional Lookups]({% link _docs/tfvars/lookups.md %}).
+* Specify the terraspace `--var-files` option on-the-fly.
+* Specify var files with [CLI Args]({% link _docs/cli/args.md %}).
+* Create a `config/terraform.tfvars` file that will get materialized.
+* Use the Terraform native `TF_VAR_name` env variables. Covered here: [Terraform Env Vars](https://www.terraform.io/docs/commands/environment-variables.html)
 
 ## Examples
 
