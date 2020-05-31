@@ -54,6 +54,6 @@ Next, let's take a look at the `infra/config/templates/provider.tf` file.
 # }
 ```
 
-You can see it's actually commented out. This is because we have already configured `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, etc. We can generally leave the generated config files as-is.
+You can see it's actually commented out. This is because we have already configured `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, etc. It should be fine to leave the generated config files as-is.
 
 Next, we'll review generated app folder files.
