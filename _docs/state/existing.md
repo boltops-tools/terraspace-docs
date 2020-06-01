@@ -4,14 +4,14 @@ title: Configuring Terraspace with Existing Statefiles and Systems
 
 If you have existing terraform state files and want to use them with terraspace, you can do that. Here are a couple of approaches to keep your existing statefile:
 
-1. Logic in `config/templates/backend.rb`
+1. Logic in `config/terraform/backend.rb`
 2. Provide backend in the stack module itself
 
-## Logic in the config/templates/backend.rb
+## Logic in the config/terraform/backend.rb
 
-Since terraspace materializes the `config/templates/backend.rb` to the root module's folder being deployed, you can add logic in there to control the state file path. Example:
+Since terraspace materializes the `config/terraform/backend.rb` to the root module's folder being deployed, you can add logic in there to control the state file path. Example:
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 # Examples of mod_name: core, wordpress, instance, vpc, where this directory structure exists

@@ -4,13 +4,13 @@ title: Terraspace Concepts
 
 ## Up and Down Commands
 
-The `terraspace up` and `terraspace down` commands are how you create infrastructure with Terraspace. The `terraspace up` is ultimately calls `terraform apply` and `terraspace down` calls `terraform destroy`.  Before calling the terraform commands, terraspace does additional processing. For example, terraspace will materialize common source code files from [config/templates]({% link _docs/config.md %}) along with the deployed module.
+The `terraspace up` and `terraspace down` commands are how you create infrastructure with Terraspace. The `terraspace up` is ultimately calls `terraform apply` and `terraspace down` calls `terraform destroy`.  Before calling the terraform commands, terraspace does additional processing. For example, terraspace will materialize common source code files from [config/terraform]({% link _docs/config.md %}) along with the deployed module.
 
 {% include intro/modules-vs-stacks.md %}
 
 ## Conventions Over Configuration
 
-Terraspace uses Conventions Over Configuration to remove boilerplate setup and mental overhead.  The `app/modules`, `app/stacks`, and `config/templates` are where you organized your code by convention and it should just work.  You also put [Tfvars]({% link _docs/config/tfvars.md %}) files in conventional folders and Terraspace will automatically use them. The "batteries are included but replaceable" You can override things as necessary.
+Terraspace uses Conventions Over Configuration to remove boilerplate setup and mental overhead.  The `app/modules`, `app/stacks`, and `config/terraform` are where you organized your code by convention and it should just work.  You also put [Tfvars]({% link _docs/config/tfvars.md %}) files in conventional folders and Terraspace will automatically use them. The "batteries are included but replaceable" You can override things as necessary.
 
 ## Tfvars Layering
 

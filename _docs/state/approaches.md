@@ -25,7 +25,7 @@ In the beginning, teams who are starting off with Terraform state might use appr
 
 However, it is fraught with a huge caveat. It is possible that `terraform apply` intended only for development resources, unintentionally affect production resources, including accidental deletion.  There is no clear isolation between development and production resources.  You essentially have all your eggs in one basket. The single statefile for everything is strongly not recommended for this reason. Here's an example of the setup with terraspace anyway:
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 backend("s3",
@@ -47,7 +47,7 @@ The next caveat with this approach is that there's no distinction within an envi
 
 Essentially, it's a mud pie. It's like having one Admin permission policy for everyone. It's probably better to limit and control the blast radius of what can be affected. Here's an example of this setup with terraspace:
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 backend("s3",
@@ -82,7 +82,7 @@ An interesting point here is how we design the stacks, and group modules togethe
 
 All that being said, here's an example of this setup with terraspace:
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 backend("s3",

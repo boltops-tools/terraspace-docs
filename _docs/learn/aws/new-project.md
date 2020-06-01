@@ -13,8 +13,8 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
           create  infra
           create  infra/.gitignore
            exist  infra
-          create  infra/config/templates/backend.tf
-          create  infra/config/templates/provider.tf
+          create  infra/config/terraform/backend.tf
+          create  infra/config/terraform/provider.tf
     => Creating new module called example.
           create  infra/app/modules/example
           create  infra/app/modules/example/main.tf
@@ -31,7 +31,7 @@ In this case, the `--provider aws` is optional, since the default provider is aw
 
 ## Config Files
 
-Let's look at `infra/config/templates/backend.tf`
+Let's look at `infra/config/terraform/backend.tf`
 
 ```terraform
 terraform {
@@ -49,7 +49,7 @@ If you're already familiar with terraform, then you'll probably notice that ther
 
 When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the s3 bucket and dynamodb table for you.
 
-Next, let's take a look at the `infra/config/templates/provider.tf` file.
+Next, let's take a look at the `infra/config/terraform/provider.tf` file.
 
 ```terraform
 # provider "aws" {

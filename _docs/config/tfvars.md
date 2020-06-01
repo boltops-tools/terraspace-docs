@@ -4,7 +4,7 @@ title: Tfvars
 
 A useful example might be to create a global `terraform.tfvars` file.
 
-config/templates/terraform.tfvars
+config/terraform/terraform.tfvars
 
 ```terraform
 account_name = "my account"
@@ -26,4 +26,4 @@ Running:
 
     terraspace build instance
 
-Builds a `.terrspace-cache/dev/modules/instance/terraform.tfvars` using the `config/templates/terraform.tfvars`. This is useful if you want to have to set the same tfvars in all your modules.
+Builds a `.terrspace-cache/dev/modules/instance/terraform.tfvars` using the `config/terraform/terraform.tfvars`. This is useful if you want to have to set the same tfvars in all your modules.

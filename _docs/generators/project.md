@@ -11,8 +11,8 @@ The project generator creates a starter Terraspace project structure.
           create  infra
           create  infra/.gitignore
            exist  infra
-          create  infra/config/templates/backend.tf
-          create  infra/config/templates/provider.tf
+          create  infra/config/terraform/backend.tf
+          create  infra/config/terraform/provider.tf
           create  infra/app/modules
           create  infra/app/stacks
     ================================================================
@@ -46,8 +46,8 @@ You can also tell the project generator to generate a project with some starter 
           create  infra
           create  infra/.gitignore
            exist  infra
-          create  infra/config/templates/backend.tf
-          create  infra/config/templates/provider.tf
+          create  infra/config/terraform/backend.tf
+          create  infra/config/terraform/provider.tf
     => Creating new module called example.
           create  infra/app/modules/example
           create  infra/app/modules/example/main.tf

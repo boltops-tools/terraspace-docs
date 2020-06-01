@@ -4,7 +4,7 @@ title: Locals
 
 A useful example might be to create a global `locals.tf` file.
 
-config/templates/locals.tf
+config/terraform/locals.tf
 
 ```terraform
 locals {
@@ -15,7 +15,7 @@ locals {
 
 ## Materialization
 
-When you run `terraspace` commands, it will use the files in the `config/templates` folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
+When you run `terraspace` commands, it will use the files in the `config/terraform` folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
 
     ├── app
     │   └── modules
@@ -28,4 +28,4 @@ Running:
 
     terraspace build instance
 
-Builds a `.terrspace-cache/dev/modules/instance/locals.tf` using the `config/templates/locals.tf`. This is useful if you want to have the same locals available in your modules.
+Builds a `.terrspace-cache/dev/modules/instance/locals.tf` using the `config/terraform/locals.tf`. This is useful if you want to have the same locals available in your modules.

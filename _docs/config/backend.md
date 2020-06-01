@@ -2,7 +2,7 @@
 title: Backend Config
 ---
 
-You can configure the backend for terraform to use with `config/templates/backend.rb` or `config/templates/backend.tf`. Below are examples.
+You can configure the backend for terraform to use with `config/terraform/backend.rb` or `config/terraform/backend.tf`. Below are examples.
 
 You may also be interested in:
 
@@ -11,7 +11,7 @@ You may also be interested in:
 
 ## Materialization
 
-When you run `terraspace` commands, it will use the files in the `config/templates` folder and materialized them with the deployed module.  For example, let's say you have an `app/stacks/wordpress` stack:
+When you run `terraspace` commands, it will use the files in the `config/terraform` folder and materialized them with the deployed module.  For example, let's say you have an `app/stacks/wordpress` stack:
 
     ├── app
     │   ├── modules
@@ -26,7 +26,7 @@ Running:
 
     terraspace up wordpress
 
-Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/templates/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
+Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
 
 ## S3 Backend
 
@@ -103,7 +103,7 @@ You can also optionally write your backend config in Ruby. Here are some example
 
 ### S3 Backend
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 backend("s3",
@@ -119,7 +119,7 @@ backend("s3",
 
 Here's an example for a gcs backend with Ruby.
 
-config/templates/backend.rb
+config/terraform/backend.rb
 
 ```ruby
 backend("gcs",
