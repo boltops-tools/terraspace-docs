@@ -11,7 +11,7 @@ To destroy the resources, run:
 You’ll be prompted to make sure you really want to delete these resources.
 
     $ terraspace down demo
-    Materializing .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/dev/stacks/demo
     Current directory: .terraspace-cache/dev/stacks/demo
     => terraform init -get > /dev/null
     Built in .terraspace-cache/dev/stacks/demo

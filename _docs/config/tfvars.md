@@ -11,7 +11,7 @@ account_name = "my account"
 region = "us-west-2"
 ```
 
-## Materialization
+## Building
 
 When you run `terraspace` commands, it will use the files in the config folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
 

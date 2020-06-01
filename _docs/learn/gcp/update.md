@@ -9,7 +9,7 @@ Let's update the infrastructure.
 Terraspace will show you a preview of the changes and prompt you to update the infrastructure.
 
     $ terraspace up demo
-    Materializing .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/dev/stacks/demo
     Current directory: .terraspace-cache/dev/stacks/demo
     => terraform init -get > /dev/null
     Built in .terraspace-cache/dev/stacks/demo

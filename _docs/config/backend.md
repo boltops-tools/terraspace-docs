@@ -9,7 +9,7 @@ You may also be interested in:
 * [Statefile Approaches and Thoughts]({% link _docs/state/approaches.md %})
 * [Configuring Backends for Existing Systems]({% link _docs/state/existing.md %})
 
-## Materialization
+## Building
 
 When you run `terraspace` commands, it will use the files in the `config/terraform` folder and materialized them with the deployed module.  For example, let's say you have an `app/stacks/wordpress` stack:
 

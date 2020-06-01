@@ -13,7 +13,7 @@ locals {
 }
 ```
 
-## Materialization
+## Building
 
 When you run `terraspace` commands, it will use the files in the `config/terraform` folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
 
