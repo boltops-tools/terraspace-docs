@@ -49,65 +49,9 @@ You'll be prompted to make sure you really want to delete these resources.
           - account_replication_type       = "GRS" -> null
           - account_tier                   = "Standard" -> null
           - enable_https_traffic_only      = false -> null
-          - id                             = "/subscriptions/61bd6788-c44e-4677-bf0e-6c380785c8a8/resourceGroups/demo-resources-wildcat/providers/Microsoft.Storage/storageAccounts/sawildcat" -> null
-          - is_hns_enabled                 = false -> null
-          - location                       = "eastus" -> null
-          - name                           = "sawildcat" -> null
-          - primary_access_key             = (sensitive value)
-          - primary_blob_connection_string = (sensitive value)
-          - primary_blob_endpoint          = "https://sawildcat.blob.core.windows.net/" -> null
-          - primary_blob_host              = "sawildcat.blob.core.windows.net" -> null
-          - primary_connection_string      = (sensitive value)
-          - primary_dfs_endpoint           = "https://sawildcat.dfs.core.windows.net/" -> null
-          - primary_dfs_host               = "sawildcat.dfs.core.windows.net" -> null
-          - primary_file_endpoint          = "https://sawildcat.file.core.windows.net/" -> null
-          - primary_file_host              = "sawildcat.file.core.windows.net" -> null
-          - primary_location               = "eastus" -> null
-          - primary_queue_endpoint         = "https://sawildcat.queue.core.windows.net/" -> null
-          - primary_queue_host             = "sawildcat.queue.core.windows.net" -> null
-          - primary_table_endpoint         = "https://sawildcat.table.core.windows.net/" -> null
-          - primary_table_host             = "sawildcat.table.core.windows.net" -> null
-          - primary_web_endpoint           = "https://sawildcat.z13.web.core.windows.net/" -> null
-          - primary_web_host               = "sawildcat.z13.web.core.windows.net" -> null
-          - resource_group_name            = "demo-resources-wildcat" -> null
-          - secondary_access_key           = (sensitive value)
-          - secondary_connection_string    = (sensitive value)
-          - secondary_location             = "westus" -> null
-          - tags                           = {} -> null
-
-          - network_rules {
-              - bypass                     = [
-                  - "AzureServices",
-                ] -> null
-              - default_action             = "Allow" -> null
-              - ip_rules                   = [] -> null
-              - virtual_network_subnet_ids = [] -> null
-            }
-
-          - queue_properties {
-
-              - hour_metrics {
-                  - enabled               = true -> null
-                  - include_apis          = true -> null
-                  - retention_policy_days = 7 -> null
-                  - version               = "1.0" -> null
-                }
-
-              - logging {
-                  - delete                = false -> null
-                  - read                  = false -> null
-                  - retention_policy_days = 0 -> null
-                  - version               = "1.0" -> null
-                  - write                 = false -> null
-                }
-
-              - minute_metrics {
-                  - enabled               = false -> null
-                  - include_apis          = false -> null
-                  - retention_policy_days = 0 -> null
-                  - version               = "1.0" -> null
-                }
-            }
+          ...
+          removed to reduce output
+          ...
         }
 
     Plan: 0 to add, 0 to change, 3 to destroy.

@@ -32,65 +32,9 @@ Terraspace will show you a preview of the changes and prompt you to update the i
             account_replication_type       = "GRS"
             account_tier                   = "Standard"
           ~ enable_https_traffic_only      = true -> false
-            id                             = "/subscriptions/61bd6788-c44e-4677-bf0e-6c380785c8a8/resourceGroups/demo-resources-wildcat/providers/Microsoft.Storage/storageAccounts/sawildcat"
-            is_hns_enabled                 = false
-            location                       = "eastus"
-            name                           = "sawildcat"
-            primary_access_key             = (sensitive value)
-            primary_blob_connection_string = (sensitive value)
-            primary_blob_endpoint          = "https://sawildcat.blob.core.windows.net/"
-            primary_blob_host              = "sawildcat.blob.core.windows.net"
-            primary_connection_string      = (sensitive value)
-            primary_dfs_endpoint           = "https://sawildcat.dfs.core.windows.net/"
-            primary_dfs_host               = "sawildcat.dfs.core.windows.net"
-            primary_file_endpoint          = "https://sawildcat.file.core.windows.net/"
-            primary_file_host              = "sawildcat.file.core.windows.net"
-            primary_location               = "eastus"
-            primary_queue_endpoint         = "https://sawildcat.queue.core.windows.net/"
-            primary_queue_host             = "sawildcat.queue.core.windows.net"
-            primary_table_endpoint         = "https://sawildcat.table.core.windows.net/"
-            primary_table_host             = "sawildcat.table.core.windows.net"
-            primary_web_endpoint           = "https://sawildcat.z13.web.core.windows.net/"
-            primary_web_host               = "sawildcat.z13.web.core.windows.net"
-            resource_group_name            = "demo-resources-wildcat"
-            secondary_access_key           = (sensitive value)
-            secondary_connection_string    = (sensitive value)
-            secondary_location             = "westus"
-            tags                           = {}
-
-            network_rules {
-                bypass                     = [
-                    "AzureServices",
-                ]
-                default_action             = "Allow"
-                ip_rules                   = []
-                virtual_network_subnet_ids = []
-            }
-
-            queue_properties {
-
-                hour_metrics {
-                    enabled               = true
-                    include_apis          = true
-                    retention_policy_days = 7
-                    version               = "1.0"
-                }
-
-                logging {
-                    delete                = false
-                    read                  = false
-                    retention_policy_days = 0
-                    version               = "1.0"
-                    write                 = false
-                }
-
-                minute_metrics {
-                    enabled               = false
-                    include_apis          = false
-                    retention_policy_days = 0
-                    version               = "1.0"
-                }
-            }
+            ...
+            removed to reduce output
+            ...
         }
 
     Plan: 0 to add, 1 to change, 0 to destroy.
