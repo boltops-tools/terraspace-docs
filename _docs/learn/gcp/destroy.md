@@ -54,6 +54,10 @@ You'll be prompted to make sure you really want to delete these resources.
       Terraform will destroy all your managed infrastructure, as shown above.
       There is no undo. Only 'yes' will be accepted to confirm.
 
+      Enter a value:
+
+Once again, we prompted to `Enter a value:`. Type `yes` and press enter to destroy the infrastructure.
+
       Enter a value: yes
 
     module.bucket.google_storage_bucket.this: Destroying... [id=bucket-optimum-gazelle]
