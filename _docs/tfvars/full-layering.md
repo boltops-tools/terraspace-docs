@@ -4,20 +4,20 @@ title: "Tfvars: Full Layering"
 
 Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. Here is full layering order:
 
-Name/Pattern                 | Example
------------------------------|---------------
-base                         | base.tfvars
-env                          | dev.tfvars
-region/base                  | us-west-2/base.tfvars (provider specific)
-region/env                   | us-west-2/dev.tfvars (provider specific)
-provider/base                | aws/base.tfvars (provider specific)
-provider/env                 | aws/dev.tfvars (provider specific)
-provider/region/base         | aws/us-west-2/base.tfvars (provider specific)
-provider/region/env          | aws/us-west-2/dev.tfvars (provider specific)
-provider/account/region/base | aws/112233445566/us-west-2/base.tfvars (provider specific)
-provider/account/region/env  | aws/112233445566/us-west-2/dev.tfvars (provider specific)
+Name/Pattern                   | Example
+-------------------------------|---------------
+base                           | base.tfvars
+env                            | dev.tfvars
+region/base                    | us-west-2/base.tfvars (provider specific)
+region/env                     | us-west-2/dev.tfvars (provider specific)
+provider/base                  | aws/base.tfvars (provider specific)
+provider/env                   | aws/dev.tfvars (provider specific)
+provider/region/base           | aws/us-west-2/base.tfvars (provider specific)
+provider/region/env            | aws/us-west-2/dev.tfvars (provider specific)
+provider/namespace/region/base | aws/112233445566/us-west-2/base.tfvars (provider specific)
+provider/namespace/region/env  | aws/112233445566/us-west-2/dev.tfvars (provider specific)
 
-The "account" depends on the provider. IE: For aws it's account. For google, account maps to the project.
+The "namespace" provider dependent. IE: For AWS it's account, for Azure it's subscription, and for Google it's project. Also, for Azure region maps to location.
 
 You can take advantage of the layering order to deploy the same infrastructure code to different regions, simply switch your env to use a different region and run `terraspace up`.
 

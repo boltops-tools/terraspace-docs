@@ -12,7 +12,7 @@ When you run `terraspace` commands, it will use the files in the config folder a
     │   └── modules
     │       └── instance
     └── config
-        └── templates
+        └── terraform
             └── provider.tf
 
 Running:
@@ -33,6 +33,14 @@ provider "aws" {
 ```
 
 Notice, how you are able to use ERB templating in the HCL file.
+
+### Azure Provider
+
+```terraform
+provider "azurerm" {
+  features {} # required
+}
+```
 
 ### Google Provider
 
@@ -56,6 +64,14 @@ provider("aws",
 )
 ```
 
+### Azure Provider
+
+```ruby
+provider("azurerm",
+  features: {} # required
+)
+```
+
 ### Google Provider
 
 ```ruby
@@ -68,7 +84,7 @@ provider("google",
 
 ## Implicit Providers
 
-Most Terraform examples out there explicitly define the provider.  If you have your environment configured properly, you don't really need to explicitly declare your provider. So you don't even need the `config/terraform/provider.tf` file.
+Most Terraform examples out there explicitly define the provider.  If you have your environment configured, you don't really need to explicitly declare your provider. You don't even need the `config/terraform/provider.tf` file.
 
 ### AWS Implicit Provider
 
@@ -86,3 +102,5 @@ Here's an example of configuring the env variables in your profile.
     export GOOGLE_PROJECT=$(cat ~/.google/credentials.json  | jq -r '.project_id')
 
 Note, you'll have to download your own `~/.google/credentials.json` file.
+
+In real-world use, it is recommendeded to pin Terraform provider versions when your infrastructure code is ready.

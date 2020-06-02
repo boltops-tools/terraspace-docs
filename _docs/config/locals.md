@@ -21,7 +21,7 @@ When you run `terraspace` commands, it will use the files in the `config/terrafo
     │   └── modules
     │       └── instance
     └── config
-        └── templates
+        └── terraform
             └── locals.tf
 
 Running:

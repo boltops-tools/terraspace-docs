@@ -11,7 +11,10 @@ config/plugins/azure.rb
 ```ruby
 TerraspacePluginAzure.configure do |config|
   config.auto_create = true
+
+  config.storage_account.sku.name = "Standard_LRS"
+  config.storage_account.sku.tier = "Standard"
 end
 ```
 
-For more docs, refer to the plugin itself: [terraspace_plugin_azure](https://github.com/boltops-tools/terraspace_plugin_azure).
+For more docs, refer to the plugin itself: [terraspace_plugin_azurerm](https://github.com/boltops-tools/terraspace_plugin_azurerm).

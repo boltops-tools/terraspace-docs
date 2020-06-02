@@ -16,7 +16,8 @@ Within the app folder there are modules and stacks folders.
     │       ├── core
     │       └── wordpress
     └── config
-        ├── backend.tf
-        └── provider.tf
+        └── terraform
+            ├── backend.tf
+            └── provider.tf
 
 {% include intro/modules-vs-stacks.md %}

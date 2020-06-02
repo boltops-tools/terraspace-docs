@@ -19,7 +19,7 @@ When you run `terraspace` commands, it will use the files in the `config/terrafo
     │   └── stacks
     │       └── wordpress
     └── config
-        └── templates
+        └── terraform
             └── backend.tf
 
 Running:
@@ -33,9 +33,9 @@ Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/te
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "<%= backend_expand("s3", "terraform-state-:ACCOUNT-:REGION-:ENV") %>"
-    key            = "<%= backend_expand("s3", ":REGION/:ENV/:BUILD_DIR/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
-    region         = "<%= backend_expand("s3", ":REGION" %>"
+    bucket         = "<%= backend_expand('s3', 'terraform-state-:ACCOUNT-:REGION-:ENV') %>"
+    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
+    region         = "<%= backend_expand('s3', ':REGION' %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
@@ -52,13 +52,36 @@ Results in:
 
 You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
 
+## Azure Backend
+
+```terraform
+# SUBSCRIPTION_HASH is a short 4-char consistent hash of the longer subscription id.
+# This is useful because azure storage accounts not allowed special characters and can only be 24 chars long.
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "<%= backend_expand('azurerm', 'terraform-resources-:LOCATION') %>"
+    storage_account_name = "<%= backend_expand('azurerm', 'ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
+    container_name       = "terraform-state"
+    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR') %>"
+  }
+}
+```
+
+So
+
+    ts:SUBSCRIPTION_HASH:LOCATION:ENV
+
+Results in:
+
+    tswxyzeastusdev
+
 ## GCS Backend
 
 ```terraform
 terraform {
   backend "gcs" {
-    bucket = "<%= backend_expand("gcs", "terraform-state-:PROJECT-:REGION-:ENV") %>"
-    prefix = "<%= backend_expand("gcs", ":REGION/:ENV/:BUILD_DIR") %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
+    bucket = "<%= backend_expand('gcs', 'terraform-state-:PROJECT-:REGION-:ENV') %>"
+    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
   }
 }
 ```
@@ -82,15 +105,22 @@ ENV | development | Terraspace env. Can be set like so `TS_ENV=development`
 MOD_NAME | wordpress | The module name or stack name, which is also a module.
 TYPE_DIR | stacks | The type name. IE: stacks or modules
 
-s3 specific variables:
+AWS specific variables:
 
 Variable | Example | Description
 --- | --- | ---
 ACCOUNT | 112233445566 | AWS Account Id
 REGION | us-west-2 | AWS Region
 
+Azure specific variables:
 
-gcs specific variables:
+Variable | Example | Description
+--- | --- | ---
+LOCATION         | eastus | Azure Location
+SUSCRIPTION      | EXAMPLE88-c44e-4677-bf0eEXAMPLE | Azure subscription id
+SUSCRIPTION_HASH | wxyz | Short consistent hash based on subscription id
+
+Google specific variables:
 
 Variable | Example | Description
 --- | --- | ---

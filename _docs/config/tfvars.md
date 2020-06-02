@@ -19,7 +19,7 @@ When you run `terraspace` commands, it will use the files in the config folder a
     │   └── modules
     │       └── instance
     └── config
-        └── templates
+        └── terraform
             └── terraform.tfvars
 
 Running:
