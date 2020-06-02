@@ -8,5 +8,6 @@ Step-by-step guides for creating, deploying, and managing infrastructure with Te
 
 <div class="container cloud-logos">
   <a href="{% link _docs/learn/aws.md %}"><img src="/img/cloud/aws.png" /></a>
+  <a href="{% link _docs/learn/azure.md %}"><img src="/img/cloud/azure.png" /></a>
   <a href="{% link _docs/learn/gcp.md %}"><img src="/img/cloud/gcp.png" /></a>
 </div>
