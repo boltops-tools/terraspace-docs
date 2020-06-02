@@ -31,14 +31,14 @@ In this case, the `--provider aws` is optional, since the default provider is aw
 
 ## Config Files
 
-Let's look at `infra/config/terraform/backend.tf`
+Let's look at `config/terraform/backend.tf`
 
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "<%= backend_expand("s3", "terraform-state-:ACCOUNT-:REGION-:ENV") %>"
-    key            = "<%= backend_expand("s3", ":REGION/:ENV/:BUILD_DIR/terraform.tfstate") %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
-    region         = "<%= backend_expand("s3", ":REGION") %>"
+    bucket         = "<%= backend_expand('s3', 'terraform-state-:ACCOUNT-:REGION-:ENV') %>"
+    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    region         = "<%= backend_expand('s3', ':REGION') %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
@@ -49,7 +49,7 @@ If you're already familiar with terraform, then you'll probably notice that ther
 
 When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the s3 bucket and dynamodb table for you.
 
-Next, let's take a look at the `infra/config/terraform/provider.tf` file.
+Next, let's take a look at the `config/terraform/provider.tf` file.
 
 ```terraform
 # provider "aws" {
@@ -57,6 +57,6 @@ Next, let's take a look at the `infra/config/terraform/provider.tf` file.
 # }
 ```
 
-You can see it's actually commented out. This is because we have already configured `AWS_PROFILE` and `AWS_REGION`. It should be fine to leave the generated config files as-is.
+You can see it's actually commented out. This is because we have already configured `AWS_PROFILE` and `AWS_REGION`. It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
 
 Next, we'll review generated app folder files.

@@ -2,13 +2,13 @@
 title: Destroy Infrastructure
 ---
 
-Now that we’ve seen how to deploy infra, let's clean up and tear down the resources.
+Now that we've seen how to deploy infra, let's clean up and tear down the resources.
 
 To destroy the resources, run:
 
     terraspace down demo
 
-You’ll be prompted to make sure you really want to delete these resources.
+You'll be prompted to make sure you really want to delete these resources.
 
     $ terraspace down demo
     Building .terraspace-cache/dev/stacks/demo

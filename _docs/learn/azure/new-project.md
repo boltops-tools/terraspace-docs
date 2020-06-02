@@ -4,11 +4,11 @@ title: New Project
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 
-    $ terraspace new project infra --provider google --examples
+    $ terraspace new project infra --provider azurerm --examples
 
 For this tutorial, we're using the `--examples` option to generate a starter example.
 
-    $ terraspace new project infra --provider google --examples
+    $ terraspace new project infra --provider azurerm --examples
     => Creating new project called infra.
           create  infra
           create  infra/.gitignore
@@ -32,28 +32,30 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
 Let's look at `config/terraform/backend.tf`
 
 ```terraform
+# SUBSCRIPTION_HASH is a short 4-char consistent hash of the longer subscription id.
+# This is useful because azure storage accounts not allowed special characters and can only be 24 chars long.
 terraform {
-  backend "gcs" {
-    bucket = "<%= backend_expand('gcs', 'terraform-state-:PROJECT-:REGION-:ENV') %>" # expanded by terraspace IE: terraform-state-project-us-central1-dev
-    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # expanded by terraspace IE: us-central1/dev/modules/vm
+  backend "azurerm" {
+    resource_group_name  = "<%= backend_expand('azurerm', 'terraform-resources-:LOCATION') %>"
+    storage_account_name = "<%= backend_expand('azurerm', 'ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
+    container_name       = "terraform-state"
+    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR') %>"
   }
 }
 ```
 
 If you're already familiar with terraform, then you'll probably notice that there's ERB templating.  Terraspace allows you use templating in your tf files. When we deploy the terraspace project, it compiles the config file down to a standard terraform file. The templating is particularly useful in `backend.tf` as it gives dynamic control over bucket, key, and region.
 
-When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the google cloud storage bucket for you.
+When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the s3 bucket and dynamodb table for you.
 
 Next, let's take a look at the `config/terraform/provider.tf` file.
 
 ```terraform
-# provider "google" {
-#   project = "REPLACE_ME"
-#   region  = "us-central1"   # update to your region
-#   zone    = "us-central1-a" # update to your zone
-# }
+provider "azurerm" {
+  features {} # required
+}
 ```
 
-You can see it's actually commented out. This is because we have already configured `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, etc. It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
+This is because we have already configured `Azure_PROFILE` and `Azure_REGION`. It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
 
 Next, we'll review generated app folder files.
