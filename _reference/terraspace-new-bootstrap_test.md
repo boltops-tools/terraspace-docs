@@ -12,4 +12,10 @@ reference: true
 Generates bootstrap test setup
 
 
+## Options
+
+```
+[--dir=DIR]  # directory to write to
+             # Default: .
+```
 
