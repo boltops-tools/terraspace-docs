@@ -56,6 +56,6 @@ provider "azurerm" {
 }
 ```
 
-This is because we have already configured `Azure_PROFILE` and `Azure_REGION`. It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
+It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
 
 Next, we'll review generated app folder files.
