@@ -9,7 +9,7 @@ Configure Azure so Terraspace can connect to it. The recommended way is to:
 
 ## Example
 
-When you run `az login` you'll be greeted with instructions to open up a webpage entire the provided device token id.
+When you run `az login` you'll be greeted with instructions to open up a webpage and enter the provided device token id.
 
     $ az login
     To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code EXAMPLE12 to authenticate.
