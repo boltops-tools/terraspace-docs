@@ -48,7 +48,7 @@ Notice, the variable notation. Terraspace expands it out, substituting actually 
 
 Results in:
 
-    us-west-2/development/stacks/wordpress/terraform.tfstate
+    us-west-2/dev/stacks/wordpress/terraform.tfstate
 
 You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
 
@@ -92,7 +92,7 @@ So
 
 Results in:
 
-    us-central1/development/stacks/wordpress
+    us-central1/dev/stacks/wordpress
 
 ## Variables Available
 
@@ -101,7 +101,7 @@ Common variables available:
 Variable | Example | Description
 --- | --- | ---
 BUILD_DIR | stacks/wordpress | The build directory name.
-ENV | development | Terraspace env. Can be set like so `TS_ENV=development`
+ENV | dev | Terraspace env. Can be set like so `TS_ENV=development`
 MOD_NAME | wordpress | The module name or stack name, which is also a module.
 TYPE_DIR | stacks | The type name. IE: stacks or modules
 
