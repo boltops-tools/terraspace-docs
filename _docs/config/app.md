@@ -2,7 +2,7 @@
 title: App Config
 ---
 
-You can configure terraspace itself with `config/app.rb`. Note, at the file is directly within the `config` folder.
+You can configure terraspace itself with `config/app.rb`. This file is directly within the `config` folder.
 
 config/app.rb
 
