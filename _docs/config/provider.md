@@ -2,11 +2,11 @@
 title: Provider Config
 ---
 
-You can configure the backend for terraform to use with `config/terraform/provider.rb` or `config/terraform/provider.tf`. The files in the config folder get materialized to each module you deploy.
+You can configure the backend for terraform to use with `config/terraform/provider.rb` or `config/terraform/provider.tf`. The files in the config folder get built with the module you deploy.
 
 ## Building
 
-When you run `terraspace` commands, it will use the files in the config folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
+When you run `terraspace` commands, it will use the files in the config folder and builds them with the deployed module.  For example, let's say you have an `app/modules/instance` module:
 
     ├── app
     │   └── modules

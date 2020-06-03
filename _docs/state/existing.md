@@ -9,7 +9,7 @@ If you have existing terraform state files and want to use them with terraspace,
 
 ## Logic in the config/terraform/backend.rb
 
-Since terraspace materializes the `config/terraform/backend.rb` to the root module's folder being deployed, you can add logic in there to control the state file path. Example:
+Since terraspace builds the `config/terraform/backend.rb` to the root module's folder being deployed, you can add logic in there to control the state file path. Example:
 
 config/terraform/backend.rb
 

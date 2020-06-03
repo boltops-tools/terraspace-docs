@@ -15,7 +15,7 @@ locals {
 
 ## Building
 
-When you run `terraspace` commands, it will use the files in the `config/terraform` folder and materialized withdeployed module.  For example, let's say you have an `app/modules/instance` module:
+When you run `terraspace` commands, it will build files in the `config/terraform` folder and with deployed module.  For example, let's say you have an `app/modules/instance` module:
 
     ├── app
     │   └── modules

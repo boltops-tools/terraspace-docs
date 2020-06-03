@@ -4,7 +4,7 @@ title: Terraspace Concepts
 
 ## Up and Down Commands
 
-The `terraspace up` and `terraspace down` commands are how you create infrastructure with Terraspace. The `terraspace up` ultimately calls `terraform apply` and `terraspace down` calls `terraform destroy`.  Before calling the terraform commands, terraspace does additional processing. For example, terraspace will materialize common source code files from [config/terraform]({% link _docs/config.md %}) along with the deployed module.
+The `terraspace up` and `terraspace down` commands are how you create infrastructure with Terraspace. The `terraspace up` ultimately calls `terraform apply` and `terraspace down` calls `terraform destroy`.  Before calling the terraform commands, terraspace does additional processing. For example, terraspace will build common source code files from [config/terraform]({% link _docs/config.md %}) along with the deployed module.
 
 {% include intro/modules-vs-stacks.md %}
 
