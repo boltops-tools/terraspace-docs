@@ -34,7 +34,7 @@ Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/te
 terraform {
   backend "s3" {
     bucket         = "<%= backend_expand('s3', 'terraform-state-:ACCOUNT-:REGION-:ENV') %>"
-    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/development/modules/vm/terraform.tfstate
+    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
     region         = "<%= backend_expand('s3', ':REGION' %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
@@ -81,7 +81,7 @@ Results in:
 terraform {
   backend "gcs" {
     bucket = "<%= backend_expand('gcs', 'terraform-state-:PROJECT-:REGION-:ENV') %>"
-    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/development/modules/vm
+    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
   }
 }
 ```
@@ -101,7 +101,7 @@ Common variables available:
 Variable | Example | Description
 --- | --- | ---
 BUILD_DIR | stacks/wordpress | The build directory name.
-ENV | dev | Terraspace env. Can be set like so `TS_ENV=development`
+ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
 MOD_NAME | wordpress | The module name or stack name, which is also a module.
 TYPE_DIR | stacks | The type name. IE: stacks or modules
 
