@@ -15,7 +15,7 @@ In fact, you can use Terraspace to build the files first, cd into the `.terraspa
     terraform init
     terraform apply
 
-Once you're in the `.terraspace-cache folder`, it's regular terraform at that point.
+Once you're in the `.terraspace-cache` folder, it's regular terraform at that point.
 
 ## HCL ERB Templating: A little extra power
 
