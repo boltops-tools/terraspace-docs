@@ -1,5 +1,5 @@
 ---
-title: "Terraspace Automation: Continuous Integration"
+title: "Automation: Continuous Integration"
 ---
 
 You can run Terraspace in continuous integration setup or automated pipeline with tools like Jenkins, [Cody](https://cody.run/) (AWS CodeBuild), etc with some flags. Here's an example:
