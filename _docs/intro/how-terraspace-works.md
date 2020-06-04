@@ -21,12 +21,12 @@ Once you're in the `.terraspace-cache` folder, it's regular terraform at that po
 
 Terraspace supports ERB templating. This minor enhancement adds incredible power.
 
-This allows you to use Ruby, a full programming language. Terraspace tries to give you the best of both worlds. You're still in the Terraform declarative land but got a little extra power with ERB. Since HCL the native Terraform language, you should generally stick to it. However, terraspace allows you to reach to this additional power when needed.
+Terraspace tries to give you the best of both worlds. You get the Terraform HCL declarative power, at the same time, it gives you a little extra power with ERB. Terraspace allows you to reach for this additional power when needed.
 
-If you really prefer not to use HCL, then Terraspace also has a Ruby DSL. The DSL builds `.json` files that Terraform understands just like `.tf` files. Note, the Ruby DSL is under development. HCL is pretty powerful, so would generally stick to it. Others will be more used to seeing HCL also.
+If you prefer not to use HCL, then Terraspace also has a Ruby DSL. The DSL builds `.json` files that Terraform understands just like `.tf` files. Generally, would stick to HCL, as it's others are probably used to seeing.
 
 ## Backend State Storage
 
-Terraspace automatically creates backend state storage resources like s3 buckets, dynamodb tables, gcs buckets. This added convenience is one less thing you don't have to worry about. You can focus on code instead.
+Terraspace can create backend state storage resources like s3 buckets, dynamodb tables, azure storage accounts, and gcs buckets automatically. This added convenience is one less thing you don't have to worry about. You can focus on code instead.
 
 {% include intro/testing.md %}

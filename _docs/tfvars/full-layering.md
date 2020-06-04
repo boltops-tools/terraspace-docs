@@ -47,6 +47,37 @@ You can use the same code for different environments in the different regions al
     AWS_REGION=us-east-1 TS_ENV=prod terraspace up demo
     AWS_REGION=us-west-2 TS_ENV=prod terraspace up demo
 
+## Azure Example
+
+Here's a structure that takes advantage of layering and multiple-locations for Azure:
+
+    app/stacks/demo/tfvars
+    ├── eastus
+    │   ├── dev.tfvars
+    │   └── prod.tfvars
+    └── westus
+        ├── dev.tfvars
+        └── prod.tfvars
+
+For Azure, switching locations can be done by using the `az configure` command:
+
+    az configure --defaults location=eastus
+    terraspace up demo
+    az configure --defaults location=westus
+    terraspace up demo
+
+Note, you check the current Azure location, you can use:
+
+    az configure --list-defaults
+    cat ~/.azure/config # also works, it's where az writes settings
+
+You can use the same code for different environments in the different regions also:
+
+    az configure --defaults location=eastus
+    TS_ENV=prod terraspace up demo
+    az configure --defaults location=westus
+    TS_ENV=prod terraspace up demo
+
 ## Google Cloud Example
 
 Here's a structure that takes advantage of layering and multiple-regions for Google Cloud:

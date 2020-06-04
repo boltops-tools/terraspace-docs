@@ -31,6 +31,8 @@ Layering combines the base layer with the TS_ENV specific layer. Another example
     1-base.auto.tfvars  2-prod.auto.tfvars
     $
 
+Terraform automatically loads all files in the directory with any variation of `*.auto.tfvars`. So these built tfvars files automatically load.
+
 ## Other Ways to Set Variables
 
 There are other ways to specific tfvar files:

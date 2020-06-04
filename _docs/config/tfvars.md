@@ -2,7 +2,7 @@
 title: Tfvars
 ---
 
-A useful example might be to create a global `terraform.tfvars` file.
+A useful example might be to create a global `terraform.tfvars` file. Remember, Terraform automatically loads all files in the directory with the exact name of `terraform.tfvars`.
 
 config/terraform/terraform.tfvars
 
