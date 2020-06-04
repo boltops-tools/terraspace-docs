@@ -15,7 +15,7 @@ end
 
 ## Custom Logger
 
-You can the logger to a custom logger.
+To use a custom logger.
 
 ```ruby
 Terraspace.configure do |config|
