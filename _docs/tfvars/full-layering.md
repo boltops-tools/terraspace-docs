@@ -66,17 +66,17 @@ For Azure, switching locations can be done by using the `az configure` command:
     az configure --defaults location=westus
     terraspace up demo
 
-Note, you check the current Azure location, you can use:
-
-    az configure --list-defaults
-    cat ~/.azure/config # also works, it's where az writes settings
-
 You can use the same code for different environments in the different regions also:
 
     az configure --defaults location=eastus
     TS_ENV=prod terraspace up demo
     az configure --defaults location=westus
     TS_ENV=prod terraspace up demo
+
+Note, you check the current Azure location, you can use:
+
+    az configure --list-defaults
+    cat ~/.azure/config # also works, it's where az writes settings
 
 ## Google Cloud Example
 
