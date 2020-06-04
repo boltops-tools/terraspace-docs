@@ -42,3 +42,23 @@ command("init", "apply",
   env: {TF_VAR_var_from_environment: "value"},
 )
 ```
+
+## With Shorthand
+
+You can use the `with_*` shorthand helpers to target terraform commands that use certain arguments.
+
+Helper | Description
+--- | ---
+with_input | Commands that make use of the `-input` argument.
+with_locking | Commands that make use of locking, the `-lock-timeout` argument.
+with_parallelism | Commands that make use parallelism, the `-parallelism` argument.
+with_vars | Commands that make use of the `-var` or `-var-file` args.
+
+### Example
+
+```ruby
+commands(:with_vars,
+  env: {TF_VAR_var_from_environment: "value"},
+  var_files: ["a.tfvars", "b.tfvars"],
+)
+```
