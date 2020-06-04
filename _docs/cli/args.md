@@ -49,10 +49,10 @@ You can use the `with_*` shorthand helpers to target terraform commands that use
 
 Helper | Description
 --- | ---
-with_input | Commands that make use of the `-input` argument.
-with_locking | Commands that make use of locking, the `-lock-timeout` argument.
-with_parallelism | Commands that make use parallelism, the `-parallelism` argument.
-with_vars | Commands that make use of the `-var` or `-var-file` args.
+with_input | Commands that take the `-input` argument.
+with_locking | Commands that take the `-lock-timeout` argument.
+with_parallelism | Commands that take the `-parallelism` argument.
+with_vars | Commands that take the `-var` or `-var-file` args.
 
 ### Example
 
