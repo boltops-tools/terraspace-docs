@@ -45,16 +45,7 @@ command("init", "apply",
 
 ## With Shorthand
 
-You can use the `with_*` shorthand helpers to target terraform commands that use certain arguments.
-
-Helper | Description
---- | ---
-with_input | Commands that take the `-input` argument.
-with_locking | Commands that take the `-lock-timeout` argument.
-with_parallelism | Commands that take the `-parallelism` argument.
-with_vars | Commands that take the `-var` or `-var-file` args.
-
-### Example
+You can use shorthand notation to target terraform commands that use certain arguments. The shorthand starts with `with_`.  Example:
 
 ```ruby
 commands(:with_vars,
@@ -62,3 +53,12 @@ commands(:with_vars,
   var_files: ["a.tfvars", "b.tfvars"],
 )
 ```
+
+Here are the available shorthands:
+
+Shorthand | Description
+--- | ---
+with_input | Commands that take the `-input` argument.
+with_locking | Commands that take the `-lock-timeout` argument.
+with_parallelism | Commands that take the `-parallelism` argument.
+with_vars | Commands that take the `-var` or `-var-file` args.
