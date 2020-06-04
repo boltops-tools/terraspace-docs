@@ -13,6 +13,8 @@ config/plugins/aws.rb
 
 ```ruby
 TerraspacePluginAws.configure do |config|
+  config.auto_create = true # set to false to completely disable auto creation
+
   config.s3.encryption = true
   config.s3.enforce_ssl = true
   config.s3.versioning = true

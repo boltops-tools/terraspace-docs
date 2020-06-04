@@ -12,6 +12,8 @@ config/plugins/google.rb
 
 ```ruby
 TerraspacePluginGoogle.configure do |config|
+  config.auto_create = true # set to false to completely disable auto creation
+
   config.gcs.versioning = true
 end
 ```

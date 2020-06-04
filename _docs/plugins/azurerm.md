@@ -10,7 +10,7 @@ config/plugins/azure.rb
 
 ```ruby
 TerraspacePluginAzure.configure do |config|
-  config.auto_create = true
+  config.auto_create = true # set to false to completely disable auto creation
 
   config.storage_account.sku.name = "Standard_LRS"
   config.storage_account.sku.tier = "Standard"
