@@ -15,5 +15,6 @@ The usual testing process will:
 
 Tests for both module-level and project-level tests are supported:
 
+* [Test Harness]({% link _docs/testing/test-harness.md %}): Test Harness Concept
 * [Module-Level Testing]({% link _docs/testing/module.md %}): Testing reusable modules.
 * [Project-Level Testing]({% link _docs/testing/project.md %}): Testing your project code.

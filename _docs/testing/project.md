@@ -56,6 +56,8 @@ describe "main" do
       tfvars:  {demo: "spec/fixtures/tfvars/demo.tfvars"},
       # create config if needed. The folder will be copied over
       # config:  "spec/fixtures/config",
+      # Additional folders that get copied straight over from the project
+      # folders: %w[external]
     )
     terraspace.up("demo") # provision real resources
   end
@@ -86,4 +88,4 @@ To run:
     bundle
     terraspace test
 
-{% include testing/what-happens.md %}
+{% include testing/test-process.md %}

@@ -68,4 +68,4 @@ To run the test, you should be in the module folder itself.
     bundle
     terraspace test
 
-{% include testing/what-happens.md %}
+{% include testing/test-process.md %}
