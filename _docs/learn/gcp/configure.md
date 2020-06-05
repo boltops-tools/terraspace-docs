@@ -9,6 +9,10 @@ Configure Google Cloud so Terraspace can connect to it. The recommended way is t
 
 ## Example
 
+To configure your `GOOGLE_APPLICATION_CREDENTIALS` you need to set up a service account. Follow the Google [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started).
+
+You get get a credentials file that looks something like this:
+
 ~/.google/config
 
 ```json
