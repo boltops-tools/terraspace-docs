@@ -5,7 +5,7 @@ title: Configure Azure
 Configure Azure so Terraspace can connect to it. The recommended way is to:
 
 1. login with `az login`
-2. setting your `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` environment variables
+2. setting your `ARM_CLIENT_ID`, `ARM_CLIENT_SECRET`, `ARM_SUBSCRIPTION_ID`, `ARM_TENANT_ID` environment variables
 
 ## Example
 
@@ -32,7 +32,7 @@ The [azure_check](https://github.com/boltops-tools/azure_check) script is useful
     Successfully connected to Azure with your ARM_CLIENT_ID and ARM_CLIENT_SECRET
     $
 
-It is important to name the variables with the prefix `ARM`, as the [Terraform Azurerm Provider](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html) uses these env variables also.
+It is important to name the variables with the prefix `ARM` and also configure the other variables, as the [Terraform Azurerm Provider](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html) uses these env variables also.  Particularly, if you are setting up terraspace to run in a [Continuous Integration workflow]({% link _docs/ci-automation.md %}).
 
 ## Resources
 
