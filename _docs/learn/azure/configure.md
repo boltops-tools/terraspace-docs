@@ -32,6 +32,8 @@ The [azure_check](https://github.com/boltops-tools/azure_check) script is useful
     Successfully connected to Azure with your ARM_CLIENT_ID and ARM_CLIENT_SECRET
     $
 
+It is important to name the variables with the prefix `ARM`, as the [Terraform Azurerm Provider](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html) uses these env variables also.
+
 ## Resources
 
 * [Azure AD application Docs](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
