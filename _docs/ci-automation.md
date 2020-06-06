@@ -11,7 +11,7 @@ You can run Terraspace in continuous integration setup or automated pipeline wit
 
 The `--auto` flag tells Terraspace to run an automated and unattended manner.
 
-* Terraspace set the `TF_IN_AUTOMATION=1` env variable, which makes some minor adjustments to Terraform output to de-emphasize specific commands to run as covered by [Running Terraform in Automation](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation).
+* Terraspace sets the `TF_IN_AUTOMATION=1` env variable, which makes some minor adjustments to Terraform output to de-emphasize specific commands to run as covered by [Running Terraform in Automation](https://learn.hashicorp.com/terraform/development/running-terraform-in-automation).
 * In the plan stage, Terraspace sets `-input=false` to when calling `terraform plan` to disable any prompts that may occur.
 * In the up stage, terraspace sets `-input=false`, `-auto-approve` and skip the `terraform init` call.
 
