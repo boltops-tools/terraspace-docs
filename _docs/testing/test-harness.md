@@ -2,7 +2,7 @@
 title: Test Harness Concept
 ---
 
-For testing, Terraspace introduces the concept of a "Test Harness".  A test harness is a generated Terraspace project. You specify code from your actual Terraspace project and from fixtures to be used in the Test Harness. This allows you to mock our parts of your project and test the modules.
+For testing, Terraspace introduces the concept of a "Test Harness".  A test harness is a generated Terraspace project. You specify code from your actual Terraspace project and from fixtures to be used in the Test Harness. This allows you to mock out parts of your project and test the modules.
 
 {% include testing/test-process.md %}
 
