@@ -2,26 +2,18 @@
 title: "Tfvars: Full Layering"
 ---
 
-Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. Here is full layering order:
+Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. This table shows the full layering order. For the sake of concisness, the layers are show in pairs, IE: base.tfvars and dev.tfvars is shown together.
 
 Name/Pattern                   | Example
 -------------------------------|---------------
-base                           | base.tfvars
-env                            | dev.tfvars
-region/base                    | us-west-2/base.tfvars (provider specific)
-region/env                     | us-west-2/dev.tfvars (provider specific)
-namespace/base                 | 112233445566/base.tfvars (provider specific)
-namespace/env                  | 112233445566/dev.tfvars (provider specific)
-namespace/region/base          | 112233445566/us-west-2/base.tfvars (provider specific)
-namespace/region/env           | 112233445566/us-west-2/dev.tfvars (provider specific)
-provider/base                  | aws/base.tfvars (provider specific)
-provider/env                   | aws/dev.tfvars (provider specific)
-provider/region/base           | aws/us-west-2/base.tfvars (provider specific)
-provider/region/env            | aws/us-west-2/dev.tfvars (provider specific)
-provider/namespace/base        | aws/112233445566/base.tfvars (provider specific)
-provider/namespace/env         | aws/112233445566/dev.tfvars (provider specific)
-provider/namespace/region/base | aws/112233445566/us-west-2/base.tfvars (provider specific)
-provider/namespace/region/env  | aws/112233445566/us-west-2/dev.tfvars (provider specific)
+base & env                     | base.tfvars and dev.tfvars
+region                         | us-west-2/{base,dev}.tfvars
+namespace                      | 112233445566/{base,dev}.tfvars (provider specific)
+namespace/region               | 112233445566/us-west-2/{base,dev}.tfvars (provider specific)
+provider                       | aws/{base,dev}.tfvars (provider specific)
+provider/region                | aws/us-west-2/{base,dev}.tfvars (provider specific)
+provider/namespace             | aws/112233445566/{base,dev}.tfvars (provider specific)
+provider/namespace/region      | aws/112233445566/us-west-2/{base,dev}.tfvars (provider specific)
 
 The `namespace` is provider dependent. IE: For AWS it's account, for Azure it's subscription, and for Google it's project. Also, for Azure `region` maps to location.
 
