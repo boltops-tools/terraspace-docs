@@ -17,7 +17,7 @@ provider/namespace/region      | aws/112233445566/us-west-2/{base,dev,instance}.
 
 All layers except for the first, tfvars root folder, are provider specific. For example, the `namespace` is provider dependent. IE: For AWS it's account, for Azure it's subscription, and for Google it's project. Also, for Azure `region` maps to location.
 
-For an explanation of `instance.tfvars`, see: [Instance Option]({% link _docs/tfvars/instance.md %}).
+For an explanation of `instance.tfvars`, see: [Instance Option]({% link _docs/tfvars/instance-option.md %}).
 
 ## Env Folders
 
@@ -37,7 +37,7 @@ You can also add structure your tfvars so that they are within env folders like 
     └── prod
         └── base.tfvars
 
-Generally, the simplier structure is should be used. Unless you're using the [Instance Option]({% link _docs/tfvars/instance.md %}), where it becomes useful for tidying up the multiple instance based tfvars files.
+Generally, the simplier structure is should be used. Unless you're using the [Instance Option]({% link _docs/tfvars/instance-option.md %}), where it becomes useful for tidying up the multiple instance based tfvars files.
 
 ## Multi-Region Layering Support
 

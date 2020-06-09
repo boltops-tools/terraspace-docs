@@ -100,7 +100,7 @@ You can also organize the files in corresponding TS_ENV based folders. Here's an
 A different statefile key path is used different `--instance` values. Example:
 
     $ terraspace up server --instance kevin -y
-    Building .terraspace-cache/dev/stacks/server_kevin <= DIFFERENT
+    Building .terraspace-cache/dev/stacks/_server_kevin <= DIFFERENT
     Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
     $
 
