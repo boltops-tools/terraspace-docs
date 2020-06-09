@@ -119,7 +119,7 @@ module "bob" {
 
 module "kevin" {
   source     = "../../modules/server"
-  instance_type = "t3.small"
+  instance_type = "t3.medium"
   tags          = { "Name": "kevin" }
 }
 ```
