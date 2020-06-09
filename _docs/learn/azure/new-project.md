@@ -4,11 +4,11 @@ title: New Project
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 
-    $ terraspace new project infra --provider azurerm --examples
+    $ terraspace new project infra --plugin azurerm --examples
 
 For this tutorial, we're using the `--examples` option to generate a starter example.
 
-    $ terraspace new project infra --provider azurerm --examples
+    $ terraspace new project infra --plugin azurerm --examples
     => Creating new project called infra.
           create  infra
           create  infra/.gitignore

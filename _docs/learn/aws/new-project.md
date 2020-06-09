@@ -4,11 +4,11 @@ title: New Project
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 
-    $ terraspace new project infra --provider aws --examples
+    $ terraspace new project infra --plugin aws --examples
 
 For this tutorial, we're using the `--examples` option to generate a starter example.
 
-    $ terraspace new project infra --provider aws --examples
+    $ terraspace new project infra --plugin aws --examples
     => Creating new project called infra.
           create  infra
           create  infra/.gitignore
@@ -27,7 +27,7 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
           create  infra/app/stacks/demo/variables.tf
     $ cd infra # and start checking out the files
 
-In this case, the `--provider aws` is optional, since the default provider is aws. We're using it in this tutorial just for clarity.
+In this case, the `--plugin aws` is optional, since the default provider is aws. We're using it in this tutorial just for clarity.
 
 ## Config Files
 

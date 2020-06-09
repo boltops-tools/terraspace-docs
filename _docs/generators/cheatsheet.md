@@ -19,7 +19,7 @@ HCL based AWS project
 
 HCL based GCP project
 
-    terraspace new project hcl-gcp --bucket my-bucket --provider google
+    terraspace new project hcl-gcp --bucket my-bucket --plugin google
     cd hcl-gcp
     terraspace up demo -y
     terraspace down demo -y
@@ -27,19 +27,19 @@ HCL based GCP project
 Blank project without examples
 
     terraspace new project hcl-aws-blank --bucket my-bucket --no-examples
-    terraspace new project hcl-gcp-blank --bucket my-bucket --provider google --no-examples
+    terraspace new project hcl-gcp-blank --bucket my-bucket --plugin google --no-examples
 
 ## Modules: HCL Based
 
     cd project
     terraspace new module ec2 # default provider is aws
-    terraspace new module vm --provider google
+    terraspace new module vm --plugin google
 
 ## Stacks: HCL Based
 
     cd project
     terraspace new stack core # default provider is aws
-    terraspace new stack core --provider google
+    terraspace new stack core --plugin google
 
 ## Projects: Ruby Based
 
@@ -53,7 +53,7 @@ Ruby based AWS project
 Ruby based GCP project
 
 
-    terraspace new project ruby-gcp --bucket my-bucket --lang ruby --provider google
+    terraspace new project ruby-gcp --bucket my-bucket --lang ruby --plugin google
     cd ruby-gcp
     terraspace up demo -y
     terraspace down demo -y
@@ -61,16 +61,16 @@ Ruby based GCP project
 Blank project without examples
 
     terraspace new project ruby-aws-blank --bucket my-bucket --lang ruby --no-examples
-    terraspace new project ruby-gcp-blank --bucket my-bucket --lang ruby --provider google --no-examples
+    terraspace new project ruby-gcp-blank --bucket my-bucket --lang ruby --plugin google --no-examples
 
 ## Modules: Ruby Based
 
     cd project
     terraspace new module ec2 --lang ruby # default provider is aws
-    terraspace new module vm --lang ruby --provider google
+    terraspace new module vm --lang ruby --plugin google
 
 ## Stacks: Ruby Based
 
     cd project
     terraspace new stack core --lang ruby # default provider is aws
-    terraspace new stack core --lang ruby --provider google
+    terraspace new stack core --lang ruby --plugin google
