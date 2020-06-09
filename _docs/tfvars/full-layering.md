@@ -2,26 +2,46 @@
 title: "Tfvars: Full Layering"
 ---
 
-Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. This table shows the full layering order. For the sake of concisness, the layers are shown in pairs, IE: base.tfvars and dev.tfvars.
+Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. This table shows the full layering order. For the sake of concisness, the layers are shown in levels, IE: base.tfvars, dev.tfvars, and instance.tfvars.
 
 Folder/Pattern                 | Example
 -------------------------------|---------------
-tfvars root folder             | base.tfvars and dev.tfvars
-region                         | us-west-2/{base,dev}.tfvars (provider specific)
-namespace                      | 112233445566/{base,dev}.tfvars (provider specific)
-namespace/region               | 112233445566/us-west-2/{base,dev}.tfvars (provider specific)
-provider                       | aws/{base,dev}.tfvars (provider specific)
-provider/region                | aws/us-west-2/{base,dev}.tfvars (provider specific)
-provider/namespace             | aws/112233445566/{base,dev}.tfvars (provider specific)
-provider/namespace/region      | aws/112233445566/us-west-2/{base,dev}.tfvars (provider specific)
+tfvars root folder             | base.tfvars, dev.tfvars, and instance.tfvars
+region                         | us-west-2/{base,dev,instance}.tfvars
+namespace                      | 112233445566/{base,dev,instance}.tfvars
+namespace/region               | 112233445566/us-west-2/{base,dev,instance}.tfvars
+provider                       | aws/{base,dev,instance}.tfvars
+provider/region                | aws/us-west-2/{base,dev,instance}.tfvars
+provider/namespace             | aws/112233445566/{base,dev,instance}.tfvars
+provider/namespace/region      | aws/112233445566/us-west-2/{base,dev,instance}.tfvars
 
-The `namespace` is provider dependent. IE: For AWS it's account, for Azure it's subscription, and for Google it's project. Also, for Azure `region` maps to location.
+All layers except for the first, tfvars root folder, are provider specific. For example, the `namespace` is provider dependent. IE: For AWS it's account, for Azure it's subscription, and for Google it's project. Also, for Azure `region` maps to location.
 
-You can take advantage of the layering order to deploy the same infrastructure code to different regions, simply switch your env to use a different region and run `terraspace up`.
+For an explanation of `instance.tfvars`, see: [Instance Option]({% link _docs/tfvars/instance.md %}).
+
+## Env Folders
+
+The simple layering structure is having the files at the top-level like so:
+
+    app/stacks/server/tfvars
+    ├── base.tfvars
+    ├── dev.tfvars
+    └── prod.tfvars
+
+You can also add structure your tfvars so that they are within env folders like so:
+
+    app/stacks/server/tfvars
+    ├── base.tfvars
+    ├── dev
+    │   └── base.tfvars
+    └── prod
+        └── base.tfvars
+
+Generally, the simplier structure is should be used. Unless you're using the [Instance Option]({% link _docs/tfvars/instance.md %}), where it becomes useful for tidying up the multiple instance based tfvars files.
 
 ## Multi-Region Layering Support
 
-Terraspace supports multi-region layering support.
+You can take advantage of the Terraspace layering to deploy the same infrastructure code to different regions, simply switch your env to use a different region and run `terraspace up`.
 
 ## AWS Example
 
@@ -102,4 +122,4 @@ For Google Cloud, switch the region with the `gcloud` command.
 
 ## Cloud Provider Differences
 
-Each Cloud provider is a little different. For example, AWS is more region-centric, and Google Cloud is more global-centric. It's up to you how to leverage Terraspace. It can handle both region-centric and global-central cases just fine.
+Each Cloud provider is a little different. For example, AWS and Azure are more region-centric, and Google Cloud is more global-centric. It's up to you how to leverage Terraspace. It can handle both region-centric and global-central cases just fine.
