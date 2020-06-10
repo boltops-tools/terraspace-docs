@@ -12,7 +12,7 @@ The baseline plugins that currently ship with Terraspace Core are:
 * [terraspace_plugin_azurerm]({% link _docs/plugins/azurerm.md %})
 * [terraspace_plugin_google]({% link _docs/plugins/google.md %})
 
-You can make a custom plugin by looking at one of the baseline plugins. You create interfaces classes and register them to Terrapace. The interfaces may change.
+You can make a custom plugin by looking at one of the baseline plugins. You create interface classes and register them to Terrapace.
 
 Then you install the plugin with:
 
