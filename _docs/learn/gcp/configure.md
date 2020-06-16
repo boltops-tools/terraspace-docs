@@ -4,8 +4,8 @@ title: Configure Google Cloud
 
 Configure Google Cloud so Terraspace can connect to it. The recommended way is to:
 
-1. setting up the `~/.google/credentials.json`
-2. setting your `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, `GOOGLE_REGION`, and `GOOGLE_ZONE` environment variables
+1. set up the `~/.google/credentials.json`
+2. set up `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, `GOOGLE_REGION`, and `GOOGLE_ZONE` environment variables
 
 ## Example
 
@@ -13,7 +13,7 @@ To configure your `GOOGLE_APPLICATION_CREDENTIALS` you need to set up a service 
 
 You get get a credentials file that looks something like this:
 
-~/.google/config
+~/.google/credentials.json
 
 ```json
 {
