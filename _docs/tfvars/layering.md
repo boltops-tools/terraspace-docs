@@ -39,7 +39,7 @@ There are other ways to specific tfvar files:
 
 * Specify the terraspace `--var-files` option on-the-fly.
 * Specify var files with [CLI Args]({% link _docs/cli/args.md %}).
-* Create a `config/terraform.tfvars` file that will gets built.
+* Create a `config/terraform/terraform.tfvars` file that will gets built.
 * Specify tfvar files in the top-level `seed` folder. Covered more in [Additional Lookups]({% link _docs/tfvars/lookups.md %}).
 * Use the Terraform native `TF_VAR_name` env variables. Covered here: [Terraform Env Vars](https://www.terraform.io/docs/commands/environment-variables.html)
 
