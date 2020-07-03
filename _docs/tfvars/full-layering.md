@@ -2,7 +2,7 @@
 title: "Tfvars: Full Layering"
 ---
 
-Terraspace Layer in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. This table shows the full layering order. For the sake of concisness, the layers are shown in levels, IE: base.tfvars, dev.tfvars, and instance.tfvars.
+Terraspace Layering in it's full form allows you to use the same infrastructure code and deploy to different environments, regions, accounts, providers, etc. This table shows the full layering order. For the sake of concisness, the layers are shown in levels, IE: base.tfvars, dev.tfvars, and instance.tfvars.
 
 Folder/Pattern                 | Example
 -------------------------------|---------------

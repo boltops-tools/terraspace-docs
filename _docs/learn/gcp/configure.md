@@ -11,7 +11,7 @@ Configure Google Cloud so Terraspace can connect to it. The recommended way is t
 
 To configure your `GOOGLE_APPLICATION_CREDENTIALS` you need to set up a service account. Follow the Google [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started).
 
-You get get a credentials file that looks something like this:
+You'll get a credentials file that looks something like this:
 
 ~/.google/credentials.json
 
@@ -33,9 +33,10 @@ You get get a credentials file that looks something like this:
 In your `~/.bashrc` or `~/.profile`, use these lines to set environment variables:
 
     export GOOGLE_APPLICATION_CREDENTIALS=~/.google/credentials.json
+    # The rest of the environment variables are used by the Google terraform provider. See: https://www.terraform.io/docs/providers/google/guides/provider_reference.html#project-1
     export GOOGLE_PROJECT=$(cat ~/.google/credentials.json  | jq -r '.project_id')
     export GOOGLE_REGION=us-central1
-    export GOOGLE_ZONE=us-central1-a # only used by terraform provider
+    export GOOGLE_ZONE=us-central1-a
 
 Note, it makes use of the `jq` command to grab the `GOOGLE_PROJECT` from the `credentials.json` file. You can either install jq or just add the actual value of your google project id.
 
