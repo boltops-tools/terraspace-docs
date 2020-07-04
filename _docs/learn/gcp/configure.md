@@ -4,16 +4,16 @@ title: Configure Google Cloud
 
 Configure Google Cloud so Terraspace can connect to it. The recommended way is to:
 
-1. set up the `~/.google/credentials.json`
+1. set up the `~/.gcp/credentials.json`
 2. set up `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, `GOOGLE_REGION`, and `GOOGLE_ZONE` environment variables
 
 ## Example
 
 To configure your `GOOGLE_APPLICATION_CREDENTIALS` you need to set up a service account. Follow the Google [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started).
 
-You'll get a credentials file that looks something like this:
+You'll download a JSON credentials file that looks something like this:
 
-~/.google/credentials.json
+~/.gcp/credentials.json
 
 ```json
 {
@@ -32,23 +32,42 @@ You'll get a credentials file that looks something like this:
 
 In your `~/.bashrc` or `~/.profile`, use these lines to set environment variables:
 
-    export GOOGLE_APPLICATION_CREDENTIALS=~/.google/credentials.json
+    export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/credentials.json
     # The rest of the environment variables are used by the Google terraform provider. See: https://www.terraform.io/docs/providers/google/guides/provider_reference.html#project-1
-    export GOOGLE_PROJECT=$(cat ~/.google/credentials.json  | jq -r '.project_id')
+    export GOOGLE_PROJECT=$(cat ~/.gcp/credentials.json  | jq -r '.project_id')
     export GOOGLE_REGION=us-central1
     export GOOGLE_ZONE=us-central1-a
 
 Note, it makes use of the `jq` command to grab the `GOOGLE_PROJECT` from the `credentials.json` file. You can either install jq or just add the actual value of your google project id.
 
-## Test GCP Setup
+## Test Google API Access
 
-Here are some useful commands to test that the GCP CLI is working:
+To use that GOOGLE_APPLICATION_CREDENTIALS is valid and is working you can use the [boltops-tools/google_check](https://github.com/boltops-tools/google_check) test script to check. Here are the summarized commands:
+
+    git clone https://github.com/boltops-tools/google_check
+    cd google_check
+    bundle
+    bundle exec ruby google_check.rb
+
+You should see something like this:
+
+    $ bundle exec ruby google_check.rb
+    Listing gcs buckets as a test
+    my-gcs-bucket
+    Successfully connected to Google API with your GOOGLE_APPLICATION_CREDENTIALS
+    $
+
+## Set up gcloud cli
+
+Though not necessary for Terraspace and Terraform to work, it is useful to also install the gcloud cli. Here are the instructions to install the [Google SDK Install Docs](https://cloud.google.com/sdk/install). After you install it, you'll need to login:
+
+  gcloud auth login
+
+After you've authenticated, here are some useful commands to test that the GCP CLI is working:
 
     gcloud config list
     gcloud compute zones list --filter=region:us-central1
 
 ## Resources
-
-* [Google SDK Install Docs](https://cloud.google.com/sdk/install)
 
 Next, we'll create a new project.
