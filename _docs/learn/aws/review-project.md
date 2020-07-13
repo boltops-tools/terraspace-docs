@@ -43,13 +43,13 @@ Next let's look at the generated `app/stacks/demo` that was created:
 app/stacks/demo/main.tf
 
 ```terraform
-resource "random_pet" "bucket" {
+resource "random_pet" "this" {
   length = 2
 }
 
 module "bucket" {
   source     = "../../modules/example"
-  bucket     = "bucket-${random_pet.bucket.id}"
+  bucket     = "bucket-${random_pet.this.id}"
   acl        = var.acl
 }
 ```

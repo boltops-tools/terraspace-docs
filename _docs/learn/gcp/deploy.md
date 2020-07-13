@@ -22,7 +22,7 @@ The `terraspace up` command will build the files and then essentially run `terra
     Terraform will perform the following actions:
 
       # random_pet.bucket will be created
-      + resource "random_pet" "bucket" {
+      + resource "random_pet" "this" {
           + id        = (known after apply)
           + length    = 2
           + separator = "-"

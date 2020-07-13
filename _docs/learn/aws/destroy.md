@@ -26,7 +26,7 @@ You'll be prompted to make sure you really want to delete these resources.
     Terraform will perform the following actions:
 
       # random_pet.bucket will be destroyed
-      - resource "random_pet" "bucket" {
+      - resource "random_pet" "this" {
           - id        = "liked-poodle" -> null
           - length    = 2 -> null
           - separator = "-" -> null
