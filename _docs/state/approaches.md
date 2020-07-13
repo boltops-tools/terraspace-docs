@@ -80,6 +80,8 @@ You also have to "stitch" the layers together with outputs and inputs. IE: You'l
 
 An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else cost of coordination will be high.
 
+Remember, which cloud resources belong to which terraform statefile is can also be difficult. The [terraspace summary]({% link _docs/intro/summary-command.md %}) command can help. It provides a summary of resources grouped by statefile.
+
 All that being said, here's an example of this setup with terraspace:
 
 config/terraform/backend.rb
