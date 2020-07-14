@@ -1,6 +1,8 @@
 ---
-title: "Instance Option and Concept"
+title: "Instance Option"
 ---
+
+## Concept
 
 Terraspace allows you to deploy multiple instances of your stack with the `--instance` option. The stack instance concept enables you to use the same code with different tfvars.
 
@@ -100,11 +102,11 @@ You can also organize the files in corresponding TS_ENV based folders. Here's an
 A different statefile key path is used different `--instance` values. Example:
 
     $ terraspace up server --instance kevin -y
-    Building .terraspace-cache/dev/stacks/server__kevin <= DIFFERENT
+    Building .terraspace-cache/dev/stacks/server.kevin <= DIFFERENT
     Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
     $
 
-The instance value is appended after the `__`. This allows multiple instances of the infrastructure to be deployed without colliding.
+The instance value is appended after a period (`.`). This allows multiple instances of the infrastructure to be deployed without colliding.
 
 ## Code Instead of TfVars
 
