@@ -6,7 +6,7 @@ title: Installation
 
 ## Cloud Provider CLI
 
-Install the corresponing cloud provider CLI tool that you are using. Example:
+Install the corresponding cloud provider CLI tool that you are using. Example:
 
 * AWS: [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 * Azure: [az cli](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest)

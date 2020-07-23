@@ -11,7 +11,7 @@ Configure Google Cloud so Terraspace can connect to it. The recommended way is t
 
 To configure your `GOOGLE_APPLICATION_CREDENTIALS` you need to set up a service account. Follow the Google [Getting Started with Authentication](https://cloud.google.com/docs/authentication/getting-started).
 
-You'll download a JSON credentials file that looks something like this:
+You'll download a JSON credentials file that looks something like the following. This is just an example:
 
 ~/.gcp/credentials.json
 
@@ -61,7 +61,7 @@ You should see something like this:
 
 Though not necessary for Terraspace and Terraform to work, it is useful to also install the gcloud cli. Here are the instructions to install the [Google SDK Install Docs](https://cloud.google.com/sdk/install). After you install it, you'll need to login:
 
-  gcloud auth login
+    gcloud auth login
 
 After you've authenticated, here are some useful commands to test that the GCP CLI is working:
 

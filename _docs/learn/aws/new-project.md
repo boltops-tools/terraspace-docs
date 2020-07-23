@@ -29,6 +29,8 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
 
 In this case, the `--plugin aws` is optional, since the default provider is aws. We're using it in this tutorial just for clarity.
 
+For more information about the folders see [Project Structure]({% link _docs/intro/structure.md %}).
+
 ## Config Files
 
 Let's look at `config/terraform/backend.tf`

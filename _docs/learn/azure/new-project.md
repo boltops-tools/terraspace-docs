@@ -27,6 +27,8 @@ For this tutorial, we're using the `--examples` option to generate a starter exa
           create  infra/app/stacks/demo/variables.tf
     $ cd infra # and start checking out the files
 
+For more information about the folders see [Project Structure]({% link _docs/intro/structure.md %}).
+
 ## Config Files
 
 Let's look at `config/terraform/backend.tf`
@@ -39,7 +41,7 @@ terraform {
     resource_group_name  = "<%= backend_expand('azurerm', 'terraform-resources-:LOCATION') %>"
     storage_account_name = "<%= backend_expand('azurerm', 'ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
     container_name       = "terraform-state"
-    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR') %>"
+    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR.tfstate') %>"
   }
 }
 ```

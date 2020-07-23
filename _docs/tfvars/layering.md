@@ -8,8 +8,8 @@ title: "Tfvars: Layering"
 
 The tfvar files are processed and "layered".  Example:
 
-    TS_ENV=dev  terraspace up core -y # merges base and dev
-    TS_ENV=prod terraspace up core -y # merges base and prod
+    TS_ENV=dev  terraspace up demo -y # merges base and dev
+    TS_ENV=prod terraspace up demo -y # merges base and prod
 
 The tfvars files should generally be within the `app/stacks` folder, as stacks can include business-specific logic.
 
@@ -17,16 +17,16 @@ The tfvars files should generally be within the `app/stacks` folder, as stacks c
 
 Terraspace builds `tfvars` to add layering support. Example:
 
-    $ terraspace build core
-    $ cd .terraspace-cache/dev/stacks/core/
+    $ terraspace build demo
+    $ cd .terraspace-cache/dev/stacks/demo/
     $ ls *.tfvars
     1-base.auto.tfvars  2-dev.auto.tfvars
     $
 
 Layering combines the base layer with the TS_ENV specific layer. Another example:
 
-    $ TS_ENV=prod terraspace build core
-    $ cd .terraspace-cache/prod/stacks/core/
+    $ TS_ENV=prod terraspace build demo
+    $ cd .terraspace-cache/prod/stacks/demo/
     $ ls *.tfvars
     1-base.auto.tfvars  2-prod.auto.tfvars
     $

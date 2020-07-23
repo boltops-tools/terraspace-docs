@@ -17,7 +17,7 @@ Terraspace supports all approaches. Though terraspace's default approach is pret
 
 ## Graduating Along The Way
 
-Teams seem to go through a similar process where they graduate from one statefile approach to the next. This presentation [Evolving Your Infrastructure with Terraform](https://www.youtube.com/watch?v=wgzgVm7Sqlk) covers the evolution process well and is similar to what we cover below.
+Teams seem to go through a similar process where they graduate from one statefile approach to the next. This presentation [Evolving Your Infrastructure with Terraform](https://www.youtube.com/watch?v=wgzgVm7Sqlk) covers the evolution process well and is similar to what we'll cover below.
 
 ## One statefile for everything
 
@@ -57,7 +57,7 @@ backend("s3",
 )
 ```
 
-With this approach, use only one `app/stacks`. Example:
+With this approach, we use only one `app/stacks`. Example:
 
     app/stacks/monolith
 
@@ -67,7 +67,7 @@ Teams will then evolve their statefile approach to one that groups related-modul
 
 Stack | Description
 --- | ---
-Core | Foundational layer with resources like vpc.
+Network | Foundational layer with resources like vpc.
 DB | Stateful database components. It may make sense to keep this as a separate stack or group them with the app/service stacks.
 Compute | General compute capacity like EKS or GKE. Or if using traditional VMs, maybe ELBs, AutoScaling, Instance groups, etc.
 App/Service | Could be the resources to deploy the app/services like kubernetes resource definitions. Some may also prefer to include the ELB, AutoScaling, Instance groups here instead.
@@ -78,9 +78,9 @@ A downside with this approach is the extra coordination required. Essentially, "
 
 You also have to "stitch" the layers together with outputs and inputs. IE: You'll feed the vpc id into the db, compute, app layers. The [terraform_remote_state](https://www.terraform.io/docs/providers/terraform/d/remote_state.html) data source may also help.
 
-An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else cost of coordination will be high.
+An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else the cost of coordination will be high.
 
-Remember, which cloud resources belong to which terraform statefile is can also be difficult. The [terraspace summary]({% link _docs/intro/summary-command.md %}) command can help. It provides a summary of resources grouped by statefile.
+Remembering which cloud resources belong to which terraform statefile is can also be difficult. The [terraspace summary]({% link _docs/intro/summary-command.md %}) command helps. It provides a summary of resources grouped by statefile.
 
 All that being said, here's an example of this setup with terraspace:
 

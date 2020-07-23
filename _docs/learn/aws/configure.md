@@ -28,6 +28,8 @@ In your `~/.bashrc` or `~/.profile`, use this line to set the `AWS_PROFILE` and 
 
 The reason we have to configure `AWS_REGION` also, is because Terraform doesn't seem to use the `~/.aws/config` setting, but will use the `AWS_REGION`.
 
+Note: Terraform does not seem to currently support the use of source_profile. The fix will be released when [terraform-aws-provider #14077](https://github.com/terraform-providers/terraform-provider-aws/pull/14077) is released.
+
 ## Test AWS Setup
 
 Here are some useful commands to test that the AWS CLI is working:
