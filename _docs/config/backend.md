@@ -62,7 +62,7 @@ terraform {
     resource_group_name  = "<%= backend_expand('azurerm', 'terraform-resources-:LOCATION') %>"
     storage_account_name = "<%= backend_expand('azurerm', 'ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
     container_name       = "terraform-state"
-    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR.tfstate') %>"
+    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
   }
 }
 ```
