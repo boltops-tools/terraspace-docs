@@ -17,7 +17,7 @@ Here's an example folder structure. The tfvars files should mainly be in `app/st
     │   │   ├── instance
     │   │   └── vpc
     │   └── stacks
-    │       └── core
+    │       └── network
     │           └── tfvars
     │               └── dev.tfvars
     └── seed

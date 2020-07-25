@@ -14,17 +14,17 @@ Since terraspace builds the `config/terraform/backend.rb` to the root module's f
 config/terraform/backend.rb
 
 ```ruby
-# Examples of mod_name: core, wordpress, instance, vpc, where this directory structure exists
+# Examples of mod_name: network, db, instance, vpc, where this directory structure exists
 #
 #    app/modules/instance
 #    app/modules/vpc
-#    app/stacks/core
-#    app/stacks/wordpress
+#    app/stacks/network
+#    app/stacks/db
 #
 state_key = case mod_name
-            when "core"
+            when "network"
               "path1/to/existing/terraform.tfstate"
-            when "wordpress"
+            when "db"
               "path2/to/existing/terraform.tfstate"
             else
               ":REGION/:ENV/:BUILD_DIR/terraform.tfstate" # fallback to default terraspace variable notation
@@ -44,7 +44,7 @@ backend("s3",
 
 If an existing `backend.rb` or `backend.tf` is in the module's folder, terraspace will not overwrite it.
 
-So you can add a file like `app/stacks/wordpress/backend.tf` with a specific state key path, and it'll get used. Example:
+So you can add a file like `app/stacks/db/backend.tf` with a specific state key path, and it'll get used. Example:
 
 ```terraform
 terraform {

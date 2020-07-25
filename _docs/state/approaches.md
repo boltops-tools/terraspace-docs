@@ -100,7 +100,7 @@ The bucket key example:
 
 Gets expanded to actual values:
 
-    us-west-2/development/stacks/wordpress/terraform.tfstate
+    us-west-2/development/stacks/demo/terraform.tfstate
 
 ## A statefile per module
 

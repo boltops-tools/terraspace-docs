@@ -11,22 +11,22 @@ You may also be interested in:
 
 ## Building
 
-When you run `terraspace` commands, it will use the files in the `config/terraform` folder and builds them with the deployed module.  For example, let's say you have an `app/stacks/wordpress` stack:
+When you run `terraspace` commands, it will use the files in the `config/terraform` folder and builds them with the deployed module.  For example, let's say you have an `app/stacks/demo` stack:
 
     ├── app
     │   ├── modules
     │   │   └── instance
     │   └── stacks
-    │       └── wordpress
+    │       └── demo
     └── config
         └── terraform
             └── backend.tf
 
 Running:
 
-    terraspace up wordpress
+    terraspace up demo
 
-Builds a `.terrspace-cache/dev/stacks/wordpress/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
+Builds a `.terrspace-cache/dev/stacks/demo/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
 
 ## S3 Backend
 
@@ -48,7 +48,7 @@ Notice, the variable notation. Terraspace expands it out, substituting actually 
 
 Results in:
 
-    us-west-2/dev/stacks/wordpress/terraform.tfstate
+    us-west-2/dev/stacks/demo/terraform.tfstate
 
 You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
 
@@ -92,7 +92,7 @@ So
 
 Results in:
 
-    us-central1/dev/stacks/wordpress
+    us-central1/dev/stacks/demo
 
 ## Variables Available
 
@@ -100,9 +100,9 @@ Common variables available:
 
 Variable | Example | Description
 --- | --- | ---
-BUILD_DIR | stacks/wordpress | The build directory name.
+BUILD_DIR | stacks/demo | The build directory name.
 ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
-MOD_NAME | wordpress | The module name or stack name, which is also a module.
+MOD_NAME | demo | The module name or stack name, which is also a module.
 TYPE_DIR | stacks | The type name. IE: stacks or modules
 
 AWS specific variables:

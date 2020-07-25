@@ -38,8 +38,8 @@ Blank project without examples
 ## Stacks: HCL Based
 
     cd project
-    terraspace new stack core # default provider is aws
-    terraspace new stack core --plugin google
+    terraspace new stack demo # default provider is aws
+    terraspace new stack demo --plugin google
 
 ## Projects: Ruby Based
 
@@ -72,5 +72,5 @@ Blank project without examples
 ## Stacks: Ruby Based
 
     cd project
-    terraspace new stack core --lang ruby # default provider is aws
-    terraspace new stack core --lang ruby --plugin google
+    terraspace new stack demo --lang ruby # default provider is aws
+    terraspace new stack demo --lang ruby --plugin google

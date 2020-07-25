@@ -12,8 +12,8 @@ Terraspace supports looking up tfvar files in conventional locations. This encou
 
 The the tfvar files are processed and "layered".  Example:
 
-    TS_ENV=dev  terraspace up core -y # merges base and dev
-    TS_ENV=prod terraspace up core -y # merges base and prod
+    TS_ENV=dev  terraspace up demo -y # merges base and dev
+    TS_ENV=prod terraspace up demo -y # merges base and prod
 
 [Tfvars Layering Docs]({% link _docs/tfvars/layering.md %})
 

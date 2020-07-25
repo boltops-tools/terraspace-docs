@@ -1,6 +1,6 @@
 Tfvar should be place within the `app/stacks/MOD` folder. Example:
 
-    app/stacks/core
+    app/stacks/demo
     ├── main.tf
     ├── tfvars
     │   ├── base.tfvars
