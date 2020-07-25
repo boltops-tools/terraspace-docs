@@ -6,7 +6,7 @@ The Terrafile provides a way to install and manage Terraform modules from source
 
 ## Example
 
-The Terrafile processes a DSL, here's an example:
+The Terrafile processes a DSL. Here's an example:
 
 ```ruby
 org "boltopspro" # set default github org. IE: https://github.com/boltopspro
@@ -26,7 +26,7 @@ When you run:
 
     terraspace bundle
 
-The modules declared in `Terrafile` are downloaded the `vendor/modules` folder. A `Terrafile.lock` file is also created to lock module versions. You can check in the lockfile so others running `terraspace bundle` will download the exact same versions as you.
+The modules declared in `Terrafile` are downloaded to the `vendor/modules` folder. A `Terrafile.lock` file is also created to lock module versions. You can check in the lockfile to version control, so others running `terraspace bundle` will download the exact same versions as you.
 
 ## Updating
 
