@@ -100,7 +100,7 @@ The bucket key example:
 
 Gets expanded to actual values:
 
-    us-west-2/development/stacks/demo/terraform.tfstate
+    us-west-2/dev/stacks/demo/terraform.tfstate
 
 ## A statefile per module
 
@@ -112,7 +112,7 @@ The `:BUILD_DIR` above includes the name of the "type_dir", which is either modu
 
 To:
 
-    us-west-2/development/modules/instance/terraform.tfstate
+    us-west-2/dev/modules/instance/terraform.tfstate
 
 ## Why the default?
 

@@ -57,6 +57,8 @@ You should see something like this:
     Successfully connected to Google API with your GOOGLE_APPLICATION_CREDENTIALS
     $
 
+Note, if there are no buckets in the project, then no buckets will be listed, but you'll still get a "Successfully connected" message
+
 ## Set up gcloud cli
 
 Though not necessary for Terraspace and Terraform to work, it is useful to also install the gcloud cli. Here are the instructions to install the [Google SDK Install Docs](https://cloud.google.com/sdk/install). After you install it, you'll need to login:
@@ -67,7 +69,5 @@ After you've authenticated, here are some useful commands to test that the GCP C
 
     gcloud config list
     gcloud compute zones list --filter=region:us-central1
-
-## Resources
 
 Next, we'll create a new project.
