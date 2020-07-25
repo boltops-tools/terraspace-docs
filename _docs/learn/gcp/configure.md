@@ -42,7 +42,7 @@ Note, it makes use of the `jq` command to grab the `GOOGLE_PROJECT` from the `cr
 
 ## Test Google API Access
 
-To use that GOOGLE_APPLICATION_CREDENTIALS is valid and is working you can use the [boltops-tools/google_check](https://github.com/boltops-tools/google_check) test script to check. Here are the summarized commands:
+To check that GOOGLE_APPLICATION_CREDENTIALS is valid and is working you can use the [boltops-tools/google_check](https://github.com/boltops-tools/google_check) test script to check. Here are the summarized commands:
 
     git clone https://github.com/boltops-tools/google_check
     cd google_check
