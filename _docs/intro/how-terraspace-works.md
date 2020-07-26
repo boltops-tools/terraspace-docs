@@ -23,7 +23,7 @@ Terraspace supports ERB templating. This minor enhancement adds incredible power
 
 Terraspace tries to give you the best of both worlds. You get the Terraform HCL declarative power, at the same time, it gives you a little extra power with ERB. Terraspace allows you to reach for this additional power when needed.
 
-If you prefer not to use HCL, then Terraspace also has a Ruby DSL. The DSL builds `.json` files that Terraform understands just like `.tf` files. Generally, would stick to HCL, as it's others are probably used to seeing.
+If you prefer not to use HCL, then Terraspace also has a Ruby DSL. The DSL builds `.json` files that Terraform understands just like `.tf` files.
 
 ## Backend State Storage
 

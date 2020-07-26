@@ -98,9 +98,9 @@ For GCP, if you have an `GOOGLE_APPLICATION_CREDENTIALS` and `GOOGLE_PROJECT` se
 
 Here's an example of configuring the env variables in your profile.
 
-    export GOOGLE_APPLICATION_CREDENTIALS=~/.google/credentials.json
-    export GOOGLE_PROJECT=$(cat ~/.google/credentials.json  | jq -r '.project_id')
+    export GOOGLE_APPLICATION_CREDENTIALS=~/.gcp/credentials.json
+    export GOOGLE_PROJECT=$(cat ~/.gcp/credentials.json  | jq -r '.project_id')
 
-Note, you'll have to download your own `~/.google/credentials.json` file.
+Note, you'll have to download your own `~/.gcp/credentials.json` file.
 
 In real-world use, it is recommendeded to pin Terraform provider versions when your infrastructure code is ready.

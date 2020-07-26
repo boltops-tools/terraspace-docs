@@ -111,12 +111,12 @@ Here's a structure that takes advantage of layering and multiple-regions for Goo
 For Google Cloud, switch the region with the `gcloud` command.
 
     gcloud config set compute/region us-central1
-    gcloud config get-value compute/region
+    export GOOGLE_REGION=$(gcloud config get-value compute/region)
     TS_ENV=dev  terraspace up demo
     TS_ENV=prod terraspace up demo
 
     gcloud config set compute/region us-east4
-    gcloud config get-value compute/region
+    export GOOGLE_REGION=$(gcloud config get-value compute/region)
     TS_ENV=dev  terraspace up demo
     TS_ENV=prod terraspace up demo
 
