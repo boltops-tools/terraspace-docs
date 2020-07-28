@@ -1,5 +1,5 @@
 ---
-title: Annoying "already initialized constant" Warning
+title: Shim Wrapper
 ---
 
 If you are seeing an annoying "warning: already initialized constant" like so:
@@ -17,11 +17,11 @@ This is due to bundler not loading until a little later.  Here are the options f
 
 1. Prepend `bundle exec` in front of all terraspace commands
 2. Run `bundle clean` with your terraspace project. Note this can break other gems on your system.
-3. Use a wrapper shim for terraspace
+3. Use a shim wraper for terraspace
 
 The current recommended approach #3, a wrapper shim. You only have to set up the shim once.
 
-## Wrapper Shim
+## Shim Wrapper
 
 Here's a wrapper shim that will work with rbenv. We'll create it at `~/bin/terraspace`
 
