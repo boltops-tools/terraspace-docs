@@ -4,8 +4,79 @@ title: Configuring Terraspace with Existing Statefiles and Systems
 
 If you have existing terraform state files and want to use them with terraspace, you can do that. Here are a couple of approaches to keep your existing statefile:
 
-1. Logic in `config/terraform/backend.rb`
-2. Provide backend in the stack module itself
+1. Copy your existing statefile
+2. Logic in `config/terraform/backend.rb`
+3. Provide backend in the stack module itself
+
+## Copy your existing statefile
+
+The recommended way to use existing state is to copy it over to the backend bucket to the path that's configured with your Terraspace project.  For example, let's say you already have existing Terraform code and a state file locally:
+
+    ~/bucket
+    ├── main.tf
+    ├── outputs.tf
+    ├── terraform.tfstate
+    └── variables.tf
+
+For the sake of this example, let's say the main.tf creates a bucket. You can do the following to "import" your terraform code and state to a Terraspace project.
+
+First, create a stack bucket folder. This is where you'll copy your existing terraform code to:
+
+    cd ~/infra # terraspace project
+    mkdir app/stacks/bucket
+
+Now go back to your ~/bucket folder with your existing terraform code:
+
+    cd ~/bucket # existing terraform code
+    cp main.tf outputs.tf varibles.tf ~/infra/app/stacks/bucket/
+
+The terraform code is now imported over. 👍  Next, we'll import the terraform state file.
+
+### AWS
+
+If using AWS, then you will copy the statefile to the S3 bucket. Here's an example:
+
+    cd ~/bucket # existing terraform code
+    aws s3 cp terraform.tfstate s3://terraform-state-111111111111-us-west-2-dev/us-west-2/dev/stacks/bucket/terraform.tfstate
+
+The general form is:
+
+    aws s3 cp terraform.tfstate s3://terraform-state-ACCOUNT-REGION-ENV/REGION/ENV/stacks/bucket/terraform.tfstate
+
+Note, with AWS if you're overwriting an existing statefile you may have to also delete the item in the DynamoDB terraform_locks table. IE: terraform-state-111111111111-us-west-2-dev/us-west-2/dev/stacks/bucket/terraform.tfstate-md5
+
+At this point, you'll have the state in sync with the code. You can verify with with `terraspace summary`
+
+    terraspace summary
+
+The output should be something like this:
+
+    $ terraspace summary
+    stacks/bucket/terraform.tfstate
+        aws_s3_bucket this: terraform-20200802231545960700000001
+    $
+
+### Google
+
+If using Google, then you will copy the statefile to the GCS bucket. Here's an example:
+
+    cd ~/bucket # existing terraform code
+    gsutil cp terraform.tfstate gs://terraform-state-tung-123-us-central1-dev/us-central1/dev/stacks/bucket/default.tfstate
+
+The general form is:
+
+    gsutil cp terraform.tfstate gs://terraform-state-GOOGLE_PROJECT-REGION-ENV/REGION/ENV/stacks/bucket/default.tfstate
+
+At this point, you'll have the state in sync with the code. You can verify with with `terraspace summary`
+
+    terraspace summary
+
+The output should be something like this:
+
+    $ terraspace summary
+    stacks/bucket/default.tfstate
+        google_storage_bucket this: bucket-unified-grubworm
+        random_pet this: unified-grubworm
 
 ## Logic in the config/terraform/backend.rb
 
