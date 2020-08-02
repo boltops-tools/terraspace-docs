@@ -61,7 +61,7 @@ The output should be something like this:
 If using Google, then you will copy the statefile to the GCS bucket. Here's an example:
 
     cd ~/bucket # existing terraform code
-    gsutil cp terraform.tfstate gs://terraform-state-tung-123-us-central1-dev/us-central1/dev/stacks/bucket/default.tfstate
+    gsutil cp terraform.tfstate gs://terraform-state-project-123-us-central1-dev/us-central1/dev/stacks/bucket/default.tfstate
 
 The general form is:
 
