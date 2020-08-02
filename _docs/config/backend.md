@@ -42,7 +42,7 @@ terraform {
 }
 ```
 
-Notice, the variable notation. Terraspace expands it out, substituting actually values. The starter `backend.tf` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
+Notice the variable notation. Terraspace expands it out, substituting the values. The starter `backend.tf` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
 
     :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
@@ -157,3 +157,7 @@ backend("gcs",
   prefix: ":REGION/:ENV/:BUILD_DIR" # variable notation gets expanded out by terraspace
 )
 ```
+
+### Why Is Env in Bucket Name?
+
+By default, the bucket name has the ENV at the end. This is done so we can easily see which environment the bucket stores Terraform statefiles for. This quickly helps with debugging. If you prefer not to have the ENV at the end of the bucket name, remove it after generating the project with `terraspace new project`.
