@@ -4,8 +4,8 @@ title: Configure AWS
 
 Configure AWS so Terraspace can connect to it. The recommended way is to:
 
-1. setting up the `~/.aws/config` and `~/.aws/credentials` files
-2. setting your `AWS_PROFILE` and `AWS_REGION` environment variables
+1. set up the `~/.aws/config` and `~/.aws/credentials` files
+2. set up your `AWS_PROFILE` and `AWS_REGION` environment variables
 
 ## Example
 
@@ -27,8 +27,6 @@ In your `~/.bashrc` or `~/.profile`, use this line to set the `AWS_PROFILE` and 
     export AWS_REGION=`aws configure get region` # to match what's in ~/.aws/config
 
 The reason we have to configure `AWS_REGION` also, is because Terraform doesn't seem to use the `~/.aws/config` setting, but will use the `AWS_REGION`.
-
-Note: Terraform does not seem to currently support the use of source_profile. The fix will be released when [terraform-aws-provider #14077](https://github.com/terraform-providers/terraform-provider-aws/pull/14077) is released.
 
 ## Test AWS Setup
 
