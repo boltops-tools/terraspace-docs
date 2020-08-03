@@ -32,7 +32,7 @@ Java | Spring
 Python | Django
 Ruby | Rails
 
-Let's say we're building a house. Not using a framework is liken to running off to the forest and cutting down trees for wood. Then using that wood to build doors, windows, etc. Finally, we start constructing the house. But we proceed with no blueprints or architectural plans.  This is essentially how most do terraform development today.
+Let's say we're building a house. Not using a framework is liken to running off to the forest and cutting down trees for wood. Then using that wood to build doors, windows, etc. Finally, we start constructing the house. But we proceed with no blueprints or architectural plans.  This is how most terraform development is done today.
 
 Terraspace provides a framework to help you get a head start right off the bat. This is because the framework provides an organized structure, conventions, and convenient tooling.
 
