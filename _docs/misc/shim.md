@@ -29,7 +29,6 @@ Here's a wrapper shim that will work with rbenv. We'll create it at `~/bin/terra
 
     #!/bin/bash
     eval "$(rbenv init -)"
-    [ -e ~/.ruby-version ] || rbenv shell $(cat ~/.ruby-version)
     if [ -f Gemfile ]; then
       exec bundle exec terraspace "$@"
     else
