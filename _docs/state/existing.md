@@ -10,7 +10,7 @@ If you have existing terraform state files and want to use them with terraspace,
 
 ## Copy your existing statefile
 
-The recommended way to use existing state is to copy it over to the backend bucket to the path that's configured with your Terraspace project.  For example, let's say you already have existing Terraform code and a state file locally:
+The recommended way to use existing state is to copy it over to the backend bucket path that's configured with your Terraspace project.  For example, let's say you already have existing Terraform code and a state file locally:
 
     ~/bucket
     ├── main.tf
