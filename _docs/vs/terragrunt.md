@@ -14,7 +14,7 @@ With terragrunt, you cd into the folder with the terraform source code and run t
 
 With terraspace, you stay at the root of the project and run the up command:
 
-    terraform up STACK
+    terraspace up STACK
 
 ## Structural Differences
 
