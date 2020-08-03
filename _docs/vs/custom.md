@@ -26,7 +26,7 @@ So we then start writing higher-level custom scripts that wrap terraform. We per
 
 ![](https://img.boltops.com/images/terraspace/huts/huts-think.png)
 
-But that's probably not what's happening. This might be your first infrastructure-as-code project. Usually, there are also tight deadlines. We're learning on the spot and sort of making things up as we go long. So we're probably doing more something like this:
+But that's probably not what's happening. This might be your first infrastructure-as-code project. Usually, there are also tight deadlines. We're learning on the spot and sort of making things up as we go long. So we're probably doing something more like this:
 
 ![](https://img.boltops.com/images/terraspace/huts/huts-actual.png)
 
