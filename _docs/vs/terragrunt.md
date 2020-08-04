@@ -103,11 +103,11 @@ You then use `path_relative_to_include` and `find_in_parent_folders` methods in 
 
 In Terraspace, the statefile is centrally defined in `config/terraform/backend.tf` and processed with variable substitution. For example, this expression in `config/terraform/backend.tf`:
 
-    terraform-state-:ACCOUNT-:REGION-:ENV
+    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
 
 Becomes:
 
-    terraform-state-:112233445566-:us-west-2-:dev
+    us-west-2/dev/stacks/demo/terraform.tfstate
 
 ## Generators
 
@@ -124,7 +124,7 @@ Terraspace has generators so you can build things quickly.
 
 Terragrunt uses a testing framework called [terratest](https://terratest.gruntwork.io/).  This allows you test real resources.
 
-Terraspace uses [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) as the default test framework plugin. It also allows you to test real resources. Terraspace introduces the concept of a [Test Harness](https://terraspace.cloud/docs/testing/test-harness/) to allow you to customize and control the test setup.
+Terraspace uses  [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) as the default test framework plugin. Rspec is a mature testing framework with expressive matchers, test setup/destroy blocks etc. It also allows you to test real resources. Terraspace also introduces the concept of a [Test Harness](https://terraspace.cloud/docs/testing/test-harness/) to allow you to customize and control the test setup.
 
 ## Summary
 

@@ -119,6 +119,44 @@ Then you're asked to also support multiple regions. At this point, you're might 
 
 It's like building the [Winchester House](https://en.wikipedia.org/wiki/Winchester_Mystery_House). Ultimately, we end up with a science project.
 
+## Life with Terraspace
+
+Terraspace answers and solves these questions right out of the gates. Here's an example of multiple-regions for AWS:
+
+    app/stacks/demo/tfvars
+    ├── us-east-1
+    │   ├── dev.tfvars
+    │   └── prod.tfvars
+    └── us-west-2
+        ├── dev.tfvars
+        └── prod.tfvars
+
+For AWS, switching region can be done by changing `AWS_REGION`.
+
+    AWS_REGION=us-east-1 terraspace up demo
+    AWS_REGION=us-west-2 terraspace up demo
+
+You can use the same code for different environments in the different regions also:
+
+    AWS_REGION=us-east-1 TS_ENV=prod terraspace up demo
+    AWS_REGION=us-west-2 TS_ENV=prod terraspace up demo
+
+For more details, check out: [Tfavrs Layering]({% link _docs/tfvars/full-layering.md %})
+
+Terraspace also provide a standard directory structure:
+
+    ├── app
+    │   ├── modules
+    │   │   └── instance
+    │   └── stacks
+    │       └── demo
+    └── config
+        └── terraform
+            ├── backend.tf
+            └── provider.tf
+
+For more details, see: [Directory Structure]({% link _docs/intro/structure.md %}).
+
 ## Summary
 
 Terraspace is not just a simple wrapper script that calls out to Terraform. It makes it a lot easier and quicker to work with Terraform. Though Terraform is a powerful tool and allows you to write infrastructure-as-code, it leaves a lot up to you to figure out. Terraspace is a framework that does just that. It provides an organized structure, conventions, and convenient tooling to help you get things done quickly.
