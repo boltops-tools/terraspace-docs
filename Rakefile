@@ -3,9 +3,8 @@ require 'opal'
 require 'opal-jquery'
 require 'opal-browser'
 
-
-# Note the jekyll-opal plugin loads a minimum baseline of opal that doesnt including extra side-side requires
-# So we'll compile our own version instead.
+# Note the jekyll-opal plugin loads a minimum baseline of opal that doesnt include extra
+# server-side requires. So we'll compile our own version instead.
 
 namespace :opal do
   desc "Build our app to app.js"
