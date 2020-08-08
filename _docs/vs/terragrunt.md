@@ -36,7 +36,7 @@ With Terraspace, normal tfvars and [layering](https://terraspace.cloud/docs/tfva
 
 Terragrunt uses the native Terraform HCL language for the main tf files, but it also adds a custom terragrunt HCL language in its `terragrunt.hcl`.  For example, to reuse modules, it's a custom terragrunt syntax. Example:
 
-```terragrunt
+```terraform
 terraform {
   source = "git::git@github.com/org/demo"
 }
@@ -56,7 +56,7 @@ Terraspace uses the native `module` keyword and Terraform language constructs ge
 
 Terragrunt has a custom `terragrunt.hcl` syntax for input variables to modules. For example:
 
-```terragrunt
+```terraform
 terraform {
   source = "git::git@github.com/foo/modules.git//path/to/module"
 }
