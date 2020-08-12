@@ -15,8 +15,9 @@ info
 ## Options
 
 ```
-[--format=FORMAT]            # output formats: json, text
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
+    [--format=FORMAT]            # output formats: json, text
+i, [--instance=INSTANCE]         # Instance of stack
+    [--verbose], [--no-verbose]  
+    [--noop], [--no-noop]        
 ```
 
