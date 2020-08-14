@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace info MODULE
+    terraspace info STACK
 
 ## Description
 

@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace build MODULE
+    terraspace build STACK
 
 ## Description
 
@@ -22,6 +22,7 @@ build
                                  # Default: true
     [--input], [--no-input]      # Ask for input for variables if not directly set.
 i, [--instance=INSTANCE]         # Instance of stack
+y, [--yes], [--no-yes]           # -auto-approve the terraform apply
     [--verbose], [--no-verbose]  
     [--noop], [--no-noop]        
 ```

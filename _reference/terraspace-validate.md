@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace validate MODULE
+    terraspace validate STACK
 
 ## Description
 

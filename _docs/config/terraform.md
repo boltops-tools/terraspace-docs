@@ -4,6 +4,8 @@ title: Terraform Config
 
 The `config/terraform/terraform.tf` is a good spot for general Terraform settings.  For example, you may want to lock the version of Terraform and providers. Terraform and providers sometime releases new versions that are not backwards compatiable.
 
+Note: If you are using Terraform Cloud or Enterprise, the terraform.tf is not used. [Terraform Cloud](https://www.terraform.io/docs/cloud/workspaces/variables.html) will override the terraform.tf and it's settings are used instead.
+
 ## Example
 
 config/terraform/terraform.tf:

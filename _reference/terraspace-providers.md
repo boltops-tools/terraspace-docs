@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace providers MODULE
+    terraspace providers STACK
 
 ## Description
 

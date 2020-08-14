@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace show MODULE
+    terraspace show STACK
 
 ## Description
 

@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace update MODULE
+    terraspace update STACK
 
 ## Description
 

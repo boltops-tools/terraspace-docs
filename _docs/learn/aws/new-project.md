@@ -38,9 +38,9 @@ Let's look at `config/terraform/backend.tf`
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "<%= backend_expand('s3', 'terraform-state-:ACCOUNT-:REGION-:ENV') %>"
-    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
-    region         = "<%= backend_expand('s3', ':REGION') %>"
+    bucket         = "<%= expansion('terraform-state-:ACCOUNT-:REGION-:ENV') %>"
+    key            = "<%= expansion(':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    region         = "<%= expansion(':REGION') %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
