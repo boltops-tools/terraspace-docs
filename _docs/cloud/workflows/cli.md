@@ -16,7 +16,7 @@ To use the CLI-driven workflow:
 
 To use Terraform Cloud, we configure the backend to "remote".
 
-Instructions: [Terraform Cloud Backend](% link _docs/cloud/backend.md %})
+Instructions: [Terraform Cloud Backend]({% link _docs/cloud/backend.md %})
 
 ## 2. Configure Terraform Cloud Variables
 

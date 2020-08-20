@@ -29,8 +29,8 @@ Note: With the VCS-driven workflow backend.tf is ignored by TFC, since TFC manag
 
 You can configure Terraform Cloud Variables with either JSON or a DSL:
 
-* [Terraform Cloud Vars JSON](% link _docs/cloud/vars/json.md %})
-* [Terraform Cloud Vars DSL](% link _docs/cloud/vars/dsl.md %})
+* [Terraform Cloud Vars JSON]({% link _docs/cloud/vars/json.md %})
+* [Terraform Cloud Vars DSL]({% link _docs/cloud/vars/dsl.md %})
 
 ## 3. Run Setup Command
 
