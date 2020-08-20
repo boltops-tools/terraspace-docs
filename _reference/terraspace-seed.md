@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace seed MODULE
+    terraspace seed STACK
 
 ## Description
 

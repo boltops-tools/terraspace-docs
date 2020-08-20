@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace down MODULE
+    terraspace down STACK
 
 ## Description
 
@@ -15,9 +15,10 @@ down
 ## Options
 
 ```
-i, [--instance=INSTANCE]         # Instance of stack
-y, [--yes], [--no-yes]           # -auto-approve the terraform apply
-    [--verbose], [--no-verbose]  
-    [--noop], [--no-noop]        
+i, [--instance=INSTANCE]                             # Instance of stack
+y, [--yes], [--no-yes]                               # -auto-approve the terraform apply
+    [--destroy-workspace], [--no-destroy-workspace]  # Also destroy the Cloud workspace. Only applies when using Terraform Cloud remote backend.
+    [--verbose], [--no-verbose]                      
+    [--noop], [--no-noop]                            
 ```
 

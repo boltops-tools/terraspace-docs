@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace console
+    terraspace console STACK
 
 ## Description
 

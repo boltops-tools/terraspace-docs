@@ -44,3 +44,19 @@ Then add `~/bin` to your PATH in your `~/.bash_profile`
     export PATH="~/bin:$PATH"
 
 The wrapper shim will prepend `bundle exec` whenever in a Terraspace project folder with a Gemfile. It will not prepend `bundle exec` outside of a Terraspace project. For example, if you are using `terraspace new` generators.
+
+## Generating the Shim Wrapper
+
+You can also use terraspace to generate the shim wrapper.
+
+    terraspace new shim
+
+You'll see something like this:
+
+    $ terraspace new shim
+          create  /usr/local/bin/terraspace
+           chmod  /usr/local/bin/terraspace
+
+If you want to specify the path where you want the shim to be saved like so:
+
+    terraspace new shim --path ~/bin/terraspace

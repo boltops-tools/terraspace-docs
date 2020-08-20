@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace refresh
+    terraspace refresh STACK
 
 ## Description
 

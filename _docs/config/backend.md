@@ -33,9 +33,9 @@ Builds a `.terrspace-cache/dev/stacks/demo/backend.tf` using the `config/terrafo
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "<%= backend_expand('s3', 'terraform-state-:ACCOUNT-:REGION-:ENV') %>"
-    key            = "<%= backend_expand('s3', ':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
-    region         = "<%= backend_expand('s3', ':REGION' %>"
+    bucket         = "<%= expansion('terraform-state-:ACCOUNT-:REGION-:ENV') %>"
+    key            = "<%= expansion(':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    region         = "<%= expansion(':REGION') %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
   }
@@ -59,10 +59,10 @@ You can fully control the state file path by adjusting this. The string substitu
 # This is useful because azure storage accounts not allowed special characters and can only be 24 chars long.
 terraform {
   backend "azurerm" {
-    resource_group_name  = "<%= backend_expand('azurerm', 'terraform-resources-:LOCATION') %>"
-    storage_account_name = "<%= backend_expand('azurerm', 'ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
+    resource_group_name  = "<%= expansion('terraform-resources-:LOCATION') %>"
+    storage_account_name = "<%= expansion('ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
     container_name       = "terraform-state"
-    key                  = "<%= backend_expand('azurerm', ':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
+    key                  = "<%= expansion(':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
   }
 }
 ```
@@ -80,8 +80,8 @@ Results in:
 ```terraform
 terraform {
   backend "gcs" {
-    bucket = "<%= backend_expand('gcs', 'terraform-state-:PROJECT-:REGION-:ENV') %>"
-    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
+    bucket = "<%= expansion('terraform-state-:PROJECT-:REGION-:ENV') %>"
+    prefix = "<%= expansion(':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
   }
 }
 ```
@@ -103,7 +103,10 @@ Variable | Example | Description
 BUILD_DIR | stacks/demo | The build directory name.
 ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
 MOD_NAME | demo | The module name or stack name, which is also a module.
-TYPE_DIR | stacks | The type name. IE: stacks or modules
+TYPE | stack | The type name. IE: stack or module
+TYPE_DIR | stacks | The type dir. IE: stacks or modules
+TYPE_INSTANCE | stack-bob | The type with the [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob. The separator is a `-`
+INSTANCE | The [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob
 
 AWS specific variables:
 
@@ -127,7 +130,17 @@ Variable | Example | Description
 PROJECT | project-12345 | Google project id
 REGION | us-central1 | Google region
 
-## Ruby Examples
+## Strip Trailing Behavior
+
+Terraspace expansion will remove the trailing dashes and slashes in case the instance option is at the end and is not set.  For example, let's say `INSTANCE` is not set.
+
+    :REGION/:ENV/:MOD_NAME/:INSTANCE
+
+Will result in:
+
+    us-west-2/dev/demo # notice there's no trailing slash
+
+## DSL Examples
 
 You can also optionally write your backend config in Ruby. Here are some examples:
 

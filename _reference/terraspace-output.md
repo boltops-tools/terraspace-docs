@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace output MODULE
+    terraspace output STACK
 
 ## Description
 

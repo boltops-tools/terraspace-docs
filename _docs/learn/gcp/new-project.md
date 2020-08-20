@@ -36,8 +36,8 @@ Let's look at `config/terraform/backend.tf`
 ```terraform
 terraform {
   backend "gcs" {
-    bucket = "<%= backend_expand('gcs', 'terraform-state-:PROJECT-:REGION-:ENV') %>" # expanded by terraspace IE: terraform-state-project-us-central1-dev
-    prefix = "<%= backend_expand('gcs', ':REGION/:ENV/:BUILD_DIR') %>" # expanded by terraspace IE: us-central1/dev/modules/vm
+    bucket = "<%= expansion('terraform-state-:PROJECT-:REGION-:ENV') %>" # expanded by terraspace IE: terraform-state-project-us-central1-dev
+    prefix = "<%= expansion(':REGION/:ENV/:BUILD_DIR') %>" # expanded by terraspace IE: us-central1/dev/modules/vm
   }
 }
 ```

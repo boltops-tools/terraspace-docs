@@ -5,11 +5,11 @@ reference: true
 
 ## Usage
 
-    terraspace plan MODULE
+    terraspace plan STACK
 
 ## Description
 
-plan module
+plan stack
 
 
 ## Options
