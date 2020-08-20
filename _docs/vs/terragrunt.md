@@ -91,7 +91,7 @@ The files are regular terraform tfvar files:
 
 To achieve DRY, Terragrunt uses helpers like `path_relative_to_include` and `find_in_parent_folders` in the `terragrunt.hcl` files. It then walks up the directory tree to include other `terragrunt.hcl` files from parent folders. It will then use things like `generate` blocks to generate files like `backend.tf` back down in the original leaf folder of the directory tree.
 
-Terraspace achieves DRY code by building files from your `app/modules`, `app/stacks` and `config/terraform` folder. It processes things in a single clear direction.
+Terraspace achieves DRY code by building files from your `app/modules`, `app/stacks` and `config/terraform` folder. It processes things in a clear single direction.
 
 ## Statefile Management
 
