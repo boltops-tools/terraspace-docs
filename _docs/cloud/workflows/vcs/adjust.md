@@ -17,7 +17,7 @@ Since TFC will run the built Terraform project folders by Terraspace, we must re
 
     terraspace new git_hook
 
-Here's an examle with output:
+Here's an example with output:
 
     $ terraspace new git_hook
           create  .git/hooks/pre-push
