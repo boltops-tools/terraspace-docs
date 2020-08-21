@@ -8,7 +8,7 @@ Here are some naming consideration thoughts. First, we'll cover Terraform recomm
 
 ## Workspace Name
 
-Terraform suggests "One Workspace Per Environment Per Terraform Configuration". This also means if you want to deploy to another region, you should scope the TFC Workspace name to include the region. Then Terraspace workspace naming scheme accounts for all of this.
+Terraform suggests "One Workspace Per Environment Per Terraform Configuration". This also means if you want to deploy to another region, you should scope the TFC Workspace name to include the region. The Terraspace workspace naming scheme accounts for all of this.
 
 ```hcl
 terraform {
