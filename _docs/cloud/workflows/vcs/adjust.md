@@ -5,13 +5,13 @@ title: "VCS Workflow: Adjust Project Settings"
 ## Summary
 
 1. Remove .terraspace-cache from .gitignore
-2. Set up pre-commit or pre-push git hook
+2. Set up pre-push git hook
 
 ## 1. Remove .terraspace-cache from .gitignore
 
 Normally, Terraspace builds a terraform project in the `.terraspace-cache` folder that is not meant to be added to versioned controlled.  With TFC, the code must be in VCS in order to be ran though.  So we must remove the `.terraspace-cache` line from the `.gitignore` file to commit it.
 
-## 2. Set up pre-commit or pre-push git hook
+## 2. Set up pre-push git hook
 
 Since TFC will run the built Terraform project folders by Terraspace, we must remember to build the project before a `git push`. We can use a git pre-push hook to always build and commit the changes so we don't forget.  In your terraform project folder, run:
 
