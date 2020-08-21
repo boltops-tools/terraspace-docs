@@ -17,7 +17,7 @@ With Terraform Cloud you get:
 
 {% include cloud/recommendations.md %}
 
-When using Terraform Cloud with Terraspace, Terraspace provides additional conveniences to it easier to use Terraform Cloud Workspaces. For example, when you set up multiple Terraform Cloud Workspaces, you often repeatedly set up common workspace Terraform Variables and Environment Variables. Terraspace supports automating much of this process.
+When using Terraform Cloud with Terraspace, Terraspace provides additional conveniences to make it easier to use Terraform Cloud Workspaces. For example, when you set up multiple Terraform Cloud Workspaces, you often repeatedly set up common workspace Terraform Variables and Environment Variables. Terraspace supports automating much of this process.
 
 In the next sections, we'll cover some of the conveniences and how to set up Terraspace with Terraform Cloud.
 
