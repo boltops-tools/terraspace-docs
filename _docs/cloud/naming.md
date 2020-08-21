@@ -45,7 +45,7 @@ Results in:
 
 As astute reader might notice that with the naming scheme, there's no distinction between deploying a Terraspace `app/modules` or `app/stacks` resource.  This is done because it's probably more common to just deploy the stack.  If you want to deploy a module, it is recomended to move the module to the `app/stacks` folder and deploy it as a stack.
 
-If you really do want to also include the module or stack in the workspace name though, here's one way:
+If you really want to include the module or stack in the workspace name, here's one way:
 
 ```hcl
 terraform {
