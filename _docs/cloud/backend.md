@@ -19,7 +19,7 @@ terraform {
 }
 ```
 
-The backend.tf will get build and looks something like this:
+The built backend.tf looks something like this:
 
 ```hcl
 terraform {
