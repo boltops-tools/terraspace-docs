@@ -17,7 +17,7 @@ The Terraform Cloud API currently does not seem to offer an way to connect VCS p
 7. Change the "Automatic Run Triggering" to **Always trigger run**
 8. Save the settings again by clicking on **Update VCS Settings**
 
-Step #7 is important as modules from outside the path that is set can result in changes to the terraform plan.  For example, you can make a change to app/modules/example that app/stacks/demo uses.
+Step #7 is important as modules from outside the path that is set can result in changes to the terraform plan.  For example, you can make a change to `app/modules/example` that `app/stacks/demo` uses.
 
 ## Resources
 
