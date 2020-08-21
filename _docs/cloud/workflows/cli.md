@@ -32,4 +32,4 @@ Terraspace detects that TFC is configured, automatically creates the workspace, 
 
 {% include cloud/recommendations.md %}
 
-Note, if your TFC user does not have permission to create the workspace, then your admin to must create the workspace ahead of time for you.
+Note, if your TFC user does not have permission to create the workspace, then contact your admin to precreate the workspace ahead of time.
