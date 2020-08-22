@@ -19,6 +19,8 @@ A simple way to authenticate to Terraform Cloud is to run:
 
 This stores a your Terraform token to `~/.terraform.d/credentials.tfrc.json`.  Terraspace will use this token.
 
+Note, `terraform login` only works for TFC.
+
 ## Environment Variable
 
 Another way to set authenticate is to set the [terraform token](https://www.terraform.io/docs/cloud/users-teams-organizations/users.html#api-tokens) as an environment variable: TERRAFORM_TOKEN.

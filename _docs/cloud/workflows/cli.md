@@ -30,6 +30,6 @@ Then it's just running the same CLI as you would normally run
 
 Terraspace detects that TFC is configured, automatically creates the workspace, configures it, and runs terraform remotely.
 
-{% include cloud/recommendations.md %}
-
 Note, if your TFC user does not have permission to create the workspace, then contact your admin to precreate the workspace ahead of time.
+
+{% include cloud/recommendations.md %}
