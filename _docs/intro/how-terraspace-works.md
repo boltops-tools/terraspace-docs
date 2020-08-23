@@ -17,6 +17,10 @@ In fact, you can use Terraspace to build the files first, cd into the `.terraspa
 
 Once you're in the `.terraspace-cache` folder, it's regular terraform at that point.
 
+Terraspace automates it all with:
+
+    terraspace up demo
+
 ## HCL ERB Templating: A little extra power
 
 Terraspace supports ERB templating. This minor enhancement adds incredible power.
