@@ -17,7 +17,7 @@ In fact, you can use Terraspace to build the files first, cd into the `.terraspa
 
 Once you're in the `.terraspace-cache` folder, it's regular terraform at that point.
 
-Terraspace automates it all with:
+Terraspace automates it with:
 
     terraspace up demo
 
