@@ -10,7 +10,7 @@ If you are seeing an annoying "warning: already initialized constant" like so:
     /Users/me/.rbenv/versions/2.7.1/lib/ruby/2.7.0/json/version.rb:5: warning: already initialized constant JSON::VERSION_ARRAY
     ...
     /Users/me/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/json-2.3.1/lib/json/common.rb:136: warning: previous definition of UnparserError was here
-    Building .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/us-west-2/dev/stacks/demo
     ...
 
 This is due to bundler not loading until a little later.  Here are the options for removing the warning:

@@ -11,10 +11,10 @@ To destroy the resources, run:
 You'll be prompted to make sure you really want to delete these resources.
 
     $ terraspace down demo
-    Building .terraspace-cache/dev/stacks/demo
-    Current directory: .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/useast/dev/stacks/demo
+    Current directory: .terraspace-cache/useast/dev/stacks/demo
     => terraform init -get > /tmp/terraspace/out/terraform-init.out
-    Built in .terraspace-cache/dev/stacks/demo
+    Built in .terraspace-cache/useast/dev/stacks/demo
     => terraform destroy
     Acquiring state lock. This may take a few moments...
     random_pet.this: Refreshing state... [id=wildcat]

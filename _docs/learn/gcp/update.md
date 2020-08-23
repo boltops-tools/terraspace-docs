@@ -9,10 +9,10 @@ Let's update the infrastructure.
 Terraspace will show you a preview of the changes and prompt you to update the infrastructure.
 
     $ terraspace up demo
-    Building .terraspace-cache/dev/stacks/demo
-    Current directory: .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/us-central1/dev/stacks/demo
+    Current directory: .terraspace-cache/us-central1/dev/stacks/demo
     => terraform init -get > /dev/null
-    Built in .terraspace-cache/dev/stacks/demo
+    Built in .terraspace-cache/us-central1/dev/stacks/demo
     => terraform apply
     random_pet.bucket: Refreshing state... [id=optimum-gazelle]
     module.bucket.google_storage_bucket.this: Refreshing state... [id=bucket-optimum-gazelle]

@@ -38,7 +38,7 @@ However, you can also use `tfvars` files. Terraspace will automatically use `app
 Addtionally, Terraspace can generate starter tfvar files for us with the `terraspace seed` command.
 
     $ terraspace seed demo
-    Reading: .terraspace-cache/dev/stacks/demo/variables.tf
+    Reading: .terraspace-cache/us-central1/dev/stacks/demo/variables.tf
           create  app/stacks/demo/tfvars/dev.tfvars
     $
 

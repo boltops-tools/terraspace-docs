@@ -9,13 +9,13 @@ Let's go ahead and deploy the infrastructure
 The `terraspace up` command will build the files and then essentially run `terraform apply`.
 
     $ terraspace up demo
-    Building .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/useast/dev/stacks/demo
     Creating Resource Group terraform-resources-eastus...
     Creating Storage Account ts88bceastusdev...
     Creating Storage Container terraform-state...
-    Current directory: .terraspace-cache/dev/stacks/demo
+    Current directory: .terraspace-cache/useast/dev/stacks/demo
     => terraform init -get > /tmp/terraspace/out/terraform-init.out
-    Built in .terraspace-cache/dev/stacks/demo
+    Built in .terraspace-cache/useast/dev/stacks/demo
     => terraform apply
     Acquiring state lock. This may take a few moments...
 

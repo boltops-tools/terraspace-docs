@@ -9,10 +9,10 @@ Let's go ahead and deploy the infrastructure
 The `terraspace up` command will build the files and then essentially run `terraform apply`.
 
     $ terraspace up demo
-    Building .terraspace-cache/dev/stacks/demo
-    Current directory: .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/us-west-2/dev/stacks/demo
+    Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
     => terraform init -get > /dev/null
-    Built in .terraspace-cache/dev/stacks/demo
+    Built in .terraspace-cache/us-west-2/dev/stacks/demo
     => terraform apply
 
     An execution plan has been generated and is shown below.

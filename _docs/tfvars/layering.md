@@ -18,7 +18,7 @@ The tfvars files should generally be within the `app/stacks` folder, as stacks c
 Terraspace builds `tfvars` to add layering support. Example:
 
     $ terraspace build demo
-    $ cd .terraspace-cache/dev/stacks/demo/
+    $ cd .terraspace-cache/us-west-2/dev/stacks/demo/
     $ ls *.tfvars
     1-base.auto.tfvars  2-dev.auto.tfvars
     $
@@ -26,7 +26,7 @@ Terraspace builds `tfvars` to add layering support. Example:
 Layering combines the base layer with the TS_ENV specific layer. Another example:
 
     $ TS_ENV=prod terraspace build demo
-    $ cd .terraspace-cache/prod/stacks/demo/
+    $ cd .terraspace-cache/us-west-2/prod/stacks/demo/
     $ ls *.tfvars
     1-base.auto.tfvars  2-prod.auto.tfvars
     $

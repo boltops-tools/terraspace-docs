@@ -11,7 +11,7 @@ Terraspace works by building files in the `app` and `config` folders to a `.terr
 In fact, you can use Terraspace to build the files first, cd into the `.terraspace-cache` folder, and run Terraform directly. Example:
 
     terraspace build demo
-    cd .terraspace-cache/dev/stacks/demo
+    cd .terraspace-cache/us-west-2/dev/stacks/demo
     terraform init
     terraform apply
 

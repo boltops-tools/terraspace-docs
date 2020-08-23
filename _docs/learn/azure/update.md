@@ -9,10 +9,10 @@ Let's update the infrastructure.
 Terraspace will show you a preview of the changes and prompt you to update the infrastructure.
 
     $ terraspace up demo
-    Building .terraspace-cache/dev/stacks/demo
-    Current directory: .terraspace-cache/dev/stacks/demo
+    Building .terraspace-cache/useast/dev/stacks/demo
+    Current directory: .terraspace-cache/useast/dev/stacks/demo
     => terraform init -get > /tmp/terraspace/out/terraform-init.out
-    Built in .terraspace-cache/dev/stacks/demo
+    Built in .terraspace-cache/useast/dev/stacks/demo
     => terraform apply
     Acquiring state lock. This may take a few moments...
     random_pet.this: Refreshing state... [id=wildcat]
