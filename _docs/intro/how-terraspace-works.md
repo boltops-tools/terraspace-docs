@@ -6,7 +6,7 @@ Here's a high-level explanation of how Terraspace works. It's pretty straightfor
 
 ## General
 
-Terraspace works by building files in the `app` and `config` folders to a `.terraspace-cache` folder. Then it merely calls out to `terraform` within that folder.
+Terraspace works by building files in the `app` and `config/terraform` folders to a `.terraspace-cache` folder. Then it merely calls out to `terraform` within that folder.
 
 In fact, you can use Terraspace to build the files first, cd into the `.terraspace-cache` folder, and run Terraform directly. Example:
 
