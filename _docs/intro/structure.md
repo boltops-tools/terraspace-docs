@@ -41,7 +41,7 @@ app/stack/demo/tfvars | Within each stack folder, you can have a tfvars folder a
 config/app.rb | Terraspace [project-level settings]({% link _docs/config/app.md %}). Configure things like the logger and [test framework]({% link _docs/testing.md %}).
 config/env | Where you put environment-specific overrides of the `config/app.rb` settings.
 config/cli | Where you can customize cli [args]({% link _docs/cli/args.md %}) and [hooks]{% link _docs/cli/hooks.md %}.
-config/terraform | common code that gets built with the deployed stack. It can be dynamically controlled to keep your code DRY.
+config/terraform | Common code that gets built with the deployed stack. It can be dynamically controlled to keep your code DRY.
 seed/tfvars | Where you configure tfvars files for modules.  Note, you can also configure tfvars files with a subfolder directly in the module, but it is not encouraged since modules should be reusable library code.
 spec | Where you put [Project-level tests]({% link _docs/testing/project.md %}).
 Terrafile | The [Terrafile]({% link _docs/terrafile.md %}) is where you define additional terraform modules to be loaded by `terraform bundle`.
