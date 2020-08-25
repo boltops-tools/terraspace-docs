@@ -28,7 +28,7 @@ The simple layering structure is having the files at the top-level like so:
     ├── dev.tfvars
     └── prod.tfvars
 
-You can also add structure your tfvars so that they are within env folders like so:
+You can also structure your tfvars so that they are within env folders like so:
 
     app/stacks/server/tfvars
     ├── base.tfvars
