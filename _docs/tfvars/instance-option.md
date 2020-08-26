@@ -108,6 +108,8 @@ A different statefile key path is used different `--instance` values. Example:
 
 The instance value is appended after a period (`.`). This allows multiple instances of the infrastructure to be deployed without colliding.
 
+{% include tfvars/instance_option_example.md %}
+
 ## Code Instead of TfVars
 
 Using the `--instance` with different tfvars is only one way to re-use the same infrastructure code. Depending on what you're trying to achieve, you may want reuse the module code by calling it multiple times in the stack code itself. Something like this:
