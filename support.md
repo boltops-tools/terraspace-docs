@@ -21,4 +21,4 @@ If you would like professional help, [BoltOps](https://www.boltops.com/) provide
 
 ## Terraspace Webinar
 
-From time to time, we run Terraspace Webinars. We'll introduce Terraspace, provide a demo, and answer your questions. If you are intersted, sign up here: [Terraspace Webinar Signup](https://bit.ly/301sZIQ).
+From time to time, we run Terraspace Webinars. We'll introduce Terraspace, provide a demo, and answer your questions. If you are interested, sign up here: [Terraspace Webinar Signup](https://bit.ly/301sZIQ).
