@@ -91,7 +91,7 @@ You can use the same code for different environments in the different regions al
     az configure --defaults location=westus
     TS_ENV=prod terraspace up demo
 
-Note, you check the current Azure location, you can use:
+Note, to check the current Azure location, you can use:
 
     az configure --list-defaults
     cat ~/.azure/config # also works, it's where az writes settings
