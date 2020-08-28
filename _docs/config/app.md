@@ -25,7 +25,7 @@ Terraspace.configure do |config|
 end
 ```
 
-## Envioronment Specific Overrides
+## Environment Specific Overrides
 
 You can configure environment specific value overrides for `config/app.rb` with corresponding `config/env/TS_ENV.rb` files. Examples:
 
