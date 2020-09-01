@@ -44,11 +44,17 @@ terraform {
 
 Notice the variable notation. Terraspace expands it out, substituting the values. The starter `backend.tf` accounts for `REGION`, `ENV`, etc. Here's an expanded example:
 
-    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
-
-Results in:
-
-    us-west-2/dev/stacks/demo/terraform.tfstate
+```terraform
+terraform {
+  backend "s3" {
+    bucket         = "terraform-state-111111111111-us-west-2-dev"     # expanded by terraspace IE: terraform-state-112233445566-us-west-2-dev
+    key            = "us-west-2/dev/stacks/demo/terraform.tfstate" # expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    region         = "us-west-2"
+    encrypt        = true
+    dynamodb_table = "terraform_locks"
+  }
+}
+```
 
 You can fully control the state file path by adjusting this. The string substitution also makes it clear what the state path looks like.
 
