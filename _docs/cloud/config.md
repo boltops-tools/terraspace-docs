@@ -23,6 +23,7 @@ Here's a table with the cloud related config settings:
 
 Name | Description
 --- | ---
-overwrite | Whether or not to overwrite existing non-sensitive variables. Default: true
-overwrite_sensitive | Whether or not to overwrite existing sensitive variables. Default: true
-relative_root | Useful for the [VCS-driven workflow]({% link _docs/cloud/workflows/vcs.md %}) if you have your terraspace project within a subfolder of the repo root folder. Default: nil
+build.clean_cache | Disable cleaning the `.terraspace-cache` entirely. Terrspace generally tries to only remove the cache files in a way to allow the TFC VCS-Driven workflow to work. But it may not work for your needs, depending on Terraspace is configured. This setting keeps the cache. You can manually delete items from the `.terraspace-cache` manually. Default: true
+cloud.overwrite | Whether or not to overwrite existing non-sensitive variables. Default: true
+cloud.overwrite_sensitive | Whether or not to overwrite existing sensitive variables. Default: true
+cloud.relative_root | Useful for the [VCS-driven workflow]({% link _docs/cloud/workflows/vcs.md %}) if you have your terraspace project within a subfolder of the repo root folder. Default: nil

@@ -25,6 +25,8 @@ Terraspace.configure do |config|
 end
 ```
 
+For the updated list of available config settings, refer to [terraspace/app.rb](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/app.rb).
+
 ## Environment Specific Overrides
 
 You can configure environment specific value overrides for `config/app.rb` with corresponding `config/env/TS_ENV.rb` files. Examples:
