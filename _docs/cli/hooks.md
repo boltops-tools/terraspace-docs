@@ -9,7 +9,7 @@ Terraspace calls out to the `terraform` command. You can execute commands before
 config/cli/hooks.rb
 
 ```ruby
-before("init"
+before("init",
   execute: "echo hi",
 )
 
@@ -25,7 +25,7 @@ So you can customize terraspace to call your commands.
 By default, if the hook commands fail, then terraspace will exit with the original hook error code.  You can change this behavior with the `exit_on_fail` option.
 
 ```ruby
-before("init"
+before("init",
   execute: "/command/will/fail/but/will/continue",
   exit_on_fail: false,
 )

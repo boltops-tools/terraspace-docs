@@ -19,7 +19,24 @@ A simple way to authenticate to Terraform Cloud is to run:
 
 This stores a your Terraform token to `~/.terraform.d/credentials.tfrc.json`.  Terraspace will use this token.
 
-Note, `terraform login` only works for TFC.
+By default, the `terraform login` command logs into TFC.
+
+### TFE
+
+For TFE, specify your TFE setup's hostname. Example:
+
+    terraform login my.hostname.com
+
+Also configure `cloud.hostname`.
+
+config/app.rb:
+
+```ruby
+Terraspace.configure do |config|
+  # ...
+  config.hostname = "my.hostname.com"
+end
+```
 
 ## Environment Variable
 
