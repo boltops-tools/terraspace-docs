@@ -3,6 +3,7 @@ title: CLI Reference
 ---
 {% include reference.md %}
 
+* [terraspace all]({% link _reference/terraspace-all.md %})
 * [terraspace build]({% link _reference/terraspace-build.md %})
 * [terraspace bundle]({% link _reference/terraspace-bundle.md %})
 * [terraspace check_setup]({% link _reference/terraspace-check_setup.md %})
@@ -13,7 +14,10 @@ title: CLI Reference
 * [terraspace console]({% link _reference/terraspace-console.md %})
 * [terraspace down]({% link _reference/terraspace-down.md %})
 * [terraspace info]({% link _reference/terraspace-info.md %})
+* [terraspace init]({% link _reference/terraspace-init.md %})
 * [terraspace list]({% link _reference/terraspace-list.md %})
+* [terraspace log]({% link _reference/terraspace-log.md %})
+* [terraspace logs]({% link _reference/terraspace-logs.md %})
 * [terraspace new]({% link _reference/terraspace-new.md %})
 * [terraspace output]({% link _reference/terraspace-output.md %})
 * [terraspace plan]({% link _reference/terraspace-plan.md %})
@@ -23,6 +27,6 @@ title: CLI Reference
 * [terraspace show]({% link _reference/terraspace-show.md %})
 * [terraspace summary]({% link _reference/terraspace-summary.md %})
 * [terraspace test]({% link _reference/terraspace-test.md %})
-* [terraspace update]({% link _reference/terraspace-update.md %})
+* [terraspace up]({% link _reference/terraspace-up.md %})
 * [terraspace validate]({% link _reference/terraspace-validate.md %})
 * [terraspace version]({% link _reference/terraspace-version.md %})

@@ -109,6 +109,34 @@ Becomes:
 
     us-west-2/dev/stacks/demo/terraform.tfstate
 
+## Deploying Multiple Stacks
+
+Both Terraspace and Terragrunt offers a way to deploy multiple parts of infrastructure with a single command.
+
+With Terragrunt, you cd into the top-level folder with all the subfolders you want to deploy and run:
+
+    cd top-level-folder
+    terragrunt apply-all
+
+What you choose to deploy is determined by the folder structure. If you want to deploy all modules, you go to the "root" of your hierarchal project folder structure.
+
+With Terraspace, to deploy multiple infrastructure stacks, you can run:
+
+    terraspace all up
+
+You can also selectively choose which infrastructure stacks to deploy. Simply provide the stack names.  Here's an example with a `b2` stack:
+
+    terraspace all up b2
+
+![](https://img.boltops.com/boltops/tools/terraspace/dependencies/simple-a1-highlight-b2.png)
+
+The green nodes, representing stacks, will be deployed. Terraspace targets the subtrees of the infrastructure dependency graph based on the list of stacks provided. You even can target multiple subtrees.
+
+    terraspace all up STACKS
+    terraspace all up b1 b2
+
+You can easily target specific parts of your infrastructure. For more info see the dependencies docs: [Deploy Multiple]({% link _docs/dependencies/deploy-all.md %}) and [Subtrees]({% link _docs/dependencies/subgraphs.md %})
+
 ## Generators
 
 Terragrunt doesn't have generators.

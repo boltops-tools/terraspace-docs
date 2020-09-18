@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace cloud setup
+    terraspace cloud setup STACK
 
 ## Description
 

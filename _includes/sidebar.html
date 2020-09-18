@@ -65,7 +65,12 @@
         <ul>
           <li><a href="{% link _docs/config/app.md %}">App</a></li>
           <li><a href="{% link _docs/config/hooks.md %}">Hooks</a></li>
-          <li><a href="{% link _docs/config/backend.md %}">Backend</a></li>
+          <li><a href="{% link _docs/config/backend.md %}">Backend</a>
+            <ul>
+              <li><a href="{% link _docs/config/backend/variables.md %}">Variables</a></li>
+              <li><a href="{% link _docs/config/backend/dsl.md %}">DSL</a></li>
+            </ul>
+          </li>
           <li><a href="{% link _docs/config/provider.md %}">Provider</a></li>
           <li><a href="{% link _docs/config/tfvars.md %}">Tfvars</a></li>
           <li><a href="{% link _docs/config/locals.md %}">Locals</a></li>
@@ -76,6 +81,7 @@
               <li><a href="{% link _docs/cli/hooks.md %}">Hooks</a></li>
             </ul>
           </li>
+          <li><a href="{% link _docs/config/reference.md %}">Reference</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/generators.md %}">Generators</a>
@@ -96,25 +102,29 @@
           <li><a href="{% link _docs/tfvars/lookups.md %}">Lookups</a></li>
         </ul>
       </li>
+      <li><a href="{% link _docs/dependencies.md %}">Dependency Graphs</a>
+        <ul>
+        {% assign docs = site.docs | where: "categories","dependencies" %}
+        {% for doc in docs -%}
+          {% if doc.nav_text == "Tfvars" %}
+          <li><a href='{{doc.url}}'>{{doc.nav_text}}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","dependencies-tfvars" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+          {% endif %}
+        {% endfor %}
+        </ul>
+      </li>
       <li><a href="{% link _docs/state.md %}">State File</a>
         <ul>
           <li><a href="{% link _docs/state/approaches.md %}">Approaches</a></li>
           <li><a href="{% link _docs/state/existing.md %}">Existing Statefile</a></li>
-        </ul>
-      </li>
-      <li><a href="{% link _docs/testing.md %}">Testing</a>
-        <ul>
-          <li><a href="{% link _docs/testing/test-harness.md %}">Test Harness</a></li>
-          <li><a href="{% link _docs/testing/module.md %}">Module-Level</a></li>
-          <li><a href="{% link _docs/testing/project.md %}">Project-Level</a></li>
-          <li><a href="{% link _docs/ci-automation.md %}">CI/CD Automation</a>
-        </ul>
-      </li>
-      <li><a href="{% link _docs/plugins.md %}">Plugins</a>
-        <ul>
-          <li><a href="{% link _docs/plugins/aws.md %}">AWS</a></li>
-          <li><a href="{% link _docs/plugins/azurerm.md %}">Azure</a></li>
-          <li><a href="{% link _docs/plugins/google.md %}">Google</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/cloud.md %}">Cloud</a>
@@ -141,6 +151,21 @@
             </ul>
           </li>
           <li><a href="{% link _docs/cloud/naming.md %}">Naming</a></li>
+        </ul>
+      </li>
+      <li><a href="{% link _docs/testing.md %}">Testing</a>
+        <ul>
+          <li><a href="{% link _docs/testing/test-harness.md %}">Test Harness</a></li>
+          <li><a href="{% link _docs/testing/module.md %}">Module-Level</a></li>
+          <li><a href="{% link _docs/testing/project.md %}">Project-Level</a></li>
+          <li><a href="{% link _docs/ci-automation.md %}">CI/CD Automation</a>
+        </ul>
+      </li>
+      <li><a href="{% link _docs/plugins.md %}">Plugins</a>
+        <ul>
+          <li><a href="{% link _docs/plugins/aws.md %}">AWS</a></li>
+          <li><a href="{% link _docs/plugins/azurerm.md %}">Azure</a></li>
+          <li><a href="{% link _docs/plugins/google.md %}">Google</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/lookups.md %}">Lookup Paths</a></li>

@@ -2,7 +2,7 @@
 title: Backend Config
 ---
 
-You can configure the backend for terraform to use with `config/terraform/backend.rb` or `config/terraform/backend.tf`. Below are examples.
+You can configure the backend for terraform to use with `config/terraform/backend.tf`. Below are examples.
 
 You may also be interested in:
 
@@ -34,7 +34,7 @@ Builds a `.terrspace-cache/dev/stacks/demo/backend.tf` using the `config/terrafo
 terraform {
   backend "s3" {
     bucket         = "<%= expansion('terraform-state-:ACCOUNT-:REGION-:ENV') %>"
-    key            = "<%= expansion(':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>" # variable notation expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    key            = "<%= expansion(':REGION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
     region         = "<%= expansion(':REGION') %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
@@ -47,8 +47,8 @@ Notice the variable notation. Terraspace expands it out, substituting the values
 ```terraform
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-111111111111-us-west-2-dev"     # expanded by terraspace IE: terraform-state-112233445566-us-west-2-dev
-    key            = "us-west-2/dev/stacks/demo/terraform.tfstate" # expanded by terraspace IE: us-west-2/dev/modules/vm/terraform.tfstate
+    bucket         = "terraform-state-111111111111-us-west-2-dev"
+    key            = "us-west-2/dev/stacks/demo/terraform.tfstate"
     region         = "us-west-2"
     encrypt        = true
     dynamodb_table = "terraform_locks"
@@ -61,8 +61,6 @@ You can fully control the state file path by adjusting this. The string substitu
 ## Azure Backend
 
 ```terraform
-# SUBSCRIPTION_HASH is a short 4-char consistent hash of the longer subscription id.
-# This is useful because azure storage accounts not allowed special characters and can only be 24 chars long.
 terraform {
   backend "azurerm" {
     resource_group_name  = "<%= expansion('terraform-resources-:LOCATION') %>"
@@ -73,13 +71,20 @@ terraform {
 }
 ```
 
-So
+Notice the variable notation. Terraspace expands it out, substituting the values. The starter `backend.tf` accounts for `LOCATION`, `ENV`, etc. Here's an expanded example:
 
-    ts:SUBSCRIPTION_HASH:LOCATION:ENV
+```ruby
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "terraform-resources-eastus"
+    storage_account_name = "tswxyzeastusdev"
+    container_name       = "terraform-state"
+    key                  = "eastus/dev/stacks/demo/terraform.tfstate"
+  }
+}
+```
 
-Results in:
-
-    tswxyzeastusdev
+Note, the `SUBSCRIPTION_HASH` is a short 4-char consistent hash of the longer subscription id. This is useful because azure storage account names are not allowed special characters and are limited to 24 chars.
 
 ## GCS Backend
 
@@ -87,54 +92,51 @@ Results in:
 terraform {
   backend "gcs" {
     bucket = "<%= expansion('terraform-state-:PROJECT-:REGION-:ENV') %>"
-    prefix = "<%= expansion(':REGION/:ENV/:BUILD_DIR') %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
+    prefix = "<%= expansion(':REGION/:ENV/:BUILD_DIR') %>"
   }
 }
 ```
 
-So
+Notice the variable notation. Terraspace expands it out, substituting the values. The starter `backend.tf` accounts for `PROJECT`, `ENV`, etc. Here's an expanded example:
 
-    :REGION/:ENV/:BUILD_DIR
+```terraform
+terraform {
+  backend "gcs" {
+    bucket = "terraform-state-google-project-id-us-central1-dev"
+    prefix = "us-central1/dev/stacks/demo"
+  }
+}
+```
 
-Results in:
+## Remote Backend: TFC and TFE
 
-    us-central1/dev/stacks/demo
+```terraform
+terraform {
+  backend "remote" {
+    organization = "ORG"
+    workspaces {
+      name = "<%= expansion(':MOD_NAME-:ENV-:REGION-:INSTANCE') %>"
+    }
+  }
+}
+```
+
+Here's an expanded example:
+
+```terraform
+terraform {
+  backend "remote" {
+    organization = "boltops"
+    workspaces {
+      name = "demo-dev-us-west-2"
+    }
+  }
+}
+```
 
 ## Variables Available
 
-Common variables available:
-
-Variable | Example | Description
---- | --- | ---
-BUILD_DIR | stacks/demo | The build directory name.
-ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
-MOD_NAME | demo | The module name or stack name, which is also a module.
-TYPE | stack | The type name. IE: stack or module
-TYPE_DIR | stacks | The type dir. IE: stacks or modules
-TYPE_INSTANCE | stack-bob | The type with the [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob. The separator is a `-`
-INSTANCE | The [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob
-
-AWS specific variables:
-
-Variable | Example | Description
---- | --- | ---
-ACCOUNT | 112233445566 | AWS Account Id
-REGION | us-west-2 | AWS Region
-
-Azure specific variables:
-
-Variable | Example | Description
---- | --- | ---
-LOCATION         | eastus | Azure Location
-SUSCRIPTION      | EXAMPLE88-c44e-4677-bf0eEXAMPLE | Azure subscription id
-SUSCRIPTION_HASH | wxyz | Short consistent hash based on subscription id
-
-Google specific variables:
-
-Variable | Example | Description
---- | --- | ---
-PROJECT | project-12345 | Google project id
-REGION | us-central1 | Google region
+For variables available see [Backend Config Variables]({% link _docs/config/backend/variables.md %})
 
 ## Strip Trailing Behavior
 
@@ -146,37 +148,6 @@ Will result in:
 
     us-west-2/dev/demo # notice there's no trailing slash
 
-## DSL Examples
-
-You can also optionally write your backend config in Ruby. Here are some examples:
-
-### S3 Backend
-
-config/terraform/backend.rb
-
-```ruby
-backend("s3",
-  bucket:         "terraform-state-:ACCOUNT-:REGION-:ENV",
-  key:            ":REGION/:ENV/:BUILD_DIR/terraform.tfstate", # variable notation gets expanded out by terraspace
-  region:         ":REGION",
-  encrypt:        true,
-  dynamodb_table: "terraform_locks"
-)
-```
-
-### GCS Backend
-
-Here's an example for a gcs backend with Ruby.
-
-config/terraform/backend.rb
-
-```ruby
-backend("gcs",
-  bucket: "terraform-state-:PROJECT-:REGION-:ENV",
-  prefix: ":REGION/:ENV/:BUILD_DIR" # variable notation gets expanded out by terraspace
-)
-```
-
-### Why Is Env in Bucket Name?
+## Why Is Env in Bucket Name?
 
 By default, the bucket name has the ENV at the end. This is done so we can easily see which environment the bucket stores Terraform statefiles for. This quickly helps with debugging. If you prefer not to have the ENV at the end of the bucket name, remove it after generating the project with `terraspace new project`.

@@ -6,6 +6,8 @@ The `terraspace summary` command shows a summary of all the resources grouped by
 
 ## Example
 
+The summary is based on the statefiles in the bucket, regardless of whether or not the stack is defined.
+
     $ terraspace summary
     Summary of resources based on backend storage statefiles
     Downloading statefiles to /tmp/terraspace/statefiles/terraform-state-111111111111-us-west-2-dev/us-west-2/dev/
@@ -17,6 +19,17 @@ The `terraspace summary` command shows a summary of all the resources grouped by
         random_pet this: first-buck
     $
 
-To learn more about the Terraspace statefile approach see: [Terraform Statefile Approaches and Thoughts]({% link _docs/state/approaches.md %}).
+The summary command is only support for aws, google, and azure currently. IE: It is not supported for local backends or TFC.
 
-{% include intro/modules-vs-stacks.md %}
+## All Show Command
+
+The `terraspace all show` command can also be helpful. It downloads `app/stacks` statefiles and and summarizes:
+
+    $ terraspace all show
+    Running:
+       terraspace show demo       # batch 1
+    Batch Run 1:
+    Running: terraspace show demo Logs: log/show/demo.log
+    terraspace show demo: Resources: 2 Outputs: 1
+    Time took: 2s
+    $
