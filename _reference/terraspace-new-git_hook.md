@@ -15,7 +15,9 @@ Generates new git hook
 ## Options
 
 ```
-t, [--type=TYPE]  # git hook type
-                  # Default: pre-push
+    [--envs=one two three]  # envs to build
+                            # Default: ["dev", "prod"]
+t, [--type=TYPE]            # git hook type
+                            # Default: pre-push
 ```
 

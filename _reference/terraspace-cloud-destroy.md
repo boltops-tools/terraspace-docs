@@ -5,16 +5,11 @@ reference: true
 
 ## Usage
 
-    terraspace cloud destroy
+    terraspace cloud destroy STACK
 
 ## Description
 
-Destroy workspace
+Destroy workspace by specifying the stack
 
 
-## Options
-
-```
-y, [--yes], [--no-yes]  # bypass are you sure prompt
-```
 

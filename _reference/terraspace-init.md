@@ -1,23 +1,21 @@
 ---
-title: terraspace show
+title: terraspace init
 reference: true
 ---
 
 ## Usage
 
-    terraspace show STACK
+    terraspace init STACK
 
 ## Description
 
-show
+init
 
 
 ## Options
 
 ```
 i, [--instance=INSTANCE]         # Instance of stack
-    [--plan=PLAN]                # path to created.plan
-    [--json], [--no-json]        # show plan in json format
     [--verbose], [--no-verbose]  
     [--noop], [--no-noop]        
 ```

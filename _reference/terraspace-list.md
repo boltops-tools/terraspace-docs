@@ -15,7 +15,8 @@ list stacks and modules
 ## Options
 
 ```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
+t, [--type=TYPE]                 # Type: stack or module. Default all
+    [--verbose], [--no-verbose]  
+    [--noop], [--no-noop]        
 ```
 
