@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-prints version
+Prints version.
 
 
 ## Options

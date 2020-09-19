@@ -9,7 +9,14 @@ reference: true
 
 ## Description
 
-output
+Run output.
+
+## Example
+
+    $ terraspace output demo
+    => terraform output
+    bucket_name = bucket-fond-sheep
+    $
 
 
 ## Options

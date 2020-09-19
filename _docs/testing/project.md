@@ -16,6 +16,7 @@ Let's say you have terraspace project with a `app/stacks/demo` module you want t
 
 We can use `terraspace new project_test` to create a `spec/stacks/demo/main_spec.rb` test.
 
+    terraspace new bootstrap_test # run once if dont have a spec folder at the project top-level
     terraspace new project_test demo
 
 The structure would look something lik e this:

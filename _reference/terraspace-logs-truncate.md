@@ -9,7 +9,13 @@ reference: true
 
 ## Description
 
-Truncates logs. IE: Removes contents and zero bytes the files
+Truncates logs. IE: Keeps the files but removes contents and zero bytes the files.
+
+## Example
+
+    $ terraspace logs truncate
+    Truncating log files in log/
+    $
 
 
 

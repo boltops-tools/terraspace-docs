@@ -9,7 +9,14 @@ reference: true
 
 ## Description
 
-Generates new git hook
+Generates new git hook.
+
+## Example
+
+    $ terraspace new git_hook
+          create  .git/hooks/pre-push
+           chmod  .git/hooks/pre-push
+    $
 
 
 ## Options

@@ -9,7 +9,13 @@ reference: true
 
 ## Description
 
-clean .terraspace-cache dir
+Removes .terraspace-cache dir.
+
+## Example
+
+    $ terraspace clean
+    Removed .terraspace-cache
+    $
 
 
 ## Options

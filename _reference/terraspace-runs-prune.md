@@ -11,7 +11,7 @@ reference: true
 
 Prune runs that are possible to cancel or discard.
 
-This leaves the to most recent run alone. The top run will immediately start planning. Runs that are also in "Needs Confirmation" will be cancelled.
+This leaves the top run alone. The top run usually starts immediately planning once the other runs are pruned. Runs that are also in "Needs Confirmation" will be cancelled.
 
 ## Examples
 
@@ -20,7 +20,7 @@ This leaves the to most recent run alone. The top run will immediately start pla
 
 ## Example with Output
 
-    $ terraspace cloud runs prune pet
+    $ terraspace cloud runs prune demo
     Will keep:
 
         run-9muMrjrd22vhsP4u pending test 2020-09-18T12:47:11

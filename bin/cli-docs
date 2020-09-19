@@ -1,0 +1,30 @@
+#!/bin/bash -eux
+
+DOCS=`pwd` # save terraspace-docs location
+
+mkdir -p /tmp/terraspace/cli-docs
+cd /tmp/terraspace/cli-docs
+
+# To use an terraspace edge, just symlink it
+if [ ! -e /tmp/terraspace/cli-docs/terraspace ] ; then
+  git clone https://github.com/boltops-tools/terraspace
+fi
+
+cd terraspace # will be in the cloned terraspace repo for the rest of the script
+
+if [ ! -L /tmp/terraspace/cli-docs/terraspace ] ; then
+  git pull || true
+  bundle
+fi
+bundle exec rake docs # generate cli docs
+
+# folder _reference
+rm -rf $DOCS/_reference*
+mv docs/_reference $DOCS/
+
+# file reference.md
+mv docs/reference.md $DOCS/reference.md
+
+# remove _includes to cleanup
+# docs/_includes/reference.md - just a generic reference.md left that is not needed
+rm -rf docs
