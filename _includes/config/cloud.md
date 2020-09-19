@@ -1,4 +1,4 @@
-cloud.auto_sync | Enables auto syncing of config/cloud settings to TFC/TFE. Useful to disable you do not have permission to manage workspaces. | true
+cloud.auto_sync | Enables auto-syncing of config/cloud settings to TFC/TFE. Useful to disable if you do not have permission to manage workspaces. | true
 cloud.working_dir_prefix | Add additional prefix to add the relative root that is set on TFC | nil
 cloud.hostname | Hostname used for TFE Terraform token used for authenticated API calls. See: [Terraform Login]({% link _docs/cloud/login.md %}) | nil
 cloud.vars.overwrite | Whether or not to overwrite non-sensitive variables. | true

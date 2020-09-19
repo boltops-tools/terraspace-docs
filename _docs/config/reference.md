@@ -8,6 +8,7 @@ all.concurrency | How many processes to run in parallel for each batch for the `
 all.exit_on_fail.down | Whether or not to exit if one of the down commands fails. Note: Other commands like show, validate, etc default to false. | true
 all.exit_on_fail.up | Whether or not to exit if one of the up commands fails. | true
 all.ignore_stacks | Stacks to ignore and not to be considered as part of the dependency graph. | []
+auto_create_backend | Enable auto-creation of backend | true
 build.cache_dir | The relative dir for the module or stack cache. IE: .terraspace-cache/us-west-2/dev/stacks/demo | :CACHE_ROOT/:REGION/:ENV/:BUILD_DIR
 build.cache_root | The root of the cache build dir. IE: .terraspace-cache | /full/path/to/.terraspace-cache
 build.clean_cache | Whether to clean the cache at the beginning of the build process. Can be useful to turn off if using TFC VCS-Driven workflow. | true
