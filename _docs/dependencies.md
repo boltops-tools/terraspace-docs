@@ -8,7 +8,7 @@ If you want to deploy multiple stacks, you can do so with a single command:
 
 Terraspace calculates the dependency graph and ensures they are deployed in the correct order. Here's a dependency graph example:
 
-![](https://img.boltops.com/boltops/tools/terraspace/dependencies/medium-exapmle-1.png)
+![](https://img.boltops.com/boltops/tools/terraspace/dependencies/medium-example-1.png)
 
 {% include dependencies/demo-repo.md %}
 

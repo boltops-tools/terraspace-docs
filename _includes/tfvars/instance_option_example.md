@@ -1,4 +1,4 @@
-## Instance Option Example
+## {{ include.heading }}
 
 The terraspace CLI `options` are also available. Here's an interesting use of the options with the `--instance` option.
 

@@ -29,7 +29,7 @@ app/stacks/instance/variables.tf
 
 Wire them together with the `terraform_output` helper in the instance tfvars file.
 
-app/stacks/instance/tfvars/dev.tfvars
+app/stacks/instance/tfvars/base.tfvars
 
     vpc_id = <%= terraform_output('vpc.vpc_id') %>
 

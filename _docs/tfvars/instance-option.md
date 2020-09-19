@@ -108,7 +108,7 @@ A different statefile key path is used different `--instance` values. Example:
 
 The instance value is appended after a period (`.`). This allows multiple instances of the infrastructure to be deployed without colliding.
 
-{% include tfvars/instance_option_example.md %}
+{% include tfvars/instance_option_example.md heading="Instance Option Example" %}
 
 ## Code Instead of TfVars
 

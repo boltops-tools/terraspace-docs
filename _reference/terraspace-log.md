@@ -36,7 +36,7 @@ To show all logs, use the `-a` option.
 
     terraspace log up -a
 
-Note, if both an action and stack is specified, then it defaults to showing all logs. If you want to not show all logs in thta case, then you can use `--no-all`.
+Note, if both an action and stack is specified, then it defaults to showing all logs. If you want to not show all logs in that case, then you can use `--no-all`.
 
 ## Tail Logs
 
@@ -63,7 +63,7 @@ f, [--follow], [--no-follow]          # Follow the log in live tail fashion. Mus
 n, [--limit=N]                        # Number of lines to limit showing. Only applies in no-follow mode.
                                       # Default: 10
 a, [--all], [--no-all]                # All mode turns off the limit. Defaults to all if a single log is specified. Only applies in no-follow mode.
-    [--verbose], [--no-verbose]       
-    [--noop], [--no-noop]             
+    [--verbose], [--no-verbose]
+    [--noop], [--no-noop]
 ```
 

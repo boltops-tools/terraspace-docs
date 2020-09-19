@@ -31,7 +31,7 @@ terraform_output("vpc.vpc_id")
 
 When running `terraspace plan all`, the dependent stacks may not have been applied yet. You can provide mock values so the plan can be successful.  Example:
 
-app/stacks/instance/tfvars/dev.tfvars
+app/stacks/instance/tfvars/base.tfvars
 
     vpc_id = <%= terraform_output('vpc.vpc_id', mock: 'vpc-111') %>
 
@@ -41,7 +41,7 @@ The mock values are only used if the dependent stacks have not yet been applied.
 
 There is also a `depends_on` helper method that can be used to declare dependencies without having to wire outputs to input variables.  Example:
 
-app/stacks/instance/tfvars/dev.tfvars
+app/stacks/instance/tfvars/base.tfvars
 
     <% depends_on('vpc') %>
 
