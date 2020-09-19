@@ -130,12 +130,11 @@ You can also selectively choose which infrastructure stacks to deploy. Simply pr
 
 ![](https://img.boltops.com/boltops/tools/terraspace/dependencies/simple-a1-highlight-b2.png)
 
-The green nodes, representing stacks, will be deployed. Terraspace targets the subtrees of the infrastructure dependency graph based on the list of stacks provided. You even can target multiple subtrees.
+The green nodes, representing stacks, will be deployed. Terraspace targets the subgraph based on the stacks provided. You can even target multiple subgraphs.
 
-    terraspace all up STACKS
     terraspace all up b1 b2
 
-You can easily target specific parts of your infrastructure. For more info see the dependencies docs: [Deploy Multiple]({% link _docs/dependencies/deploy-all.md %}) and [Subtrees]({% link _docs/dependencies/subgraphs.md %})
+You can easily target specific parts of your infrastructure. For more info see the docs: [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}) and [Subgraphs]({% link _docs/dependencies/subgraphs.md %})
 
 ## Generators
 

@@ -10,11 +10,18 @@ The following table summarizes the releases. Only some highlighted releases are 
 
 Version | Notes
 --- | ---
+0.3.0 | Some config options where renamed. See below.
 0.2.0 | Just make sure youre using the a compatible version the provider plugins. Upgrading terraspace should have already done this, but just in case this is noted.
 
 ## Upgrade Details
 
 The following section provides a little more detail on each version upgrade. Note, we'll not provide more details for all versions.
+
+### 0.3.0
+
+* TFC vars related options like `cloud.overwrite` have been move to `cloud.vars`. IE:  `config.overwrite` => `config.cloud.overwrite`
+* TFC option. The `cloud.relative_root` has been renamed to `cloud.working_dir_prefix`.
+* See [Config Reference Docs]({% link _docs/config/reference.md %}) for up-to-date list.
 
 ### 0.2.0
 

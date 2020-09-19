@@ -12,7 +12,7 @@ app/stacks/demo/tfvars/base.tfvars:
 
     vpc_id = <%= terraform_output("vpc.vpc_id")" %>
 
-Terraspace also uses this information to build the dependency graph and deploys the dependent stacks in the correct order with `terraspace all up`. Learn more: [Deploy Multiple]({% link _docs/dependencies/deploy-all.md %}).
+Terraspace also uses this information to build the dependency graph and deploys the dependent stacks in the correct order with `terraspace all up`. Learn more: [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}).
 
 ## Example 2: General
 
