@@ -12,9 +12,4 @@ Terraspace calculates the dependency graph and ensures they are deployed in the 
 
 {% include dependencies/demo-repo.md %}
 
-## More Info
-
-{% assign docs = site.docs | where: "categories","dependencies" %}
-{% for doc in docs -%}
-* [{{ doc.title }}]({{ doc.url }})
-{% endfor %}
+{% include dependencies/more-info.md %}
