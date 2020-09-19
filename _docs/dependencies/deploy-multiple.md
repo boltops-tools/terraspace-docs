@@ -53,7 +53,7 @@ When you run the `terraspace all up` command, Terraspace will deploy the resourc
     Time took: 7s
     $
 
-Terraspace provides a reduced-noise summary of the runs. The full logs are also written for further inspection and debugging.
+Terraspace provides a reduced-noise summary of the runs. The full logs are also written for further inspection and debugging. The [terraspace log]({% link _reference/terraspace-log.md %}) command is useful for viewing the logs.
 
 ## Dependency Graph & Parallelism
 
@@ -82,7 +82,7 @@ end
 
 More docs: [Config Reference]({% link _docs/config/reference.md %})
 
-## Filtering
+## Filtering Subgraphs
 
 You can filter for subtrees or subgraphs to deploy:
 

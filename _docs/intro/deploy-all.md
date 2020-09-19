@@ -28,6 +28,34 @@ Terraspace will parallelize the batches as much as possible:
        terraspace up a1 # batch 4
     Are you sure? (y/N)
 
+Once you confirm, Terraspace deploys the batches in parallel. Essentially, terraspace handles the orchestration.
+
+    Are you sure? (y/N) y
+    Batch Run 1:
+    Running: terraspace up b2 Logs: log/up/b2.log
+    Running: terraspace up c1 Logs: log/up/c1.log
+    Running: terraspace up c3 Logs: log/up/c3.log
+    Running: terraspace up d1 Logs: log/up/d1.log
+    terraspace up b2:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    terraspace up c1:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    terraspace up c3:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    terraspace up d1:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    Batch Run 2:
+    Running: terraspace up b1 Logs: log/up/b1.log
+    Running: terraspace up c2 Logs: log/up/c2.log
+    terraspace up b1:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    terraspace up c2:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    Batch Run 3:
+    Running: terraspace up b3 Logs: log/up/b3.log
+    terraspace up b3:  Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+    Batch Run 4:
+    Running: terraspace up a1 Logs: log/up/a1.log
+    terraspace up a1:  Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+    Time took: 41s
+    $
+
+Terraspace also provides a reduced-noise summary of the runs. The full logs are also written for further inspection and debugging.
+
 ## Targetting Subgraphs
 
 You can also deploy specific parts of your infrastructure by specifying the stack names. Example:
