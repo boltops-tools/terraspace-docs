@@ -33,7 +33,7 @@ app/stacks/instance/tfvars/base.tfvars
 
     vpc_id = <%= terraform_output('vpc.vpc_id') %>
 
-Terraform infers the dependency from this wiring and will deploy the vpc before the instance. It's that simple.
+Terraspace infers the dependency from this wiring and will deploy the vpc before the instance. It's that simple.
 
 ## Deploying
 
