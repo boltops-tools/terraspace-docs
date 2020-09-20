@@ -13,15 +13,15 @@ all subcommands
 
 ## Subcommands
 
-* [terraspace all down]({% link _reference/terraspace-all-down.md %}) - destroy all
-* [terraspace all graph]({% link _reference/terraspace-all-graph.md %}) - graph all
-* [terraspace all output]({% link _reference/terraspace-all-output.md %}) - output all
-* [terraspace all plan]({% link _reference/terraspace-all-plan.md %}) - plan all
-* [terraspace all providers]({% link _reference/terraspace-all-providers.md %}) - providers all
-* [terraspace all refresh]({% link _reference/terraspace-all-refresh.md %}) - refresh all
-* [terraspace all show]({% link _reference/terraspace-all-show.md %}) - show all
-* [terraspace all up]({% link _reference/terraspace-all-up.md %}) - deploy all
-* [terraspace all validate]({% link _reference/terraspace-all-validate.md %}) - validate all
+* [terraspace all down]({% link _reference/terraspace-all-down.md %}) - Destroy all or multiple stacks.
+* [terraspace all graph]({% link _reference/terraspace-all-graph.md %}) - Draw a dependency graph.
+* [terraspace all output]({% link _reference/terraspace-all-output.md %}) - Show output for all or multiple stacks.
+* [terraspace all plan]({% link _reference/terraspace-all-plan.md %}) - Run plan for all or multiple stacks.
+* [terraspace all providers]({% link _reference/terraspace-all-providers.md %}) - Show providers for all or multiple stacks.
+* [terraspace all refresh]({% link _reference/terraspace-all-refresh.md %}) - Refresh all or multiple stacks.
+* [terraspace all show]({% link _reference/terraspace-all-show.md %}) - Run show for all or multiple stacks.
+* [terraspace all up]({% link _reference/terraspace-all-up.md %}) - Deploy all or multiple stacks.
+* [terraspace all validate]({% link _reference/terraspace-all-validate.md %}) - Validate all or multiple stacks.
 
 ## Options
 

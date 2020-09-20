@@ -128,7 +128,7 @@ You can also selectively choose which infrastructure stacks to deploy. Simply pr
 
     terraspace all up b2
 
-![](https://img.boltops.com/boltops/tools/terraspace/dependencies/simple-a1-highlight-b2.png)
+![](https://img.boltops.com/boltops/tools/terraspace/graphs/medium-a1-highlight-b2.png)
 
 The green nodes, representing stacks, will be deployed. Terraspace targets the subgraph based on the stacks provided. You can even target multiple subgraphs.
 

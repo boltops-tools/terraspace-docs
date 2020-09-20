@@ -26,4 +26,4 @@ A little note about the `terraform_output` helper internals. The `terraform_outp
 
     <%= JSON.load(terraform_output("stack.list_output")).first %>
 
-The proxy object can ultimately hold any type of data, not just a string. So the `JSON.load` does not work in this case.
+The proxy object can ultimately hold any type of data, not just a string. So the `JSON.load` does not work. Instead, you can use HCL and locals to access elements in the data structure. See: [Complex Types Accessing Attributes]({% link _docs/dependencies/tfvars/complex.md %}).

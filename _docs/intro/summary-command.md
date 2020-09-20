@@ -6,7 +6,7 @@ The `terraspace summary` command shows a summary of all the resources grouped by
 
 ## Example
 
-The summary is based on the statefiles in the bucket, regardless of whether or not the stack is defined.
+The summary is based on the statefiles in the bucket, regardless of whether or not the stack is defined in the project.
 
     $ terraspace summary
     Summary of resources based on backend storage statefiles
@@ -19,7 +19,10 @@ The summary is based on the statefiles in the bucket, regardless of whether or n
         random_pet this: first-buck
     $
 
-The summary command is only support for aws, google, and azure currently. IE: It is not supported for local backends or TFC.
+## Considerations
+
+* The summary command is supported for aws, google, and azure only. IE: It is not supported for local backends or TFC.
+* It download all statefiles for the specific TS_ENV. For performance, it requires `:ENV` to be the "containing folder" for all the state files. IE: The default backend.tf `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` works.
 
 ## All Show Command
 
@@ -33,3 +36,5 @@ The `terraspace all show` command can also be helpful. It downloads `app/stacks`
     terraspace show demo: Resources: 2 Outputs: 1
     Time took: 2s
     $
+
+This command supports all backends.

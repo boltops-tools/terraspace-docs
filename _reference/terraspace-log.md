@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-The all log command allows you to view multiple logs.
+View and tail logs.
 
 The log commands will filter out the logs for the last ran terraspace command. It does this by filtering for the last found PID in the log files.
 
@@ -18,6 +18,8 @@ The log commands will filter out the logs for the last ran terraspace command. I
 Follow all the logs as you're running `terraspace all up`:
 
     terraspace log -f
+
+Note, Terraspace automatically checks every second for new logs and adds them to be followed.
 
 ## View Logs
 
@@ -36,7 +38,7 @@ To show all logs, use the `-a` option.
 
     terraspace log up -a
 
-Note, if both an action and stack is specified, then it defaults to showing all logs. If you want to not show all logs in that case, then you can use `--no-all`.
+Note, if both an action and stack is specified, then it defaults to showing all logs. If you want not to show all logs, use `--no-all`.
 
 ## Tail Logs
 
@@ -49,10 +51,14 @@ To tail logs, use the `-f` option.
 
 ## Timestamps
 
-The timestamps are shown by default when you are looking for multiple files.  When you specify a both the action and stack for a single log file, then timestamps are not shown.
+The timestamps are shown by default when you are looking for multiple files.  When you specify both the action and stack for a single log file, then timestamps are not shown.
 
     terraspace log up         # timestamps will be shown in this case
     terraspace log up network # timestamps not be shown in this case
+
+To show timestamps:
+
+    terraspace up up network --timestamps
 
 
 ## Options
@@ -63,7 +69,7 @@ f, [--follow], [--no-follow]          # Follow the log in live tail fashion. Mus
 n, [--limit=N]                        # Number of lines to limit showing. Only applies in no-follow mode.
                                       # Default: 10
 a, [--all], [--no-all]                # All mode turns off the limit. Defaults to all if a single log is specified. Only applies in no-follow mode.
-    [--verbose], [--no-verbose]
-    [--noop], [--no-noop]
+    [--verbose], [--no-verbose]       
+    [--noop], [--no-noop]             
 ```
 
