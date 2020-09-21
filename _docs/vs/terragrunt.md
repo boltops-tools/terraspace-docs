@@ -124,17 +124,13 @@ With Terraspace, to deploy multiple infrastructure stacks, you can run:
 
     terraspace all up
 
-You can also selectively choose which infrastructure stacks to deploy. Simply provide the stack names.  Here's an example with a `b2` stack:
+You can also selectively choose which infrastructure stacks to deploy. Simply provide the stack names.  Here's an example targetting the b2 and b3 stacks.
 
-    terraspace all up b2
+    terraspace all up b2 b3
 
-![](https://img.boltops.com/boltops/tools/terraspace/graphs/medium-a1-highlight-b2.png)
+![](https://img.boltops.com/boltops/tools/terraspace/graphs/simple-a1-highlight-b2-b3.png)
 
-The green nodes, representing stacks, will be deployed. Terraspace targets the subgraph based on the stacks provided. You can even target multiple subgraphs.
-
-    terraspace all up b1 b2
-
-You can easily target specific parts of your infrastructure. For more info see the docs: [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}) and [Subgraphs]({% link _docs/dependencies/subgraphs.md %})
+The subgraph stacks, represented by green nodes, will be deployed. For more info see the docs: [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}) and [Subgraphs]({% link _docs/dependencies/subgraphs.md %})
 
 ## Generators
 
