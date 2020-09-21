@@ -59,7 +59,7 @@ Terraspace provides a reduced-noise summary of the runs. The full logs are also 
 
 Terraspace builds the dependency graph and runs the commands in parallel as much as possible.  Let's say you have this dependency graph:
 
-![](https://img.boltops.com/boltops/tools/terraspace/dependencies/simple-example.png)
+![](https://img.boltops.com/boltops/tools/terraspace/graphs/instance-redis-mysql-vpc.png)
 
 Terraspace will deploy resources in this order:
 
