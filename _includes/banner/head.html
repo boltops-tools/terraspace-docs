@@ -1,4 +1,5 @@
-<link rel="preload" href="https://www.boltops.com/banners/terraspace.js" as="script" />
-<script data-cfasync="false" async src="https://www.boltops.com/banners/terraspace.js"></script>
+{% assign buildtime = "now" | date: "%Y%m%d%H%M%S" %}
+<link rel="preload" href="https://www.boltops.com/banners/terraspace-{{ buildtime }}.js" as="script" />
+<script data-cfasync="false" async src="https://www.boltops.com/banners/terraspace-{{ buildtime }}.js"></script>
 
 <div id="head-banner"></div>
