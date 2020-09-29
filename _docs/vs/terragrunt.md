@@ -6,6 +6,8 @@ categories: vs
 
 Terraspace and Terragrunt are quite different beasts. Terragrunt describes itself as a thin wrapper for Terraform. Terraspace is a framework. Their workflow, structure, and designs are completely different.
 
+{% include vs/related-article.md %}
+
 ## Commands
 
 With terragrunt, you cd into the folder with the terraform source code and run the apply command:

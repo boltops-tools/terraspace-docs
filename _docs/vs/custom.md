@@ -6,6 +6,8 @@ categories: vs
 
 Though Terraform provides us the essentials to help build infrastructure-as-code, it leaves much up to us to figure out.  Usually, companies end up home-growing custom scripts on top of Terraform to build infrastructure code. Typically, these are a bunch of bash scripts that duck-tape things together. It ends up like a science project.
 
+{% include vs/related-article.md %}
+
 ## How It Starts
 
 It may start with engineers provisioning infrastructure manually. We all do it. We point and click around in the console to build infrastructure. This is often the best way to learn actually.

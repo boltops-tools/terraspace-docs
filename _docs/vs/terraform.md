@@ -162,3 +162,5 @@ There's a lot more that Terraspace provides. These examples are simply the tip o
 ## Summary
 
 Terraspace is not just a simple wrapper script that calls out to Terraform. It makes it a lot easier and quicker to work with Terraform. Though Terraform is a powerful tool and allows you to write infrastructure-as-code, it leaves a lot up to you to figure out. Terraspace is a framework that does just that. It provides an organized structure, conventions, and convenient tooling to help you get things done quickly.
+
+{% include vs/related-article.md %}
