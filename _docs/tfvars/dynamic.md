@@ -4,15 +4,18 @@ title: "Tfvars: Dynamic"
 
 The tfvars files get processed by ERB templating, providing some dynamic control.
 
-## Example 1: terraform_output
+## Example 1: output
 
-A useful helper is `terraform_output`, it allows you to grab the output value from another stack and use it as an input variable for another stack.
+A useful helper is `output`, it allows you to grab the output value from another stack and use it as an input variable for another stack.
 
 app/stacks/demo/tfvars/base.tfvars:
 
-    vpc_id = <%= terraform_output("vpc.vpc_id")" %>
+    vpc_id = <%= output("vpc.vpc_id")" %>
 
-Terraspace also uses this information to build the dependency graph and deploys the dependent stacks in the correct order with `terraspace all up`. Learn more: [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}).
+Terraspace also uses this information to build the dependency graph and deploys the dependent stacks in the correct order with `terraspace all up`. Related useful docs:
+
+* [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}).
+* [Dependencies Tfvars: Complex Types]({% link _docs/dependencies/tfvars/complex.md %}).
 
 ## Example 2: General
 

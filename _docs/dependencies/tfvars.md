@@ -10,21 +10,21 @@ Here is some additional info about the dependencies-related helper methods.
 
 Name | Description
 --- | ---
-terraform_output | Wire stack outputs to inputs. Terraspace will infer the dependency.
+output | Wire stack outputs to inputs. Terraspace will infer the dependency.
 depends_on | Explicitly configure the dependency.
 
-## terraform_output helper
+## output helper
 
-The general form for `terraform_output` is
+The general form for `output` is
 
 ```ruby
-terraform_output("DEPENDANT_STACK.OUTPUT_KEY", options={})
+output("DEPENDANT_STACK.OUTPUT_KEY", options={})
 ```
 
 Where `DEPENDANT_STACK` is another stack in your terraform project, and `OUTPUT_KEY` is an output defined in that stack. Example:
 
 ```ruby
-terraform_output("vpc.vpc_id")
+output("vpc.vpc_id")
 ```
 
 ### Mock Values
@@ -33,7 +33,7 @@ When running `terraspace plan all`, the dependent stacks may not have been appli
 
 app/stacks/instance/tfvars/base.tfvars
 
-    vpc_id = <%= terraform_output('vpc.vpc_id', mock: 'vpc-111') %>
+    vpc_id = <%= output('vpc.vpc_id', mock: 'vpc-111') %>
 
 The mock values are only used if the dependent stacks have not yet been applied. Once the dependent stacks are applied, actual values are used instead.
 
@@ -45,7 +45,7 @@ app/stacks/instance/tfvars/base.tfvars
 
     <% depends_on('vpc') %>
 
-Remember you do not need to declare `depends_on` if you are already using `terraform_output` to inputs to outputs. Terraspace will infer the dependencies automatically. It is fine to declare both, though you may forget to remove the `depends_on` declaration when you remove all the `terraform_output` declarations.
+Remember you do not need to declare `depends_on` if you are already using `output` to inputs to outputs. Terraspace will infer the dependencies automatically. It is fine to declare both, though you may forget to remove the `depends_on` declaration when you remove all the `output` declarations.
 
 You can also specify multiple stacks with depends_on:
 

@@ -27,11 +27,11 @@ app/stacks/instance/variables.tf
       default     = null
     }
 
-Wire them together with the `terraform_output` helper in the instance tfvars file.
+Wire them together with the `output` helper in the instance tfvars file.
 
 app/stacks/instance/tfvars/base.tfvars
 
-    vpc_id = <%= terraform_output('vpc.vpc_id') %>
+    vpc_id = <%= output('vpc.vpc_id') %>
 
 Terraspace infers the dependency from this wiring and will deploy the vpc before the instance. It's that simple.
 
