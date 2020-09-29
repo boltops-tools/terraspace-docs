@@ -44,6 +44,6 @@ Since the return value from the `output` helper is a proxy object, this code wil
 Instead, you can:
 
 1. Use HCL and locals to access elements in the data structure.
-2. Use Ruby access elements before passing to the Input Variables.
+2. Use Ruby to access elements before passing to the Input Variables.
 
 Both methods are covered in the [Complex Types Docs]({% link _docs/dependencies/tfvars/complex.md %}).
