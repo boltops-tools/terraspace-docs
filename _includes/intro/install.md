@@ -18,7 +18,7 @@ You can use this command to check your setup:
 
 ## Linux Support Only
 
-Terraspace works on macosx and linux only. Terraspace does not work on windows. For windows users, consider using the [Cloud9 IDE](https://aws.amazon.com/cloud9/), which runs in a browser and uses linux.
+Terraspace currently only works on macosx and linux. For windows users, consider using the [Cloud9 IDE](https://aws.amazon.com/cloud9/), which runs in a browser and uses linux.
 
 {% if include.provider %}
 Next, we'll configure {{ include.provider }}.
