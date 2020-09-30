@@ -25,7 +25,7 @@ Terraspace will show you a preview of the changes and prompt you to update the i
 
       # module.bucket.google_storage_bucket.this will be updated in-place
       ~ resource "google_storage_bucket" "this" {
-          ~ bucket_policy_only       = false -> true
+          ~ uniform_bucket_level_access       = false -> true
             default_event_based_hold = false
             force_destroy            = false
             id                       = "bucket-optimum-gazelle"

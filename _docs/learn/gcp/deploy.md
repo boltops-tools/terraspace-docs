@@ -30,15 +30,15 @@ The `terraspace up` command will build the files and then essentially run `terra
 
       # module.bucket.google_storage_bucket.this will be created
       + resource "google_storage_bucket" "this" {
-          + bucket_policy_only = false
-          + force_destroy      = false
-          + id                 = (known after apply)
-          + location           = "US"
-          + name               = (known after apply)
-          + project            = (known after apply)
-          + self_link          = (known after apply)
-          + storage_class      = "STANDARD"
-          + url                = (known after apply)
+          + uniform_bucket_level_access = false
+          + force_destroy               = false
+          + id                          = (known after apply)
+          + location                    = "US"
+          + name                        = (known after apply)
+          + project                     = (known after apply)
+          + self_link                   = (known after apply)
+          + storage_class               = "STANDARD"
+          + url                         = (known after apply)
         }
 
     Plan: 2 to add, 0 to change, 0 to destroy.

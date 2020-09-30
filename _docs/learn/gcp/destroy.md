@@ -34,18 +34,18 @@ You'll be prompted to make sure you really want to delete these resources.
 
       # module.bucket.google_storage_bucket.this will be destroyed
       - resource "google_storage_bucket" "this" {
-          - bucket_policy_only       = true -> null
-          - default_event_based_hold = false -> null
-          - force_destroy            = false -> null
-          - id                       = "bucket-optimum-gazelle" -> null
-          - labels                   = {} -> null
-          - location                 = "US" -> null
-          - name                     = "bucket-optimum-gazelle" -> null
-          - project                  = "tung-275700" -> null
-          - requester_pays           = false -> null
-          - self_link                = "https://www.googleapis.com/storage/v1/b/bucket-optimum-gazelle" -> null
-          - storage_class            = "STANDARD" -> null
-          - url                      = "gs://bucket-optimum-gazelle" -> null
+          - uniform_bucket_level_access = true -> null
+          - default_event_based_hold    = false -> null
+          - force_destroy               = false -> null
+          - id                          = "bucket-optimum-gazelle" -> null
+          - labels                      = {} -> null
+          - location                    = "US" -> null
+          - name                        = "bucket-optimum-gazelle" -> null
+          - project                     = "tung-275700" -> null
+          - requester_pays              = false -> null
+          - self_link                   = "https://www.googleapis.com/storage/v1/b/bucket-optimum-gazelle" -> null
+          - storage_class               = "STANDARD" -> null
+          - url                         = "gs://bucket-optimum-gazelle" -> null
         }
 
     Plan: 0 to add, 0 to change, 2 to destroy.

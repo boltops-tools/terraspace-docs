@@ -12,8 +12,8 @@ main.tf
 
 ```terraform
 resource "google_storage_bucket" "this" {
-  name               = var.name
-  bucket_policy_only = var.bucket_policy_only
+  name                        = var.name
+  uniform_bucket_level_access = var.uniform_bucket_level_access
 }
 ```
 
@@ -25,8 +25,8 @@ variable "name" {
   type        = string
 }
 
-variable "bucket_policy_only" {
-  description = "bucket_policy_only"
+variable "uniform_bucket_level_access" {
+  description = "uniform_bucket_level_access"
   type        = bool
   default     = false
 }
@@ -48,8 +48,8 @@ resource "random_pet" "this" {
 module "bucket" {
   source = "../../modules/example"
 
-  name               = "bucket-${random_pet.this.id}"
-  bucket_policy_only = var.bucket_policy_only
+  name                        = "bucket-${random_pet.this.id}"
+  uniform_bucket_level_access = var.uniform_bucket_level_access
 }
 ```
 
