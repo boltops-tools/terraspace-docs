@@ -2,6 +2,8 @@
 title: Deploy All
 ---
 
+<div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/GjlWeYAGWIE?rel=0" frameborder="0" allowfullscreen=""></iframe></div></div>
+
 Terraspace also allows you to deploy all stacks with a single command:
 
     terraspace all up
