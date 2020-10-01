@@ -18,4 +18,9 @@ Truncates logs. IE: Keeps the files but removes contents and zero bytes the file
     $
 
 
+## Options
+
+```
+y, [--yes], [--no-yes]  # bypass are you sure prompt
+```
 

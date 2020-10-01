@@ -18,4 +18,9 @@ Removes logs
     $
 
 
+## Options
+
+```
+y, [--yes], [--no-yes]  # bypass are you sure prompt
+```
 
