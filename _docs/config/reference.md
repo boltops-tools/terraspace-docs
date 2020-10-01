@@ -12,6 +12,7 @@ auto_create_backend | Enable auto-creation of backend | true
 build.cache_dir | The relative dir for the module or stack cache. IE: .terraspace-cache/us-west-2/dev/stacks/demo | :CACHE_ROOT/:REGION/:ENV/:BUILD_DIR
 build.cache_root | The root of the cache build dir. IE: .terraspace-cache | /full/path/to/.terraspace-cache
 build.clean_cache | Whether to clean the cache at the beginning of the build process. Can be useful to turn off if using TFC VCS-Driven workflow. | true
+bundle | This should be a Hash. It configures `terraspace bundle` settings. Options are passed straight through, allowing you to configure anything with the bundle command. See [terrafile config level options]({% link _docs/terrafile/options.md %}) for the options. | {logger: Terraspace.logger}
 {% include config/cloud.md %}
 terraform.plugin_cache.dir | Sets `TF_PLUGIN_CACHE_DIR`. | /tmp/terraspace/plugin_cache
 terraform.plugin_cache.enabled | Whether or not to enable a common cache folder to download plugins.

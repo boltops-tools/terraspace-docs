@@ -2,36 +2,29 @@
 title: Terrafile
 ---
 
-The Terrafile provides a way to install and manage Terraform modules from sources like the [Terraform Registry](https://registry.terraform.io/), [GitHub](https://github.com/), etc.
+{% include terrafile/intro.md %}
 
-## Example
+## Best of Both Worlds
 
-The Terrafile processes a DSL. Here's an example:
-
-```ruby
-org "boltopspro" # set default github org. IE: https://github.com/boltopspro
-
-# Use modules from your org
-mod "instance", source: "terraform-aws-instance", version: "v0.1.0"
-mod "elb", source: "terraform-aws-elb"
-
-# Use modules and specify org explicitly
-mod "vpc", source: "another-org/terraform-aws-vpc", version: "master"
-
-# Use modules from the Terraform registry
-mod "sqs", source: "terraform-aws-modules/sqs/aws"
-```
-
-When you run:
+The Terrafile approach simplifies managing modules. The advantage of using a `Terrafile` is centralization. You can centrally define, manage, and update modules. To install the modules, you add them to `Terrafile` and run:
 
     terraspace bundle
 
-The modules declared in `Terrafile` are downloaded to the `vendor/modules` folder. A `Terrafile.lock` file is also created to lock module versions. You can check in the lockfile to version control, so others running `terraspace bundle` will download the exact same versions as you.
+Modules are downloaded to your `vendor/modules` folder. You can easily look at the module source code when you need to debug.
 
-## Updating
+A `Terrafile.lock` file is also generated. This file can be committed to version control to ensure that everyone on the team uses the exact same version.
 
-To update the `Terrafile.lock` with the latest versions:
+Of course, you can still use the typical approach of declaring the source directly in the module source code. Here are some [examples from the docs](https://www.terraform.io/docs/modules/sources.html):
 
-    terraspace bundle update
+```terraform
+module "consul" {
+  source = "hashicorp/consul/aws"
+  version = "0.1.0"
+}
 
-Terrafile simplifies managing module versions to a centralized place.  The `terraspace bundle` commands makes use of [boltops-tools/terraspace-bundler](https://github.com/boltops-tools/terraspace-bundler).
+module "example" {
+  source = "github.com/hashicorp/example"
+}
+```
+
+Terraspace provides flexibility. You can use either or both approaches. You get the best of both worlds.
