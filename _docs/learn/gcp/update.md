@@ -25,18 +25,18 @@ Terraspace will show you a preview of the changes and prompt you to update the i
 
       # module.bucket.google_storage_bucket.this will be updated in-place
       ~ resource "google_storage_bucket" "this" {
-          ~ uniform_bucket_level_access       = false -> true
-            default_event_based_hold = false
-            force_destroy            = false
-            id                       = "bucket-optimum-gazelle"
-            labels                   = {}
-            location                 = "US"
-            name                     = "bucket-optimum-gazelle"
-            project                  = "tung-275700"
-            requester_pays           = false
-            self_link                = "https://www.googleapis.com/storage/v1/b/bucket-optimum-gazelle"
-            storage_class            = "STANDARD"
-            url                      = "gs://bucket-optimum-gazelle"
+          ~ uniform_bucket_level_access = false -> true
+            default_event_based_hold    = false
+            force_destroy               = false
+            id                          = "bucket-optimum-gazelle"
+            labels                      = {}
+            location                    = "US"
+            name                        = "bucket-optimum-gazelle"
+            project                     = "tung-275700"
+            requester_pays              = false
+            self_link                   = "https://www.googleapis.com/storage/v1/b/bucket-optimum-gazelle"
+            storage_class               = "STANDARD"
+            url                         = "gs://bucket-optimum-gazelle"
         }
 
     Plan: 0 to add, 1 to change, 0 to destroy.
