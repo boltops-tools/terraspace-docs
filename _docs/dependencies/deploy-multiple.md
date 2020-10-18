@@ -53,7 +53,7 @@ When you run the `terraspace all up` command, Terraspace will deploy the resourc
     Time took: 7s
     $
 
-Terraspace provides a reduced-noise summary of the runs. The full logs are also written for further inspection and debugging. The [terraspace log]({% link _reference/terraspace-log.md %}) command is useful for viewing the logs.
+Terraspace provides a reduced-noise summary of the runs. The full logs are also written for further inspection and debugging. The [terraspace logs]({% link _reference/terraspace-logs.md %}) command is useful for viewing the logs.
 
 ## Dependency Graph & Parallelism
 

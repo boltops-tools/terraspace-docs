@@ -27,11 +27,11 @@ Also, check out `terraspace all show`.
 ## Options
 
 ```
-    [--mod=MOD]                  # Module to build to generate a backend file for discovery. By default the last module is used. Usually, it wont matter.
-    [--init], [--no-init]        # Instance of stack
-                                 # Default: true
-s, [--short], [--no-short]       # Only show statefiles
-    [--verbose], [--no-verbose]  
-    [--noop], [--no-noop]        
+[--mod=MOD]                  # Module to build to generate a backend file for discovery. By default the last module is used. Usually, it wont matter.
+[--init], [--no-init]        # Instance of stack
+                             # Default: true
+[--details], [--no-details]  # Show details of the listed resources
+[--verbose], [--no-verbose]  
+[--noop], [--no-noop]        
 ```
 
