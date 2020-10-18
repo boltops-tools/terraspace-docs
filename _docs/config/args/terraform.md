@@ -1,12 +1,14 @@
 ---
-title: CLI Args
+title: Terraform Args
+nav_text: Terraform
+categories: args
 ---
 
-Terraspace calls out to the `terraform` command. You can configure common arguments for commands with `config/cli/args.rb`.
+Terraspace calls out to the `terraform` command. You can configure common arguments for commands with `config/args/terraform.rb`.
 
 ## Example
 
-config/cli/args.rb
+config/args/terraform.rb
 
 ```ruby
 command("init",
@@ -26,7 +28,7 @@ The arguments are added to the specified `terraform` commands when terraspace ca
     terraform init -lock-timeout=20m
     terraform apply -lock-timeout=21m -var-file=a.tfvars -var-file=b.tfvars
 
-The `a.tfvars` and `b.tfvars` files will only be added if the files exist.
+The `a.tfvars` and `b.tfvars` files will only be added if the files exist. The files should be the stack folder itself. IE: `app/stacks/demo/a.tfvars`
 
 Terraspace may add other args also. IE: The `-get` option is usually used with the `terraform init` command.
 

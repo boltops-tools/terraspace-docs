@@ -15,6 +15,7 @@ all subcommands
 
 * [terraspace all down]({% link _reference/terraspace-all-down.md %}) - Destroy all or multiple stacks.
 * [terraspace all graph]({% link _reference/terraspace-all-graph.md %}) - Draw a dependency graph.
+* [terraspace all init]({% link _reference/terraspace-all-init.md %}) - Init.
 * [terraspace all output]({% link _reference/terraspace-all-output.md %}) - Show output for all or multiple stacks.
 * [terraspace all plan]({% link _reference/terraspace-all-plan.md %}) - Run plan for all or multiple stacks.
 * [terraspace all providers]({% link _reference/terraspace-all-providers.md %}) - Show providers for all or multiple stacks.

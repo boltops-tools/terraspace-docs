@@ -1,11 +1,11 @@
 ---
-title: terraspace logs help
+title: terraspace clean help
 reference: true
 ---
 
 ## Usage
 
-    terraspace logs help [COMMAND]
+    terraspace clean help [COMMAND]
 
 ## Description
 

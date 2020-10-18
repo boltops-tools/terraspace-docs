@@ -1,24 +1,10 @@
 ---
-title: Config Hooks
+title: Custom Hooks
 ---
 
-You can run hooks as part of the Terraspace processing:
+Terraspace supports a variety of hooks. They can be used to customize and finely control the Terraform lifecycle process.
 
-Hook Name | Description
---- | ---
-on_boot | Runs very early in the Terraspace boot process. Runs right after plugins are loaded.
-
-## on_boot
-
-
-The on_boot hook runs very early. It takes a block of code and can be used to run custom logic. One useful way to use it is switching AWS_PROFILE, GOOGLE_APPLICATION_CREDENTIALS, etc automatically based on the TS_ENV. Example:
-
-config/env/dev.rb
-
-```ruby
-Terraspace.configure do |config|
-  config.hooks.on_boot do
-    ENV['AWS_PROFILE'] = 'dev'
-  end
-end
-```
+{% assign docs = site.docs | where: "categories","hooks" | sort:"order" %}
+{% for doc in docs -%}
+* [{{ doc.title }}]({{ doc.url }})
+{% endfor %}

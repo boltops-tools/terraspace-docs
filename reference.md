@@ -16,7 +16,6 @@ title: CLI Reference
 * [terraspace info]({% link _reference/terraspace-info.md %})
 * [terraspace init]({% link _reference/terraspace-init.md %})
 * [terraspace list]({% link _reference/terraspace-list.md %})
-* [terraspace log]({% link _reference/terraspace-log.md %})
 * [terraspace logs]({% link _reference/terraspace-logs.md %})
 * [terraspace new]({% link _reference/terraspace-new.md %})
 * [terraspace output]({% link _reference/terraspace-output.md %})

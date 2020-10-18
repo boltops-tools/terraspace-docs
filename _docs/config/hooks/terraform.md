@@ -1,12 +1,15 @@
 ---
-title: CLI Hooks
+title: Terraform Hooks
+nav_text: Terraform
+categories: hooks
+order: 1
 ---
 
 Terraspace calls out to the `terraform` command. You can execute commands before and after each command with CLI hooks.
 
 ## Example
 
-config/cli/hooks.rb
+config/hooks/terraform.rb
 
 ```ruby
 before("init",
@@ -42,3 +45,5 @@ before("init", "apply",
   execute: "echo hi",
 )
 ```
+
+{% include config/hooks/options.md command="terraform" %}

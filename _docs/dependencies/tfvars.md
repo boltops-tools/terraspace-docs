@@ -21,11 +21,11 @@ The general form for `output` is
 output("DEPENDANT_STACK.OUTPUT_KEY", options={})
 ```
 
-Where `DEPENDANT_STACK` is another stack in your terraform project, and `OUTPUT_KEY` is an output defined in that stack. Example:
+Where `DEPENDANT_STACK` is another stack in your terraform project, and `OUTPUT_KEY` is an output defined in that stack. Here's an tfvars example:
 
-```ruby
-output("vpc.vpc_id")
-```
+app/stacks/instance/tfvars/base.tfvars
+
+    vpc_id = <%= output('vpc.vpc_id') %>
 
 ### Mock Values
 

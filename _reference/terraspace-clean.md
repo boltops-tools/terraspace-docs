@@ -5,18 +5,17 @@ reference: true
 
 ## Usage
 
-    terraspace clean
+    terraspace clean SUBCOMMAND
 
 ## Description
 
-Removes .terraspace-cache dir.
+clean subcommands
 
-## Example
+## Subcommands
 
-    $ terraspace clean
-    Removed .terraspace-cache
-    $
-
+* [terraspace clean all]({% link _reference/terraspace-clean-all.md %}) - Runs all clean operations.
+* [terraspace clean cache]({% link _reference/terraspace-clean-cache.md %}) - Removes cache dirs.
+* [terraspace clean logs]({% link _reference/terraspace-clean-logs.md %}) - Removes or truncate logs.
 
 ## Options
 

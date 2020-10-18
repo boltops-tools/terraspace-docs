@@ -65,7 +65,6 @@
       <li><a href="{% link _docs/config.md %}">Config</a>
         <ul>
           <li><a href="{% link _docs/config/app.md %}">App</a></li>
-          <li><a href="{% link _docs/config/hooks.md %}">Hooks</a></li>
           <li><a href="{% link _docs/config/backend.md %}">Backend</a>
             <ul>
               <li><a href="{% link _docs/config/backend/variables.md %}">Variables</a></li>
@@ -76,10 +75,20 @@
           <li><a href="{% link _docs/config/tfvars.md %}">Tfvars</a></li>
           <li><a href="{% link _docs/config/locals.md %}">Locals</a></li>
           <li><a href="{% link _docs/config/terraform.md %}">Terraform</a></li>
-          <li><a href="{% link _docs/cli.md %}">CLI</a>
+          <li><a href="{% link _docs/config/args.md %}">Args</a>
             <ul>
-              <li><a href="{% link _docs/cli/args.md %}">Args</a></li>
-              <li><a href="{% link _docs/cli/hooks.md %}">Hooks</a></li>
+            {% assign docs = site.docs | where: "categories","args" %}
+            {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+            {% endfor %}
+            </ul>
+          </li>
+          <li><a href="{% link _docs/config/hooks.md %}">Hooks</a>
+            <ul>
+            {% assign docs = site.docs | where: "categories","hooks" | sort:"order" %}
+            {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+            {% endfor %}
             </ul>
           </li>
           <li><a href="{% link _docs/config/reference.md %}">Reference</a></li>
@@ -120,6 +129,17 @@
           <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
           {% endif %}
         {% endfor %}
+        </ul>
+      </li>
+      <li><a href="{% link _docs/terrafile.md %}">Terrafile</a>
+        <ul>
+          <li><a href="{% link _docs/terrafile/usage.md %}">Usage</a></li>
+          <li><a href="{% link _docs/terrafile/options.md %}">Options</a>
+            <ul>
+              <li><a href="{% link _docs/terrafile/options/stack.md %}">Stack</a></li>
+            </ul>
+          </li>
+          <li><a href="{% link _docs/terrafile/version-locking.md %}">Version Locking</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/state.md %}">State File</a>
@@ -170,7 +190,6 @@
         </ul>
       </li>
       <li><a href="{% link _docs/lookups.md %}">Lookup Paths</a></li>
-      <li><a href="{% link _docs/terrafile.md %}">Terrafile</a></li>
       <li><a href="{% link _docs/dsl.md %}">DSL</a></li>
       <li>Misc
         <ul>
