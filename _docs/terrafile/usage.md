@@ -13,7 +13,7 @@ org "boltops-tools" # set default org
 
 # GitHub repo with default org
 mod "s3", source: "terraform-aws-s3", version: "master"
-# mod "s3", source: "terraform-aws-s3", version: "master",
+# mod "s3", source: "terraform-aws-s3", tag: "v0.1.0"
 
 # GitHub repo with explicit org
 # mod "elasticache", source: "boltopspro/terraform-aws-elasticache"
@@ -21,6 +21,8 @@ mod "s3", source: "terraform-aws-s3", version: "master"
 # Terraform registry
 mod "sg", source: "terraform-aws-modules/security-group/aws", version: "3.10.0"
 ```
+
+For more examples on how to use specific versions see: [Version Locking Docs]({% link _docs/terrafile/version-locking.md %}).
 
 ## Install
 
