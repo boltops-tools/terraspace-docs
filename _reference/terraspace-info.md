@@ -61,6 +61,7 @@ You can also format the output in json:
 ```
 i, [--instance=INSTANCE]         # Instance of stack
     [--format=FORMAT]            # Output formats: csv, table, tab, json
+    [--path=PATH]                # Print path to built path
     [--verbose], [--no-verbose]  
     [--noop], [--no-noop]        
 ```
