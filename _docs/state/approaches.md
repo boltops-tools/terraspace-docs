@@ -76,7 +76,7 @@ The nice thing about this approach is the increased isolation of running `terraf
 
 A downside with this approach is the extra coordination required. Essentially, "orchestration" now gets moved away from terraform itself to us/humans. For example, the VPC layer must be provisioned first. Then the other layers can be deployed. We have to either manually coordinate or add another build process outside of terraform to help coordinate. A CI/CD system here may help. When you have one state file per env, coordination is given for free. Separate stacks require extra coordination.
 
-You also have to "stitch" the layers together with outputs and inputs. IE: You'll feed the vpc id into the db, compute, app layers. The [terraform_remote_state](https://www.terraform.io/docs/providers/terraform/d/remote_state.html) data source may also help.
+The [terraspace all](https://terraspace.cloud/reference/terraspace-all/) command also helps. It calculates the dependency graph and ensures they are deployed in the correct order. It's covered in more detailed in this blog post: [Terraspace All: Deploy Multiple Stacks or Terraform Modules At Once](https://blog.boltops.com/2020/09/19/terraspace-all-deploy-multiple-stacks-at-once)
 
 An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else the cost of coordination will be high.
 

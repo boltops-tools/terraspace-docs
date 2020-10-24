@@ -20,7 +20,7 @@ In this case, there are database and network 3rd parties modules. There's also a
 
 ## Precedence
 
-When there are 2 modules with the same name in both the `app` and `vendor` folder, the module in the `app` folder takes higher precedence and wins.
+When there are 2 modules with the same name in both the `app/modules` and `vendor/modules` folder, the module in the `app/modules` folder takes higher precedence and wins.
 
 ## terraspace bundle
 
