@@ -11,7 +11,7 @@ Terraspace will show you a preview of the changes and prompt you to update the i
     $ terraspace up demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
     Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
-    => terraform init -get > /dev/null
+    => terraform init -get -input=false >> /tmp/terraspace/log/init/demo.log
     Built in .terraspace-cache/us-west-2/dev/stacks/demo
     => terraform apply
     random_pet.bucket: Refreshing state... [id=liked-poodle]

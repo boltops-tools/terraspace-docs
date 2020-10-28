@@ -13,7 +13,7 @@ You'll be prompted to make sure you really want to delete these resources.
     $ terraspace down demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
     Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
-    => terraform init -get > /dev/null
+    => terraform init -get -input=false >> /tmp/terraspace/log/init/demo.log
     Built in .terraspace-cache/us-west-2/dev/stacks/demo
     => terraform destroy
     random_pet.bucket: Refreshing state... [id=liked-poodle]

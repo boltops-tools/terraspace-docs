@@ -11,7 +11,7 @@ The `terraspace up` command will build the files and then essentially run `terra
     $ terraspace up demo
     Building .terraspace-cache/us-central1/dev/stacks/demo
     Current directory: .terraspace-cache/us-central1/dev/stacks/demo
-    => terraform init -get > /dev/null
+    => terraform init -get -input=false >> /tmp/terraspace/log/init/demo.log
     Built in .terraspace-cache/us-central1/dev/stacks/demo
     => terraform apply
 
