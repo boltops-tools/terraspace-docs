@@ -47,3 +47,7 @@ A `Terrafile.lock` is also generated to lock the versions. For strict versions l
     terraspace bundle update
 
 This updates the `Terrafile.lock` versions.
+
+## Version Locking with Different Environments like Dev and Prod
+
+Somewhat related documentation that you may be interested is the [Patterns Different Versions Docs]({% link _docs/patterns/different-versions.md %}). It show how to use different versions of modules for different environments like dev and prod.

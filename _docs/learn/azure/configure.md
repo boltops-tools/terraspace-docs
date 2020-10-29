@@ -24,7 +24,7 @@ That's usually enough to set up the `az` CLI. You can check with:
 
 ## Set up env variables
 
-We set up `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` because terraspace uses it to handle things like automatically creating the Storage Account for the terraform state file.  To get these env variables setup, follow the [Azure Instructions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
+We set up `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` because terraspace uses it to handle things like automatically creating the Storage Account for the terraform state file.  To get these env variables setup, follow the [Azure Instructions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
 
 The [azure_check](https://github.com/boltops-tools/azure_check) script is useful to check that access is working. You should get something like this.
 
@@ -34,6 +34,6 @@ The [azure_check](https://github.com/boltops-tools/azure_check) script is useful
 
 ## Resources
 
-* [Azure AD application Docs](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal)
+* [Azure AD application Docs](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal)
 
 Next, we'll create a new project.

@@ -77,7 +77,7 @@
           <li><a href="{% link _docs/config/terraform.md %}">Terraform</a></li>
           <li><a href="{% link _docs/config/args.md %}">Args</a>
             <ul>
-            {% assign docs = site.docs | where: "categories","args" %}
+            {% assign docs = site.docs | where: "categories","args" | sort:"order" %}
             {% for doc in docs -%}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
             {% endfor %}
@@ -142,10 +142,57 @@
           <li><a href="{% link _docs/terrafile/version-locking.md %}">Version Locking</a></li>
         </ul>
       </li>
+      <li><a href="{% link _docs/helpers.md %}">Helpers</a>
+        <ul>
+          {% assign docs = site.docs | where: "categories","helpers" | sort:"order" %}
+          {% for doc in docs -%}
+          {% if doc.nav_text == "AWS" %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","helpers-aws" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% elsif doc.nav_text == "Azure" %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","helpers-azure" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% elsif doc.nav_text == "Custom" %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","helpers-custom" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% elsif doc.nav_text == "Google" %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","helpers-google" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
       <li><a href="{% link _docs/state.md %}">State File</a>
         <ul>
           <li><a href="{% link _docs/state/approaches.md %}">Approaches</a></li>
-          <li><a href="{% link _docs/state/existing.md %}">Existing Statefile</a></li>
+          <li><a href="{% link _docs/state/secrets.md %}">Secrets</a></li>
+          <li><a href="{% link _docs/state/existing.md %}">Existing</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/cloud.md %}">Cloud</a>
@@ -177,8 +224,10 @@
       <li><a href="{% link _docs/testing.md %}">Testing</a>
         <ul>
           <li><a href="{% link _docs/testing/test-harness.md %}">Test Harness</a></li>
-          <li><a href="{% link _docs/testing/module.md %}">Module-Level</a></li>
-          <li><a href="{% link _docs/testing/project.md %}">Project-Level</a></li>
+          <li><a href="{% link _docs/testing/module.md %}">Module</a></li>
+          <li><a href="{% link _docs/testing/stack.md %}">Stack</a></li>
+          <li><a href="{% link _docs/testing/project.md %}">Project</a></li>
+          <li><a href="{% link _docs/testing/generator.md %}">Generator</a></li>
           <li><a href="{% link _docs/ci-automation.md %}">CI/CD Automation</a>
         </ul>
       </li>
@@ -187,6 +236,14 @@
           <li><a href="{% link _docs/plugins/aws.md %}">AWS</a></li>
           <li><a href="{% link _docs/plugins/azurerm.md %}">Azure</a></li>
           <li><a href="{% link _docs/plugins/google.md %}">Google</a></li>
+        </ul>
+      </li>
+      <li><a href="{% link _docs/patterns.md %}">Patterns</a>
+        <ul>
+          {% assign docs = site.docs | where: "categories","patterns" %}
+          {% for doc in docs -%}
+          <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+          {% endfor %}
         </ul>
       </li>
       <li><a href="{% link _docs/lookups.md %}">Lookup Paths</a></li>

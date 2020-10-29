@@ -2,7 +2,7 @@
 title: Ruby Hooks
 nav_text: Ruby
 categories: hooks
-order: 9
+order: 8
 ---
 
 The hook `execute` option can also be provided Ruby code instead of a string.  Here's how it works:

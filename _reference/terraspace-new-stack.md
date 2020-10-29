@@ -26,7 +26,7 @@ Generates new stack.
 
 ```
     [--examples], [--no-examples]  # Also generate examples
-    [--force]                      # Bypass overwrite are you sure prompt for existing files
+y, [--force]                       # Bypass overwrite are you sure prompt for existing files
     [--lang=LANG]                  # Language to use: HCL/ERB or Ruby DSL
                                    # Default: hcl
 p, [--plugin=PLUGIN]               # Cloud Plugin. Supports: aws, google

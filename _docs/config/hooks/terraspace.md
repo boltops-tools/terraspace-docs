@@ -13,6 +13,8 @@ Hook | Description
 ---|---
 build | When Terraspace builds or compiles the Terraspace project to the `.terraspace-cache` folder.
 
+{% include config/hooks/generator.md %}
+
 ## Example
 
 config/hooks/terraspace.rb
