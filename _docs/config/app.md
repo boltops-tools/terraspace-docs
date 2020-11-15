@@ -25,7 +25,7 @@ Terraspace.configure do |config|
 end
 ```
 
-For the updated list of available config settings, refer to [terraspace/app.rb](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/app.rb).
+For a list of available config settings, refer to the [Config Reference]({% link _docs/config/reference.md %}) docs.
 
 ## Environment Specific Overrides
 

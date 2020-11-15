@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace new plugin
+    terraspace new plugin NAME
 
 ## Description
 
@@ -65,6 +65,6 @@ Generates plugin.
 ## Options
 
 ```
-[--force]  # Bypass overwrite are you sure prompt for existing files
+y, [--force]  # Bypass overwrite are you sure prompt for existing files
 ```
 

@@ -2,6 +2,8 @@
 title: Shim Wrapper
 ---
 
+Note: Terraspace 0.5.0 and above requires `bundler/setup` earlier in its bootup process and no longer requires a shim. These docs are kept around for posterity. They will be eventually removed.
+
 If you are seeing an annoying "warning: already initialized constant" like so:
 
     $ terraspace up demo
@@ -60,3 +62,17 @@ You'll see something like this:
 If you want to specify the path where you want the shim to be saved like so:
 
     terraspace new shim --path ~/bin/terraspace
+
+## Rbenv Shim Slowness
+
+If you are using rbenv, it can be [slow](https://github.com/rbenv/rbenv/issues/70) on some systems. You may want to consider replacing the shim that rbenv generates with a faster one. Here's an example:
+
+~/.rbenv/shims/terraspace
+
+    #!/usr/bin/env bash
+    EXE=$(gem which terraspace | sed 's|lib/terraspace.rb|exe/terraspace|')
+    if [ -f config/app.rb ]; then
+      exec bundle exec $EXE "$@"
+    else
+      exec $EXE "$@"
+    fi

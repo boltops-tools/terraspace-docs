@@ -13,9 +13,9 @@ Let's say you have terraform module named example:
     ├── outputs.tf
     └── variables.tf
 
-We can use `terraspace new module_test` to create a `app/modules/example/test/spec/main_spec.rb` test.
+We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) to create a `app/modules/example/test/spec/main_spec.rb` test.
 
-    terraspace new module_test example
+    terraspace new test example --type module
 
 The structure will look something like this:
 
@@ -36,6 +36,7 @@ app/modules/example/test/spec/main_spec.rb:
 ```ruby
 describe "main" do
   before(:all) do
+    reconfigure_logging # reconfigure Terraspace.logger to a file
     mod_path = File.expand_path("../..", __dir__) # the source of the module to test is 2 levels up
     # Build terraspace project to use as a test harness
     # Will be located at: /tmp/terraspace/test-harnesses/network
@@ -54,6 +55,7 @@ describe "main" do
     # Replace with your own test
     expect(true).to be true
     # Example
+    # pp terraspace.outputs("example")
     # output_value = terraspace.output("example", "some-output")
     # expect(output_value).to include("some-value")
   end
@@ -64,7 +66,7 @@ end
 
 To run the test, you should be in the module folder itself.
 
-    cd demo/test # you should be in the test folder
+    cd app/modules/example
     bundle
     terraspace test
 

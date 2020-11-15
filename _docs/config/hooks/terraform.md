@@ -7,6 +7,8 @@ order: 1
 
 Terraspace calls out to the `terraform` command. You can execute commands before and after each command with CLI hooks.
 
+{% include config/hooks/generator.md %}
+
 ## Example
 
 config/hooks/terraform.rb

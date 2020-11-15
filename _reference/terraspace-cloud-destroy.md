@@ -29,4 +29,9 @@ Destroy workspace by specifying the stack
     $
 
 
+## Options
+
+```
+y, [--yes], [--no-yes]  # bypass are you sure prompt
+```
 

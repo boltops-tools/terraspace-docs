@@ -20,12 +20,6 @@ You can use this command to check your setup:
 
 Terraspace currently only works on macosx and linux. For windows users, consider using the [Cloud9 IDE](https://aws.amazon.com/cloud9/), which runs in a browser and uses linux.
 
-## Install Shim
-
-It is recommended to also install a [shim]({% link _docs/misc/shim.md %}) for Terraspace. To install the shim:
-
-    terraspace new shim
-
 {% if include.provider %}
 Next, we'll configure {{ include.provider }}.
 {% endif %}

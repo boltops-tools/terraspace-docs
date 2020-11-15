@@ -28,4 +28,19 @@ TerraspacePluginAws.configure do |config|
 end
 ```
 
-For more docs, refer to the plugin itself: [terraspace_plugin_aws](https://github.com/boltops-tools/terraspace_plugin_aws).
+## Plugin Options
+
+Name | Description | Default
+---|---|---
+auto_create | Whether or not to automatically create the S3 bucket and DynamoDB table. | true
+s3.encryption | Whether or not to enable S3 bucket encryption. |  true
+s3.enforce_ssl | Whether or not to add a S3 bucket policy that enforces SSL. |  true
+s3.versioning | Whether or not to enable versioning on the S3 bucket. |  true
+s3.lifecycle | Whether or not to add a lifecycle policy that cleans up old versions to the S3 bucket. |  true
+s3.access_logging | Whether or not to enable access logging on the S3 bucket.  |  false
+s3.secure_existing | Whether or not to run the security controls on existing buckets. By default, only run on newly created bucket the first time. | false
+dynamodb.encryption | Whether or not enable encryption on the DynamoDB table. |  true
+dynamodb.kms_master_key_id | Specify the KMS key to use. By default, the default DynamoDB key associated with the AWS account is used. |  nil
+dynamodb.sse_type | Server-side encryption type. |  "KMS"
+
+The full list refer to plugin source code: [terraspace_plugin_aws](https://github.com/boltops-tools/terraspace_plugin_aws/blob/master/lib/terraspace_plugin_aws/interfaces/config.rb).

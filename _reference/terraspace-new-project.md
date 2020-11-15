@@ -57,7 +57,7 @@ Generates new project.
 
 ```
     [--examples], [--no-examples]              # Also generate examples
-    [--force]                                  # Bypass overwrite are you sure prompt for existing files.
+y, [--force]                                   # Bypass overwrite are you sure prompt for existing files.
     [--lang=LANG]                              # Language to use: HCL/ERB or Ruby DSL
                                                # Default: hcl
 p, [--plugin=PLUGIN]                           # Cloud Plugin. Supports: aws, google
@@ -68,6 +68,7 @@ p, [--plugin=PLUGIN]                           # Cloud Plugin. Supports: aws, go
                                                # Default: true
     [--config], [--no-config]                  # Whether or not to generate config files.
                                                # Default: true
+    [--quiet], [--no-quiet]                    # Quiet output.
     [--test-structure], [--no-test-structure]  # Create project bootstrap test structure.
 ```
 

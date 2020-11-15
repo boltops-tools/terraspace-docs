@@ -2,6 +2,7 @@
 title: Terraform Args
 nav_text: Terraform
 categories: args
+order: 8
 ---
 
 Terraspace calls out to the `terraform` command. You can configure common arguments for commands with `config/args/terraform.rb`.

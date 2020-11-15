@@ -2,6 +2,8 @@
 title: Config Reference
 ---
 
+Here's a list of the available config settings.
+
 Name | Description | Default
 --- | --- | ---
 all.concurrency | How many processes to run in parallel for each batch for the `terraspace all` commands. | 5
@@ -15,7 +17,8 @@ build.clean_cache | Whether to clean the cache at the beginning of the build pro
 bundle | This should be a Hash. It configures `terraspace bundle` settings. Options are passed straight through, allowing you to configure anything with the bundle command. See [terrafile config level options]({% link _docs/terrafile/options.md %}) for the options. | {logger: Terraspace.logger}
 {% include config/cloud.md %}
 terraform.plugin_cache.dir | Sets `TF_PLUGIN_CACHE_DIR`. | /tmp/terraspace/plugin_cache
-terraform.plugin_cache.enabled | Whether or not to enable a common cache folder to download plugins.
+terraform.plugin_cache.enabled | Whether or not to enable a common cache folder to download plugins. | true
+terraform.plugin_cache.purge_on_error | Whether or not to automatically purge the plugin_cache and retry when there are Terraform plugin cache errors like [this](https://gist.github.com/tongueroo/f3b44297228d420442a683fbe80e8937). Recommend enabling. | true
 hooks.on_boot | Hook to run on boot. This hook runs very early. You can use it configure things like ENV vars dynamically. This should be a Ruby block of code. | nil
 init.mode | Can be: auto, never, always. auto means init will only be called when .terraform doesnt exist yet. You can also override this with a env var. IE: `TS_INIT_MODE=always` | auto
 log.root | The root folder where logs are written to. | log
