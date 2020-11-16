@@ -15,6 +15,15 @@ Conventionally name the helper custom.
           create  config/helpers
           create  config/helpers/custom_helper.rb
 
+Produces:
+
+config/helpers/custom_helper.rb
+
+```ruby
+module Terraspace::Project::CustomHelper
+end
+```
+
 ## Stack Examples
 
 Conventionally name the helper to be the same as the stack name.
@@ -23,6 +32,15 @@ Conventionally name the helper to be the same as the stack name.
           create  app/stacks/demo/config/helpers
           create  app/stacks/demo/config/helpers/demo_helper.rb
     $
+
+Produces:
+
+app/stacks/demo/config/helpers/demo_helper.rb
+
+```ruby
+module Terraspace::Stack::Demo::DemoHelper
+end
+```
 
 Explictly name the helper file. IE: custom here.
 
@@ -39,6 +57,15 @@ Conventionally name the helper to be the same as the module name.
           create  app/module/example/config/helpers
           create  app/module/example/config/helpers/example_helper.rb
     $
+
+Produces:
+
+app/module/example/config/helpers/example_helper.rb
+
+```ruby
+module Terraspace::Module::Example::ExampleHelper
+end
+```
 
 Explictly name helper method. IE: custom here.
 
