@@ -55,7 +55,7 @@ describe "main" do
     # Replace with your own test
     expect(true).to be true
     # Example
-    # pp terraspace.outputs("example")
+    # pp terraspace.outputs
     # output_value = terraspace.output("example", "some-output")
     # expect(output_value).to include("some-value")
   end
