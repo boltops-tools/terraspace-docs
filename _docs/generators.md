@@ -10,10 +10,10 @@ Terraspace ships with a few generators to help you get building modules quickly.
 
 Here are some additional generators:
 
-    terraspace new example --type module   # Generates new module test
-    terraspace new helper                  # Generates helper
-    terraspace new hook                    # Generates hook
-    terraspace new arg                     # Generates arg
+    terraspace new test example --type module  # Generates new module test
+    terraspace new helper                      # Generates helper
+    terraspace new hook                        # Generates hook
+    terraspace new arg                         # Generates arg
 
 Here's a cheatsheet for generators. Refer to the cli reference for more docs: [terraspace new]({% link _reference/terraspace-new.md %})
 
