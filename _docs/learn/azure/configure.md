@@ -5,7 +5,7 @@ title: Configure Azure
 Configure Azure so Terraspace can connect to it. The recommended way is to:
 
 1. login with `az login`
-2. setting your `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` environment variables
+2. set up environment variables like `ARM_SUBSCRIPTION_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_CLIENT_ID`
 
 ## Example
 
@@ -24,7 +24,7 @@ That's usually enough to set up the `az` CLI. You can check with:
 
 ## Set up env variables
 
-We set up `ARM_CLIENT_ID` and `ARM_CLIENT_SECRET` because terraspace uses it to handle things like automatically creating the Storage Account for the terraform state file.  To get these env variables setup, follow the [Azure Instructions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
+We set up `ARM_SUBSCRIPTION_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_CLIENT_ID` because terraspace uses it to handle things like automatically creating the Storage Account for the terraform state file.  To get these env variables setup, follow the [Azure Instructions](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#register-an-application-with-azure-ad-and-create-a-service-principal).
 
 The [azure_check](https://github.com/boltops-tools/azure_check) script is useful to check that access is working. You should get something like this.
 
