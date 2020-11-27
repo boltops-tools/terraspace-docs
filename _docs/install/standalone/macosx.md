@@ -1,0 +1,40 @@
+---
+title: "Install: Mac OSX"
+nav_text: MacOSX
+category: standalone
+---
+
+This page shows you how to install Terraspace on Mac OSX.
+
+## Homebrew
+
+You can install Terraspace via homebrew.
+
+Install
+
+    brew cask install boltops-tools/software/terraspace
+    sudo chown -R `whoami`:staff /opt/terraspace
+
+It's important change `/opt/terraspace` to be owned by your user: [Mac OSX Permissions]({% link _docs/install/standalone/macosx/permissions.md %})
+
+Upgrade
+
+    brew update
+    brew cask install boltops-tools/software/terraspace
+    sudo chown -R `whoami`:staff /opt/terraspace
+
+Uninstall
+
+    brew cask uninstall boltops-tools/software/terraspace
+    rm -rf /opt/terraspace
+    grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f # clean up terraspace wrappers
+
+## DMG
+
+You can also download the dmg and install with the Mac OSX GUI installer.
+
+Download link: [Terraspace DMG](https://tap.boltops.com/packages/terraspace/terraspace-latest.dmg)
+
+You can check [terraspace-latest.dmg.metadata.json](https://tap.boltops.com/packages/terraspace/terraspace-latest.dmg.metadata.json) to verify the package checksum. Here's the checksum command.
+
+    shasum -a 256 terraspace-latest.dmg

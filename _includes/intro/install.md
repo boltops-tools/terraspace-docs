@@ -4,7 +4,7 @@ Install terraspace via RubyGems.
 
     gem install terraspace
 
-Ruby 2.7 and above is recommended.
+Ruby 2.7 and above is recommended. For other ways to install Terraspace see: [Install Docs]({% link _docs/install.md %}).
 
 ## Terraform
 
@@ -16,10 +16,3 @@ You can use this command to check your setup:
 
     terraspace check_setup
 
-## Linux Support Only
-
-Terraspace currently only works on macosx and linux. For windows users, consider using the [Cloud9 IDE](https://aws.amazon.com/cloud9/), which runs in a browser and uses linux.
-
-{% if include.provider %}
-Next, we'll configure {{ include.provider }}.
-{% endif %}

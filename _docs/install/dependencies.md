@@ -1,8 +1,10 @@
 ---
-title: Installation
+title: Installation Dependencies
 ---
 
-{% include intro/install.md %}
+## Terraform
+
+Terraform is required. To install terraform see: [Install Terraform]({% link _docs/install/terraform.md %})
 
 ## Cloud Provider CLI
 
@@ -19,3 +21,11 @@ If you need to set up the Cloud Provider credentials, here are the docs from the
 * [Configure AWS]({% link _docs/learn/aws/configure.md %})
 * [Configure Azure]({% link _docs/learn/azure/configure.md %})
 * [Configure GCP]({% link _docs/learn/gcp/configure.md %})
+
+## Linux
+
+Terraspace currently only works on macosx and linux. For windows users, consider using the [Cloud9 IDE](https://aws.amazon.com/cloud9/), which runs in a browser and uses linux.
+
+{% if include.provider %}
+Next, we'll configure {{ include.provider }}.
+{% endif %}
