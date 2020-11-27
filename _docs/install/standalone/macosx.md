@@ -2,6 +2,7 @@
 title: "Install: Mac OSX"
 nav_text: MacOSX
 category: standalone
+order: 1
 ---
 
 This page shows you how to install Terraspace on Mac OSX.
@@ -15,7 +16,7 @@ Install
     brew cask install boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
-It's important change `/opt/terraspace` to be owned by your user: [Mac OSX Permissions]({% link _docs/install/standalone/macosx/permissions.md %})
+It's important change `/opt/terraspace` to be owned by your user: [Standalone Permissions]({% link _docs/install/standalone/details/permissions.md %})
 
 Upgrade
 

@@ -1,14 +1,13 @@
 ---
 title: "Mac OSX Permissions"
-nav_text: MacOSX
+nav_text: Mac OSX
 ---
 
-After installing Terraspace via homebrew, you should change the owner of the `/opt/terraspace` folder to your user.
+After installing Terraspace via the standalone installer, you should change the owner of the `/opt/terraspace` folder to your user.
 
-    brew cask install boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
-The cask installer uses sudo to create the `/opt/terraspace` directory, so it is owned by root.  This results in a sudo prompt when terraspace calls `bundle` and tries to install new gems. You will see this:
+The standalone installer uses sudo to create the `/opt/terraspace` directory, so it is owned by root.  This results in a sudo prompt when terraspace calls `bundle` and tries to install new gems. You will see this:
 
     => Installing dependencies with: bundle install
     Following files may not be writable, so sudo is needed:

@@ -2,6 +2,7 @@
 title: "Install: Ubuntu/Debian"
 nav_text: Ubuntu
 category: standalone
+order: 3
 ---
 
 This page shows you how to install Terraspace on Ubuntu and Debian based linux systems that use the apt package manager.
@@ -18,6 +19,8 @@ Install
 
     apt-get update
     apt-get install -y terraspace
+    exit # change to normal user
+    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 Upgrade
 

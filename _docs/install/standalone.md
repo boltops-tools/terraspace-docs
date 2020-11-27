@@ -17,6 +17,8 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
     curl -so /etc/yum.repos.d/boltops.repo https://yum.boltops.com/boltops.repo
     rpm --import https://yum.boltops.com/boltops-key.public
     yum install -y terraspace
+    exit # change to normal user
+    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 ## Ubuntu/Debian
 
@@ -25,6 +27,8 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
     curl -s https://apt.boltops.com/boltops-key.public | apt-key add -
     apt-get update
     apt-get install -y terraspace
+    exit # change to normal user
+    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 ## Standalone Install Docs
 

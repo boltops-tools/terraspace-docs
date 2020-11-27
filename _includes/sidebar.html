@@ -68,10 +68,12 @@
             <ul>
             {% assign docs = site.docs | where: "categories","standalone" | sort:"order" %}
             {% for doc in docs -%}
-            {% if doc.nav_text == "MacOSX" %}
+            {% if doc.nav_text == "Details" %}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
               <ul>
-                <li><a href="{% link _docs/install/standalone/macosx/permissions.md %}">Permissions</a></li>
+                <li><a href="{% link _docs/install/standalone/details/permissions.md %}">Permissions</a></li>
+                <li><a href="{% link _docs/install/standalone/details/path.md %}">Path</a></li>
+                <li><a href="{% link _docs/install/standalone/details/troubleshoot.md %}">Troubleshooting</a></li>
               </ul>
               </li>
             {% else %}

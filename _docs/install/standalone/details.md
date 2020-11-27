@@ -22,7 +22,7 @@ The installer creates wrapper scripts in `/usr/local/bin`. Here are some of them
 
 Most users have `/usr/local/bin` configured in there PATH. So these wrappers should work.
 
-If you wish not to have these wrappers generated for you, set `export TS_WRAPPERS=0` before running the installer. Without the wrapper scripts, to complete the terraspace standalone installation, you must add `/opt/terraspace/embedded/bin` to your PATH. See: [embedded bin path]({% link _docs/install/standalone/path.md %}).
+If you wish not to have these wrappers generated for you, set `export TS_WRAPPERS=0` before running the installer. Without the wrapper scripts, to complete the terraspace standalone installation, you must add `/opt/terraspace/embedded/bin` to your PATH. See: [embedded bin path]({% link _docs/install/standalone/details/path.md %}).
 
 ## Terraform
 
