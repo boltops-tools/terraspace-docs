@@ -22,7 +22,7 @@ For the Dockerfiles, see: [boltops-tools/terraspace-dockerfiles](https://github.
 
 ## Docker Pull
 
-The Docker images are published to Dockerhub daily. The images generally include the latest version of Terraspace and Terraform. So remember to update the cached Docker images if you've pulled them before.
+The Docker images are published to Dockerhub daily at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). The images generally include the latest version of Terraspace and Terraform. So remember to update the cached Docker images if you've pulled them before.
 
     docker pull boltops/terraspace
     docker pull boltops/terraspace:alpine
