@@ -10,4 +10,4 @@ By default, the standalone installer creates wrapper scripts in `/usr/local/bin`
 
 Most users have `/usr/local/bin` configured in their PATH. So these wrappers work immediately. If you wish not to have these wrappers generated for you, set `export TS_WRAPPERS=0` before running the installer.
 
-Important: If you have ruby wrappers in /usr/local/bin already, the installer will overwrite them.
+Important: If you have ruby wrappers in `/usr/local/bin` already, the installer will overwrite them.
