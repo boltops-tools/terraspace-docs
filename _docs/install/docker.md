@@ -16,7 +16,7 @@ Start the container
 
 This starts up a container with Terraspace and Terraform already installed.
 
-The default OS is the ubuntu. You can also use different OSes by specifying the tag.
+The default OS is ubuntu. You can also use different OSes by specifying the tag.
 
     docker run -ti boltops/terraspace:alpine
     docker run -ti boltops/terraspace:amzn2
