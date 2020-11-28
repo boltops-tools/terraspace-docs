@@ -1,5 +1,5 @@
 ---
-title: Tfvars
+title: Tfvars & Layering
 ---
 
 Terraspace supports looking up tfvar files in conventional locations. This encourages an organized structure.
