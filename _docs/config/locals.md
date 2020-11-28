@@ -28,4 +28,4 @@ Running:
 
     terraspace build demo
 
-Builds a `.terrspace-cache/dev/stacks/demo/locals.tf` using the `config/terraform/locals.tf`. This is useful if you want to have the same locals available in your stacks.
+Builds a `.terraspace-cache/dev/stacks/demo/locals.tf` using the `config/terraform/locals.tf`. This is useful if you want to have the same locals available in your stacks.

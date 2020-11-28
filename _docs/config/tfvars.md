@@ -26,4 +26,4 @@ Running:
 
     terraspace build instance
 
-Builds a `.terrspace-cache/dev/modules/instance/terraform.tfvars` using the `config/terraform/terraform.tfvars`. This is useful if you want to have to set the same tfvars in all your modules.
+Builds a `.terraspace-cache/dev/modules/instance/terraform.tfvars` using the `config/terraform/terraform.tfvars`. This is useful if you want to have to set the same tfvars in all your modules.

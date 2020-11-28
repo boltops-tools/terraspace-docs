@@ -26,7 +26,7 @@ Running:
 
     terraspace up demo
 
-Builds a `.terrspace-cache/dev/stacks/demo/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
+Builds a `.terraspace-cache/dev/stacks/demo/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
 
 ## S3 Backend
 

@@ -34,4 +34,4 @@ Running:
 
     terraspace build demo
 
-Builds a `.terrspace-cache/dev/stacks/demo/terraform.tf` using the `config/terraform/terraform.tf`. This is useful if you want to have the same terraform available in your stacks.
+Builds a `.terraspace-cache/dev/stacks/demo/terraform.tf` using the `config/terraform/terraform.tf`. This is useful if you want to have the same terraform available in your stacks.

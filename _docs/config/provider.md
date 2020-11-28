@@ -19,7 +19,7 @@ Running:
 
     terraspace up instance
 
-Builds a `.terrspace-cache/dev/modules/instance/provider.tf` using the `config/terraform/provider.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of providers.
+Builds a `.terraspace-cache/dev/modules/instance/provider.tf` using the `config/terraform/provider.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of providers.
 
 ## Examples:
 
