@@ -6,9 +6,9 @@ You can install Terraspace as a standalone package.  The nice thing about this a
 
 Terraspace provides the pre-built binaries. Other tools such as [vagrant](https://www.vagrantup.com/), written in ruby, and the [aws cli](https://aws.amazon.com/cli/), written in python, also work the same way.
 
-Below are quickstart instructions for different OSes.
-
 Important: If you're using rvm or rbenv and already have Ruby installed, you should [install terraspace as a gem]({% link _docs/install/gem.md %}). Otherwise, different gem dependencies from the two installations can be used and cause all kinds of trouble.
+
+Below are quickstart instructions for different OSes.
 
 ## Mac OSX
 
