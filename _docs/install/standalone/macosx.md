@@ -7,6 +7,10 @@ order: 1
 
 This page shows you how to install Terraspace on Mac OSX.
 
+Here's a "Mac OSX Homebrew Install" Video:
+
+<div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/UzaMWTYEfTU" frameborder="0" allowfullscreen=""></iframe></div></div>
+
 ## Homebrew
 
 You can install Terraspace via homebrew.
