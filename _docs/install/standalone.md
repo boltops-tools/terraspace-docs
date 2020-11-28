@@ -40,6 +40,8 @@ More info on [CentOS Install]({% link _docs/install/standalone/centos.md %})
 
 More info on [Ubuntu Install]({% link _docs/install/standalone/ubuntu.md %})
 
+{% include install/wrappers.md %}
+
 ## How It Works
 
 The standalone installer packages are published daily. Here are also details on how the standalone installer works: [Standalone Details]({% link _docs/install/standalone/details.md %}).
