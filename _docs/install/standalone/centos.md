@@ -1,13 +1,13 @@
 ---
 title: "Install: CentOS/RedHat/Fedora"
-nav_text: Centos
+nav_text: CentOS
 category: standalone
 order: 2
 ---
 
 This page shows you how to install Terraspace on CentOS, RedHat, Fedora and other Linux systems that use the yum-based package manager.
 
-## Centos/RedHat/Fedora
+## CentOS/RedHat/Fedora
 
 Configure repo
 
