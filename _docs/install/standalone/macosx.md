@@ -13,7 +13,7 @@ You can install Terraspace via homebrew.
 
 Install
 
-    brew cask install boltops-tools/software/terraspace
+    brew install --cask boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
 It's important change `/opt/terraspace` to be owned by your user: [Standalone Permissions]({% link _docs/install/standalone/details/permissions.md %})
@@ -21,7 +21,7 @@ It's important change `/opt/terraspace` to be owned by your user: [Standalone Pe
 Upgrade
 
     brew update
-    brew cask install boltops-tools/software/terraspace
+    brew install --cask boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
 Uninstall

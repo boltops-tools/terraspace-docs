@@ -8,7 +8,7 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
 
 ## Mac OS X
 
-    brew cask install boltops-tools/software/terraspace
+    brew install --cask boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
 ## Centos/RedHat/Fedora
