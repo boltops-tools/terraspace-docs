@@ -30,6 +30,8 @@ Uninstall
 
     yum remove -y terraspace
 
+{% include install/wrappers.md %}
+
 ## Fedora Notes
 
 For Fedora, you may also need the libxcrypt-compat package.
@@ -44,7 +46,7 @@ Or you'll get this error:
 
 Fedora is a bleeding edge distro and is quicker about upgrading their system. The `libcrypt.so` has been removed. The libxcrypt-compat package installs it back.
 
-## Amazon Linux 2
+## Amazon Linux 2 Notes
 
 The standalone installer does not support Amazon Linux 1.  Please use Amazon Linux 2 instead.
 

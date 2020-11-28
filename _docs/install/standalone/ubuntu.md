@@ -30,6 +30,8 @@ Remove
 
     apt-get remove -y --purge terraspace
 
+{% include install/wrappers.md %}
+
 ## Deb Install
 
 You can also download the deb package and install it directly. Here are the commands:

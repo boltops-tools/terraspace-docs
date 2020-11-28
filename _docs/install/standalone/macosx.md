@@ -30,6 +30,8 @@ Uninstall
     rm -rf /opt/terraspace
     grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f # clean up terraspace wrappers
 
+{% include install/wrappers.md %}
+
 ## DMG
 
 You can also download the dmg and install with the Mac OSX GUI installer.
