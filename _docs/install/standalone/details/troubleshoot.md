@@ -1,6 +1,8 @@
 ---
 title: Troubleshooting
 nav_text: Troubleshoot
+category: standalone-details
+order: 1
 ---
 
 Below are some troubleshooting notes:

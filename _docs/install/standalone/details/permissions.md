@@ -1,6 +1,7 @@
 ---
 title: "Standalone Permissions"
 nav_text: Permissions
+category: standalone-details
 ---
 
 After installing Terraspace via the standalone installer, you should change the owner of the `/opt/terraspace` folder to your user.

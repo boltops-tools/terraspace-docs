@@ -10,12 +10,14 @@ Below are quickstart instructions for different OSes.
 
 Important: If you're using rvm or rbenv and already have Ruby installed, you should [install terraspace as a gem]({% link _docs/install/gem.md %}). Otherwise, different gem dependencies from the two installations can be used and cause all kinds of trouble.
 
-## Mac OS X
+## Mac OSX
 
     brew install --cask boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
-## Centos/RedHat/Fedora
+More info on [Mac OSX Install]({% link _docs/install/standalone/macosx.md %})
+
+## CentOS/RedHat/Fedora
 
     sudo su -
     curl -so /etc/yum.repos.d/boltops.repo https://yum.boltops.com/boltops.repo
@@ -23,6 +25,8 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
     yum install -y terraspace
     exit # change to normal user
     sudo chown -R `whoami`:`whoami` /opt/terraspace
+
+More info on [CentOS Install]({% link _docs/install/standalone/centos.md %})
 
 ## Ubuntu/Debian
 
@@ -34,11 +38,8 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
     exit # change to normal user
     sudo chown -R `whoami`:`whoami` /opt/terraspace
 
-## Standalone Install Docs
+More info on [Ubuntu Install]({% link _docs/install/standalone/ubuntu.md %})
 
-The standalone installer packages are published daily. Here are also detailed installation instructions for each OS.
+## How It Works
 
-{% assign docs = site.docs | where: "categories","standalone" | sort:"order" %}
-{% for doc in docs -%}
-* [{{ doc.title }}]({{ doc.url }})
-{% endfor %}
+The standalone installer packages are published daily. Here are also details on how the standalone installer works: [Standalone Details]({% link _docs/install/standalone/details.md %}).
