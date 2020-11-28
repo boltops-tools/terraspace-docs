@@ -296,3 +296,19 @@ ul.toc {
     height:100%;
   }
 }
+
+
+.quick-start-video {
+  .video-desc {
+    h4 {
+      font-weight: bold;
+    }
+    // background-color: red;
+    font-size: 1.25em;
+    vertical-align: middle;
+    display: table-cell;
+    @media (min-width: 768px) {
+      height: 350px;
+    }
+  }
+}
