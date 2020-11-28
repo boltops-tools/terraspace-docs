@@ -16,7 +16,7 @@ Install
     brew install --cask boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
-It's important change `/opt/terraspace` to be owned by your user: [Standalone Permissions]({% link _docs/install/standalone/details/permissions.md %})
+It's important to change `/opt/terraspace` to be owned by your user: [Standalone Permissions]({% link _docs/install/standalone/details/permissions.md %})
 
 Upgrade
 
