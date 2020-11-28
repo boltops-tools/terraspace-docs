@@ -2,7 +2,7 @@
 title: Terraspace with Docker
 ---
 
-You can run Terraspace within a Docker container. This provides you with an isolated throwaway environment to try out Terraspace.
+You can run Terraspace within a Docker container. TThe Docker images are published to Dockerhub daily at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). This provides you with an isolated throwaway environment to try out Terraspace.
 
 Here's a "Getting Started with Terraspace and Docker" Video:
 
