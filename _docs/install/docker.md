@@ -20,6 +20,9 @@ The default OS is ubuntu. You can also use different OSes by specifying the tag.
 
     docker run -ti boltops/terraspace:alpine
     docker run -ti boltops/terraspace:amzn2
+    docker run -ti boltops/terraspace:centos
+    docker run -ti boltops/terraspace:debian
+    docker run -ti boltops/terraspace:fedora
     docker run -ti boltops/terraspace:ubuntu
 
 For the Dockerfiles, see: [boltops-tools/terraspace-dockerfiles](https://github.com/boltops-tools/terraspace-dockerfiles)
@@ -31,6 +34,9 @@ The Docker images are published to Dockerhub daily at [boltops/terraspace](https
     docker pull boltops/terraspace
     docker pull boltops/terraspace:alpine
     docker pull boltops/terraspace:amzn2
+    docker pull boltops/terraspace:centos
+    docker pull boltops/terraspace:debian
+    docker pull boltops/terraspace:fedora
     docker pull boltops/terraspace:ubuntu
 
 ## Cloud Provider Docker Guides
