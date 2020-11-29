@@ -18,6 +18,7 @@ The installer creates wrapper scripts in `/usr/local/bin`. Here are some of them
     /usr/local/bin/bundle
     /usr/local/bin/gem
     /usr/local/bin/rspec
+    /usr/local/bin/ruby
     /usr/local/bin/terraspace
 
 Most users have `/usr/local/bin` configured in there PATH. So these wrappers should work.
