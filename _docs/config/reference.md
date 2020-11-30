@@ -10,8 +10,8 @@ all.concurrency | How many processes to run in parallel for each batch for the `
 all.exit_on_fail.down | Whether or not to exit if one of the down commands fails. Note: Other commands like show, validate, etc are also configurable and default to false. For `all down` , `TS_EXIT_ON_FAIL=0` will also tell Terraspace to continue on failures. | true
 all.exit_on_fail.up | Whether or not to exit if one of the up commands fails. | true
 all.ignore_stacks | Stacks to ignore and not to be considered as part of the dependency graph. | []
-allow.envs | Allow envs to deploy to. IE: dev, prod, etc. By default, any env is allowed. | nil
-allow.regions | Allow regions to deploy to. IE: us-east-1, us-west-2, etc. By default, any region is allowed. | nil
+allow.envs | Array of allowed envs to deploy to. IE: dev, prod, etc. By default, any env is allowed. | nil
+allow.regions | Array of allowed regions to deploy to. IE: us-east-1, us-west-2, etc. By default, any region is allowed. | nil
 auto_create_backend | Enable auto-creation of backend | true
 build.cache_dir | The relative dir for the module or stack cache. IE: .terraspace-cache/us-west-2/dev/stacks/demo | :CACHE_ROOT/:REGION/:ENV/:BUILD_DIR
 build.cache_root | The root of the cache build dir. IE: .terraspace-cache | /full/path/to/.terraspace-cache
