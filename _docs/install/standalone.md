@@ -12,7 +12,7 @@ Below are quickstart instructions for different OSes.
 
 ## Mac OSX
 
-    brew install --cask boltops-tools/software/terraspace
+    brew install boltops-tools/software/terraspace
     sudo chown -R `whoami`:staff /opt/terraspace
 
 More info on [Mac OSX Install]({% link _docs/install/standalone/macosx.md %})
