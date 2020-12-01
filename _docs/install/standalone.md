@@ -12,31 +12,27 @@ Below are quickstart instructions for different OSes.
 
 ## Mac OSX
 
-    brew install boltops-tools/software/terraspace
-    sudo chown -R `whoami`:staff /opt/terraspace
+    brew tap boltops-tools/software
+    brew install terraspace
 
 More info on [Mac OSX Install]({% link _docs/install/standalone/macosx.md %})
 
 ## CentOS/RedHat/Fedora
 
-    sudo su -
+    sudo su
     curl -so /etc/yum.repos.d/boltops.repo https://yum.boltops.com/boltops.repo
     rpm --import https://yum.boltops.com/boltops-key.public
     yum install -y terraspace
-    exit # change to normal user
-    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 More info on [CentOS Install]({% link _docs/install/standalone/centos.md %})
 
 ## Ubuntu/Debian
 
-    sudo su -
+    sudo su
     echo "deb https://apt.boltops.com stable main" > /etc/apt/sources.list.d/boltops.list
     curl -s https://apt.boltops.com/boltops-key.public | apt-key add -
     apt-get update
     apt-get install -y terraspace
-    exit # change to normal user
-    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 More info on [Ubuntu Install]({% link _docs/install/standalone/ubuntu.md %})
 

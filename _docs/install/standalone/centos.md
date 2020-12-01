@@ -11,15 +11,13 @@ This page shows you how to install Terraspace on CentOS, RedHat, Fedora and othe
 
 Configure repo
 
-    sudo su -
+    sudo su
     curl -so /etc/yum.repos.d/boltops.repo https://yum.boltops.com/boltops.repo
     rpm --import https://yum.boltops.com/boltops-key.public
 
 Install
 
     yum install -y terraspace
-    exit # change to normal user
-    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 Upgrade
 
@@ -55,7 +53,7 @@ The standalone installer does not support Amazon Linux 1.  Please use Amazon Lin
 You can also download the rpm package and install it directly. Here are the commands:
 
     wget https://yum.boltops.com/packages/terraspace/terraspace-latest.rpm
-    sudo su -
+    sudo su
     rpm -ivh terraspace-latest.rpm
     terraspace -h
 

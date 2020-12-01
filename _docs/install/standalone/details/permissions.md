@@ -4,19 +4,21 @@ nav_text: Permissions
 category: standalone-details
 ---
 
-After installing Terraspace via the standalone installer, you should change the owner of the `/opt/terraspace` folder to your user.
+The Terraspace standalone installer will make sure that the owner and permissions of the `/opt/terraspace` folder is your user.
+
+If the `/opt/terraspace` folder is not owned by your user for whatever reason, here are the commands to change it:
 
 For macosx:
 
     sudo chown -R `whoami`:staff /opt/terraspace
 
-For other linux OSes, this is generally:
+For other Linux OSes, this is generally:
 
     sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 ## Why?
 
-The standalone installer uses sudo to create the `/opt/terraspace` directory, so it is owned by root.  This results in a sudo prompt when terraspace calls `bundle` and tries to install new gems. You will see this:
+When the `/opt/terraspace` folder is not owned by your user, you won't be able to write to it without sudo. This results in a sudo prompt when terraspace calls `bundle` and tries to install new gems. You will see this:
 
     => Installing dependencies with: bundle install
     Following files may not be writable, so sudo is needed:

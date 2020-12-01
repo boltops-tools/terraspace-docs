@@ -11,7 +11,7 @@ This page shows you how to install Terraspace on Ubuntu and Debian based linux s
 
 Configure repo
 
-    sudo su -
+    sudo su
     echo "deb https://apt.boltops.com stable main" > /etc/apt/sources.list.d/boltops.list
     curl -s https://apt.boltops.com/boltops-key.public | apt-key add -
 
@@ -19,8 +19,6 @@ Install
 
     apt-get update
     apt-get install -y terraspace
-    exit # change to normal user
-    sudo chown -R `whoami`:`whoami` /opt/terraspace
 
 Upgrade
 
@@ -28,7 +26,7 @@ Upgrade
 
 Remove
 
-    apt-get remove -y --purge terraspace
+    apt-get remove -y terraspace
 
 {% include install/wrappers.md %}
 

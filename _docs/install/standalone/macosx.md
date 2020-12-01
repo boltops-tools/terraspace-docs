@@ -17,22 +17,22 @@ You can install Terraspace via homebrew.
 
 Install
 
-    brew install boltops-tools/software/terraspace
-    sudo chown -R `whoami`:staff /opt/terraspace
-
-It's important to change `/opt/terraspace` to be owned by your user: [Standalone Permissions]({% link _docs/install/standalone/details/permissions.md %})
+    brew tap boltops-tools/software
+    brew install terraspace
 
 Upgrade
 
     brew update
-    brew install boltops-tools/software/terraspace
-    sudo chown -R `whoami`:staff /opt/terraspace
+    brew install terraspace
 
 Uninstall
 
-    brew cask uninstall boltops-tools/software/terraspace
+    brew uninstall terraspace
+
+Cleanup
+
     rm -rf /opt/terraspace
-    grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f # clean up terraspace wrappers
+    grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f
 
 {% include install/wrappers.md %}
 
