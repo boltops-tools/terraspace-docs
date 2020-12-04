@@ -33,7 +33,7 @@ Terraspace offers this flexibility for one-off purposes.  For example:
 * You may also want to try out an app/modules/MOD quickly without having to define a stack.
 * You may need to temporarily override the tfvars files embedded within the `app/stacks/MOD/tfvars`.
 
-Note, `app/modules/*/tfvars` are **not** considered in the lookup paths at all. This is because modules should be reusable.
+It is strongly recommended to **not** define tfvars in `app/modules/*/tfvars`. This is because modules should be reusable.
 
 Remember modules and like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be akin to hard coding parameters.
 
