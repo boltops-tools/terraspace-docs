@@ -1,5 +1,6 @@
 ---
 title: Review Project
+search_title: Review Project Google
 ---
 
 Let's explore the generated app folder.

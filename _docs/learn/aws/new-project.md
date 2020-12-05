@@ -1,5 +1,6 @@
 ---
 title: New Project
+search_title: New Project AWS
 ---
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.

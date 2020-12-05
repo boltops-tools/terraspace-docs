@@ -8,13 +8,20 @@ class Pager
   end
 
   def setup
-    on_left_right
+    return unless add?
     add_page_buttons
-    on_prev_next
+    on_arrows
+    on_click
+  end
+
+  def add?
+    path = $window.location.path # `window.location.pathname` IE: /search/  It does not include the ?q=term
+    excludes = %w[search]
+    @sidebar.size > 0 && !excludes.detect { |x| path.include?(x) }
   end
 
   # When left and right clicked, go to next page based on the sidebar
-  def on_left_right
+  def on_arrows
     Document.on("keyup") do |e|
       case e.which
       when 37 # left
@@ -28,8 +35,6 @@ class Pager
   end
 
   def add_page_buttons
-    return unless Element.find("#sidebar").size > 0
-
     html =<<~EOL
       <div class="prev-next-buttons">
         <a id="prev" class="btn btn-basic">Back</a>
@@ -42,7 +47,7 @@ class Pager
     fluid.append(html)
   end
 
-  def on_prev_next
+  def on_click
     next_link = Element.find("#next")
     next_link.on('click') do |e|
       goto_link("next")

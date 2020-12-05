@@ -1,5 +1,6 @@
 ---
 title: Update Infrastructure
+search_title: Update Infrastructure Google
 ---
 
 Let's update the infrastructure.

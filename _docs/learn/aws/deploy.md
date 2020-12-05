@@ -1,5 +1,6 @@
 ---
 title: Deploy Infrastructure
+search_title: Deploy Infrastructure AWS
 ---
 
 Let's go ahead and deploy the infrastructure

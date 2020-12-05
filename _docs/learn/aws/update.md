@@ -1,5 +1,6 @@
 ---
 title: Update Infrastructure
+search_title: Update Infrastructure AWS
 ---
 
 Let's update the infrastructure.

@@ -39250,13 +39250,13 @@ Opal.modules["pager"] = function(Opal) {
   function $rb_plus(lhs, rhs) {
     return (typeof(lhs) === 'number' && typeof(rhs) === 'number') ? lhs + rhs : lhs['$+'](rhs);
   }
-  var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $klass = Opal.klass, $send = Opal.send, $truthy = Opal.truthy, $gvars = Opal.gvars;
+  var self = Opal.top, $nesting = [], nil = Opal.nil, $$$ = Opal.const_get_qualified, $$ = Opal.const_get_relative, $breaker = Opal.breaker, $slice = Opal.slice, $klass = Opal.klass, $truthy = Opal.truthy, $gvars = Opal.gvars, $send = Opal.send;
 
-  Opal.add_stubs(['$setup', '$new', '$find', '$on_left_right', '$add_page_buttons', '$on_prev_next', '$on', '$which', '$===', '$goto_link', '$>', '$size', '$append', '$sidebar_links', '$find_current', '$index', '$==', '$-', '$+', '$at', '$attr', '$assign', '$location', '$path', '$first', '$select']);
+  Opal.add_stubs(['$setup', '$new', '$find', '$add?', '$add_page_buttons', '$on_arrows', '$on_click', '$path', '$location', '$>', '$size', '$!', '$detect', '$include?', '$on', '$which', '$===', '$goto_link', '$append', '$sidebar_links', '$find_current', '$index', '$==', '$-', '$+', '$at', '$attr', '$assign', '$first', '$select']);
   return (function($base, $super, $parent_nesting) {
     var self = $klass($base, $super, 'Pager');
 
-    var $nesting = [self].concat($parent_nesting), $Pager_setup$1, $Pager_initialize$2, $Pager_setup$3, $Pager_on_left_right$4, $Pager_add_page_buttons$6, $Pager_on_prev_next$7, $Pager_goto_link$10, $Pager_sidebar_links$11, $Pager_find_current$12;
+    var $nesting = [self].concat($parent_nesting), $Pager_setup$1, $Pager_initialize$2, $Pager_setup$3, $Pager_add$ques$4, $Pager_on_arrows$6, $Pager_add_page_buttons$8, $Pager_on_click$9, $Pager_goto_link$12, $Pager_sidebar_links$13, $Pager_find_current$14;
 
     self.$$prototype.sidebar = nil;
     
@@ -39276,15 +39276,36 @@ Opal.modules["pager"] = function(Opal) {
       var self = this;
 
       
-      self.$on_left_right();
+      if ($truthy(self['$add?']())) {
+      } else {
+        return nil
+      };
       self.$add_page_buttons();
-      return self.$on_prev_next();
+      self.$on_arrows();
+      return self.$on_click();
     }, $Pager_setup$3.$$arity = 0);
     
-    Opal.def(self, '$on_left_right', $Pager_on_left_right$4 = function $$on_left_right() {
-      var $$5, self = this;
+    Opal.def(self, '$add?', $Pager_add$ques$4 = function() {
+      var $a, $$5, self = this, path = nil, excludes = nil;
+      if ($gvars.window == null) $gvars.window = nil;
 
-      return $send($$($nesting, 'Document'), 'on', ["keyup"], ($$5 = function(e){var self = $$5.$$s || this, $case = nil;
+
+      path = $gvars.window.$location().$path();
+      excludes = ["search"];
+      return ($truthy($a = $rb_gt(self.sidebar.$size(), 0)) ? $send(excludes, 'detect', [], ($$5 = function(x){var self = $$5.$$s || this;
+
+
+
+        if (x == null) {
+          x = nil;
+        };
+        return path['$include?'](x);}, $$5.$$s = self, $$5.$$arity = 1, $$5))['$!']() : $a);
+    }, $Pager_add$ques$4.$$arity = 0);
+
+    Opal.def(self, '$on_arrows', $Pager_on_arrows$6 = function $$on_arrows() {
+      var $$7, self = this;
+
+      return $send($$($nesting, 'Document'), 'on', ["keyup"], ($$7 = function(e){var self = $$7.$$s || this, $case = nil;
 
       
         
@@ -39294,47 +39315,43 @@ Opal.modules["pager"] = function(Opal) {
         return (function() {$case = e.$which();
         if ((37)['$===']($case)) {return self.$goto_link("prev")}
         else if ((39)['$===']($case)) {return self.$goto_link("next")}
-        else { return nil }})();}, $$5.$$s = self, $$5.$$arity = 1, $$5))
-    }, $Pager_on_left_right$4.$$arity = 0);
+        else { return nil }})();}, $$7.$$s = self, $$7.$$arity = 1, $$7))
+    }, $Pager_on_arrows$6.$$arity = 0);
     
-    Opal.def(self, '$add_page_buttons', $Pager_add_page_buttons$6 = function $$add_page_buttons() {
+    Opal.def(self, '$add_page_buttons', $Pager_add_page_buttons$8 = function $$add_page_buttons() {
       var self = this, html = nil, fluid = nil;
 
       
-      if ($truthy($rb_gt($$($nesting, 'Element').$find("#sidebar").$size(), 0))) {
-      } else {
-        return nil
-      };
       html = "" + "<div class=\"prev-next-buttons\">\n" + "  <a id=\"prev\" class=\"btn btn-basic\">Back</a>\n" + "  <a id=\"next\" class=\"btn btn-primary\">Next Step</a>\n" + "  <p class=\"keyboard-tip\">Pro tip: Use the <- and -> arrow keys to move back and forward.</p>\n" + "</div>\n";
       fluid = $$($nesting, 'Element').$find(".container-fluid");
       return fluid.$append(html);
-    }, $Pager_add_page_buttons$6.$$arity = 0);
+    }, $Pager_add_page_buttons$8.$$arity = 0);
     
-    Opal.def(self, '$on_prev_next', $Pager_on_prev_next$7 = function $$on_prev_next() {
-      var $$8, $$9, self = this, next_link = nil, prev_link = nil;
+    Opal.def(self, '$on_click', $Pager_on_click$9 = function $$on_click() {
+      var $$10, $$11, self = this, next_link = nil, prev_link = nil;
 
       
       next_link = $$($nesting, 'Element').$find("#next");
-      $send(next_link, 'on', ["click"], ($$8 = function(e){var self = $$8.$$s || this;
+      $send(next_link, 'on', ["click"], ($$10 = function(e){var self = $$10.$$s || this;
 
       
         
         if (e == null) {
           e = nil;
         };
-        return self.$goto_link("next");}, $$8.$$s = self, $$8.$$arity = 1, $$8));
+        return self.$goto_link("next");}, $$10.$$s = self, $$10.$$arity = 1, $$10));
       prev_link = $$($nesting, 'Element').$find("#prev");
-      return $send(prev_link, 'on', ["click"], ($$9 = function(e){var self = $$9.$$s || this;
+      return $send(prev_link, 'on', ["click"], ($$11 = function(e){var self = $$11.$$s || this;
 
       
         
         if (e == null) {
           e = nil;
         };
-        return self.$goto_link("prev");}, $$9.$$s = self, $$9.$$arity = 1, $$9));
-    }, $Pager_on_prev_next$7.$$arity = 0);
+        return self.$goto_link("prev");}, $$11.$$s = self, $$11.$$arity = 1, $$11));
+    }, $Pager_on_click$9.$$arity = 0);
     
-    Opal.def(self, '$goto_link', $Pager_goto_link$10 = function $$goto_link(direction) {
+    Opal.def(self, '$goto_link', $Pager_goto_link$12 = function $$goto_link(direction) {
       var self = this, links = nil, current_link = nil, current_index = nil, link = nil, last = nil, i = nil, href = nil;
       if ($gvars.window == null) $gvars.window = nil;
 
@@ -39363,33 +39380,33 @@ Opal.modules["pager"] = function(Opal) {
       } else {
         return nil
       };
-    }, $Pager_goto_link$10.$$arity = 1);
+    }, $Pager_goto_link$12.$$arity = 1);
     (Opal.class_variable_set($nesting[0], '@@sidebar_links', nil));
     
-    Opal.def(self, '$sidebar_links', $Pager_sidebar_links$11 = function $$sidebar_links() {
+    Opal.def(self, '$sidebar_links', $Pager_sidebar_links$13 = function $$sidebar_links() {
       var $a, self = this;
 
       
       if ($truthy((($a = $nesting[0].$$cvars['@@sidebar_links']) == null ? nil : $a))) {
         return (($a = $nesting[0].$$cvars['@@sidebar_links']) == null ? nil : $a)};
       return (Opal.class_variable_set($nesting[0], '@@sidebar_links', self.sidebar.$find(".content-nav a")));
-    }, $Pager_sidebar_links$11.$$arity = 0);
-    return (Opal.def(self, '$find_current', $Pager_find_current$12 = function $$find_current() {
-      var $$13, self = this, current_location = nil, links = nil;
+    }, $Pager_sidebar_links$13.$$arity = 0);
+    return (Opal.def(self, '$find_current', $Pager_find_current$14 = function $$find_current() {
+      var $$15, self = this, current_location = nil, links = nil;
       if ($gvars.window == null) $gvars.window = nil;
 
       
       current_location = $gvars.window.$location().$path();
       links = self.$sidebar_links();
-      return $send(links, 'select', [], ($$13 = function(l){var self = $$13.$$s || this;
+      return $send(links, 'select', [], ($$15 = function(l){var self = $$15.$$s || this;
 
       
         
         if (l == null) {
           l = nil;
         };
-        return l.$attr("href")['$=='](current_location);}, $$13.$$s = self, $$13.$$arity = 1, $$13)).$first();
-    }, $Pager_find_current$12.$$arity = 0), nil) && 'find_current';
+        return l.$attr("href")['$=='](current_location);}, $$15.$$s = self, $$15.$$arity = 1, $$15)).$first();
+    }, $Pager_find_current$14.$$arity = 0), nil) && 'find_current';
   })($nesting[0], null, $nesting)
 };
 

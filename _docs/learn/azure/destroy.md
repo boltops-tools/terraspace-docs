@@ -1,5 +1,6 @@
 ---
 title: Destroy Infrastructure
+search_title: Destroy Infrastructure Azure
 ---
 
 Now that we've seen how to deploy infra, let's clean up and tear down the resources.

@@ -1,5 +1,6 @@
 ---
 title: Deploy Infrastructure
+search_title: Deploy Infrastructure Google
 ---
 
 Let's go ahead and deploy the infrastructure

@@ -1,5 +1,6 @@
 ---
 title: Review Project
+search_title: Review Project Azure
 ---
 
 Let's explore the generated app folder.

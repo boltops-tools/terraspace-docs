@@ -1,5 +1,6 @@
 ---
 title: Next Steps
+search_title: Next Steps Support Terraspace
 ---
 
 Hopefully, you have a good feel for how terraspace works now. From here, there are a few resources that can help you continue along:
