@@ -17,4 +17,4 @@ If you are seeing warnings like this:
 
 You probably have rvm or rbenv and the Terraspace standalone version installed together.  Ruby version managers adjust the PATH so that libraries and gems are picked up and this can interfere with the Terraspace standalone PATH.
 
-Having both the rvm or rbenv and the standalone Terraspace package installed means different gems from each install can be used. This causes all sorts of troubles. Since you already have Ruby installed, install terraspace as a gem instead.
+Having both the rvm or rbenv and the standalone Terraspace package installed means different gems from each install can be used. This causes all sorts of troubles. Since you already have Ruby installed, install terraspace as a gem instead. See: [Terraspace Gem Install]({% link _docs/install/gem.md %}).

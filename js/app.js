@@ -39289,19 +39289,19 @@ Opal.modules["pager"] = function(Opal) {
       var $a, $$5, self = this, path = nil, excludes = nil;
       if ($gvars.window == null) $gvars.window = nil;
 
-
+      
       path = $gvars.window.$location().$path();
       excludes = ["search"];
       return ($truthy($a = $rb_gt(self.sidebar.$size(), 0)) ? $send(excludes, 'detect', [], ($$5 = function(x){var self = $$5.$$s || this;
 
-
-
+      
+        
         if (x == null) {
           x = nil;
         };
         return path['$include?'](x);}, $$5.$$s = self, $$5.$$arity = 1, $$5))['$!']() : $a);
     }, $Pager_add$ques$4.$$arity = 0);
-
+    
     Opal.def(self, '$on_arrows', $Pager_on_arrows$6 = function $$on_arrows() {
       var $$7, self = this;
 
