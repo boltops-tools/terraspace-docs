@@ -355,13 +355,22 @@ ul.toc {
 .top-bar {
   .has-search {
     // mobile
+    // without padding-left its centered
     margin: 0;
     padding: 0;
     width: 200px;
     // desktop
+    @media (min-width: 500px) {
+      // without padding-left its centered
+      width: 320px;
+    }
+    @media (min-width: 600px) {
+      // without padding-left its centered
+      width: 400px;
+    }
     @media (min-width: 768px) {
       padding-left: 64px;
-      width: 500px;
+      width: 512px;
     }
 
 
