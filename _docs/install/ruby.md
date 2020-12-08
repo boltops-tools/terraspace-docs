@@ -31,6 +31,12 @@ With the rbenv git approach, you'll be able to use the latest available rubies b
 
     cd ~/.rbenv/plugins/ruby-build && git pull
 
+Then install different ruby versions. Example:
+
+    rbenv install 2.7.2
+    rbenv global 2.7.2
+    echo 2.7.2 > ~/.ruby-version # on some systems this is needed
+
 ## 2. Install rbenv with homebrew
 
 You can install rbenv with homebrew also:
@@ -57,7 +63,7 @@ And start a new terminal. You should be able see something like this:
     $ type ruby
     ruby is /Users/tung/.rbenv/shims/ruby
 
-Then you'll be able to install different ruby versions. Here's an example:
+Then install different ruby versions. Example:
 
     rbenv install 2.7.2
     rbenv global 2.7.2
