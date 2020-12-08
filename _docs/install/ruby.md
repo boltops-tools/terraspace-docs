@@ -9,7 +9,7 @@ On a new system, the recommended way to install Ruby is via [rbenv](https://gith
 
 ## 1. Install rbenv with git
 
-You can also simply install rbenv by cloning down the rbenv repo to `~/.rbenv.
+You can also simply install rbenv by cloning down the rbenv repo to `~/.rbenv`.
 
     git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
