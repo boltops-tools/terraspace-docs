@@ -8,7 +8,8 @@ If you're looking for support for terraspace, here are some options:
 
 * Read the [Documentation](https://terraspace.cloud).
 * If you have a question about using Terraspace, start a discussion on [BoltOps Community Forum](https://community.boltops.com/) or [StackOverflow](https://stackoverflow.com/questions/tagged/terraspace)
-* If you have a question about using Terraspace on sites like [StackOverflow](https://stackoverflow.com/questions/tagged/terraspace).
+
+The Terraspace community is growing. You will likely find other folks who are interested in Terraspace and just figuring things out also. Would love for community members to be helpful and point others in the right direction. We’ve all been there before, and sometimes the littlest tip goes a long way to help others.
 
 ## Report a bug
 
