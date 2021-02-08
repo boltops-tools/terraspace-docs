@@ -6,19 +6,36 @@
 // base
 @import "variables";
 @import "mixins";
+
+@import "fonts";
 @import "default";
+@import "syntax";
 
 // structure
-@import "sidebar";
-@import "caret";
-@import "content";
+@import "app/sidebar";
+@import "app/content";
+
 @import "footer";
+@import "header";
+@import "navbar";
 
 // theme
-@import "bootstrap-overrides";
-@import "theme";
-@import "buttons";
-@import "masthead";
-@import "table";
-@import "syntax";
-@import "cta";
+@import "homepage";
+
+// sections
+@import "sections/more-tools";
+@import "sections/homepage/code";
+@import "sections/homepage/cta";
+@import "sections/homepage/feature";
+@import "sections/homepage/quick-start-video";
+@import "sections/homepage/quotes";
+
+
+@import "elements/search-form";
+@import "elements/buttons";
+@import "elements/lists";
+@import "elements/nav-tabs";
+@import "elements/table";
+
+@import "app/content";
+@import "app/sidebar";

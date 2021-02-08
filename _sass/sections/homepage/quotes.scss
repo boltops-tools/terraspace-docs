@@ -1,0 +1,75 @@
+section.quotes {
+    padding: 90px 0 45px;
+    @media (min-width: $large) {
+        padding: 130px 0 74px;
+    }
+
+    @media (min-width: $large) {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .quotes-carousel {
+        display: none;
+        @media (min-width: $large) {
+            display: block;
+        }
+
+        .author-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .author-quote {
+            p {
+                font-size: 18px;
+                &:last-child {
+                    margin-bottom: 0;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        &:not(.mobile) {
+            .quotes-group {
+                margin: 0 18px;
+            }
+            .quotes-item {
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 10px;
+                padding: 39px 47px;
+                margin-bottom: 40px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .author-avatar {
+                min-width: 120px;
+                min-height: 120px;
+                margin: initial;
+            }
+
+            .author-quote {
+                margin-left: 30px;
+            }
+        }
+
+        &.mobile {
+            display: block;
+            @media (min-width: $large) {
+                display: none;
+            }
+
+            .author-quote {
+                margin-top: 30px;
+                padding: 0 30px;
+            }
+        }
+    }
+}

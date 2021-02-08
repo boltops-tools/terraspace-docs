@@ -1,0 +1,21 @@
+<section class="more-tools text-center">
+  <div class="container">
+    <h3 class="text-uppercase">More tools:</h3>
+    <ul class="tools-list list-unstyled d-lg-flex align-items-center justify-content-between tools">
+      {% for tool in site.data.tools %}
+      <li>
+        <a href="{{tool.link}}">
+          <img src="/img/tools/{{tool.image}}" alt="{{tool.image-title}}">
+          <span>{{tool.image-title}}</span>
+        </a>
+        <div class="tools-descr">
+          <img src="/img/tools/{{tool.image}}" alt="{{tool.image-title}}">
+          <h3>{{tool.title}}</h3>
+          <p>{{tool.description}}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  </div>
+</section>

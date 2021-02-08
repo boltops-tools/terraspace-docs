@@ -4,7 +4,9 @@
 
 $theme-primary:    #777;
 $theme-secondary:  #7b4397;
-$theme-tertiary:   #dc2430;
+$theme-tertiary:   #CC1D58;
+$theme-yellow:     #F59924;
+$theme-gray:       #1B1B20;
 
 $gray-base:        #000;
 $gray-darker:      lighten($gray-base, 13.5%); // #222
@@ -18,7 +20,35 @@ $brand-facebook:	#3b5998;
 $brand-google-plus:	#dd4b39;
 
 $site-color-primary: #3972c7;
-$site-color-primary-rgb: #18FF9C;
+$site-color-primary-rgb: #0B9610;
 $site-color-secondary: #2c3e50;
 $site-color-secondary-dark: #233140;
 $site-color-links: #a3c8ff;
+
+$gray1: #F1F3F6;
+$gray2: #E6E7ED;
+$gray3: #DBDAE4;
+$gray4: #ACABB7;
+$gray5: #797887;
+$gray6: #59587B;
+$gray7: #282C35;
+
+$gradient-primary: linear-gradient(82.1deg, #2E1829 7.59%, #CC1D58 91.31%);
+$gradient-banner: linear-gradient(270deg, #59587B 0%, #CC1D58 100%);
+$gradient-btn: linear-gradient(90deg, #FF2D5F 20.31%, #F96E3B 80.73%);
+$gradient-btn-hover: linear-gradient(90deg, #E61749 16.67%, #FF5C21 84.9%);
+$gradient-bg: linear-gradient(90deg, $theme-gray 0%, #000000 100%);
+$gradient-bg-linear: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 69.79%);
+
+$shadow-btn: 0px 6px 12px rgba(149, 10, 15, 0.5);
+
+// Font
+$font-size-main: 15px;
+$font-family-main: 'Montserrat';
+$font-family-second: 'Gothica';
+
+// Breakpoints
+$extra-large: 1440px;
+$large: 992px;
+$medium: 768px;
+$small: 576px;

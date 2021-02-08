@@ -1,0 +1,60 @@
+// Styling for the masthead
+header.masthead {
+  position: relative;
+  &:after {
+    content: '';
+    background: url('/img/plane.svg') no-repeat right bottom;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    right: 6%;
+    width: 510px;
+    height: 270px;
+    max-width: 100%;
+    display: block;
+
+    @media (max-width: $small - 1) {
+      right: 10px;
+      width: 130%;
+      height: 100%;
+      max-width: 500px;
+    }
+  }
+
+  .header {
+    &-content {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin: 40px 0;
+      @media (max-width: $small - 1) {
+        margin: 30px 0;
+
+        h1 {
+          line-height: 50.4px;
+        }
+
+        h2 {
+          line-height: 32px;
+        }
+      }
+
+      h1, h2 {
+        font-weight: 300;
+        margin-bottom: 0;
+      }
+    }
+    &-reference {
+      border-left: 5px solid $theme-yellow;
+      padding: 5px 0 5px 25px;
+      margin: 10px 0 265px;
+      @media (min-width: $large) {
+        margin: 32px 0 100px;
+        padding: 12px 30px 8px;
+      }
+      h6 {
+        font-weight: 300;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-title: Search
+title: Search results for “<span data-search-found-term></span>”
 search_omit: true
 ---
 
@@ -19,9 +19,12 @@ search_omit: true
 
 <!-- Search result template -->
 <script type="text/x-template" id="search-result">
-  <div class="search-result">
-    <h3><a href="##Url##">##Title##</a></h3>
-    <div class="content">##Content##</div>
+  <div class="search search-result">
+    <hr>
+    <h5 class="search-title">
+      <a href="##Url##">##Title##</a>
+    </h5>
+    <div class="serch-content">##Content##</div>
   </div>
 </script>
 

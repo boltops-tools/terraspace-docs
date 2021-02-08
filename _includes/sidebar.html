@@ -1,7 +1,7 @@
-<div id="sidebar">
-  <section class="content-nav">
-    <h2><a href="{% link getting-started.md %}">Getting Started</a></h2>
-    <ul id="learn">
+<div id="sidebar" class="sidebar">
+  <div class="content-nav">
+    <ul>
+      <li><h2><a href="{% link getting-started.md %}">Getting Started</a></h2></li>
       <li><a href="{% link _docs/learn/aws.md %}">AWS</a>
         <ul>
           <li><a href="{% link _docs/learn/aws/install.md %}">Install Terraspace</a></li>
@@ -43,15 +43,15 @@
       </li>
       <li><a href="{% link _docs/vs.md %}">Terraspace vs Others</a>
         <ul>
-        {% assign docs = site.docs | where: "categories","vs" %}
-        {% for doc in docs -%}
+          {% assign docs = site.docs | where: "categories","vs" %}
+          {% for doc in docs -%}
           <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
-        {% endfor %}
+          {% endfor %}
         </ul>
       </li>
     </ul>
-    <h2><a href="{% link docs.md %}">Docs</a></h2>
-    <ul id="docs">
+    <ul>
+      <li><h2><a href="{% link docs.md %}">Docs</a></h2></li>
       <li><a href="{% link _docs/intro.md %}">Intro</a>
         <ul>
           <li><a href="{% link _docs/intro/how-terraspace-works.md %}">How Terraspace Works</a></li>
@@ -66,29 +66,29 @@
           <li><a href="{% link _docs/install/gem.md %}">Gem</a></li>
           <li><a href="{% link _docs/install/standalone.md %}">Standalone</a>
             <ul>
-            {% assign docs = site.docs | where: "categories","standalone" | sort:"order" %}
-            {% for doc in docs -%}
-            {% if doc.nav_text == "Details" %}
+              {% assign docs = site.docs | where: "categories","standalone" | sort:"order" %}
+              {% for doc in docs -%}
+              {% if doc.nav_text == "Details" %}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a>
-              <ul>
-                <li><a href="{% link _docs/install/standalone/details/permissions.md %}">Permissions</a></li>
-                <li><a href="{% link _docs/install/standalone/details/path.md %}">Path</a></li>
-                <li><a href="{% link _docs/install/standalone/details/troubleshoot.md %}">Troubleshooting</a></li>
-                <li><a href="{% link _docs/install/standalone/details/uninstall.md %}">Uninstall</a></li>
-              </ul>
+                <ul>
+                  <li><a href="{% link _docs/install/standalone/details/permissions.md %}">Permissions</a></li>
+                  <li><a href="{% link _docs/install/standalone/details/path.md %}">Path</a></li>
+                  <li><a href="{% link _docs/install/standalone/details/troubleshoot.md %}">Troubleshooting</a></li>
+                  <li><a href="{% link _docs/install/standalone/details/uninstall.md %}">Uninstall</a></li>
+                </ul>
               </li>
-            {% else %}
+              {% else %}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
-            {% endif %}
-            {% endfor %}
+              {% endif %}
+              {% endfor %}
             </ul>
           </li>
           <li><a href="{% link _docs/install/docker.md %}">Docker</a>
             <ul>
-            {% assign docs = site.docs | where: "categories","docker-guides" | sort:"order" %}
-            {% for doc in docs -%}
+              {% assign docs = site.docs | where: "categories","docker-guides" | sort:"order" %}
+              {% for doc in docs -%}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
-            {% endfor %}
+              {% endfor %}
             </ul>
           </li>
           <li><a href="{% link _docs/install/dependencies.md %}">Dependencies</a></li>
@@ -111,18 +111,18 @@
           <li><a href="{% link _docs/config/terraform.md %}">Terraform</a></li>
           <li><a href="{% link _docs/config/args.md %}">Args</a>
             <ul>
-            {% assign docs = site.docs | where: "categories","args" | sort:"order" %}
-            {% for doc in docs -%}
+              {% assign docs = site.docs | where: "categories","args" | sort:"order" %}
+              {% for doc in docs -%}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
-            {% endfor %}
+              {% endfor %}
             </ul>
           </li>
           <li><a href="{% link _docs/config/hooks.md %}">Hooks</a>
             <ul>
-            {% assign docs = site.docs | where: "categories","hooks" | sort:"order" %}
-            {% for doc in docs -%}
+              {% assign docs = site.docs | where: "categories","hooks" | sort:"order" %}
+              {% for doc in docs -%}
               <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
-            {% endfor %}
+              {% endfor %}
             </ul>
           </li>
           <li><a href="{% link _docs/config/reference.md %}">Reference</a></li>
@@ -148,8 +148,8 @@
       </li>
       <li><a href="{% link _docs/dependencies.md %}">Dependency Graphs</a>
         <ul>
-        {% assign docs = site.docs | where: "categories","dependencies" %}
-        {% for doc in docs -%}
+          {% assign docs = site.docs | where: "categories","dependencies" %}
+          {% for doc in docs -%}
           {% if doc.nav_text == "Tfvars" %}
           <li><a href='{{doc.url}}'>{{doc.nav_text}}</a>
             <ul>
@@ -162,7 +162,7 @@
           {% else %}
           <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
           {% endif %}
-        {% endfor %}
+          {% endfor %}
         </ul>
       </li>
       <li><a href="{% link _docs/terrafile.md %}">Terrafile</a>
@@ -298,12 +298,14 @@
       </li>
       <li><a href="{% link reference.md %}">CLI Reference</a></li>
     </ul>
-  </section>
-  <div class="menu-options">
-    <h2>sidebar options:</h2>
-    <ul class="list-unstyled">
-      <li><a href="#" id="expand-all">expand all</a></li>
-      <li><a href="{{ site.gh_url }}/blob/master/{{ page.path }}" target="_blank">edit page</a></li>
-    </ul>
+  </div>
+  <div class="menu-options-wrapper">
+    <div class="menu-options">
+      <a href="#" id="expand-all">Expand all</a>
+      <span class="sep">|</span>
+      <a href="#" id="collapse-all">Collapse all</a>
+      <span class="sep">|</span>
+      <a href="{{ site.gh_url }}/blob/master/{{ page.path }}" target="_blank">Edit page</a></li>
+    </div>
   </div>
 </div>

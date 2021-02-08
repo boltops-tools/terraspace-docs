@@ -1,0 +1,120 @@
+.btn {
+  padding: 20px;
+  font-size: 20px;
+  position: relative;
+  min-width: 266px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  overflow: hidden;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+
+  &:focus, &:active, &:active:focus,
+  &.btn-primary:not(:disabled):not(.disabled):active:focus{
+    box-shadow: none;
+  }
+
+  &-primary {
+    color: #fff;
+    box-shadow: $shadow-btn;
+    border-color: transparent;
+    z-index: 0;
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &:before {
+      background: $gradient-btn;
+    }
+
+    &:after {
+      background: $gradient-btn-hover;
+      opacity: 0;
+      @include transition-all;
+    }
+
+    &:hover:after {
+      opacity: 1;
+    }
+  }
+
+  &-basic {
+    background: #FFFFFF;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    &:hover {
+      color: $theme-tertiary;
+    }
+  }
+
+  &-md {
+    min-width: auto;
+    padding: 14px 40px;
+    font-size: 18px;
+  }
+
+  &-sm {
+    min-width: auto;
+    padding: 6px 20px;
+    font-size: $font-size-main;
+  }
+
+  &-edit-page {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+  }
+
+  &-unstyled {
+    padding: 0;
+    font-size: 15px;
+    font-weight: 400;
+    border: none;
+    border-radius: 0;
+    min-width: auto;
+  }
+}
+
+.dismiss {
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  right: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  cursor: pointer;
+
+  .fa {
+    @include transition-all;
+    color: $gray5;
+    font-size: 13px;
+    line-height: 10.8px;
+    font-weight: bold;
+  }
+
+  &:hover .fa {
+    color: $theme-tertiary;
+  }
+}
+
+.prev-next-buttons {
+  white-space: nowrap;
+
+  button:not(:last-child) {
+    margin-right: 20px;
+  }
+}

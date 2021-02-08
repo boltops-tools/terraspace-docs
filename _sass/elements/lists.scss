@@ -1,0 +1,41 @@
+ul {
+  padding-left: 15px;
+  li {
+    margin-bottom: 8px;
+    line-height: 20px;
+    @media (min-width: $large) {
+      line-height: 25.5px;
+    }
+  }
+}
+
+$images: (1: 'dry.svg', 2: 'generators.svg', 3: 'multiple-env.svg', 4: 'deploy.svg', 5: 'secrets-support.svg', 6: 'terrafile.svg', 7: 'cli.svg', 8: 'testing.svg', 9: 'cloud.svg');
+ul.terraspace-features {
+  list-style-type: none;
+
+  li {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 30px;
+
+    a:first-child {
+      font-weight: 600;
+      font-size: 18px;
+      display: table;
+    }
+
+    @each $index, $image in $images {
+      &:nth-child(#{$index}):before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        background: url('/img/content/#{$image}') no-repeat top;
+        background-size: contain;
+        display: block;
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

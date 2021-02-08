@@ -1,0 +1,17 @@
+{% for feature in site.data.features %}
+<section class="feature {{feature.section-class}}" style="{{feature.section-style}}">
+  <div class="container">
+    <div class="row flex-lg-row{% if feature.reverse == true %}-reverse{% endif %} align-items-center">
+      <div class="col-lg-6">
+        <div class="feature-box">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="/img/{{feature.image}}" alt={{feature.image-title}}">
+      </div>
+    </div>
+  </div>
+</section>
+{% endfor %}

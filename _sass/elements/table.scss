@@ -1,0 +1,72 @@
+table, .table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  // @media (max-width: $medium - 1) {
+  //   width: auto;
+  //   min-width: 100%;
+  //   display: inline-block;
+  //   margin-bottom: 20px;
+  //   border: none;
+
+  //   &-wrapper {
+  //     overflow: hidden;
+  //     overflow-x: auto;
+  //     margin-left: -10px;
+  //     margin-right: -10px;
+  //     padding: 0 10px;
+  //     -ms-overflow-style: none;
+  //     scrollbar-width: none;
+
+  //     &::-webkit-scrollbar {
+  //       display: none;
+  //     }
+  //   }
+  // }
+
+  thead th {
+    background-color: $theme-gray;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    // white-space: nowrap;
+  }
+
+  tr {
+    background-color: #fff;
+  }
+
+  tr:nth-child(even) {
+    background-color: $gray2;
+  }
+
+  td {
+    vertical-align: top;
+    @media (max-width: $medium - 1) {
+      min-width: 360px;
+      &:nth-child(1), &:nth-child(2) {
+        // white-space: nowrap;
+        min-width: auto;
+      }
+    }
+  }
+
+  th, td {
+    padding: 10px 45px 10px 10px;
+  }
+
+  //
+  display: block;
+  // max-width: -moz-fit-content;
+  // max-width: fit-content;
+  // margin: 0 auto; // only if we want table centered
+  overflow-x: auto;
+  // white-space: nowrap;
+
+}

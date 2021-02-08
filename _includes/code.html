@@ -1,0 +1,16 @@
+<section class="code" data-title="the code">
+  <div class="container">
+    <div class="row">
+      <div class="col code-block">
+        {% for code in site.data.codes %}
+        <div class="code-section">
+          <h5>{{code.title}}</h5>
+          <div class="highlighter-rouge">
+            {% highlight sh %}{{code.code}}{% endhighlight %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

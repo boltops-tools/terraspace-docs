@@ -1,0 +1,40 @@
+.search-form {
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  @media (min-width: $large) {
+    margin-right: 20px;
+  }
+
+  .search {
+    position: absolute;
+    top: 50%;
+    margin-top: -12px;
+    color: #fff;
+    left: 12px;
+    @include transition-all;
+    @media (min-width: $large) {
+      svg {
+        width: 16px;
+      }
+    }
+  }
+  .form-control {
+    @include transition-all;
+    padding: 0 35px;
+    background-color: $gray7;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    color: #fff;
+
+    @media (max-width: $large - 1) {
+      padding: 0px 15px 0px 42px;
+      height: 50px;
+    }
+
+
+    &:hover, &:focus {
+      border-color: $theme-yellow;
+    }
+  }
+}

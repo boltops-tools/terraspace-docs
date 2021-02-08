@@ -59,31 +59,82 @@
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
-// fix css the pre code block that is generated with ```
-.highlighter-rouge .highlight {
-  background: #ecf0f1;
-  // overflow: scroll;
-  // max-width: 600px;
-}
-
-.highlighter-rouge {
-  // max-width: 900px;
-}
-
 pre {
   background: #ecf0f1;
-  padding: 10px;
+  // padding: 10px;
   margin: 0 0 10.5px;
   font-size: 12px;
 }
 
 code {
-  font-size: 80%;
-  color: #24292e;
-  background: #ecf0f1;
-  padding: .2em 0;
+  font-size: 15px;
+  line-height: 20px;
+  background: #f3f4f4;
+  padding: 2px 6px;
+  color: #000;
+  border-radius: 6px;
+
+  // padding: .2em .4em;
+  // margin: 0;
+  // font-size: 85%;
+  // background-color: var(--color-markdown-code-bg);
 }
 
-code.highlighter-rouge {
-  padding: .2em .4em;
+code.language-plaintext {
+  white-space: nowrap;
+}
+
+div.highlighter-rouge {
+  @media (max-width: $small - 1) {
+    overflow: auto;
+    // overflow-x: scroll;
+    // white-space: nowrap;
+    margin-left: -10px;
+    margin-right: -10px;
+    // -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+div.highlight, figure.highlight {
+  background: #f6f8fa;
+  // background: #ecf0f1;
+  border-radius: 10px;
+  padding: 10px 1px 10px 10px;
+  // color: #fff;
+  margin-bottom: 10px;
+
+  // width: 667px;
+
+  @media (max-width: $small - 1) {
+    display: inline-block;
+    width: 95%; // 667px;
+    margin: 0 10px 10px 10px;
+    // margin: 0 10px;
+    overflow: auto;
+  }
+
+  pre {
+    margin: 0;
+    background: transparent;
+    overflow: auto;
+
+    code {
+      font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+      font-size: 14px;
+      background: transparent;
+      // color: #fff;
+      line-height: 20px;
+      padding: 0;
+
+      span {
+        color: inherit;
+        background: transparent;
+      }
+    }
+  }
 }

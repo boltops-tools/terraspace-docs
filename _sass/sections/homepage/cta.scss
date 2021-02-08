@@ -1,0 +1,13 @@
+section.cta {
+    padding: 160px 0;
+    @media (min-width: $large) {
+        padding: 200px 0;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 44.8px;
+        margin-bottom: 42px;
+        font-weight: 500;
+    }
+}
