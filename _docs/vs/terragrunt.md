@@ -23,7 +23,7 @@ Given the relatively young phase of the DevOps space, tools like Terragrunt have
 * **Organized Structure**: With Terragrunt, you must carefully plan your structure. This is still one of the most discussed, debated, and blogged about topics when getting started with Terraform. [Simply Google it](https://www.google.com/search?ei=KmdzX6jNH5eJ-gTO5prgBA&q=terraform+recommended+directory+structure&oq=terraform+structure+recommendations). Terraspace gives you a conventional project structure upfront. The defaults work right off-the-bat, and you can still configure things if you wish.
 * **DRY**: Though Terragrunt keeps module code DRY, there's duplication with the `terragrunt.hcl` files. Terraspace approach to generating Terraform projects removes these duplicated configuration files. The infrastructure code ends up DRYer.
 * **Automated Backend Creation**: Terraspace not only automatically create the backend buckets for you, but it also has more configurable knobs and switches. Additionally, all 3 major cloud provider backends are supported out of the box: aws, azure, google. Terragrunt only supports the automated creation of buckets for AWS.
-* **CLI hooks**: The Terraspace [CLI hooks syntax]({% link _docs/config/hooks.md %}) is more conciseness and cleaner. Life's better when code is more readable.
+* **CLI hooks**: The Terraspace [CLI hooks syntax]({% link _docs/config/hooks.md %}) is more concise and cleaner. Life's better when code is more readable.
 * **Deploy all**: Being able to deploy all of your stacks together with a single command is a wonderfully powerful feature. Terraspace's ability to deploy all stacks is more friendly, flexible, and powerful.
 
 ## Terraspace Turbo Charges Terraform
@@ -67,7 +67,7 @@ Docs: [Tfvars]({% link _docs/tfvars.md %}) and [Layering]({% link _docs/tfvars/l
 
 Both tools provide the ability to deploy all of your stacks with a single command. It's a wonderfully powerful feature. Just the minimal ability alone is not enough, though. How friendly it is to use also matters.
 
-With Terragrunt, the `terragrunt apply-all` full output from the multiple `terraform apply` processes is printed out all to your terminal. It makes it difficult to see what's going on.
+With Terragrunt, the `terragrunt apply-all` full output from the multiple `terraform apply` processes is printed out to your terminal in one big stream. It makes it difficult to see what's going on.
 
 With Terraspace, the `terraspace all up` output is a reduced-noise summary. The full detailed logs from each `terraspace up` is also written to files for further inspection. It's designed for humans.
 
@@ -128,7 +128,7 @@ Docs: [Terrafile Docs]({% link _docs/terrafile.md %})
 
 ## Major Clouds Supported
 
-Though, Terragrunt supports all cloud providers, it is focused on AWS. For example, it doesn't automatically create backend buckets for Azure or Google. With Terraspace, the 3 major cloud providers are better supported: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). There are also easy and gentle learning guides for each of them:
+Though, Terragrunt supports all cloud providers, it is focused on AWS. For example, it doesn't automatically create backend buckets for Azure. With Terraspace, the 3 major cloud providers are better supported: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). There are also easy and gentle learning guides for each of them:
 
 * [Getting Started with AWS]({% link _docs/learn/aws.md %})
 * [Getting Started with Azure]({% link _docs/learn/azure.md %})
@@ -157,7 +157,7 @@ Docs: [Generators]({% link _docs/generators.md %})
 
 ## Built-in Test Framework
 
-For testing, Terragrunt uses separate library call [Terratest](https://terratest.gruntwork.io.md).  Terraspace integrates [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) library straight into Terraspace as part of it's [Test Framework]({% link _docs/testing.md %}). The test framework allows you to use a language for testing that is readable and clear: Ruby and Rspec. Terraspace actually dogfoods itself by using its own test framework. All 3 major cloud providers are tested before a new release: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). We're talking with about testing with **real** resources.
+For testing, Terragrunt uses separate library call [Terratest](https://terratest.gruntwork.io.md).  Terraspace integrates the [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) library straight into Terraspace as part of it's [Test Framework]({% link _docs/testing.md %}). The test framework allows you to use a language for testing that is readable and clear: Ruby and Rspec. Terraspace actually dogfoods itself by using its own test framework. All 3 major cloud providers are tested before a new release: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). We're talking with about testing with **real** resources.
 
 Docs: [Built-in Test Framework]({% link _docs/testing.md %}):
 
