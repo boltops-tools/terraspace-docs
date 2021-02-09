@@ -1,0 +1,125 @@
+.homepage {
+  background: $gradient-bg;
+  overflow-x: hidden;
+
+  /**
+  TOP BAR
+   */
+  .top-bar {
+    padding: 0;
+    background: transparent;
+    max-width: 1180px;
+    margin: auto;
+    position: initial;
+    .navbar-toggler {
+      @media (min-width: $large) {
+        display: none;
+      }
+    }
+  }
+
+  /**
+  NAV BAR
+   */
+  .navbar.navbar-expand-lg {
+    padding: 28px 0;
+    height: auto;
+    @media (max-width: $large - 1) {
+      padding: 10px 0;
+    }
+
+    #menu-toggle { display: none }
+
+    .navbar-toggler {
+      position: absolute;
+      right: 10px;
+      top: 28px;
+      margin: 0;
+      &[data-target="#homepageMenu"] {
+        display: block;
+        @media (min-width: $large) {
+          display: none;
+        }
+      }
+      &[aria-expanded=true] {
+        .navbar-toggler-icon {
+          background-color: #000;
+        }
+      }
+    }
+
+    .navbar-brand {
+      margin-right: 0;
+      display: block;
+
+      img {
+        max-width: 220px;
+      }
+    }
+  }
+
+  /**
+  CODE SECTION
+   */
+  .code {
+    div.highlighter-rouge {
+      /*@media (max-width: $small - 1) {
+        width: calc(100vw + 30px);
+      }*/
+    }
+  }
+
+  /**
+  MORE TOOLS
+   */
+  section.more-tools {
+    padding: 70px 0;
+    @media (min-width: $large) {
+      padding: 80px 0 160px;
+    }
+
+    .container {
+      display: block;
+    }
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 85px;
+      @media (min-width: $large) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .tools-list {
+      padding: 0 10px;
+      flex-direction: column;
+      @media (min-width: $large) {
+        flex-direction: row;
+      }
+      li {
+        margin-left: 0;
+        min-height: 90px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        @media (max-width: $large - 1) {
+          margin-bottom: 60px;
+        }
+
+        a > img {
+          display: block;
+        }
+
+        a > span {
+          display: none;
+        }
+      }
+
+      .tools-descr {
+        bottom: 110px;
+        left: -70px;
+      }
+    }
+  }
+}

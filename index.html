@@ -3,33 +3,33 @@ layout: default
 sidebar: false
 ---
 
-<header class="masthead">
+<header class="masthead gradient-primary">
+  {% include header.html %}
   <div class="container">
     <div class="row">
-      <div class="col-sm-8 col-sm-offset-2">
+      <div class="col-sm-12">
         <div class="header-content">
-          <div class="header-content-inner">
-            <h1>Terraspace: The Terraform Framework</h1>
-            <h2>{% include reference.md %}</h2>
-          </div>
+          <h1><span class="bold">Terraspace</span> Is A Terraform Framework</h1>
+          <h2>that optimizes for infrastructure-as-code happiness</h2>
         </div>
       </div>
-      <div class="col-sm-4">
-        <img src="/img/logos/terraspace_logo_light.png" class="homepage-logo" />
+    </div>
+    <div class="row">
+      <div class="col-lg-8 offset-lg-1 pl-lg-0">
+        <div class="header-reference">
+          <h6>{% include reference.md %}</h6>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-{% include commands.html %}
-{% include quick-start-video.html %}
+{% include code.html %}
+{% include quotes.html %}
 
-<section class="cta">
-  <div class="cta-content">
-    <div class="container">
-      <h2>Learn More</h2>
-      <a href="{% link getting-started.md %}" class="btn btn-outline btn-xl">Quick Start</a>
-    </div>
-  </div>
-  <div class="overlay"></div>
+<section class="features">
+  {% include features.html %}
 </section>
+
+{% include quick-start-video.html %}
+{% include cta.html %}

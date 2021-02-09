@@ -1,0 +1,77 @@
+- title: Commands <i>easy to learn</i>
+  code: |
+      terraspace new project
+      terraspace new module
+      terraspace seed
+      terraspace build
+      terraspace up
+      terraspace down
+      terraspace all up
+      terraspace summary
+      terraspace test
+
+- title: Generators
+  code: |
+      $ terraspace new stack demo
+      => Creating new stack called demo.
+            create  app/stacks/demo
+            create  app/stacks/demo/main.tf
+            create  app/stacks/demo/outputs.tf
+            create  app/stacks/demo/variables.tf
+      $
+
+- title: Deploy
+  code: |
+      $ terraspace up demo -y
+      Building .terraspace-cache/us-west-2/dev/stacks/demo
+      Built in .terraspace-cache/us-west-2/dev/stacks/demo
+      Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
+      => terraform apply -auto-approve
+      Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+      network_id = projects/tung-111222/global/networks/duck
+      $
+
+- title: Destroy
+  code: |
+      $ terraspace down demo -y
+      Building .terraspace-cache/us-west-2/dev/stacks/demo
+      Built in .terraspace-cache/us-west-2/dev/stacks/demo
+      Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
+      => terraform destroy -auto-approve
+      Destroy complete! Resources: 2 destroyed.
+      $
+
+- title: Structure
+  code: |
+      ├── app
+      │   ├── modules
+      │   │   ├── instance
+      │   │   ├── rds
+      │   │   ├── security_group
+      │   │   └── vpc
+      │   └── stacks
+      │       ├── app
+      │       ├── vpc
+      │       └── instance
+      └── config
+          └── terraform
+              ├── backend.tf
+              └── provider.tf
+
+- title: Testing
+  code: |
+      $ terraspace test
+      main
+      Building test harness...
+      Test harness built: /tmp/terraspace-test-harnesses/network
+      => terraspace up example -y
+      => terraform apply -auto-approve
+      Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
+        successful deploy
+      => terraspace down example -y
+      => terraform destroy -auto-approve
+      Destroy complete! Resources: 2 destroyed.
+
+      Finished in 30.21 seconds (files took 0.29861 seconds to load)
+      1 example, 0 failures
+      $

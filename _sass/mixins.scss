@@ -62,18 +62,18 @@
     }
 }
 
+@mixin body-font {
+    font-family: $font-family-main, 'Helvetica', 'Arial', 'sans-serif';
+}
+
 @mixin heading-font {
-    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    // font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px;
 }
 
-@mixin body-font {
-    font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
-}
-
 @mixin alt-font {
-    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    // font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
     letter-spacing: 2px;
     text-transform: uppercase;
 }

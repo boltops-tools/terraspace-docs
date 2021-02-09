@@ -1,0 +1,75 @@
+section.code {
+    padding: 145px 0 75px;
+    @media (min-width: $large) {
+        padding: 90px 0;
+    }
+
+    &:before {
+        @media (max-width: $small) {
+            white-space: normal;
+            font-size: 140px;
+            line-height: 90px;
+            top: -2px;
+            left: -100px;
+            right: -100px;
+        }
+    }
+
+    h5 {
+        color: $theme-yellow;
+        font-weight: 600;
+        margin-bottom: 13px;
+        i {
+            font-weight: 300;
+            font-size: 22px;
+        }
+    }
+
+    .code {
+        &-block {
+            //min-width: 555px;
+            @media (min-width: $large) {
+                column-count: 2;
+                column-gap: 30px;
+            }
+        }
+
+        &-section {
+            break-inside: avoid;
+            margin-bottom: 24px;
+            @media (min-width: $large) {
+                margin-bottom: 38px;
+            }
+        }
+    }
+
+    .highlight {
+        background: $gray7;
+        border-radius: 10px;
+        padding: 0 10px;
+        color: #fff;
+        @media (min-width: $large) {
+            padding: 10px 20px;
+            max-width: none;
+            width: auto;
+        }
+
+        pre {
+            margin: 0;
+            background: transparent;
+
+            code {
+                font-family: $font-family-second;
+                background: transparent;
+                font-size: 15px;
+                color: #fff;
+                line-height: 20px;
+
+                span {
+                    color: inherit;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}

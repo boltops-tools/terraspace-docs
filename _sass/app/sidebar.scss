@@ -1,0 +1,174 @@
+.sidebar {
+  background-color: #fff;
+  min-width: 353px;
+  width: 353px;
+  padding: 30px;
+  overflow: auto;
+  @include transition-all;
+
+  @media (max-width: $extra-large - 1) {
+    min-width: 320px;
+  }
+
+  @media (max-width: $large - 1) {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    z-index: 1;
+    padding: 40px 30px;
+    max-height: calc(100vh - 80px);
+    &.toggled {
+      left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 20px;
+    line-height: 34px;
+    @media (min-width: $large) {
+      font-size: 18px;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin: 0 0 33px;
+    list-style-type: none;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    li {
+      padding-bottom: 0;
+      margin-bottom: 20px;
+      position: relative;
+      padding-left: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: $large) {
+        margin-bottom: 12px;
+      }
+
+      // Sub menu
+      ul {
+        margin: 10px 0 0 0;
+
+        li {
+          margin-bottom: 18px;
+          @media (min-width: $large) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .content-nav > ul > li {
+    padding-left: 0;
+  }
+}
+
+.page-menu {
+  width: 317px;
+  min-width: 317px;
+  background-color: #fff;
+  padding: 30px;
+  display: none;
+  @include transition-all;
+  @media (max-width: 1300px) {
+    display: none !important;
+  }
+
+  &-content {
+    position: sticky;
+    top: 20px;
+  }
+
+  p {
+    color: $gray4;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  li {
+    padding-left: 0;
+    margin-bottom: 8px;
+
+    a {
+      color: #000;
+      &:hover {
+        border-bottom-color: #000;
+      }
+    }
+  }
+}
+
+.content-nav {
+  & > ul > li:first-child {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+  a {
+    color: #000;
+    &:hover {
+      color: $theme-yellow;
+      border-bottom-color: transparent;
+    }
+
+    &.current-page {
+      color: $theme-yellow;
+      font-weight: 600;
+    }
+  }
+}
+
+.menu-options {
+  display: none;
+  font-size: 0.8em;
+  margin-top: 40px;
+  @media (min-width: $large) {
+    display: block;
+  }
+    .sep {
+      margin: 0 8px;
+    }
+}
+
+/* ---------------------------------------------------
+    CARET
+----------------------------------------------------- */
+.caret {
+  cursor: pointer;
+  vertical-align: middle;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  display: inline-flex;
+  @include transition-all;
+  background: url(/img/caret.svg) no-repeat center center;
+  background-size: contain;
+
+  &-down {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    transform: rotate(90deg);
+  }
+
+  &-spacing {
+    display: none;
+  }
+
+  &.nested {
+    display: none;
+  }
+
+  &.active {
+    display: block;
+  }
+}

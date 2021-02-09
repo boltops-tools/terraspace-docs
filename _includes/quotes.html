@@ -1,0 +1,48 @@
+<section class="quotes light" data-title="quotes">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <div class="owl-carousel quotes-carousel">
+          {% for quote in site.data.quotes %}
+          <div class="quotes-group">
+            <div class="quotes-item d-flex">
+              <div class="author-avatar">
+                <img src="/img/quotes/{{ quote.image }}" alt={{ quote.image-title }}>
+              </div>
+              <div class="author-quote">
+                <p>{{ quote.text }}</p>
+                <p>{{ quote.author }}</p>
+              </div>
+            </div>
+            <!--<div class="quotes-item d-flex">-->
+            <!--  <div class="author-avatar">-->
+            <!--    <img src="/img/quotes/{{ quote.image2 }}" alt={{ quote.image-title2 }}>-->
+            <!--  </div>-->
+            <!--  <div class="author-quote">-->
+            <!--    <p>{{ quote.text2 }}</p>-->
+            <!--    <p>{{ quote.author2 }}</p>-->
+            <!--  </div>-->
+            <!--</div>-->
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="owl-carousel quotes-carousel mobile">
+          {% for quote in site.data.quotes %}
+          <div class="quotes-group">
+            <div class="quotes-item">
+              <div class="author-avatar">
+                <img src="/img/quotes/{{ quote.image }}" alt={{ quote.image-title }}>
+              </div>
+              <div class="author-quote">
+                <p>{{ quote.text }}</p>
+                <p>{{ quote.author }}</p>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

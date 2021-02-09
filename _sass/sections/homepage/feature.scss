@@ -1,0 +1,111 @@
+section.feature {
+    background: $gradient-bg-linear;
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 0;
+    overflow: visible;
+
+    @media (max-width: $large - 1) {
+        &:not(.dry) {
+            padding-top: 80px;
+        }
+        .container {
+            max-width: none;
+        }
+    }
+
+    &s {
+        overflow: hidden;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    @media (min-width: $large) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        height: 600px;
+
+        .row {
+            flex-direction: row;
+        }
+    }
+
+    .feature-box {
+        background: rgba(0, 0, 0, 0.7);
+        padding: 30px 40px 30px;
+        @media (max-width: $large - 1) {
+            padding: 25px 10px 50px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+
+        h3 {
+            font-size: 32px;
+            line-height: 39px;
+            color: $theme-yellow;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 25px;
+            margin: 0 0 25px;
+        }
+    }
+
+    img {
+        display: block;
+        max-width: 110%;
+        margin: 0 auto;
+        @media (max-width: $medium - 1) {
+            max-width: 500px;
+            margin-bottom: -35px;
+            z-index: -1;
+            position: relative;
+        }
+        @media (max-width: $small - 1) {
+            margin-left: -70px;
+        }
+        @media (min-width: $extra-large) {
+            position: relative;
+            left: -75px;
+            top: 0;
+            z-index: -1;
+            max-width: none;
+        }
+    }
+
+    @media (min-width: $extra-large) {
+        .flex-sm-row-reverse {
+            img {
+                left: -120px;
+            }
+        }
+    }
+
+    &.tfvars {
+        img {
+            @media (max-width: $small - 1) {
+                margin-left: -105px;
+            }
+            @media (min-width: $extra-large) {
+                top: -75px;
+                margin-top: -12px;
+            }
+        }
+    }
+
+
+    @media (max-width: $small - 1) {
+        &.generators img {
+            margin-left: -90px;
+        }
+
+        &.stack img {
+            margin-left: -73px;
+        }
+    }
+}

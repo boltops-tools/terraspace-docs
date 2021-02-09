@@ -1,0 +1,57 @@
+.nav-tabs {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-top: 55px;
+  border-bottom: 1px solid #D3D2DE;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: $large) {
+    padding: 0 15px;
+  }
+
+  &-wrapper {
+    max-width: 790px;
+    background: #fff;
+    @media (max-width: $large - 1) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  .nav-link {
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+    font-size: 15px;
+    color: #000;
+    padding: 15px 0;
+    margin: 0 15px;
+    white-space: nowrap;
+    transition: border-bottom-color .3s;
+
+    &:hover {
+      color: #000;
+      border-bottom-color: $theme-yellow;
+    }
+
+    &.active {
+      color: #000;
+      border-bottom-color: $theme-yellow;
+      font-weight: 600;
+    }
+  }
+}
+
+.tab-content {
+  padding: 30px 15px;
+  @media (min-width: $large) {
+    padding: 30px;
+  }
+}

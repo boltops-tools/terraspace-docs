@@ -47,4 +47,4 @@ Now, you won't have to remember to run `terraspace build` before a `git push` ag
 
 Terraspace only cleans up env-specific files in .terraspace-cache. If you want to remove the built files from other envs, you must do so manually with `rm -rf`. You can also blow away the entire cache and start fresh with:
 
-    terraspace clean
+    terraspace clean all

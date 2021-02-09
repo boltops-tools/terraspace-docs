@@ -36,14 +36,15 @@ class Pager
 
   def add_page_buttons
     html =<<~EOL
+      <hr>
       <div class="prev-next-buttons">
-        <a id="prev" class="btn btn-basic">Back</a>
-        <a id="next" class="btn btn-primary">Next Step</a>
-        <p class="keyboard-tip">Pro tip: Use the <- and -> arrow keys to move back and forward.</p>
+        <button id="prev" class="btn btn-basic btn-md">Back</button>
+        <button id="next" class="btn btn-primary btn-md">Next page</button>
+        <p class="keyboard-tip"><strong>Pro tip:</strong> Use the<img src="/img/arrow-left.svg" alt="Arrow left">and<img src="/img/arrow-right.svg" alt="Arrow Right">keys to move back and forward through articles.
       </div>
     EOL
 
-    fluid = Element.find(".container-fluid")
+    fluid = Element.find("#content")
     fluid.append(html)
   end
 

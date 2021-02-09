@@ -1,0 +1,41 @@
+- title: "DRY Structure"
+  description: "A common config structure that gets built with the deployed module. Keep your code DRY."
+  image: "dry.png"
+  image-title: "Dry"
+  section-class: "dry"
+
+- title: "Backends"
+  description: "Automatically created backends like AWS S3, Azure Storage Account, and Google GCS."
+  image: "backends.png"
+  image-title: "Backends"
+  reverse: true
+
+- title: "Tfvars"
+  description: "Use the same infrastructure code to create multiple environments: dev, prod, etc."
+  image: "tfvars.png"
+  image-title: "Tfvars"
+  section-class: "tfvars"
+
+- title: "Generators"
+  description: "Built-in generators to quickly create the starter module. Focus on code instead of boilerplate structure."
+  image: "generators.png"
+  image-title: "Generators"
+  reverse: true
+  section-class: "generators"
+
+- title: "Deploy Multiple Stacks at Once"
+  description: "If you want to deploy multiple stacks, you can do so with a single command."
+  image: "stack.png"
+  image-title: "Stack"
+  section-class: "stack"
+
+- title: "Testing"
+  description: "A testing framework that allows you to create test harnesses, deploy real-resources. Have high confidence that your code works."
+  image: "testing.png"
+  image-title: "Testing"
+  reverse: true
+
+- title: "Configurable"
+  description: "Customize CLI with hooks and args."
+  image: "configurable.png"
+  image-title: "Configurable"
