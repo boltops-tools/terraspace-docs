@@ -13,7 +13,7 @@ There are 3 types of helpers:
 2. [Stack-Level Helpers]({% link _docs/helpers/custom/stack.md %}): Only locally available to the specific stack they are defined in.
 3. [Module-Level Helpers]({% link _docs/helpers/custom/module.md %}): Only locally available to the specific module they are defined in.
 
-There are several types of helpers you can define, so you may be unsure which type to use. When in doubt, use stack-level helpers. It nice to keep the helpers scope to the specify stack that needs them.
+There are several types of helpers you can define, so you may be unsure which type to use. When in doubt, use stack-level helpers. It nice to keep the helpers scope to the specific stack that needs them.
 
 ## Example
 
