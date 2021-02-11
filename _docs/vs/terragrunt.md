@@ -22,7 +22,7 @@ Given the relatively young phase of the DevOps space, tools like Terragrunt have
 
 * **Organized Structure**: With Terragrunt, you must carefully plan your structure. This is still one of the most discussed, debated, and blogged about topics when getting started with Terraform. [Simply Google it](https://www.google.com/search?ei=KmdzX6jNH5eJ-gTO5prgBA&q=terraform+recommended+directory+structure&oq=terraform+structure+recommendations). Terraspace gives you a conventional project structure upfront. The defaults work right off-the-bat, and you can still configure things if you wish.
 * **DRY**: Though Terragrunt keeps module code DRY, there's duplication with the `terragrunt.hcl` files. Terraspace approach to generating Terraform projects removes these duplicated configuration files. The infrastructure code ends up DRYer.
-* **Automated Backend Creation**: Terraspace not only automatically create the backend buckets for you, but it also has more configurable knobs and switches. Additionally, all 3 major cloud provider backends are supported out of the box: aws, azure, google. Terragrunt only supports the automated creation of buckets for AWS.
+* **Automated Backend Creation**: Terraspace not only automatically create the backend buckets for you, but it also has more configurable knobs and switches. Additionally, all 3 major cloud provider backends are supported out of the box: aws, azure, google. Terragrunt doesn't support the automated creation of buckets for Azure.
 * **CLI hooks**: The Terraspace [CLI hooks syntax]({% link _docs/config/hooks.md %}) is more concise and cleaner. Life's better when code is more readable.
 * **Deploy all**: Being able to deploy all of your stacks together with a single command is a wonderfully powerful feature. Terraspace's ability to deploy all stacks is more friendly, flexible, and powerful.
 
@@ -48,7 +48,7 @@ With Terraspace, you stay at the root of the project and run the up command:
 
     terraspace up STACK
 
-You don't have to jump around to different folders. The way you think about the commands in a centralized fashion.
+You don't have to jump around to different folders. You think about things in a centralized fashion.
 
 Docs: [How Terraspace Works]({% link _docs/intro/how-terraspace-works.md %}), [Backend Config]({% link _docs/config/backend.md %}).
 
@@ -100,12 +100,20 @@ To choose which infrastructure stacks to deploy. Simply provide the stack names.
 
 The subgraph stacks, represented by green nodes, will be deployed. A summarized preview is provided.
 
-    $ terraspace all up
+    $ terraspace all up b2 b3
+    Building one stack to build all stacks
+    Building .terraspace-cache/us-west-2/dev/stacks/c2
+    Downloading tfstate files for dependencies defined in tfvars...
+    Built in .terraspace-cache/us-west-2/dev/stacks/c2
     Will run:
-        terraspace up vpc      # batch 1
-        terraspace up db       # batch 2
-        terraspace up instance # batch 2
-    Are you sure? (y/N) y
+        terraspace up c1 # batch 1
+        terraspace up c3 # batch 1
+        terraspace up e1 # batch 1
+        terraspace up b3 # batch 2
+        terraspace up d1 # batch 2
+        terraspace up c2 # batch 3
+        terraspace up b2 # batch 4
+    Are you sure? (y/N)
 
 Terraspace's deploy all ability is more friendly, flexible, and powerful.
 

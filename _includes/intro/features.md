@@ -7,7 +7,7 @@
 
 * [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}) The ability to deploy multiple stacks with a single command. Terraspace calculates the [dependency graph]({% link _docs/dependencies/subgraphs.md %}) and deploys stacks in the right order. You can also target specific stacks and deploy [subgraphs]({% link _docs/dependencies/subgraphs.md %}).
 
-* [Secrets Support]({% link _docs/intro.md %}) Terraspace has built-in secrets support for [AWS Secrets Manager]({% link _docs/intro.md %}), [AWS SSM Parameter Store]({% link _docs/intro.md %}), [Azure Key Vault]({% link _docs/intro.md %}), [Google Secrets Manager]({% link _docs/intro.md %}). Easily set variables from Cloud secrets providers.
+* [Secrets Support]({% link _docs/intro.md %}) Terraspace has built-in secrets support for [AWS Secrets Manager]({% link _docs/helpers/aws/secrets.md %}), [AWS SSM Parameter Store]({% link _docs/helpers/aws/ssm.md %}), [Azure Key Vault]({% link _docs/helpers/azure/secrets.md %}), [Google Secrets Manager]({% link _docs/helpers/google/secrets.md %}). Easily set variables from Cloud secrets providers.
 
 * [Terrafile]({% link _docs/terrafile.md %}) Terraspace makes it easy to use Terraform modules sourced from your own git repositories, other git repositories, or the Terraform Registry. The git repos can be private or public. This is an incredibly powerful feature of Terraspace because it opens up a world of modules for you to use. Use any module from anywhere.
 

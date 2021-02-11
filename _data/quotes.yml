@@ -1,5 +1,6 @@
 - text: "This could be a game changer for Terraform users. I just went through the AWS demo, very impressive!"
   author: "– Blake G"
+  link: https://twitter.com/TSgt_Green/status/1298782816092782593
   image: "blake.jpg"
   image-title: "Blake"
   # text2: "They are a great partner and we are glad to know they have an eye on our environment! BoltOps paid for themselves in only a few months."
@@ -9,6 +10,7 @@
 
 - text: "We were very curious to learn about Terraspace, a Terraform Framework (yes yes, that’s a thing!) helping DevOps engineers to be more productive. You can use it for example to deploy multiple stacks at once in various cloud providers with just one command, regardless of the number and structure of their dependencies. Really impressive stuff."
   author: "– VSHN AG"
+  link: https://www.facebook.com/1585666404994430/posts/here-in-vshn-we-breathe-infrastructure-as-code-it-is-no-surprise-that-we-are-gre/2905736506320740/
   image: "vshn.png"
   image-title: "vshn"
   # text2: "They are a great partner and we are glad to know they have an eye on our environment! BoltOps paid for themselves in only a few months."
@@ -18,6 +20,7 @@
 
 - text: "Stumbled across a Terraspace when trying to solve an issue I was having with orchestrating the deployment of multiple environments but still keeping the automation DRY. Looks like it may solve a couple other problems Ive been having as well. "
   author: "– Dave S"
+  link: https://www.linkedin.com/feed/update/urn:li:activity:6717239248522764288/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6717239248522764288%29
   image: "dave.jpg"
   image-title: "Dave"
   # text2: "They are a great partner and we are glad to know they have an eye on our environment! BoltOps paid for themselves in only a few months."
