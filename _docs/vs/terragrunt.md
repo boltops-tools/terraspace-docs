@@ -101,18 +101,12 @@ To choose which infrastructure stacks to deploy. Simply provide the stack names.
 The subgraph stacks, represented by green nodes, will be deployed. A summarized preview is provided.
 
     $ terraspace all up b2 b3
-    Building one stack to build all stacks
-    Building .terraspace-cache/us-west-2/dev/stacks/c2
-    Downloading tfstate files for dependencies defined in tfvars...
-    Built in .terraspace-cache/us-west-2/dev/stacks/c2
     Will run:
-        terraspace up c1 # batch 1
+        terraspace up b2 # batch 1
         terraspace up c3 # batch 1
-        terraspace up e1 # batch 1
-        terraspace up b3 # batch 2
-        terraspace up d1 # batch 2
-        terraspace up c2 # batch 3
-        terraspace up b2 # batch 4
+        terraspace up d1 # batch 1
+        terraspace up c2 # batch 2
+        terraspace up b3 # batch 3
     Are you sure? (y/N)
 
 Terraspace's deploy all ability is more friendly, flexible, and powerful.
