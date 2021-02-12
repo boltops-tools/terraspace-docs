@@ -140,12 +140,12 @@ Though, Terragrunt supports all cloud providers, it is focused on AWS. For examp
 
 Though it's possible to use Terragrunt with Terraform Cloud, it's inconvenient.  Terraspace integrates with Terraform Cloud and Terraform Enterprise more closely. Both CLI and VCS driven workflows are supported:
 
-* [CLI-driven workflow]({% link _docs/cloud/workflows/cli.md %})
-* [VCS-driven workflow]({% link _docs/cloud/workflows/vcs.md %})
+* [CLI-driven workflow]({% link _docs/tfc/workflows/cli.md %})
+* [VCS-driven workflow]({% link _docs/tfc/workflows/vcs.md %})
 
 Terraspace can automatically set up the workspace GitHub connection and set terraform and environment cloud variables. It simply automates as much as it can.  This saves you hours manually creating the workspaces, which is also error-prone.
 
-Docs: [TFC/TFE support]({% link _docs/cloud.md %}).
+Docs: [TFC/TFE support]({% link _docs/tfc.md %}).
 
 ## Generators: Stop Writing Boilerplate
 

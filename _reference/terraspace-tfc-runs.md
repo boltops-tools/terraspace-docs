@@ -1,11 +1,11 @@
 ---
-title: terraspace cloud runs
+title: terraspace tfc runs
 reference: true
 ---
 
 ## Usage
 
-    terraspace cloud runs SUBCOMMAND
+    terraspace tfc runs SUBCOMMAND
 
 ## Description
 

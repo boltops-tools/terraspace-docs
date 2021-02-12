@@ -2,7 +2,7 @@
 title: CLI Workflow
 ---
 
-The [CLI workflow](https://www.terraform.io/docs/cloud/run/cli.html) is nice this because it offers the best of both worlds. You get to use the familiar CLI. At the same time, the `terraform apply` runs remotely in a throwaway virtual machine. So you get a consistent environment.
+The [CLI workflow](https://www.terraform.io/docs/tfc/run/cli.html) is nice this because it offers the best of both worlds. You get to use the familiar CLI. At the same time, the `terraform apply` runs remotely in a throwaway virtual machine. So you get a consistent environment.
 
 ## Summary
 
@@ -16,11 +16,11 @@ To use the CLI-driven workflow:
 
 To use Terraform Cloud, we configure the backend to "remote".
 
-Instructions: [Terraform Cloud Backend]({% link _docs/cloud/backend.md %})
+Instructions: [Terraform Cloud Backend]({% link _docs/tfc/backend.md %})
 
 ## 2. Configure Terraform Cloud Variables
 
-{% include cloud/vars-intro.md %}
+{% include tfc/vars-intro.md %}
 
 ## 3. Use the CLI to deploy as normal
 
@@ -32,4 +32,4 @@ Terraspace detects that TFC is configured, automatically creates the workspace, 
 
 Note, if your TFC user does not have permission to create the workspace, then contact your admin to precreate the workspace ahead of time.
 
-{% include cloud/recommendations.md %}
+{% include tfc/recommendations.md %}

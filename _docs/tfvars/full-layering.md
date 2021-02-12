@@ -39,87 +39,51 @@ You can also structure your tfvars so that they are within env folders like so:
 
 Generally, the simplier structure is should be used. Unless you're using the [Instance Option]({% link _docs/tfvars/instance-option.md %}), where it becomes useful for tidying up the multiple instance based tfvars files.
 
-## Multi-Region Layering Support
+## Project-level and Stack-level Layering
 
-You can take advantage of the Terraspace layering to deploy the same infrastructure code to different regions, simply switch your env to use a different region and run `terraspace up`.
+Layering performed both at the project-level and stack-level.
 
-## AWS Example
+1. **Project-level Layering**: These are project-wide tfvars set for **every** stack. These files live in `config/terraform/tfvars`
+2. **Stack-level Layering**: This are targetted tfvars set the **specific** stack being deployed. These files can live in the specific stack folder, IE: `app/stacks/demo/tfvars`
 
-Here's a structure that takes advantage of layering and multiple-regions for AWS:
+Here's a short example to explain. First, the **project-level** tfvars:
 
-    app/stacks/demo/tfvars
-    ├── us-east-1
-    │   ├── dev.tfvars
-    │   └── prod.tfvars
-    └── us-west-2
-        ├── dev.tfvars
-        └── prod.tfvars
+config/terraform/tfvars/base.tfvars
 
-For AWS, switching region can be done by changing `AWS_REGION`.
+```ruby
+tags = ["common-tag"]
+```
 
-    AWS_REGION=us-east-1 terraspace up demo
-    AWS_REGION=us-west-2 terraspace up demo
+config/terraform/tfvars/dev.tfvars
 
-You can use the same code for different environments in the different regions also:
+```ruby
+tags = ["tag-for-all-dev-envs"]
+```
 
-    AWS_REGION=us-east-1 TS_ENV=prod terraspace up demo
-    AWS_REGION=us-west-2 TS_ENV=prod terraspace up demo
+Second, the **stack-level** tfvars.
 
-## Azure Example
+app/stacks/demo/tfvars/base.tfvars
 
-Here's a structure that takes advantage of layering and multiple-locations for Azure:
+```ruby
+labels = ["demo-stack-common-tag"]
+```
 
-    app/stacks/demo/tfvars
-    ├── eastus
-    │   ├── dev.tfvars
-    │   └── prod.tfvars
-    └── westus
-        ├── dev.tfvars
-        └── prod.tfvars
+app/stacks/demo/tfvars/dev.tfvars
 
-For Azure, switching locations can be done by using the `az configure` command:
+```ruby
+labels = ["demo-stack-tag-for-all-dev-envs"]
+```
 
-    az configure --defaults location=eastus
-    terraspace up demo
-    az configure --defaults location=westus
-    terraspace up demo
+Building or deploying the demo stack produces:
 
-You can use the same code for different environments in the different regions also:
+    $ terraspace build demo
+    $ ls .terraspace-cache/us-west-2/dev/stacks/demo/*.tfvars
+    .terraspace-cache/us-west-2/dev/stacks/demo/1-project-base.auto.tfvars
+    .terraspace-cache/us-west-2/dev/stacks/demo/2-project-dev.auto.tfvars
+    .terraspace-cache/us-west-2/dev/stacks/demo/3-base.auto.tfvars
+    .terraspace-cache/us-west-2/dev/stacks/demo/4-dev.auto.tfvars
+    $
 
-    az configure --defaults location=eastus
-    TS_ENV=prod terraspace up demo
-    az configure --defaults location=westus
-    TS_ENV=prod terraspace up demo
+Terraspace layering gives you the power to create shared tfvars at the project-level, and also create targetted tfvars for specific stacks.
 
-Note, to check the current Azure location, you can use:
-
-    az configure --list-defaults
-    cat ~/.azure/config # also works, it's where az writes settings
-
-## Google Cloud Example
-
-Here's a structure that takes advantage of layering and multiple-regions for Google Cloud:
-
-    app/stacks/demo/tfvars
-    ├── us-central1
-    │   ├── dev.tfvars
-    │   └── prod.tfvars
-    └── us-east4
-        ├── dev.tfvars
-        └── prod.tfvars
-
-For Google Cloud, switch the region with the `gcloud` command.
-
-    gcloud config set compute/region us-central1
-    export GOOGLE_REGION=$(gcloud config get-value compute/region)
-    TS_ENV=dev  terraspace up demo
-    TS_ENV=prod terraspace up demo
-
-    gcloud config set compute/region us-east4
-    export GOOGLE_REGION=$(gcloud config get-value compute/region)
-    TS_ENV=dev  terraspace up demo
-    TS_ENV=prod terraspace up demo
-
-## Cloud Provider Differences
-
-Each Cloud provider is a little different. For example, AWS and Azure are more region-centric, and Google Cloud is more global-centric. It's up to you how to leverage Terraspace. It can handle both region-centric and global-central cases just fine.
+If you that is not enough for your needs, you can even customize layering itself.

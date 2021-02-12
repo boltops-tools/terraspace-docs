@@ -6,7 +6,7 @@ title: Terraform Cloud Vars DSL
 
 First, you create a `vars.rb` file like so:
 
-config/terraform/cloud/vars.rb
+config/terraform/tfc/vars.rb
 
 ```ruby
 var(
@@ -31,4 +31,4 @@ Notice the use of ENV. This avoids hardcoding sensitive info.
 
 Terraspace will then automatically call the Terraform Cloud API to set the variables as part of the `terraspace up`.
 
-{% include cloud/vars-behavior.md %}
+{% include tfc/vars-behavior.md %}

@@ -6,7 +6,7 @@ When using Terraform Cloud, Terraspace performs additional convenience logic to 
 
 ## Terraform Cloud Variables Behavior
 
-Whenever a `terraspace up` is ran, terraspace reads the `config/terraform/cloud/vars.json` file and uses it to create Terraform Cloud Variables.
+Whenever a `terraspace up` is ran, terraspace reads the `config/terraform/tfc/vars.json` file and uses it to create Terraform Cloud Variables.
 
 Terraspace will overwrite TFC variables by default. The behavior is configurable. Non-sensitive and sensitive variables can be finely controlled with different overwrite behavior.
 
@@ -24,4 +24,4 @@ Here's a table with the cloud related config settings:
 Name | Description | Default
 --- | --- | ---
 build.clean_cache | Disable cleaning the `.terraspace-cache` entirely. Terrspace generally tries to only remove the cache files in a way to allow the TFC VCS-Driven workflow to work. But it may not work for your needs, depending on Terraspace is configured. This setting keeps the cache. You can manually delete items from the `.terraspace-cache` manually. | true
-{% include config/cloud.md %}
+{% include config/tfc.md %}

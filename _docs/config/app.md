@@ -29,9 +29,9 @@ For a list of available config settings, refer to the [Config Reference]({% link
 
 ## Environment Specific Overrides
 
-You can configure environment specific value overrides for `config/app.rb` with corresponding `config/env/TS_ENV.rb` files. Examples:
+You can configure environment specific value overrides for `config/app.rb` with corresponding `config/envs/TS_ENV.rb` files. Examples:
 
-config/env/dev.rb
+config/envs/dev.rb
 
 ```ruby
 Terraspace.configure do |config|
@@ -39,7 +39,7 @@ Terraspace.configure do |config|
 end
 ```
 
-config/env/prod.rb
+config/envs/prod.rb
 
 ```ruby
 Terraspace.configure do |config|

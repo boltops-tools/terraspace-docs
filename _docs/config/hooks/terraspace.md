@@ -50,7 +50,7 @@ There is also a special on_boot hook that is runs very early in the Terraspace b
 
 It takes a block of code. One useful way to use it is switching `AWS_PROFILE`, `GOOGLE_APPLICATION_CREDENTIALS`, etc automatically based on the `TS_ENV`. Example:
 
-config/env/dev.rb
+config/envs/dev.rb
 
 ```ruby
 Terraspace.configure do |config|

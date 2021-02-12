@@ -2,4 +2,4 @@
 title: Terraform Cloud Vars
 ---
 
-{% include cloud/vars-intro.md %}
+{% include tfc/vars-intro.md %}

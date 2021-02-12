@@ -16,19 +16,19 @@ To use the VCS-driven workflow:
 
 Terraspace can create the TFC workspace and set variables for you.
 
-Instructions: [Setup Workspace Name and Variables]({% link _docs/cloud/workflows/vcs/setup.md %})
+Instructions: [Setup Workspace Name and Variables]({% link _docs/tfc/workflows/vcs/setup.md %})
 
 ## 2. Adjust Terraspace Project Settings
 
 You'll need to adjust some Terraspace git related settings for a decent git workflow.
 
-Instructions: [Adjust Terraspace Project Settings]({% link _docs/cloud/workflows/vcs/adjust.md %})
+Instructions: [Adjust Terraspace Project Settings]({% link _docs/tfc/workflows/vcs/adjust.md %})
 
 ## 3. Connect your VCS to run Terraform on VCS triggers
 
 Last, you will connect your TFC Workspace to your version control provider.
 
-Instructions: [Connect to VCS]({% link _docs/cloud/workflows/vcs/connect.md %})
+Instructions: [Connect to VCS]({% link _docs/tfc/workflows/vcs/connect.md %})
 
 ## VCS or CLI Workflow Only
 
@@ -39,7 +39,7 @@ Note, when the VCS workflow mode is used, you cannot use the CLI workflow. TFC o
 > A workspace that is connected to a VCS requires the VCS-driven workflow to
     ensure that the VCS remains the single source of truth.
 
-If you want to use the [CLI workflow]({% link _docs/cloud/workflows/cli.md %}), you must disconnect VCS from the workspace.
+If you want to use the [CLI workflow]({% link _docs/tfc/workflows/cli.md %}), you must disconnect VCS from the workspace.
 
 ## Instance Option
 

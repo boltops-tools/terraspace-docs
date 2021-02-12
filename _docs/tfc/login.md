@@ -40,7 +40,7 @@ end
 
 ## Environment Variable
 
-Another way to set authenticate is to set the [terraform token](https://www.terraform.io/docs/cloud/users-teams-organizations/users.html#api-tokens) as an environment variable: TERRAFORM_TOKEN.
+Another way to set authenticate is to set the [terraform token](https://www.terraform.io/docs/tfc/users-teams-organizations/users.html#api-tokens) as an environment variable: TERRAFORM_TOKEN.
 
     export TERRAFORM_TOKEN=your-token
 
