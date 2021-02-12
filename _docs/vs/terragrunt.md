@@ -159,7 +159,7 @@ Docs: [Generators]({% link _docs/generators.md %})
 
 ## Built-in Test Framework
 
-For testing, Terragrunt uses separate library call [Terratest](https://terratest.gruntwork.io.md).  Terraspace integrates the [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) library straight into Terraspace as part of it's [Test Framework]({% link _docs/testing.md %}). The test framework allows you to use a language for testing that is readable and clear: Ruby and Rspec. Terraspace actually dogfoods itself by using its own test framework. All 3 major cloud providers are tested before a new release: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). We're talking with about testing with **real** resources.
+For testing, Terragrunt uses a separate library call [Terratest](https://terratest.gruntwork.io.md).  Terraspace integrates the [rspec-terraspace](https://github.com/boltops-tools/rspec-terraspace) library straight into Terraspace as part of it's [Test Framework]({% link _docs/testing.md %}). The test framework allows you to use a language for testing that is readable and clear: Ruby and Rspec. Terraspace actually dogfoods itself by using its own test framework. All 3 major cloud providers are tested before a new release: [aws]({% link _docs/learn/aws.md %}), [azure]({% link _docs/learn/azure.md %}), [google]({% link _docs/learn/gcp.md %}). We're talking with about testing with **real** resources.
 
 Docs: [Built-in Test Framework]({% link _docs/testing.md %}):
 
@@ -173,7 +173,7 @@ With Terraspace, you use native Terraform HCL syntax. There is no additional cus
 
 Terragrunt is written in go-lang, a lower-level language. Terraspace is written in Ruby, a higher-level language. Ruby is one of the most beautiful, concise, and expressive languages in the world. Its versatility makes it adept for writing glue and frameworks.
 
-Though language shouldn't matter, it does. Most modern-day DevOps shops use a variety of tools like Bash, Python, Ruby, and go to achieve their goals. For example, [vagrant](https://www.vagrantup.com.md) is written in Ruby and the [aws cli](https://aws.amazon.com/cli.md) is written in Python. Ruby is actually one of the reasons for Terraspace superpowers and gives it many advantages.
+Though language shouldn't matter, it does. Most modern-day DevOps shops use a variety of tools like Bash, Python, Ruby, and Go to achieve their goals. For example, [vagrant](https://www.vagrantup.com.md) is written in Ruby and the [aws cli](https://aws.amazon.com/cli.md) is written in Python. Ruby is actually one of the reasons for Terraspace's superpowers and gives it many advantages.
 
 Interestingly, the fact that Ruby is used is generally transparent to the end-user. The starter [learning guides]({% link getting-started.md %}) all take you through a gentle path, where you are using Terraform HCL just like you usually would. That's the power of using the right tool for the right job. Most of the time, you don't even realize it. All you mainly see is that things are getting done.
 
