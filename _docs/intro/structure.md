@@ -4,7 +4,6 @@ title: Project Structure
 
 Here's an example project structure.
 
-    .
     ├── app
     │   ├── modules
     │   │   └── example
