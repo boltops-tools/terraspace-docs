@@ -88,7 +88,7 @@ With Terragrunt, you cd into the top-level folder with all the subfolders you wa
 
 What you choose to deploy is determined by the folder structure. If you want to deploy all modules, you go to the "root" of your hierarchal project folder structure.
 
-With Terraspace, you selectively choose what to deploy within an environment. To deploy everything:
+With Terraspace, you have more power to selectively choose what to deploy within an environment. To deploy everything:
 
     terraspace all up
 
@@ -138,7 +138,7 @@ Though, Terragrunt supports all cloud providers, it is focused on AWS. For examp
 
 ## TFC and TFE Supported
 
-Though it's possible to use Terragrunt with Terraform Cloud, it's not convenient.  Terraspace integrates with Terraform Cloud and Terraform Enterprise more closely. Both CLI and VCS driven workflows are supported:
+Though it's possible to use Terragrunt with Terraform Cloud, it's inconvenient.  Terraspace integrates with Terraform Cloud and Terraform Enterprise more closely. Both CLI and VCS driven workflows are supported:
 
 * [CLI-driven workflow]({% link _docs/cloud/workflows/cli.md %})
 * [VCS-driven workflow]({% link _docs/cloud/workflows/vcs.md %})

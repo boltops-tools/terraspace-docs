@@ -11,12 +11,13 @@ Here's an example `Terrafile`.
 ```ruby
 org "boltops-tools" # set default org
 
-# GitHub repo with default org
-mod "s3", source: "terraform-aws-s3", version: "master"
-# mod "s3", source: "terraform-aws-s3", tag: "v0.1.0"
-
-# GitHub repo with explicit org
-# mod "elasticache", source: "boltopspro/terraform-aws-elasticache"
+# Repo examples
+mod "s3", source: "git@github.com:boltops-tools/terraform-aws-s3"
+# mod "pet", source: "https://github.com/boltops-tools/random_pet"  # public repo
+# mod "elasticache", source: "boltopspro/terraform-aws-elasticache" # explicit org
+# mod "redis", source: "terraform-aws-elasticache"                  # inferred org
+# mod "bucket1", source: "terraform-aws-s3", version: "master"      # pinned to branch. easily update with terraspace bundle update
+# mod "bucket2", source: "terraform-aws-s3", tag: "v0.1.0"          # pinned to tag no matter what
 
 # Terraform registry
 mod "sg", source: "terraform-aws-modules/security-group/aws", version: "3.10.0"
