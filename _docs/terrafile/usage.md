@@ -18,12 +18,21 @@ mod "s3", source: "git@github.com:boltops-tools/terraform-aws-s3"
 # mod "redis", source: "terraform-aws-elasticache"                  # inferred org
 # mod "bucket1", source: "terraform-aws-s3", version: "master"      # pinned to branch. easily update with terraspace bundle update
 # mod "bucket2", source: "terraform-aws-s3", tag: "v0.1.0"          # pinned to tag no matter what
+# mod "null_resource", source: "https://github.com/boltops-tools/modules", subfolder: "path/to/null_resource_module"
 
 # Terraform registry
 mod "sg", source: "terraform-aws-modules/security-group/aws", version: "3.10.0"
 ```
 
-For more examples on how to use specific versions see: [Version Locking Docs]({% link _docs/terrafile/version-locking.md %}).
+**Options Docs**:
+
+* [Mod-level options]({% link _docs/terrafile/options.md %}#1-mod-level): : These options apply at the mod-level, so they specifically affect each mod only.
+* [Terrafile-level options]({% link _docs/terrafile/options.md %}#2-terrafile-level): These options apply globally and affect the entire Terrafile.
+
+**Additional Docs**:
+
+* [Version Locking Docs]({% link _docs/terrafile/version-locking.md %}): Everything you may want to know about version locking.
+* [Stack Options]({% link _docs/terrafile/options/stack.md %}): The `stack` option tells Terraspace to copy examples from modules to the `app/stacks` folder. There are a variety of ways to use it.
 
 ## Install
 

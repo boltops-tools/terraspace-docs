@@ -4,9 +4,9 @@ title: Terrafile Options
 
 Terraspace bundler has several configurable options. The options can apply at the:
 
-1. Mod level
-2. Terrafile level
-3. Config level
+1. **Mod level**: These options apply at the mod-level, so they specifically affect each mod only.
+2. **Terrafile level**: These options apply globally and affect the entire Terrafile.
+3. **Config level**: These options generally apply globally and can affect the entire Terrafile or even CLI option behaviors like the `--terrafile` option.
 
 The precedence of the options is also: 1, 2, and 3.
 
@@ -36,7 +36,7 @@ These options apply globally and affect the entire Terrafile.
 Name | Description | Default
 --- |  --- | ---
 base_clone_url | Base clone url to use. | https://github.com/
-export_to |  Where the modules get exported to saved to. | vendor/modules
+export_to |  Where the modules get exported to saved to. Note, be careful about changing this location to `app/stacks` as the default `export_purge=true` will remove this folder. It's safer to use `export_to` at the mod-level.  | vendor/modules
 export_purge | Whether or not to remove all existing exported modules folder first. If you disable this behavior, then you can manually clear modules out yourself before installing. IE: `rm -r vendor/modules`. | true
 stack_options | The stack options is a global way to set some of the mod-level stack options, IE: purge, dest, etc. See the mod-level [stack option]({% link _docs/terrafile/options/stack.md %}) for more details. | {}
 

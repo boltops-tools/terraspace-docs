@@ -6,7 +6,17 @@ title: Terrafile
 
 ## Best of Both Worlds
 
-The Terrafile approach simplifies managing modules. The advantage of using a `Terrafile` is centralization. You can centrally define, manage, and update modules. To install the modules, you add them to `Terrafile` and run:
+The Terrafile approach simplifies managing modules. The advantage of using a `Terrafile` is centralization. You can centrally define, manage, and update modules. To define modules, add them to `Terrafile`:
+
+Terrafile
+
+```ruby
+org "boltops-tools" # set default org
+mod "s3", source: "git@github.com:boltops-tools/terraform-aws-s3"
+mod "sg", source: "terraform-aws-modules/security-group/aws", version: "3.10.0"
+```
+
+To install the modules, run:
 
     terraspace bundle
 
