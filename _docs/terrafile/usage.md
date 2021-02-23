@@ -89,7 +89,7 @@ You can get additional information about each bundled module with:
 Often modules come with examples. Terraspace can copy these starter examples to the `app/stacks` folder for you. Terraspace also will rewrite the module `source` attribute to point to the correct location. This streamlines the `terraspace bundle` workflow. Example:
 
 ```ruby
-mod "vpc", "terraform-aws-modules/vpc/aws", stack: "simple-vpc"
+mod "vpc", source: "terraform-aws-modules/vpc/aws", stack: "simple-vpc"
 ```
 
 Terraspace copies `vendor/modules/vpc/examples/simple-vpc` to `app/stacks/vpc`. For most examples, you'll be able to deploy immediately:

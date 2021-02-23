@@ -21,7 +21,7 @@ src | Relative path to the specific example within the examples folder. The `exa
 Here's an example Terrafile to explain:
 
 ```ruby
-mod "vpc", "terraform-aws-modules/vpc/aws", stack: "simple-vpc" # notice examples/ prefix is optional
+mod "vpc", source: "terraform-aws-modules/vpc/aws", stack: "simple-vpc" # notice examples/ prefix is optional
 ```
 
 By running:
@@ -37,7 +37,7 @@ Terraspace copies `vendor/modules/vpc/examples/simple-vpc` to `app/stacks/vpc`. 
 You can also configure the stack options with a Hash if you need more control:
 
 ```ruby
-mod "vpc", "terraform-aws-modules/vpc/aws",
+mod "vpc", source: "terraform-aws-modules/vpc/aws",
               stack: {
                 dest: "vendor/stacks",
                 examples: "examples",
@@ -63,7 +63,7 @@ Here's an example with an Array of stacks:
 
 
 ```ruby
-mod "vpc", "terraform-aws-modules/vpc/aws", stacks: ["simple-vpc", "complete-vpc"]
+mod "vpc", source: "terraform-aws-modules/vpc/aws", stacks: ["simple-vpc", "complete-vpc"]
 ```
 
 Running:
@@ -86,7 +86,7 @@ You can also have Terraspace bundler copy over all examples to the `app/stacks` 
 
 
 ```ruby
-mod "vpc", "terraform-aws-modules/vpc/aws", stacks: :all
+mod "vpc", source: "terraform-aws-modules/vpc/aws", stacks: :all
 ```
 
 Running:

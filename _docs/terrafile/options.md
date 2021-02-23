@@ -26,7 +26,7 @@ Example Terrafile:
 ```ruby
 mod "s3", source: "terraform-aws-s3", subfolder: "path/to/module/s3"
 mod "ec2", source: "terraform-aws-ec2", export_to: "app/modules"
-mod "vpc", "terraform-aws-modules/vpc/aws", stack: "simple-vpc" # notice examples/ prefix is optional
+mod "vpc", source: "terraform-aws-modules/vpc/aws", stack: "simple-vpc" # notice examples/ prefix is optional
 ```
 
 ## 2. Terrafile level
