@@ -41,7 +41,7 @@ Generally, the simplier structure is should be used. Unless you're using the [In
 
 ## Project-level and Stack-level Layering
 
-Layering performed both at the project-level and stack-level.
+Layering is performed both at the project-level and stack-level.
 
 1. **Project-level Layering**: These are project-wide tfvars set for **every** stack. These files live in `config/terraform/tfvars`
 2. **Stack-level Layering**: This are targetted tfvars set the **specific** stack being deployed. These files can live in the specific stack folder, IE: `app/stacks/demo/tfvars`
