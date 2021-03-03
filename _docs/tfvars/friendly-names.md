@@ -15,7 +15,7 @@ Terraspace.configure do |config|
 end
 ```
 
-This maps the `111111111111` namespace to a friendly  name `dev-account`. So when build or deploy it'll use the friendly name. Example build:
+This maps the `111111111111` namespace to a friendly  name `dev-account`. So when you build or deploy it'll use the friendly name. Example:
 
     $ ls app/stacks/demo/tfvars/dev-account/
     base.tfvars
@@ -46,4 +46,4 @@ Here's a useful command to check for the AWS account id.
 
 ## State File and Build cache_dir
 
-Note, if you've changed `build.cache_dir`, add `namespace` to the path, and deployed stacks previous, then changing added friendly names mapping can result in the `cache_dir` path and state file changing. If you want to maintain the old state, then you can set `layering.enable_names.cache_dir=false` to disable the mapping only for the `cache_dir`. The friendly names will only be used for your local folders and not the generated `cache_dir` path. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}).
+Note, if you've changed `build.cache_dir`, added `namespace` to the path, and deployed stacks previously, then adding friendly names mapping can result in the `cache_dir` path and the state file changing. If you want to maintain the old state, then you can set `layering.enable_names.cache_dir=false` to disable the mapping only for the `cache_dir`. The friendly names will only be used for your local folders and not the generated `cache_dir` path. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}).
