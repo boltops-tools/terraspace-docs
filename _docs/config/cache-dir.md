@@ -34,7 +34,7 @@ Can produce:
 
 ## Object Interface
 
-When setting it as a Object, the instacne method `call` should also return a String with a pattern for Terraspace to use for substitution.
+When setting it as a Object, the instance method `call` should also return a String with a pattern for Terraspace to use for substitution.
 
 ```ruby
 class CustomBuildDir
