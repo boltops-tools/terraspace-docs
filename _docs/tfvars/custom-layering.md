@@ -41,11 +41,11 @@ end
 ```
 ## Interface Methods
 
-There are 3 main interface methods designed you can override:
+There are 3 main interface methods designed to be overriden:
 
-1. **pre_layers**: Layers that get processed before the main layer. Defaults to empty.
-2. **main_layers**: The main layers that get processed as described by the Terraspace docs. This inclues the base and env layers as well as the layers provided by the specific cloud plugin. IE: AWS, Azure, GCP.
-3. **post_layers**: Layers that get processed after the main layer. Defaults to empty.
+1. **pre_layers**: Layers that get processed before the main layer. Defaults to an empty Array.
+2. **main_layers**: The main layers that get processed as described by the Terraspace docs. This includes the base and env layers as well as the layers provided by the specific cloud plugins. IE: AWS, Azure, GCP.
+3. **post_layers**: Layers that get processed after the main layer. Defaults to an empty Array.
 
 You can chose the methods to override.
 
