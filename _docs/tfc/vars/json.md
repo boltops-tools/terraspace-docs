@@ -6,7 +6,7 @@ title: Terraform Cloud Vars JSON
 
 First, you create a `vars.json` file like so:
 
-config/terraform/cloud/vars.json
+config/terraform/tfc/vars.json
 
 ```json
 [
@@ -55,4 +55,4 @@ Notice, that the `vars.json` supports ERB template processing. This avoids hardc
 
 Terraspace will then automatically call the Terraform Cloud API to set the variables as part of the `terraspace up`.
 
-{% include cloud/vars-behavior.md %}
+{% include tfc/vars-behavior.md %}

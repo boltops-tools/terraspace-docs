@@ -20,7 +20,7 @@ For example if you have these secret values:
     $ gcloud secrets versions access latest --secret demo-dev-user
     test
 
-.terraspace-cache/us-west-2/dev/stacks/demo/01-dev.auto.tfvars
+.terraspace-cache/us-west-2/dev/stacks/demo/1-dev.auto.tfvars
 
     user = "bob"
     pass = "test"

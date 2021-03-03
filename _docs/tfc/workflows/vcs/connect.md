@@ -6,7 +6,7 @@ Terraspace supports automating most of the VCS connection setup for your workspa
 
 ## Prerequisite: VCS Provider OAuth Token
 
-As a prerequisite, set up a VCS Provider. Follow the Terraform Docs: [Configuring OAuth Access](https://www.terraform.io/docs/cloud/vcs/github.html). Once done, you'll see something like this:
+As a prerequisite, set up a VCS Provider. Follow the Terraform Docs: [Configuring OAuth Access](https://www.terraform.io/docs/tfc/vcs/github.html). Once done, you'll see something like this:
 
 ![](https://img.boltops.com/boltops/tools/terraspace/vcs/github-oauth.png)
 
@@ -48,8 +48,8 @@ You can also configure the VCS connection without deploying. To do so, use:
 This syncs the Terraspace project settings to Terraform Cloud. A sync performs the following for each workspace:
 
 1. Create or update workspace, including the VCS settings.
-2. Set the working dir. This is automatically determined. Though you can adjust the [working_dir_prefix]({% link _docs/cloud/config.md %}).
-3. Set env and terraform variables. The variables can be configured with code. See [Cloud Vars]({% link _docs/cloud/vars.md %}).
+2. Set the working dir. This is automatically determined. Though you can adjust the [working_dir_prefix]({% link _docs/tfc/config.md %}).
+3. Set env and terraform variables. The variables can be configured with code. See [Cloud Vars]({% link _docs/tfc/vars.md %}).
 
 ## Sync All & Preview
 
@@ -87,4 +87,4 @@ end
 
 ## Manual Setup
 
-If you need to set up the VCS connection manually instead, see [Connect to VCS Manually]({% link _docs/cloud/workflows/vcs/manual.md %}).
+If you need to set up the VCS connection manually instead, see [Connect to VCS Manually]({% link _docs/tfc/workflows/vcs/manual.md %}).

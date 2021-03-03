@@ -1,11 +1,11 @@
 ---
-title: terraspace cloud help
+title: terraspace tfc help
 reference: true
 ---
 
 ## Usage
 
-    terraspace cloud help [COMMAND]
+    terraspace tfc help [COMMAND]
 
 ## Description
 

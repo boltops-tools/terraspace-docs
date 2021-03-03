@@ -4,7 +4,7 @@ title: Naming Considerations
 
 Here are some naming consideration thoughts. First, we'll cover Terraform recommendations to help understand why Terraspace names things a certain way.
 
-{% include cloud/recommendations.md %}
+{% include tfc/recommendations.md %}
 
 ## Workspace Name
 
@@ -78,11 +78,11 @@ It is probably more common to deploy stacks. So the recommendation is to not inc
 
 ## Build Cache Dir
 
-The build cache is important, particularly when using the [VCS-Driven workflow]({% link _docs/cloud/workflows/cli.md %}).  Make sure the build cache name is unique when deploying to multiple regions. The default already does this. You can adjust it further if needed via [config/app.rb]({% link _docs/config/app.md %}). Example:
+The build cache is important when using the [VCS-Driven workflow]({% link _docs/tfc/workflows/cli.md %}).  Make sure the build cache name is unique when deploying to multiple regions. The default already does this. You can adjust it further if needed via [config/app.rb]({% link _docs/config/app.md %}). Example:
 
 ```ruby
 Terraspace.configure do |config|
-  config.build.cache_root = nil # defaults to .terraspace-cache
+  config.build.cache_root = nil # defaults to /full/path/to/.terraspace-cache
   config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR"
 end
 ```

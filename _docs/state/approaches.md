@@ -116,4 +116,4 @@ To:
 
 ## Why the default?
 
-Terraspace default is to have a state file on a per stack basis, which is intended to group modules together. This allows fine-grain control and isolation protection when running `terraform apply`. It is also the recommendation from Terraform themselves: [One Workspace Per Environment Per Terraform Configuration](https://www.terraform.io/docs/cloud/guides/recommended-practices/part1.html#one-workspace-per-environment-per-terraform-configuration).
+Terraspace default is to have a state file on a per stack basis, which is intended to group modules together. This allows fine-grain control and isolation protection when running `terraform apply`. It is also the recommendation from Terraform themselves: [One Workspace Per Environment Per Terraform Configuration](https://www.terraform.io/docs/tfc/guides/recommended-practices/part1.html#one-workspace-per-environment-per-terraform-configuration).

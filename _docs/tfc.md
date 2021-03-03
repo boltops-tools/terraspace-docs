@@ -15,13 +15,13 @@ With Terraform Cloud you get:
 * The state file is managed by Terraform Cloud.
 * You also get a web UI console with plans, applies, and history.
 
-{% include cloud/recommendations.md %}
+{% include tfc/recommendations.md %}
 
 When using Terraform Cloud with Terraspace, Terraspace provides additional conveniences to make it easier to use Terraform Cloud Workspaces. For example, when you set up multiple Terraform Cloud Workspaces, you often repeatedly set up common workspace Terraform Variables and Environment Variables. Terraspace supports automating much of this process.
 
 In the next sections, we'll cover some of the conveniences and how to set up Terraspace with Terraform Cloud.
 
-* [Backend]({% link _docs/cloud/backend.md %}): Configure Terraspace to use Terraform Cloud.
-* [Config]({% link _docs/cloud/config.md %}): Adjust how Terraspace updates the Terraform Cloud Variables.
-* [Vars JSON]({% link _docs/cloud/vars/json.md %}): Set Terraform Cloud Workspace vars automatically with JSON file.
-* [Vars DSL]({% link _docs/cloud/vars/dsl.md %}): Set Terraform Cloud Workspace vars automatically with DSL file.
+* [Backend]({% link _docs/tfc/backend.md %}): Configure Terraspace to use Terraform Cloud.
+* [Config]({% link _docs/tfc/config.md %}): Adjust how Terraspace updates the Terraform Cloud Variables.
+* [Vars JSON]({% link _docs/tfc/vars/json.md %}): Set Terraform Cloud Workspace vars automatically with JSON file.
+* [Vars DSL]({% link _docs/tfc/vars/dsl.md %}): Set Terraform Cloud Workspace vars automatically with DSL file.

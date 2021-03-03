@@ -15,9 +15,9 @@ Notice that the region is included in the path.
 
 ## Terraform Cloud
 
-One of the reason region is included in the path is for [Terraform Cloud]({% link _docs/cloud.md %}). With TFC, the Workspace "Terraform Working Directory" setting needs to be unique for the [VCS-Driven Workflow]({% link _docs/cloud/workflows/vcs.md %}). The code needs to be checked into version control under a unique path.
+One of the reason region is included in the path is for [Terraform Cloud]({% link _docs/tfc.md %}). With TFC, the Workspace "Terraform Working Directory" setting needs to be unique for the [VCS-Driven Workflow]({% link _docs/tfc/workflows/vcs.md %}). The code needs to be checked into version control under a unique path.
 
-Essentially, it boils down to how TFC works. We must make sure that the "Terraform Working Directory" is designed for a different workspace. If we are not using TFC VCS-Driven workflow, these limits do not apply.  For example, the [TFC CLI-Driven]({% link _docs/cloud/workflows/cli.md %}) workflow works just fine.
+Essentially, it boils down to how TFC works. We must make sure that the "Terraform Working Directory" is designed for a different workspace. If we are not using TFC VCS-Driven workflow, these limits do not apply.  For example, the [TFC CLI-Driven]({% link _docs/tfc/workflows/cli.md %}) workflow works just fine.
 
 ## Other Backend Types
 

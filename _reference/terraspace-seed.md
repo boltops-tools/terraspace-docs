@@ -24,7 +24,7 @@ Build starer seed tfvars file.
 
 ```
 y, [--yes], [--no-yes]           # bypass prompts and force overwrite files
-    [--where=WHERE]              # where to create file. either under app or seed folder structure. values: app or stack
+    [--where=WHERE]              # where to create file. either under app or seed folder structure. values: seed or stack
     [--init], [--no-init]        # Instance of stack
                                  # Default: true
 i, [--instance=INSTANCE]         # Instance of stack

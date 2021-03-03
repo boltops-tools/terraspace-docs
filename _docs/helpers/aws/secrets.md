@@ -20,7 +20,7 @@ For example if you have these secret values:
     $ aws secretsmanager get-secret-value --secret-id demo-dev-pass | jq '.SecretString'
     test
 
-.terraspace-cache/us-west-2/dev/stacks/demo/01-dev.auto.tfvars
+.terraspace-cache/us-west-2/dev/stacks/demo/1-dev.auto.tfvars
 
     user = "bob"
     pass = "test"
