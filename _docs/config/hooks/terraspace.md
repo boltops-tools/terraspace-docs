@@ -44,18 +44,6 @@ In this case, regardless of the hook command succeeding or failing, Terraspace w
 
 {% include config/hooks/options.md command="terraspace" %}
 
-## On Boot Hook
+## Boot Hooks
 
-There is also a special on_boot hook that is runs very early in the Terraspace boot process. It runs right after plugins are loaded.
-
-It takes a block of code. One useful way to use it is switching `AWS_PROFILE`, `GOOGLE_APPLICATION_CREDENTIALS`, etc automatically based on the `TS_ENV`. Example:
-
-config/envs/dev.rb
-
-```ruby
-Terraspace.configure do |config|
-  config.hooks.on_boot do
-    ENV['AWS_PROFILE'] = 'dev'
-  end
-end
-```
+If you need to hook into the Terraspace boot process super-early on, check out [Boot Hook]({% link _docs/config/boot.md %}).
