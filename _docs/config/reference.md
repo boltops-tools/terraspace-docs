@@ -21,7 +21,7 @@ bundle | This should be a Hash. It configures `terraspace bundle` settings. Opti
 hooks.on_boot | Hook to run on boot. This hook runs very early. You can use it configure things like ENV vars dynamically. This should be a Ruby block of code. | nil
 init.mode | Can be: auto, never, always. auto means init will only be called when .terraform doesnt exist yet. You can also override this with a env var. IE: `TS_INIT_MODE=always` | auto
 layering.names | Map layering names to friendly names. Currently only supports namespace. More docs: [Layering Friendly Names]({% link _docs/tfvars/friendly-names.md %}) | {}
-layering.enable_names.cache_dir | Enable or disable friendly name mapping for `build.cache_dir` path. It can be useful to disable this if you've changed the default settings and want to keep original path and state file. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}) | true
+layering.enable_names.expansion | Enable or disable friendly name mapping where `expansion` is used. This occurs for `build.cache_dir` and [terraform backends]({% link _docs/config/backend.md %}). It can be useful to disable this if you've changed the default settings and want to keep original path and state file. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}) | true
 log.root | The root folder where logs are written to. | log
 logger | Logger instance to use. | Logger.new($stdout)
 logger.formatter | Logger Formatter to use. See [Formatter](https://ruby-doc.org/stdlib-2.7.1/libdoc/logger/rdoc/Logger/Formatter.html) for interface. | [Terraspace::Logger::Formatter](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/logger/formatter.rb)
