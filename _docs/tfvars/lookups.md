@@ -35,7 +35,7 @@ Terraspace offers this flexibility for one-off purposes.  For example:
 
 It is strongly recommended to **not** define tfvars in `app/modules/*/tfvars`. This is because modules should be reusable.
 
-Remember modules and like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be akin to hard coding parameters.
+Remember modules are like "functions" and tfvars are like "parameters" passed to them. Putting the tfvars files within the same module directory would be akin to hard coding parameters.
 
 ## Why tfvars in Stacks?
 
