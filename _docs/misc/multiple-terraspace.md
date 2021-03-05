@@ -56,26 +56,26 @@ Since you have access to a full programming language, you can tap into it to do 
 
 For example, the `config.hooks.on_boot` hook was changed in 0.6.2.
 
-To account for versions < 0.6:
+To account for versions < 0.6.2:
 
 config/app.rb
 
 ```ruby
 Terraspace.configure do
-  major, minor = Terraspace::VERSION.split('.')
+  major, minor, patch = Terraspace::VERSION.split('.').map(&:to_i)
   config.hooks.on_boot do
     ENV['AWS_PROFILE'] = 'dev-profile'
-  end if major <= 0 and minor <= 5
+  end if major <= 0 and minor <= 6 && patch < 2
 end
 ```
 
-To account for versions >= 0.6:
+To account for versions >= 0.6.2:
 
 config/boot.rb
 
 ```ruby
-major, minor = Terraspace::VERSION.split('.')
-return unless major >= 0 and minor > 5
+major, minor, patch = Terraspace::VERSION.split('.').map(&:to_i)
+return unless major >= 0 and minor >= 6 && patch >= 2
 ENV['AWS_PROFILE'] = 'dev-profile'
 ```
 
