@@ -26,3 +26,15 @@ ENV['AWS_PROFILE'] = 'dev'
 ```
 
 This example is for AWS, but you can can do similiar switch logic with `GOOGLE_APPLICATION_CREDENTIALS`, etc.
+
+## Example: Default TS_ENV
+
+If you prefer a different default than `TS_ENV=dev`.
+
+config/boot.rb
+
+```ruby
+ENV['TS_ENV'] ||= 'development'
+```
+
+This changes the default for everyone using the project, but still allows them to control the default by adding `export TS_ENV=development` to their `~/.bash_profile`. 
