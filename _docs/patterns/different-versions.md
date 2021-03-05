@@ -1,6 +1,6 @@
 ---
 title: "Different Module Versions for Dev and Prod"
-nav_text: Different Versions
+nav_text: Different Module Versions
 category: patterns
 ---
 
