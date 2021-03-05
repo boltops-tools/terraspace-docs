@@ -40,11 +40,11 @@ Example with:
 
     bundle exec terraspace version
 
-The `bundle exec` is a wrapper that adjusts the load path. By using bundle exec, it ensures that the exact versions specified in `Gemfile.lock` are used. This includes, not only terraspace, but all ruby gems.
+The `bundle exec` is a wrapper that adjusts the load path. By using `bundle exec`, it ensures that the exact versions specified in `Gemfile.lock` are used. This includes, not only terraspace, but all ruby gems.
 
 When you don't use `bundle exec`, ruby uses the system load path. The versions that then get used are more dependent on your environment and how your system has been configured. In this case, Ruby has little choice but to make some assumptions, and usually, it uses the latest version.
 
-So when using terraspace without `bundle exec`, the latest terraspace version is used. Terraspace takes an extra step to help. It calls `bundle exec` early internally also. This ensures that all other dependencies are locked to `Gemfile.lock`. Terraspace is only able to pin all other gems at that point, though. This approach does conveniently spare you from having to type bundle exec and works great for most cases.
+So when using terraspace without `bundle exec`, the latest terraspace version is used. Terraspace takes an extra step to help. It calls `bundle exec` early internally also. This ensures that all other dependencies are locked to `Gemfile.lock`. Terraspace is only able to pin all other gems at that point, though. This approach does conveniently spare you from having to type `bundle exec` and works great for most cases.
 
 It won't work when there's a later version of terraspace installed on the system, and your `Gemfile.lock` pins a different terraspace version. In this case, you'll need to use `bundle exec` or uninstall other versions of terraspace from your system.
 
