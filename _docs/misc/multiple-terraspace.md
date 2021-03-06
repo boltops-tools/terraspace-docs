@@ -50,7 +50,7 @@ It won't work when there's a later version of terraspace installed on the system
 
 ## Version Checking within Project Code
 
-If run multiple versions of terraspace, `bundle exec` will make sure the right terraspace version is loaded. However, `bundle exec` does nothing to ensure that your project code is written to the same version of terraspace. That's up to you.
+When running multiple versions of terraspace,`bundle exec` will make sure the right terraspace version is loaded. However, `bundle exec` does nothing to ensure that your project code is written to the same version of terraspace. That's up to you.
 
 Since you have access to a full programming language, you can tap into it to do conditional logic and perform versioning checking at the project-level.  This is where terraspace offers more power and control.
 
@@ -79,4 +79,4 @@ return unless major >= 0 and minor >= 6 && patch >= 2
 ENV['AWS_PROFILE'] = 'dev-profile'
 ```
 
-The code starts to get messy, but it's an option. Instead, the general recommendation is to use git, do the upgrade and test in different branch, and switch over to it as soon as it's feasible for your team. This keeps the code cleaner.
+The code starts to get messy, but it's an option. Instead, the general recommendation is to use git, do the upgrade and test in a different branch, and switch over to it as soon as it's feasible for your team. This keeps the code cleaner.
