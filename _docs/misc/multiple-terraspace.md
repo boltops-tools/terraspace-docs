@@ -79,4 +79,4 @@ return unless major >= 0 and minor >= 6 && patch >= 2
 ENV['AWS_PROFILE'] = 'dev-profile'
 ```
 
-The code starts to get messy, but it's an option. Instead, the general recommendation is to use git, do the upgrade and test in a different branch, and switch over to it as soon as it's feasible for your team. This keeps the code cleaner.
+The code starts to get messy, but it's an option. Instead, the general recommendation is to use git to create a different branch, test the upgrade, and switch over to it as soon as it's feasible for your team. This keeps the code cleaner.
