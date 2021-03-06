@@ -15,7 +15,7 @@ Terraspace will searches 2 files in the `config` folder. If the files exist, the
 1. **config/boot.rb**: Always runs.
 2. **config/boot/TS_ENV.rb**: Runs based on the env. IE: `TS_ENV=dev` => `config/boot/dev.rb`
 
-Both files are required and ran if they both exists. Since the `TS_ENV` one runs second, it'll override previously set values. 
+Both files are required and ran if they both exists. Since the `TS_ENV` one runs second, it can be used to override previously set values. 
 
 ## Example: Default TS_ENV
 
