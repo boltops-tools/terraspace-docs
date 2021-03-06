@@ -18,7 +18,6 @@ build.cache_dir | The relative dir for the module or stack cache. This can be a 
 build.cache_root | The root of the cache build dir. IE: .terraspace-cache | /full/path/to/.terraspace-cache
 build.clean_cache | Whether to clean the cache at the beginning of the build process. Can be useful to turn off if using TFC VCS-Driven workflow. | true
 bundle | This should be a Hash. It configures `terraspace bundle` settings. Options are passed straight through, allowing you to configure anything with the bundle command. See [terrafile config level options]({% link _docs/terrafile/options.md %}) for the options. | {logger: Terraspace.logger}
-hooks.on_boot | Hook to run on boot. This hook runs very early. You can use it configure things like ENV vars dynamically. This should be a Ruby block of code. | nil
 init.mode | Can be: auto, never, always. auto means init will only be called when .terraform doesnt exist yet. You can also override this with a env var. IE: `TS_INIT_MODE=always` | auto
 layering.names | Map layering names to friendly names. Currently only supports namespace. More docs: [Layering Friendly Names]({% link _docs/tfvars/friendly-names.md %}) | {}
 layering.enable_names.expansion | Enable or disable friendly name mapping where `expansion` is used. This occurs for `build.cache_dir` and [terraform backends]({% link _docs/config/backend.md %}). It can be useful to disable this if you've changed the default settings and want to keep original path and state file. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}) | true
