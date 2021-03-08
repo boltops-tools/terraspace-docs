@@ -43,7 +43,7 @@ Terraspace automatically updates the TFC Workspace and with the repo connection 
 
 You can also configure the VCS connection without deploying. To do so, use:
 
-    terraspace cloud sync demo
+    terraspace tfc sync demo
 
 This syncs the Terraspace project settings to Terraform Cloud. A sync performs the following for each workspace:
 
@@ -55,7 +55,7 @@ This syncs the Terraspace project settings to Terraform Cloud. A sync performs t
 
 You can sync all the workspaces. This can be useful, if your TFC user does not have permission to manage workspaces. You can ask the TFC admin to run the sync command to create the workspaces in batch.   Example:
 
-    $ terraspace cloud sync # all workspaces
+    $ terraspace tfc sync # all workspaces
     About to sync these project stacks with Terraform Cloud workspaces:
 
         Stack => Workspace
@@ -72,7 +72,7 @@ You can sync all the workspaces. This can be useful, if your TFC user does not h
 
 If you would like to bypass the prompt, you can use the `-y` option.
 
-    terraspace cloud sync -y
+    terraspace tfc sync -y
 
 ## Disconnect VCS
 

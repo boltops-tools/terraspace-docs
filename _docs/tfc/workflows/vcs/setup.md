@@ -36,7 +36,7 @@ You can configure Terraform Cloud Variables with either JSON or a DSL:
 
 Run the setup command:
 
-    terraspace cloud setup
+    terraspace tfc setup
 
 Terraspace automatically creates the TFC workspace and variables.
 
