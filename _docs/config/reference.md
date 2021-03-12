@@ -27,7 +27,7 @@ logger.formatter | Logger Formatter to use. See [Formatter](https://ruby-doc.org
 logger.level | Logger level | info
 summary.prune | Prune old state files with no resources to speed up summary call over time. Note: This removes old state files, so it deletes some state history. | false
 terraform.plugin_cache.dir | Sets `TF_PLUGIN_CACHE_DIR`. | /tmp/terraspace/plugin_cache
-terraform.plugin_cache.enabled | Whether or not to enable a common cache folder to download plugins. | true
+terraform.plugin_cache.enabled | Whether or not to enable a common cache folder to download plugins. | false
 terraform.plugin_cache.purge_on_error | Whether or not to automatically purge the plugin_cache and retry when there are Terraform plugin cache errors like [this](https://gist.github.com/tongueroo/f3b44297228d420442a683fbe80e8937). Recommend enabling. | true
 test_framework | Test framework to use | rspec
 {% include config/tfc.md %}

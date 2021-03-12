@@ -2,28 +2,24 @@
 title: Shim Wrapper
 ---
 
-Note: Terraspace 0.5.0 and above requires `bundler/setup` earlier in its bootup process and no longer requires a shim. These docs are kept around for posterity. They will be eventually removed.
+A shim wrapper can be useful for some cases.
 
-If you are seeing an annoying "warning: already initialized constant" like so:
+## Bundler already activated Warnings
 
-    $ terraspace up demo
-    /Users/me/.rbenv/versions/2.7.1/lib/ruby/2.7.0/json/version.rb:4: warning: already initialized constant JSON::VERSION
-    /Users/me/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/json-2.3.1/lib/json/version.rb:4: warning: previous definition of VERSION was here
-    /Users/me/.rbenv/versions/2.7.1/lib/ruby/2.7.0/json/version.rb:5: warning: already initialized constant JSON::VERSION_ARRAY
-    ...
-    /Users/me/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/json-2.3.1/lib/json/common.rb:136: warning: previous definition of UnparserError was here
-    Building .terraspace-cache/us-west-2/dev/stacks/demo
-    ...
+For example, if you've [multiple versions of terraspace installed]({% link _docs/misc/multiple-terraspace.md %}) it can sometimes lead to dependencies resolution issues, and you'll see errors like this:
 
-This is due to bundler not loading until a little later.  Here are the options for removing the warning:
+    You have already activated google-apis-core 0.3.0, but your Gemfile requires google-apis-core 0.2.1. Prepending `bundle exec` to your command may solve this.
 
-1. Prepend `bundle exec` in front of all terraspace commands
-2. Run `bundle clean` with your terraspace project. Note this can break other gems on your system.
-3. Use a shim wraper for terraspace
+This is due to the ruby system and bundler `Gemfile.lock` dependencies not matching.  A coupon of options:
 
-The current recommended approach #3, a wrapper shim. You only have to set up the shim once.
+1. Update `Gemfile.lock` with bundle update.
+2. Run `bundle exec` in front of your commands with a shim wrapper.
+
+Approach #1 updates the `Gemfile.lock` dependencies to match the system and removes the warning. You won't need a shim in this case. We'll cover #2 next.
 
 ## Shim Wrapper
+
+The shim wrapper essentially ensures that `bundle exec` is prepended in front of terraspace when you're within a project. This saves you precious finger-typing energy. You only have to set up the shim once.
 
 Here's a wrapper shim that will work with rbenv. We'll create it at `~/bin/terraspace`
 

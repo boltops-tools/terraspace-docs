@@ -80,3 +80,7 @@ ENV['AWS_PROFILE'] = 'dev-profile'
 ```
 
 The code starts to get messy, but it's an option. Instead, the general recommendation is to use git to create a different branch, test the upgrade, and switch over to it as soon as it's feasible for your team. This keeps the code cleaner.
+
+## Shim Wrapper
+
+If have multiple versions of terraspace on the same system, you should always use the `bundle exec` command when you're inside the Terraspace project. This ensures that the terraspace version in the project's `Gemfile.lock` is used.  Typing `bundle exec` can get old quick, so you can use a [shim wrapper]({% link _docs/misc/shim.md %}) to save yourself previous finger-typing energy.
