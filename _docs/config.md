@@ -22,12 +22,12 @@ Extension | Strategy
 
 The `config/terraform` is for common configurations. They're overridable within each module itself, though. For example:
 
-* config/backend.tf - common configuration
+* config/terraform/backend.tf - common configuration
 * app/stacks/demo1 - does not have a backend.tf
 * app/stacks/demo2/backend.tf - overrides backend.tf
 
-When Terraspace builds the stacks, `demo1` uses `config/backend.tf` and `demo2` uses `app/stacks/demo2/backend.tf`. Files within the stack have higher precedence than the `config/terraform` files.
+When Terraspace builds the stacks, `demo1` uses `config/terraform/backend.tf` and `demo2` uses `app/stacks/demo2/backend.tf`. Files within the stack have higher precedence than the `config/terraform` files.
 
-Note, since terraspace provides a little extra power with ERB templating, you can also have logic in the `config/terraform` files. It's up to you, Terraspace gives you options.
+Note, since terraspace provides a little extra power with ERB templating, you can also have dynamic ERB logic in the `config/terraform` files. It's up to you, Terraspace gives you options.
 
 The next docs cover different ways to leverage config.
