@@ -12,6 +12,7 @@ title: CLI Reference
 * [terraspace completion_script]({% link _reference/terraspace-completion_script.md %})
 * [terraspace console]({% link _reference/terraspace-console.md %})
 * [terraspace down]({% link _reference/terraspace-down.md %})
+* [terraspace fmt]({% link _reference/terraspace-fmt.md %})
 * [terraspace info]({% link _reference/terraspace-info.md %})
 * [terraspace init]({% link _reference/terraspace-init.md %})
 * [terraspace list]({% link _reference/terraspace-list.md %})
