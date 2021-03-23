@@ -86,4 +86,4 @@ Building or deploying the demo stack produces:
 
 Terraspace layering gives you the power to create shared tfvars at the project-level, and also create targetted tfvars for specific stacks.
 
-If you that is not enough for your needs, you can even customize layering itself.
+If you that is not enough for your needs, you can even customize layering itself: [Custom Layering]({% link _docs/tfvars/custom-layering.md %}).
