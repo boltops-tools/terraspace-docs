@@ -12,8 +12,8 @@ For example, if you've [multiple versions of terraspace installed]({% link _docs
 
 This is due to the ruby system and bundler `Gemfile.lock` dependencies not matching.  A coupon of options:
 
-1. Update `Gemfile.lock` with bundle update.
-2. Run `bundle exec` in front of your commands with a shim wrapper.
+1. **bundle update**: Update `Gemfile.lock` with bundle update.
+2. **shim wrapper**: Run `bundle exec` in front of your commands with a shim wrapper.
 
 Approach #1 updates the `Gemfile.lock` dependencies to match the system and removes the warning. You won't need a shim in this case. We'll cover #2 next.
 
@@ -41,7 +41,7 @@ Then add `~/bin` to your PATH in your `~/.bash_profile`
 
     export PATH="~/bin:$PATH"
 
-The wrapper shim will prepend `bundle exec` whenever in a Terraspace project folder with a Gemfile. It will not prepend `bundle exec` outside of a Terraspace project. For example, if you are using `terraspace new` generators.
+The wrapper shim will prepend `bundle exec` whenever in a Terraspace project folder with a Gemfile. It will not prepend `bundle exec` outside of a Terraspace project. For example, if you are using `terraspace new project` generator.
 
 ## Generating the Shim Wrapper
 
