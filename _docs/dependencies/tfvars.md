@@ -29,7 +29,7 @@ app/stacks/instance/tfvars/base.tfvars
 
 ### Mock Values
 
-When running `terraspace plan all`, the dependent stacks may not have been applied yet. You can provide mock values so the plan can be successful.  Example:
+When running `terraspace all plan`, the dependent stacks may not have been applied yet. You can provide mock values so the plan can be successful.  Example:
 
 app/stacks/instance/tfvars/base.tfvars
 
