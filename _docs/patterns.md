@@ -2,7 +2,7 @@
 title: Terraspace Patterns
 ---
 
-We'll cover some Terraspaace and infrastructure-as-code patterns.
+We'll cover some Terraspace and infrastructure-as-code patterns.
 
 {% assign docs = site.docs | where: "categories","patterns" %}
 {% for doc in docs -%}
