@@ -11,12 +11,9 @@ The `config/terraform` folder is for common configurations. All files in the fol
 
 ## Processing
 
-Files that end with `.tf` and `.rb` get processed with different strategies as part of being built.
+{% include config/processing.md %}
 
-Extension | Strategy
---- | ---
-.tf | Will be processed with ERB. This allows add a little extra power to the Terraform HCL language with templating logic.
-.rb | Will be processed by the Terraspace Ruby DSL. This allows you to write Terraform code with Ruby.
+Note: Files in the `files` folder are copied straight over to the build cache without any processing regardless of extension.  IE: `app/stacks/demo/files/example.rb`.  More docs:  [Pass Files]({% link _docs/config/pass-files.md %})
 
 ## Overridable
 
