@@ -51,7 +51,7 @@ SUSCRIPTION_HASH | wxyz | Short consistent hash based on subscription id.
 
 </div>
 
-Azure variable values are handled by [https://github.com/boltops-tools/azure_info](https://github.com/https://github.com/boltops-tools/azure_info) library. You can also The values are generally set when you use `az login`.  You can see the values with `az account show`.
+Azure variable values are handled by [boltops-tools/azure_info](https://github.com/boltops-tools/azure_info) library. You can also The values are generally set when you use `az login`.  You can see the values with `az account show`.
 
 ___
 
@@ -66,4 +66,4 @@ REGION | us-central1 | Google region. Can be set by the env var `GOOGLE_REGION` 
 
 </div>
 
-Google variable values are handled by [https://github.com/boltops-tools/gcp_data](https://github.com/https://github.com/boltops-tools/gcp_data) library. The values are generally set when you use `gcloud config set`.  You can see the values with `gcloud config list` and `gcloud config get`.
+Google variable values are handled by [boltops-tools/gcp_data](https://github.com/boltops-tools/gcp_data) library. The values are generally set when you use `gcloud config set`.  You can see the values with `gcloud config list` and `gcloud config get`.
