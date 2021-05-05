@@ -2,7 +2,7 @@
 title: Ruby Hooks
 nav_text: Ruby
 categories: hooks
-order: 8
+order: 3
 ---
 
 The hook `execute` option can also be provided Ruby code instead of a string.  Here's how it works:
@@ -54,8 +54,45 @@ Terraspace will do something like this:
 @hook[:execute].call
 ```
 
-## Process Context
+## Method Argument
 
-The context in which the hook runs is worth highlighting. When the `execute` option is a String, Terraspace runs the script in a **new** child process. This the script is an independent process, and whatever is done to its environment is segregated.
+The `call` method can optionally be defined with an argument. The argument can be named whatever you wish. It's named `runner` in the example. The `runner` argument is the instance of the class that handles running the hook.  It can be use to access metadata about the running terraspace command. An example may help:
 
-When the `execute` option a Ruby object, then Terraspace runs the hook within the **same** process. It means the hook can affect the **same** environment. IE: Setting environment variables.
+app/stacks/demo/config/hooks/terraspace.rb
+
+```ruby
+class ShowContext
+  def call(runner)
+    mod = runner.mod
+
+    puts "runner #{runner}"
+    puts "runner.hook #{runner.hook}"
+
+    puts "mod #{mod}"
+    puts "mod.name #{mod.name}"
+    puts "mod.build_dir #{mod.build_dir}"
+    puts "mod.cache_dir #{mod.cache_dir}"
+    puts "mod.root #{mod.root}"
+    puts "mod.type #{mod.type}"
+    puts "mod.type_dir #{mod.type_dir}"
+    puts "mod.options #{mod.options}"
+
+    puts("Terraspace.root #{Terraspace.root}")
+    puts("Terraspace.env #{Terraspace.env}")
+
+    # Example of creating an expander. Note: Interface may change
+    expander = TerraspacePluginAws::Interfaces::Expander.new(mod)
+    puts "expander.account #{expander.account}"
+  end
+end
+
+before("build",
+  execute: ShowContext,
+)
+```
+
+The example puts out some example values accessible via the `runner` object.  It also includes an example of creating an expander object to get the current account. Note, the interface is for plugins and may change.
+
+**Question**: How about other helper methods? Like `outputs` and `aws_ssm`?
+
+Currrently, other helpers are not available within this runner context. This has to due with how helpers are currently designed to work specifically with tfvars dependency graph processing logic. Will consider PRs for improvements.
