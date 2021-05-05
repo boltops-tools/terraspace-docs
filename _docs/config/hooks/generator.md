@@ -2,7 +2,7 @@
 title: Hook Generator
 nav_text: Generator
 categories: hooks
-order: 9
+order: 5
 ---
 
 To help you get started quickly, you can generate starter hook code. Here are some examples:

@@ -47,3 +47,5 @@ In this case, regardless of the hook command succeeding or failing, Terraspace w
 ## Boot Hooks
 
 If you need to hook into the Terraspace boot process super-early on, check out [Boot Hook]({% link _docs/config/boot.md %}).
+
+{% include config/hooks/context.md %}
