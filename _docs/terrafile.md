@@ -22,7 +22,9 @@ To install the modules, run:
 
 Modules are downloaded to your `vendor/modules` folder. You can easily look at the module source code when you need to debug.
 
-A `Terrafile.lock` file is also generated. This file can be committed to version control to ensure that everyone on the team uses the exact same version.
+{% include terrafile/usage.md %}
+
+## Pure Terraform Approach
 
 Of course, you can still use the typical approach of declaring the source directly in the module source code. Here are some [examples from the docs](https://www.terraform.io/docs/modules/sources.html):
 

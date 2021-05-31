@@ -44,9 +44,7 @@ The modules in `Terrafile` are downloaded to the `vendor/modules` folder.
 
 A `Terrafile.lock` file is generated to lock module versions. You can then check in the lockfile into version control.  Other members on your team running `terraspace bundle` will download the **exact** same versions as you.
 
-## How do vendor/modules work?
-
-We can download modules into the `vendor/modules` folder, and Terraspace will know to use them because it's another lookup location that Terraspace considers. This lookup ability is described in the [Lookup Paths Docs]({% link _docs/lookups.md %}). Terraspace is smart enough to build and materialize the Terraform project that it deploys from multiple source folders.
+{% include terrafile/usage.md %}
 
 ## Updating
 
