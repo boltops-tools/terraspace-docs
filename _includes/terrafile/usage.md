@@ -18,4 +18,6 @@ module "bucket" {
 
 A module downloaded to `vendor/modules/s3` is sourced same way as if they were defined in `app/modules/s3`. This is because Terraspace considers multiple lookup paths. Docs: [Lookup Paths]({% link _docs/lookups.md %})
 
+Here's an example repo based on these docs: [boltops-tools/terraspace-demo-terrafile](https://github.com/boltops-tools/terraspace-demo-terrafile)
+
 {% include terrafile/lockfile.md %}
