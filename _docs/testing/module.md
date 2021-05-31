@@ -45,7 +45,6 @@ describe "main" do
     terraspace.build_test_harness(
       name: "example-harness",
       modules: {example: mod_path},
-      stacks:  {example: "#{mod_path}/test/spec/fixtures/stack"}, # folder with the stack module files
     )
     terraspace.up("example")
   end
@@ -57,9 +56,10 @@ describe "main" do
     # Replace with your own test
     expect(true).to be true
     # Example
-    # pp terraspace.outputs
-    # output_value = terraspace.output("example", "some-output")
-    # expect(output_value).to include("some-value")
+    pp terraspace.outputs
+    output_value = terraspace.output("example", "name")
+    # terraform generates a bucket name in the form of "terraform-20210531202051034300000001"
+    expect(output_value).to include("terraform-")
   end
 end
 ```
