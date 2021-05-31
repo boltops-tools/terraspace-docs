@@ -13,7 +13,7 @@ Let's say you have terraform stack named demo:
     ├── outputs.tf
     └── variables.tf
 
-We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) to create a `app/stacks/demo/test/spec/main_spec.rb` test.
+We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) run from the **root** of the terraspace project to create a `app/stacks/demo/test/spec/main_spec.rb` test.
 
     terraspace new test example --type stack
 
@@ -69,7 +69,7 @@ end
 
 ### Run Tests
 
-To run the test, you should be in the module folder itself.
+To run the test, you should be **within** in the module folder itself.
 
     cd app/stacks/demo
     bundle

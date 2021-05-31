@@ -4,6 +4,8 @@ title: Module-Level Testing
 
 Module-level testing refers to testing specific modules. Their tests live within the module's folder itself and are meant to be ran independently.
 
+Here's an repo with module test demo based on these docs: [boltops-tools/terraspace-module-test-demo](https://github.com/boltops-tools/terraspace-module-test-demo)
+
 ## Structure
 
 Let's say you have terraform module named example:
@@ -13,7 +15,7 @@ Let's say you have terraform module named example:
     ├── outputs.tf
     └── variables.tf
 
-We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) to create a `app/modules/example/test/spec/main_spec.rb` test.
+We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) run from the **root** of the terraspace project to create a `app/modules/example/test/spec/main_spec.rb` test.
 
     terraspace new test example --type module
 
@@ -64,7 +66,7 @@ end
 
 ### Run Tests
 
-To run the test, you should be in the module folder itself.
+To run the test, you should be **within** in the module folder itself.
 
     cd app/modules/example
     bundle
