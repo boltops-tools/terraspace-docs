@@ -31,7 +31,7 @@ Knowing a little bit about how Terraspace internals will you help understand the
 
 ## Dependency Must Be Defined in tfvars
 
-Only tfvars files respect the use of the `output` and `depends_on` helpers. By desgin, Terraspace avoids the double processing of other files like `main.tf`. So you must declare dependencies in tfvars.
+Only tfvars files respect the use of the `output` and `depends_on` helpers. When `terraspace all` runs, it double processes tfvars files with ERB/ruby. The 1st pass figures out the dependency graph. The 2nd pass fetches the output values from the resolved graph. By design, Terraspace avoids the double processing of other files like `main.tf`. So you must declare dependencies in tfvars. Related issue [#115](https://github.com/boltops-tools/terraspace/issues/115)
 
 ## OutputProxy Object
 
