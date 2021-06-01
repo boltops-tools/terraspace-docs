@@ -13,6 +13,7 @@ title: CLI Reference
 * [terraspace console]({% link _reference/terraspace-console.md %})
 * [terraspace down]({% link _reference/terraspace-down.md %})
 * [terraspace fmt]({% link _reference/terraspace-fmt.md %})
+* [terraspace force_unlock]({% link _reference/terraspace-force_unlock.md %})
 * [terraspace info]({% link _reference/terraspace-info.md %})
 * [terraspace init]({% link _reference/terraspace-init.md %})
 * [terraspace list]({% link _reference/terraspace-list.md %})
