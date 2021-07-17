@@ -10,8 +10,8 @@ The `aws_secret` helper fetches secret data from AWS Secrets Manager.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= aws_secret('demo-#{Terraspace.env}-user') %>"
-    pass = "<%= aws_secret('demo-#{Terraspace.env}-pass') %>"
+    user = "<%= aws_secret("demo-#{Terraspace.env}-user") %>"
+    pass = "<%= aws_secret("demo-#{Terraspace.env}-pass") %>"
 
 For example if you have these secret values:
 
