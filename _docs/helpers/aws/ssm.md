@@ -10,8 +10,8 @@ The `aws_ssm` helper fetches secret data from AWS SSM Parameter Store.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= aws_ssm("/demo/#{Terraspace.env}/user") %>"
-    pass = "<%= aws_ssm("/demo/#{Terraspace.env}/pass") %>"
+    user = "<%= aws_ssm('/demo/#{Terraspace.env}/user') %>"
+    pass = "<%= aws_ssm('/demo/#{Terraspace.env}/pass') %>"
 
 For example if you have these secret values:
 
