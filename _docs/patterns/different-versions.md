@@ -60,7 +60,7 @@ app/stacks/demo/main.tf:
 ```hcl
 module "bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "1.14" # currently the same version for both dev and prod
+  version = "2.5.0" # currently the same version for both dev and prod
 }
 ```
 
@@ -95,10 +95,10 @@ app/stacks/bucket/config/helpers/version_helper.rb
 module Terraspace::Module::Demo::VersionHelper
   def version
     map = {
-      dev:  "1.14",
-      prod: "1.15",
+      dev:  "2.5.0",
+      prod: "2.6.0",
     }
-    map[Terraspace.env.to_sym] || "1.14"
+    map[Terraspace.env.to_sym] || "2.5.0"
   end
 end
 ```
@@ -118,22 +118,22 @@ module "s3-bucket" {
 
 ### Deploy
 
-Now when deployed, dev will use version 1.15
+Now when deployed, dev will use version 2.6.0
 
-    $ TS_ENV=dev  terraspace up demo # use version 1.15
+    $ TS_ENV=dev  terraspace up demo # use version 2.6.0
     $ cat .terraspace-cache/us-west-2/dev/stacks/demo/main.tf
     module "s3-bucket" {
       source  = "terraform-aws-modules/s3-bucket/aws"
-      version = "1.15"
+      version = "2.6.0"
     }
 
-And prod will use 1.14.
+And prod will use 2.5.0.
 
-    $ TS_ENV=prod terraspace up demo # use version 1.14
+    $ TS_ENV=prod terraspace up demo # use version 2.5.0
     $ cat .terraspace-cache/us-west-2/prod/stacks/demo/main.tf
     module "s3-bucket" {
       source  = "terraform-aws-modules/s3-bucket/aws"
-      version = "1.14"
+      version = "2.5.0"
     }
     $
 
