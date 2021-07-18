@@ -20,21 +20,21 @@ First, let's cover the approach people typically take. Usually, folks have a fol
         ├── main.tf
         └── vars.tf
 
-The `dev/main.tf` uses s3 bucket module version 1.15.0
+The `dev/main.tf` uses s3 bucket module version 2.6.0
 
 ```hcl
 module "bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "1.15.0"
+  version = "2.6.0"
 }
 ```
 
-The `prod/main.tf` uses s3 bucket module version 1.14.0
+The `prod/main.tf` uses s3 bucket module version 2.5.0
 
 ```hcl
 module "bucket" {
   source  = "terraform-aws-modules/s3-bucket/aws"
-  version = "1.14.0"
+  version = "2.5.0"
 }
 ```
 
