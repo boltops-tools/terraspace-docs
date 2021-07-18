@@ -25,7 +25,7 @@ Tip: You can also use [terraspace new helper]({% link _reference/terraspace-new-
 
 The custom helper methods will be available to use in the `.tf` files. Example:
 
-app/stacks/demo/bucket.tf
+app/stacks/bucket/main.tf
 
 ```hcl
 resource "random_pet" "this" {
