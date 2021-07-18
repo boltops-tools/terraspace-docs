@@ -95,8 +95,8 @@ app/stacks/bucket/config/helpers/version_helper.rb
 module Terraspace::Module::Demo::VersionHelper
   def version
     map = {
-      dev:  "2.5.0",
-      prod: "2.6.0",
+      dev:  "2.6.0",
+      prod: "2.5.0",
     }
     map[Terraspace.env.to_sym] || "2.5.0"
   end
