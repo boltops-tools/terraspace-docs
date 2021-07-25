@@ -38,7 +38,6 @@ app/modules/example/test/spec/main_spec.rb:
 ```ruby
 describe "main" do
   before(:all) do
-    reconfigure_logging # reconfigure Terraspace.logger to a file
     mod_path = File.expand_path("../..", __dir__) # the source of the module to test is 2 levels up
     # Build terraspace project to use as a test harness
     # Will be located at: /tmp/terraspace/test-harnesses/network

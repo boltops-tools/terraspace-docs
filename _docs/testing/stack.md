@@ -36,7 +36,6 @@ app/stacks/demo/test/spec/main_spec.rb:
 ```ruby
 describe "main" do
   before(:all) do
-    reconfigure_logging # reconfigure Terraspace.logger to a file
     stack_path = File.expand_path("../..", __dir__) # the source of the stack to test is 2 levels up
     ts_root = File.expand_path("../../..", stack_path) # original Terraspace.root
     # Build terraspace project to use as a test harness
