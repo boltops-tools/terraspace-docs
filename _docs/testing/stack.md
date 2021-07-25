@@ -15,7 +15,7 @@ Let's say you have terraform stack named demo:
 
 We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) run from the **root** of the terraspace project to create a `app/stacks/demo/test/spec/main_spec.rb` test.
 
-    terraspace new test example --type stack
+    terraspace new test demo --type stack
 
 The structure will look something like this:
 
