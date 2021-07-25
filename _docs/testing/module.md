@@ -45,6 +45,9 @@ describe "main" do
     terraspace.build_test_harness(
       name: "example-harness",
       modules: {example: mod_path},
+      # See: https://terraspace.cloud/docs/testing/test-harness/
+      # tfvars: {demo: "spec/fixtures/tfvars/test.tfvars"},
+      # config: "spec/fixtures/config",
     )
     terraspace.up("example")
   end

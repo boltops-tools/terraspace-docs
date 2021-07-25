@@ -33,7 +33,7 @@ name | Name of the generated Test Harness. The test harness gets built into `/tm
 modules | List of modules to be included in the Test Harness under the `app/modules` folder. The List can be a simple Array of strings, in which the folder gets copied. Or the list can be a Hash which maps a path to the a `NAME` to the `app/modules/NAME`folder.
 stacks | List of stacks to be included in the Test Harness under the `app/stacks` folder. The List can be a simple Array of strings, in which the folder gets copied. Or the list can be a Hash which maps a path to the `NAME` in the `app/stacks/NAME`folder of the Test Harness.
 tfvars | A Hash that maps either files or folders over to be copied to the `app/stacks/STACK/tfvars` within the Test Harness.
-config | A String with a path to the config folder fixture to be copied to the Test Harness.
+config | A String with a path to the config folder fixture to be copied to the Test Harness.  If using a remote backend, make sure to create a `terraform` subfolder, IE: `config/terraform`
 folders | A generalized List of Strings of folders to copy over from the actual Terraspace project to the Test Harness. This is a generalized method that allows copying of any arbitrary folders from the Terraspace project to the Test Harness.
 
 A good way understand how these Keys work and how to use them is to look at the examples in the next sections.
