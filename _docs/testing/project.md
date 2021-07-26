@@ -8,6 +8,8 @@ Project-level testing belongs with the terraspace project itself. Their tests li
 
 We can use [terraspace new test]({% link _reference/terraspace-new-test.md %}) to create a `spec/demo_spec.rb` test.
 
+    terraspace new test demo --type project
+
 Here's an example of the generated starter spec.
 
 spec/demo_spec.rb:
