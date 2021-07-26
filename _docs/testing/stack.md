@@ -62,6 +62,10 @@ describe "main" do
     # pp terraspace.outputs
     # output_value = terraspace.output("demo", "some-output")
     # expect(output_value).to include("some-value")
+    # More useful helpers:
+    # pp terraspace.state['resources']
+    # pp terraspace.state_resource('random_pet.this')
+    # pp terraspace.state_resource('module.bucket')
   end
 end
 ```
