@@ -26,7 +26,7 @@ Will download module to:
 Terrafile
 
 ```ruby
-mod "webapp", source: "app.terraform.io/demo-qa/s3-webapp/aws" #, clone_with: "https"
+mod "webapp", source: "app.terraform.io/demo-qa/s3-webapp/aws"
 ```
 
 Running:

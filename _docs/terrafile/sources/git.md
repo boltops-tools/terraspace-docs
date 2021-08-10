@@ -1,5 +1,5 @@
 ---
-title: "Git: GitHub, Bitbucket, Mercurial repositories"
+title: "Git: GitHub, Bitbucket, GitLab repositories"
 nav_text: Git
 categories: sources
 order: 1
