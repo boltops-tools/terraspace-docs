@@ -20,6 +20,7 @@ export_to | Overrides the export_to Terrafile level option. IE: `vendor/modules`
 stack | The stack option can be used to specify the source path within the module to copy as a starter example stack. IE: `vendor/modules/examples/simple-vpc` => `app/stacks/vpc`. The `stack` and `stacks` options are aliases. You can use either; they both do the same thing. The `stack` option further explained here [stack options]({% link _docs/terrafile/options/stack.md %}) | nil
 subfolder | The subfolder where the module lives within the repo. By default, the module code is assumed to be at the root of the git repo. You can change it with this setting. | nil
 version | Lock module to specific version. Can also use: `branch`, `ref`, `sha`, `tag`. See [Version Locking]({% link _docs/terrafile/version-locking.md %}) | nil
+clone_with | Protocol to use for `git clone` with private registry source. IE: `https` or `git`
 
 Example Terrafile:
 
@@ -39,6 +40,7 @@ base_clone_url | Base clone url to use. | https://github.com/
 export_to |  Where the modules get exported to saved to. Note, be careful about changing this location to `app/stacks` as the default `export_purge=true` will remove this folder. It's safer to use `export_to` at the mod-level.  | vendor/modules
 export_purge | Whether or not to remove all existing exported modules folder first. If you disable this behavior, then you can manually clear modules out yourself before installing. IE: `rm -r vendor/modules`. | true
 stack_options | The stack options is a global way to set some of the mod-level stack options, IE: purge, dest, etc. See the mod-level [stack option]({% link _docs/terrafile/options/stack.md %}) for more details. | {}
+clone_with | Protocol to use for `git clone` with private registry source. IE: `https` or `git`
 
 Example Terrafile:
 
