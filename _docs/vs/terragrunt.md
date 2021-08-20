@@ -191,4 +191,4 @@ We cover plenty of differences between Terraspace and Terragrunt here. Overall, 
 
 At this point, if you're still wondering what's right for you. Think that theorizing will only get you so far. Building a small test proof-of-concept project with each tool is sometimes the fastest path to reaching a decision. Go out there and start building! A good place to start is the [Terrspace Getting Started Guides]({% link getting-started.md %}).
 
-For another similar comparison, check out this blog post: [Terraspace vs Terragrunt vs Terraspace](https://blog.boltops.com/2020/09/28/terraform-vs-terragrunt-vs-terraspace)
+For another similar comparison, check out this blog post: [Terraform vs Terragrunt vs Terraspace](https://blog.boltops.com/2020/09/28/terraform-vs-terragrunt-vs-terraspace)
