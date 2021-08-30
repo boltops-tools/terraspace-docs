@@ -2,7 +2,7 @@
 title: Terrafile Usage
 ---
 
-{% include terrafile/intro.md %}
+{% include videos/learn/terrafile-intro.md %}
 
 ## Example
 

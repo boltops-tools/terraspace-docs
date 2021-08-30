@@ -5,6 +5,8 @@ categories: hooks
 order: 3
 ---
 
+{% include videos/learn/hooks.md %}
+
 The hook `execute` option can also be provided Ruby code instead of a string.  Here's how it works:
 
 1. When the execute option is a String: Terraspace will shell out and run it as a script.

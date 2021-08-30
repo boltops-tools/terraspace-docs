@@ -2,6 +2,8 @@
 title: Custom Hooks
 ---
 
+{% include videos/learn/hooks.md %}
+
 Terraspace supports a variety of hooks. They can be used to customize and finely control the Terraform lifecycle process.
 
 ## Hook Types

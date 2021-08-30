@@ -2,6 +2,8 @@
 title: Testing
 ---
 
+{% include videos/learn/testing-intro.md %}
+
 Terraspace supports testing with real-resources. It is recommended to use a separate AWS account, Azure subscription, GCP project, or cloud provider equivalent that is dedicated for testing purposes.
 
 The usual testing process will:

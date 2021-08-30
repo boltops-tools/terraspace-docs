@@ -4,6 +4,8 @@ nav_text: SSM
 categories: helpers-aws
 ---
 
+{% include videos/learn/aws-secrets.md %}
+
 The `aws_ssm` helper fetches secret data from AWS SSM Parameter Store.
 
 ## Example

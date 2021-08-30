@@ -2,6 +2,10 @@
 title: Deploy All
 ---
 
+{% include videos/learn.md
+     url="terraspace-fundamentals/lessons/terraspace-all-background-info"
+     img="https://uploads-learn.sandbox.boltops.com/eyp831l4rlkf4wnsmekjpik2v6zm" %}
+
 <div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/GjlWeYAGWIE?rel=0" frameborder="0" allowfullscreen=""></iframe></div></div>
 
 Also, check out the blog post: [Terraspace All: Deploy Multiple Stacks or Terraform Modules At Once](https://blog.boltops.com/2020/09/19/terraspace-all-deploy-multiple-stacks-at-once)

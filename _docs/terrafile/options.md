@@ -2,6 +2,8 @@
 title: Terrafile Options
 ---
 
+{% include videos/learn/terrafile-intro.md %}
+
 Terraspace bundler has several configurable options. The options can apply at the:
 
 1. **Mod level**: These options apply at the mod-level, so they specifically affect each mod only.

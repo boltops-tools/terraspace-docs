@@ -2,6 +2,8 @@
 title: Custom Args
 ---
 
+{% include videos/learn/args.md %}
+
 Terraspace supports customizing the args passed to the `terraform` commands:
 
 ## Args Types

@@ -5,6 +5,10 @@ categories: sources
 order: 1
 ---
 
+{% include videos/learn.md
+     url="terrafile/lessons/terrafile-github-example"
+     img="https://uploads-learn.boltops.com/thg98ta0fwsvxrvj4pdmnu0nepug" %}
+
 ## Example
 
 Terrafile

@@ -4,6 +4,8 @@ nav_text: Secrets
 categories: helpers-aws
 ---
 
+{% include videos/learn/aws-secrets.md %}
+
 The `aws_secret` helper fetches secret data from AWS Secrets Manager.
 
 ## Example

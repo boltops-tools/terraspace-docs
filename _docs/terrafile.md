@@ -2,7 +2,7 @@
 title: Terrafile
 ---
 
-{% include terrafile/intro.md %}
+{% include videos/learn/terrafile-intro.md %}
 
 ## Best of Both Worlds
 

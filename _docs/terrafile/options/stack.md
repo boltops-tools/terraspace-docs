@@ -2,6 +2,10 @@
 title: Terrafile Stack Options
 ---
 
+{% include videos/learn.md
+     url="terrafile/lessons/terrafile-stack-option"
+     img="https://uploads-learn.boltops.com/r5cgm4f2ced9s5pih9okpyxs6ums" %}
+
 Terraspace can copy starter examples within the downloaded module to the `app/stacks` folder.  This is controlled with the `stack` option. Terraspace is also smart enough to rewrite the module `source` attribute to point to the correct location.  It practically writes code for you, saving you time. 😁
 
 ## Summary Table

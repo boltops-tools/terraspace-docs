@@ -5,6 +5,8 @@ categories: helpers-custom
 order: 2
 ---
 
+{% include videos/learn/custom-helpers.md %}
+
 Stack-Level helpers are only locally available to the specific stack they are defined in.
 
 ## Example

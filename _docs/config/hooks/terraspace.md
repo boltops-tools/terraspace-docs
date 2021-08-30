@@ -5,6 +5,8 @@ categories: hooks
 order: 2
 ---
 
+{% include videos/learn/hooks.md %}
+
 You can use hooks to run scripts at specific steps of the Terraspace lifecycle. These lifecycle points occur at a higher-level than the `terraform` commands.
 
 ## Lifecycle Hooks

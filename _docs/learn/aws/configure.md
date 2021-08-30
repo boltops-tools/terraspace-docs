@@ -2,6 +2,8 @@
 title: Configure AWS
 ---
 
+{% include videos/learn/terraspace-getting-started-with-aws.md %}
+
 Configure AWS so Terraspace can connect to it. The recommended way is to:
 
 1. set up the `~/.aws/config` and `~/.aws/credentials` files

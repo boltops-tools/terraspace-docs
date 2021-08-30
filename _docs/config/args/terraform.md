@@ -5,6 +5,8 @@ categories: args
 order: 8
 ---
 
+{% include videos/learn/args.md %}
+
 Terraspace calls out to the `terraform` command. You can configure common arguments for commands with `config/args/terraform.rb`.
 
 ## Example
