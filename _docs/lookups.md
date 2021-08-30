@@ -22,6 +22,12 @@ In this case, there are database and network 3rd parties modules. There's also a
 
 When there are 2 modules with the same name in both the `app/modules` and `vendor/modules` folder, the module in the `app/modules` folder takes higher precedence and wins.
 
+Eventually, terraspace builds all the modules to the `.terraspace-cache` folder. Example:
+
+    .terraspace-cache/us-west-2/dev/modules/database
+    .terraspace-cache/us-west-2/dev/modules/instance
+    .terraspace-cache/us-west-2/dev/modules/network
+
 ## terraspace bundle
 
 The vendor additional lookup location can be particularly useful with modules declared in a [Terrafile]({% link _docs/terrafile/usage.md %}). You can add modules to your Terrafile definition and download them to the `vendor/modules` folder with:
