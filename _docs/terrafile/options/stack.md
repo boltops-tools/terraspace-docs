@@ -18,7 +18,7 @@ dest | The default destination folder is `app/stacks`. Though you can change it 
 examples | Examples folder name. | examples
 name | The stack name. IE: `app/stacks/NAME`. By default, the mod's name is used. | mod's name
 purge | If set to `true`, then the existing `app/stacks/vpc` folder is removed.  The setting defaults to `false`, so Terraspace will not wipe changes you've made. Note, only the specific stack is removed. The rest of the stacks in the `app/stacks` folder are left untouched. You must manually remove other stacks by design. | false
-src | Relative path to the specific example within the examples folder. The `examples/` prefix is optional. | nil
+src | Relative path to the specific example within the examples folder. The `examples/` prefix is optional. Note: You can also set src with `example` or `name`. | nil
 
 ## String Example
 
