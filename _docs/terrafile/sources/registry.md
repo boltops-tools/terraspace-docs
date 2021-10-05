@@ -54,7 +54,7 @@ You can adjust this behavior with the `clone_with` option. IE:
 Terrafile
 
 ```ruby
-mod "webapp", source: "app.terraform.io/demo-qa/s3-webapp/aws", clone_with: `https`
+mod "webapp", source: "app.terraform.io/demo-qa/s3-webapp/aws", clone_with: "https"
 ```
 
 Results in `https` being used.
