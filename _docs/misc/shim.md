@@ -59,6 +59,8 @@ If you want to specify the path where you want the shim to be saved like so:
 
     terraspace new shim --path ~/bin/terraspace
 
+Note, the shim wrapper contains starter code. Though it should generally work for most systems, it might require adjustments depending on your system.
+
 ## Rbenv Shim Slowness
 
 If you are using rbenv, it can be [slow](https://github.com/rbenv/rbenv/issues/70) on some systems. You may want to consider replacing the shim that rbenv generates with a faster one. Here's an example:
