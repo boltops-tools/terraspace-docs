@@ -70,4 +70,4 @@ You can probably use a [Config Hook]({% link _docs/config/hooks.md %}) to set th
 
 ## Recommendation
 
-While it is possible to use a single Terraspace project to provision resources from multiple cloud providers, it is cleaner to have multiple terraspace projects. For example, a terrasapce project for AWS and one for Google. Terraform resource interfaces are not cloud-agnostic anyway. Terraform supports multiple cloud providers, but the Cloud provider interfaces are different.  So the current recommendation is to use separate Terraspace projects.
+While it is possible to use a single Terraspace project to provision resources from multiple cloud providers, it is cleaner to have multiple terraspace projects. For example, a terraspace project for AWS and one for Google. Terraform resource interfaces are not cloud-agnostic anyway. Terraform supports multiple cloud providers, but the Cloud provider interfaces are different.  So the current recommendation is to use separate Terraspace projects.

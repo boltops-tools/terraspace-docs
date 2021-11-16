@@ -11,7 +11,7 @@ reference: true
 
 Run init in built terraform project.
 
-Typically, Terrasapce auto init should handle initialization. You can run init if you need to though.
+Typically, Terraspace auto init should handle initialization. You can run init if you need to though.
 
 ## Example
 
