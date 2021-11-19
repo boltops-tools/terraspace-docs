@@ -8,6 +8,8 @@ title: Terrafile Stack Options
 
 Terraspace can copy starter examples within the downloaded module to the `app/stacks` folder.  This is controlled with the `stack` option. Terraspace is also smart enough to rewrite the module `source` attribute to point to the correct location.  It practically writes code for you, saving you time. 😁
 
+Also see: [terraspace bundle example command]({% link _docs/terrafile/example.md %}).
+
 ## Summary Table
 
 The stack option can understand a String or Hash. In its String form, you're setting the stack src. With the Hash form, you have more fine-grain control over the options to set. Here's a table with the options:
