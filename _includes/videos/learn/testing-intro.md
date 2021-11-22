@@ -1,3 +1,3 @@
 {% include videos/learn.md
      url="terraspace-testing/lessons/terraspace-testing-introduction-the-test-harness"
-     img="https://uploads-learn.sandbox.boltops.com/t9se839vias53lplx41dphl1atfc" %}
+     img="https://uploads-learn.boltops.com/ytpz0r4p3ncpf5ah3iszqch0uavq" %}

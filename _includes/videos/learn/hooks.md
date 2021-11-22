@@ -1,3 +1,3 @@
 {% include videos/learn.md
-     url="terraspace-fundamentals/lessons/terraspace-generators"
-     img="https://uploads-learn.sandbox.boltops.com/oqt2196awbp5gt3vp32pvb0agjig" %}
+     url="terraspace-fundamentals/lessons/terraspace-hooks"
+     img="https://uploads-learn.boltops.com/x9lo04j325ls0ynk7iwpkwhvyozs" %}

@@ -4,7 +4,7 @@ title: Deploy All
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-all-background-info"
-     img="https://uploads-learn.sandbox.boltops.com/eyp831l4rlkf4wnsmekjpik2v6zm" %}
+     img="https://uploads-learn.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
 
 <div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/GjlWeYAGWIE?rel=0" frameborder="0" allowfullscreen=""></iframe></div></div>
 

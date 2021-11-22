@@ -6,7 +6,7 @@ categories: vs
 
 {% include videos/learn.md
      url="terraspace-and-terragrunt/lessons/terragrunt-to-terraspace-step-by-step-migration"
-     img="https://uploads-learn.sandbox.boltops.com/pty4medoo4yj8wnuufgo7lk4xb0l" %}
+     img="https://uploads-learn.boltops.com/pk0ikml50x5rjk3uysn9yj6togse" %}
 
 Terraspace and Terragrunt are different beasts. Terragrunt started off as a thin wrapper tool and grew into the tool it is today. Terraspace started off as a framework. This is one of the reasons their workflow, structure, and design are entirely different.
 

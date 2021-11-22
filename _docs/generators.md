@@ -2,6 +2,8 @@
 title: Generators
 ---
 
+{% include videos/learn/generators.md %}
+
 Terraspace ships with a few generators to help you get building modules quickly. The common ones.
 
     terraspace new module NAME   # Generates new module

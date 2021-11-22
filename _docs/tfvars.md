@@ -4,7 +4,7 @@ title: Tfvars & Layering
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-tfvars-and-layering-reusing-code"
-     img="https://uploads-learn.sandbox.boltops.com/iosqrl57a940h5mdkk05jdv52bze" %}
+     img="https://uploads-learn.boltops.com/lumdbxxfk591zlxmck7ofavl0xxr" %}
 
 Terraspace supports looking up tfvar files in conventional locations. This encourages an organized structure.
 

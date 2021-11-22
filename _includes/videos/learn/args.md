@@ -1,3 +1,3 @@
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-customizing-terraform-args"
-     img="https://uploads-learn.sandbox.boltops.com/u634kykyezgtmmp7v997kl3qfw8t" %}
+     img="https://uploads-learn.boltops.com/qqsk5q0j1zsqu9kntrkf7unrak5e" %}
