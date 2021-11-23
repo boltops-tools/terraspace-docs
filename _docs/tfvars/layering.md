@@ -35,7 +35,7 @@ Terraform automatically loads all files in the directory with any variation of `
 
 ## Other Ways to Set Variables
 
-There are other ways to specific tfvar files:
+There are other ways to specify tfvar files:
 
 * Specify the terraspace `--var-files` option on-the-fly.
 * Specify var files with [CLI Args]({% link _docs/config/args/terraform.md %}).
