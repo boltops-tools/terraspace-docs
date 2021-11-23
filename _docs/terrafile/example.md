@@ -2,6 +2,10 @@
 title: Terraspace Bundle Example Command
 ---
 
+{% include videos/learn.md
+     url="terraspace-terrafile/lessons/terrafile-bundle-example-command"
+     img="https://uploads-learn.boltops.com/gpbbmgad43urpz2h106sfe7hctrv" %}
+
 Terraspace bundler has the ability to import example from a module's examples folder with:
 
     terraspace bundle example MOD EXAMPLE
