@@ -1,4 +1,4 @@
-Tfvar should be place within the `app/stacks/MOD` folder. Example:
+Tfvar files should be place within the `app/stacks/MOD` folder. Example:
 
     app/stacks/demo
     ├── main.tf
