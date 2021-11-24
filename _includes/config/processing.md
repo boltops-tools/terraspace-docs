@@ -1,6 +1,6 @@
-Files that end with `.tf` and `.rb` get processed with different strategies as part of being built.
+Files that end with `.tf`, `.tfvars` and `.rb` get processed with different strategies as part of being built.
 
-Extension | Strategy
+Extensions | Strategy
 --- | ---
-.tf | Will be processed with ERB. This allows add a little extra power to the Terraform HCL language with templating logic.
+.tf and .tfvars | Will be processed with ERB. This allows add a little extra power to the Terraform HCL language with templating logic.
 .rb | Will be processed by the Terraspace Ruby DSL. This allows you to write Terraform code with Ruby.
