@@ -28,7 +28,10 @@ We set up `ARM_SUBSCRIPTION_ID`, `ARM_CLIENT_SECRET`, `ARM_TENANT_ID`, `ARM_CLIE
 
 The [azure_check](https://github.com/boltops-tools/azure_check) script is useful to check that access is working. You should get something like this.
 
-    $ ruby azure_check.rb
+    $ git clone https://github.com/boltops-tools/azure_check
+    $ cd azure_check
+    $ bundle
+    $ bundle exec ruby azure_check.rb
     Successfully connected to Azure with your ARM_CLIENT_ID and ARM_CLIENT_SECRET
     $
 
