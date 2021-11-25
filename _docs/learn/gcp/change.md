@@ -17,6 +17,7 @@ module "bucket" {
 
   name                        = "bucket-${random_pet.this.id}"
   uniform_bucket_level_access = var.uniform_bucket_level_access
+  location                    = var.location
 }
 ```
 
@@ -29,6 +30,12 @@ variable "uniform_bucket_level_access" {
   description = "uniform_bucket_level_access"
   type        = bool
   default     = false
+}
+
+variable "location" {
+  description = "location"
+  type        = string
+  default     = "US"
 }
 ```
 
@@ -50,6 +57,7 @@ app/stacks/demo/tfvars/dev.tfvars
 ```terraform
 # Optional variables:
 # uniform_bucket_level_access = false
+# location                    = "US"
 ```
 
 Terraspace parses the `demo/variables.tf` file to generate the `tfvars/dev.tfvars` file.  It detected that all the variables are optional.  We'll uncomment uniform_bucket_level_access and change it to `uniform_bucket_level_access = true`.
@@ -59,6 +67,7 @@ app/stacks/demo/tfvars/dev.tfvars
 ```terraform
 # Optional variables:
 uniform_bucket_level_access = true
+# location                    = "US"
 ```
 
 Next, we'll update the infrastructure.

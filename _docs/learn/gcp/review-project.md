@@ -15,6 +15,7 @@ main.tf
 resource "google_storage_bucket" "this" {
   name                        = var.name
   uniform_bucket_level_access = var.uniform_bucket_level_access
+  location                    = var.location
 }
 ```
 
@@ -30,6 +31,12 @@ variable "uniform_bucket_level_access" {
   description = "uniform_bucket_level_access"
   type        = bool
   default     = false
+}
+
+variable "location" {
+  description = "location"
+  type        = string
+  default     = "US"
 }
 ```
 
@@ -51,6 +58,7 @@ module "bucket" {
 
   name                        = "bucket-${random_pet.this.id}"
   uniform_bucket_level_access = var.uniform_bucket_level_access
+  location                    = var.location
 }
 ```
 
