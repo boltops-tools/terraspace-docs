@@ -18,9 +18,15 @@ When you run `az login` you'll be greeted with instructions to open up a webpage
     To sign in, use a web browser to open the page https://microsoft.com/devicelogin and enter the code EXAMPLE12 to authenticate.
     $
 
-That's usually enough to set up the `az` CLI. You can check with:
+Note: You might have to specify the tenant id.
+
+    az login --tenant $ARM_TENANT_ID
+
+That's usually enough to set up the `az` CLI. Here are some commands to check access:
 
     az account list -o table
+    az group list | jq '.[].name'
+    az storage account list | jq '.[].name'
 
 ## Set up env variables
 
