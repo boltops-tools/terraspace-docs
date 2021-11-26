@@ -3,6 +3,8 @@ title: Deploy Infrastructure
 search_title: Deploy Infrastructure Google
 ---
 
+{% include videos/learn/terraspace-getting-started-with-google.md %}
+
 Let's go ahead and deploy the infrastructure
 
     $ terraspace up demo

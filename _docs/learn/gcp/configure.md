@@ -2,6 +2,8 @@
 title: Configure Google Cloud
 ---
 
+{% include videos/learn/terraspace-getting-started-with-google.md %}
+
 Configure Google Cloud so Terraspace can connect to it. The recommended way is to:
 
 1. set up the `~/.gcp/credentials.json`

@@ -2,6 +2,8 @@
 title: Configure Azure
 ---
 
+{% include videos/learn/terraspace-getting-started-with-azure.md %}
+
 Configure Azure so Terraspace can connect to it. The recommended way is to:
 
 1. login with `az login`

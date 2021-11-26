@@ -3,6 +3,8 @@ title: Destroy Infrastructure
 search_title: Destroy Infrastructure Google
 ---
 
+{% include videos/learn/terraspace-getting-started-with-google.md %}
+
 Now that we've seen how to deploy infra, let's clean up and tear down the resources.
 
 To destroy the resources, run:

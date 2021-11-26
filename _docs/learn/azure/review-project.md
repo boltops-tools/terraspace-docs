@@ -3,6 +3,8 @@ title: Review Project
 search_title: Review Project Google
 ---
 
+{% include videos/learn/terraspace-getting-started-with-azure.md %}
+
 Let's explore the generated app folder.
 
 ## App Modules
