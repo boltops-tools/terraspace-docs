@@ -62,7 +62,7 @@ terraform
 terraform
   terraform {
     backend "azurerm" {
-    resource_group_name = "<%= expansion('terraform-resources-:LOCATION') %>"
+    resource_group_name = "<%= expansion(':ENV-:LOCATION') %>"
     storage_account_name = "<%= expansion('ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
     container_name = "terraform-state"
     key = "<%= expansion(':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
@@ -79,7 +79,7 @@ terraform
 {% highlight sh %}
 terraform {
   backend "azurerm" {
-    resource_group_name = "terraform-resources-eastus"
+    resource_group_name = "dev-eastus"
     storage_account_name = "tswxyzeastusdev"
     container_name = "terraform-state"
     key = "eastus/dev/stacks/demo/terraform.tfstate"

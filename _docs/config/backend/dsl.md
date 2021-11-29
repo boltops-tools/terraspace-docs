@@ -22,7 +22,7 @@ config/terraform/backend.rb
 
 ```ruby
 backend("azurerm",
-  resource_group_name:  "terraform-resources-:LOCATION"
+  resource_group_name:  ":ENV-:LOCATION"
   storage_account_name: "ts:SUBSCRIPTION_HASH:LOCATION:ENV"
   container_name:       "terraform-state"
   key:                  ":LOCATION/:ENV/:BUILD_DIR/terraform.tfstate"
