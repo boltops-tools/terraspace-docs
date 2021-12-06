@@ -4,10 +4,6 @@ nav_text: Deploy Multiple
 categories: dependencies
 ---
 
-{% include videos/learn.md
-     url="terraspace-fundamentals/lessons/terraspace-all-walkthrough"
-     img="https://uploads-learn.boltops.com/pc2ag09b2ewsbps4808nlu1ja2kx" %}
-
 Terraspace allows you to deploy multiple stacks with a single command:
 
     terraspace all up

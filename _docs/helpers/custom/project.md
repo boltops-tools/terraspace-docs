@@ -5,8 +5,6 @@ categories: helpers-custom
 order: 1
 ---
 
-{% include videos/learn/custom-helpers.md %}
-
 Project-Level helpers are globally available to all modules.
 
 ## Example

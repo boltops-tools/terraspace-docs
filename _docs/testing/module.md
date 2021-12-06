@@ -2,10 +2,6 @@
 title: Module-Level Testing
 ---
 
-{% include videos/learn.md
-     url="terraspace-testing/lessons/terraspace-testing-how-to-test-terraform-modules"
-     img="https://uploads-learn.boltops.com/2tweitq69wbliuqclefrfyvbd80z" %}
-
 Module-level testing refers to testing specific modules. Their tests live within the module's folder itself and are meant to be ran independently.
 
 Here's an repo with module test demo based on these docs: [boltops-tools/terraspace-demo-module-test](https://github.com/boltops-tools/terraspace-demo-module-test)

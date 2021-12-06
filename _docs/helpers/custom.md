@@ -5,8 +5,6 @@ order: 4
 category: helpers
 ---
 
-{% include videos/learn/custom-helpers.md %}
-
 You can add your own custom helper methods to Terraspace. This is powerful because you can extend and change Terraspace itself.
 
 There are 3 types of helpers:

@@ -5,10 +5,6 @@ categories: sources
 order: 2
 ---
 
-{% include videos/learn.md
-     url="terrafile/lessons/terrafile-terraform-registry-example"
-     img="https://uploads-learn.boltops.com/ism5q4ymslg3aifthu658oda37vv" %}
-
 ## Example: Public
 
 Terrafile

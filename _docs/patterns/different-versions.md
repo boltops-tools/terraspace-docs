@@ -4,10 +4,6 @@ nav_text: Different Module Versions
 category: patterns
 ---
 
-{% include videos/learn.md
-     url="terraspace-fundamentals/lessons/terraspace-use-different-modules-for-dev-and-prod"
-     img="https://uploads-learn.boltops.com/687m3xqcbrgixw81tmfkk3ftbp7i" %}
-
 We'll cover how to use different versions of a module for the dev and prod environments.
 
 ## What People Usually Do

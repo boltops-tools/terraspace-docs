@@ -2,10 +2,6 @@
 title: Stack-Level Testing
 ---
 
-{% include videos/learn.md
-     url="terraspace-testing/lessons/terraspace-testing-how-to-test-terraspace-stacks"
-     img="https://uploads-learn.boltops.com/oabc35ebzbyij8hkbfg8n2ft6tzj" %}
-
 Stack-level testing refers to testing specific stacks. Their tests live within the stack's folder itself and are meant to be ran independently.
 
 ## Structure

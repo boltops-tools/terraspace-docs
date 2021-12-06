@@ -5,8 +5,6 @@ categories: helpers-custom
 order: 3
 ---
 
-{% include videos/learn/custom-helpers.md %}
-
 Module-Level helpers are only locally available to the specific module they are defined in.
 
 ## Example
