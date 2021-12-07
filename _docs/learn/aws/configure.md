@@ -13,7 +13,7 @@ Configure AWS so Terraspace can connect to it. The recommended way is to:
 
 ~/.aws/config
 
-    [dev]
+    [profile dev]
     output = json
     region = us-west-2
 
