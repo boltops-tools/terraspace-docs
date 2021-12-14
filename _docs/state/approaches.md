@@ -2,6 +2,8 @@
 title: Terraform Statefile Approaches and Thoughts
 ---
 
+{% include videos/youtube.md video_id="GHGU0HXF4p8" %}
+
 {% include state/preamble.md %}
 
 ## General Approaches
