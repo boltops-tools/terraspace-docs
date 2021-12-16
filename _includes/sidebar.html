@@ -63,7 +63,14 @@
       </li>
       <li><a href="{% link _docs/install.md %}">Install</a>
         <ul>
-          <li><a href="{% link _docs/install/gem.md %}">Gem</a></li>
+          <li><a href="{% link _docs/install/gem.md %}">Gem</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","gem" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
           <li><a href="{% link _docs/install/standalone.md %}">Standalone</a>
             <ul>
               {% assign docs = site.docs | where: "categories","standalone" | sort:"order" %}
