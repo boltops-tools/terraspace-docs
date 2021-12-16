@@ -52,3 +52,7 @@ So is it better to leave versions free?
 Of course not. As often the answer, it depends. It's often pragmatic to consider dependencies each closely on a case-by-case basis. Currently, the generated Gemfile is a small list. Additional gem versions may be added as cases are considered.
 
 The issue can also be helped in another way: by reducing the dependencies footprint. In future Terraspace versions, hoping to move provider plugins moved out of the core terraspace gem and add them as part of the `Gemfile` only. This should further reduce the chances of dependencies causing issues.
+
+## Terrapace Shim Wrapper
+
+On certain system setups, you may also want or need to add a [terraspace shim]({% link _docs/misc/shim.md %}) to ensure that `bundle exec` gets called early enough. It's really system-dependent. Details are covered here: [Shim Wrapper]({% link _docs/misc/shim.md %}).
