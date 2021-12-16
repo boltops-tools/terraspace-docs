@@ -6,7 +6,7 @@ A shim wrapper can be useful for some cases.
 
 ## Bundler already activated Warnings
 
-For example, if you've [multiple versions of terraspace installed]({% link _docs/misc/multiple-terraspace.md %}) it can sometimes lead to dependencies resolution issues, and you'll see errors like this:
+For example, if you've [multiple versions of terraspace installed]({% link _docs/install/gem/multiple-versions.md %}) it can sometimes lead to dependencies resolution issues, and you'll see errors like this:
 
     You have already activated google-apis-core 0.3.0, but your Gemfile requires google-apis-core 0.2.1. Prepending `bundle exec` to your command may solve this.
 
@@ -77,4 +77,4 @@ If you are using rbenv, it can be [slow](https://github.com/rbenv/rbenv/issues/7
 
 ## Why The Need For bundle exec?
 
-See: [Multiple Terraspace Versions]({% link _docs/misc/multiple-terraspace.md %})
+See: [Multiple Terraspace Versions]({% link _docs/install/gem/multiple-versions.md %})

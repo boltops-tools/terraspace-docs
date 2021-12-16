@@ -1,5 +1,8 @@
 ---
-title: Multiple Terraspace Versions
+title: Installing and Using Multiple Versions of Terraspace
+nav_text: Multiple Versions
+category: gem
+order: 3
 ---
 
 If you're interested in running multiple or different versions of terraspace on the same machine, this page can help.
