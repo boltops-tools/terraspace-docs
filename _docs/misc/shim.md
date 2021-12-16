@@ -74,3 +74,7 @@ If you are using rbenv, it can be [slow](https://github.com/rbenv/rbenv/issues/7
     else
       exec $EXE "$@"
     fi
+
+## Why The Need For bundle exec?
+
+See: [Multiple Terraspace Versions]({% link _docs/misc/multiple-terraspace.md %})

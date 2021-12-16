@@ -28,7 +28,7 @@ Change terraspace version in Gemfile:
     0.6.2
     $
 
-## Long Answer: Why
+## Long Answer: Why bundle exec?
 
 The key to running multiple versions is understanding how ruby, bundler, and system paths work. You see, when you run **any** cli command with `bundle exec` pretended, it affects the system load path.
 
