@@ -45,7 +45,7 @@ Consider how Terraform itself handles version locking of providers and modules. 
 
 Locking versions can provide stability, especially since the speed at which terraform move is quick. At the same time, because terraform moves rapidly, locking versions means you won't get the latest updates and fixes. In practice, this can also break things and cause the very thing you were trying to prevent: instability.
 
-Because pinned versions are too old, they're is not really being tested by the community. So you end up unlocking the versions and updating everything in one big go to fix things. It becomes a mouse-and-cat game of updating versions and in hopes of fixing the breakage. To compress matters, this often happens at a non-ideal time. The updates would have of happened more incrementally had the versions been more "free".
+Because pinned versions are too old, they're is not really being tested by the community. So you end up unlocking the versions and updating everything in one big go to fix things. It becomes a mouse-and-cat game of updating versions in hopes of fixing the breakage. To compress matters, this often happens at a non-ideal time. The updates would have of happened more incrementally had the versions been more "free".
 
 So is it better to leave versions free?
 
