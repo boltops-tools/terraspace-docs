@@ -30,7 +30,7 @@ The `rake build` command produces a `.gem` file that can be used to install the 
     0.6.22.custom
 
 
-Or on any machine with a Ruby installed. You can copy it to a machine, ssh into the machine and install it:
+Or on any machine with a Ruby installed. You can copy it to the machine, ssh into it, and install the custom gem:
 
     $ scp pkg/terraspace-0.6.22.custom.gem user@server.com:
     $ ssh user@server.com
