@@ -19,18 +19,17 @@ module Terraspace
 end
 ```
 
-Build the gem package.
+Build the gem package:
 
     $ bundle
     $ rake build
     pkg/terraspace-0.6.22.custom.gem
 
-The `rake build` command produces a `.gem` file that can be used to install the gem. You can install it locally:
+The produced `.gem` can used to install the gem. You can install it locally:
 
-    $ gem install terraspace-0.6.22.custom.gem
+    $ gem install pkg/terraspace-0.6.22.custom.gem
     $ terraspace -v
     0.6.22.custom
-
 
 Or on any machine with a Ruby installed. You can copy it to the machine, ssh into it, and install the custom gem:
 
