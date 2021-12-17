@@ -10,7 +10,7 @@ For example, if you've [multiple versions of terraspace installed]({% link _docs
 
     You have already activated google-apis-core 0.3.0, but your Gemfile requires google-apis-core 0.2.1. Prepending `bundle exec` to your command may solve this.
 
-This is due to the ruby system and bundler `Gemfile.lock` dependencies not matching.  A coupon of options:
+This is due to the ruby system and bundler `Gemfile.lock` dependencies not matching.  There are a couple of options:
 
 1. **bundle update**: Update `Gemfile.lock` with bundle update.
 2. **shim wrapper**: Run `bundle exec` in front of your commands with a shim wrapper.
