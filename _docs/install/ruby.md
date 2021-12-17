@@ -79,7 +79,7 @@ Then install different ruby versions. Example:
 
 ### Uninstall Ruby and rbenv
 
-To unistall with homebrew:
+To uninstall with homebrew:
 
     brew uninstall rbenv
 
