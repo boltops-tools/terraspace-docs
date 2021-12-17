@@ -41,7 +41,7 @@ Considering adding additional version specifiers in the generated `Gemfile`, but
 
 **An analogy:**
 
-Consider how Terraform itself handles version locking of providers and modules. You can always specify pinned versions of providers like aws, azurerm, or google in your `provider.tf`. Where you use the `module` keyword to source in a module, you can also specify specific versions to lock the module down. This has been practice has been repeated often enough that it often goes unquestioned without considering the trade-offs.
+Consider how Terraform itself handles version locking of providers and modules. You can always specify pinned versions of providers like aws, azurerm, or google in your `provider.tf`. Where you use the `module` keyword to source in a module, you can also specify specific versions to lock the module down. This practice has been repeated often enough that it often goes unquestioned without considering the trade-offs.
 
 Locking versions can provide stability, especially since the speed at which terraform move is quick. At the same time, because terraform moves rapidly, locking versions means you won't get the latest updates and fixes. In practice, this can also break things and cause the very thing you were trying to prevent: instability.
 
