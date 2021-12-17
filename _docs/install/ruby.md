@@ -13,7 +13,7 @@ You can also simply install rbenv by cloning down the rbenv repo to `~/.rbenv`.
 
     git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 
-    cat << EOF >> ~/.bash_profile
+    cat << 'EOF' >> ~/.bash_profile
     export PATH="$HOME/.rbenv/bin:$PATH"
     eval "$(rbenv init -)"
     EOF
