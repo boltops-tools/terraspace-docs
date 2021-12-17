@@ -37,6 +37,14 @@ Then install different ruby versions. Example:
     rbenv global 3.0.3
     echo 3.0.3 > ~/.ruby-version # on some systems this is needed
 
+### Uninstall Ruby and rbenv
+
+The nice thing about using rbenv is that the Ruby installation is isolated to ~/.rbenv. So you could always remove it with:
+
+    rm -rf ~/.rbenv
+
+And removing the 2 lines of rbenv configuration in `~/.bash_profile`.
+
 ## 2. Install rbenv with homebrew
 
 You can install rbenv with homebrew also:
@@ -68,6 +76,12 @@ Then install different ruby versions. Example:
     rbenv install 3.0.3
     rbenv global 3.0.3
     echo 3.0.3 > ~/.ruby-version # on some systems this is needed
+
+### Uninstall Ruby and rbenv
+
+To unistall with homebrew:
+
+    brew uninstall rbenv
 
 ## Notes
 
