@@ -19,6 +19,8 @@ module Terraspace
 end
 ```
 
+Build the gem package.
+
     $ bundle
     $ rake build
     pkg/terraspace-0.6.22.custom.gem
