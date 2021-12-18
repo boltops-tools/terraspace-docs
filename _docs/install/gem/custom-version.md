@@ -31,7 +31,7 @@ The produced `.gem` can used to install the gem. You can install it locally:
     $ terraspace -v
     0.6.22.custom
 
-Or on any machine with a Ruby installed. You can copy it to the machine, ssh into it, and install the custom gem:
+Or on any machine with Ruby installed. You can copy it to the machine, ssh into it, and install the custom gem:
 
     $ scp pkg/terraspace-0.6.22.custom.gem user@server.com:
     $ ssh user@server.com
