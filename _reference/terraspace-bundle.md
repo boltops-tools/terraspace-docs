@@ -30,6 +30,12 @@ Bundle with Terrafile.
 
     terraspace bundle info MODULE
 
+## Import Example As Stack
+
+You can import a module's example as a stack.
+
+    terraspace bundle example MODULE EXAMPLE
+
 
 ## Options
 

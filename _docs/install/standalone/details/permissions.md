@@ -40,3 +40,5 @@ When the `/opt/terraspace` folder is not owned by your user, you won't be able t
       Password:
 
 To fix this issue, make sure `/opt/terraspace` is owned by your user, instead of repeatedly having to type your password for sudo.
+
+Also, running `sudo` means you're using bare shell with pretty much none of your environment settings or variables configured. Though there are ways to [preserve](https://stackoverflow.com/questions/8633461/how-to-keep-environment-variables-when-using-sudo) environment variables with `--preserve-env`, it's often better to avoid sudo as you'll run into different environmental differences and quirks.

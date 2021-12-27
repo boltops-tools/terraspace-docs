@@ -2,7 +2,7 @@
 title: Installing and Using Multiple Versions of Terraspace
 nav_text: Multiple Versions
 category: gem
-order: 3
+order: 1
 ---
 
 If you're interested in running multiple or different versions of terraspace on the same machine, this page can help.
@@ -31,25 +31,7 @@ Change terraspace version in Gemfile:
     0.6.2
     $
 
-## Long Answer: Why bundle exec?
-
-The key to running multiple versions is understanding how ruby, bundler, and system paths work. You see, when you run **any** cli command with `bundle exec` pretended, it affects the system load path.
-
-Example without:
-
-    terraspace version
-
-Example with:
-
-    bundle exec terraspace version
-
-The `bundle exec` is a wrapper that adjusts the load path. By using `bundle exec`, it ensures that the exact versions specified in `Gemfile.lock` are used. This includes, not only terraspace, but all ruby gems.
-
-When you don't use `bundle exec`, ruby uses the system load path. The versions that then get used are more dependent on your environment and how your system has been configured. In this case, Ruby has little choice but to make some assumptions, and usually, it uses the latest version.
-
-So when using terraspace without `bundle exec`, the latest terraspace version is used. Terraspace takes an extra step to help. It calls `bundle exec` early [internally](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/autoloader.rb#L2) also. This ensures that all other dependencies are locked to `Gemfile.lock`. Terraspace is only able to pin all other gems at that point, though. This approach does conveniently spare you from having to type `bundle exec` and works great for most cases.
-
-It won't work when there's a later version of terraspace installed on the system, and your `Gemfile.lock` pins a different terraspace version. In this case, you'll need to use `bundle exec` or uninstall other versions of terraspace from your system.
+To avoid having to remember to type `bundle exec`, you can use a [shim]({% link _docs/install/shim.md %}).
 
 ## Version Checking within Project Code
 
@@ -86,4 +68,4 @@ The code starts to get messy, but it's an option. Instead, the general recommend
 
 ## Shim Wrapper
 
-If have multiple versions of terraspace on the same system, you should always use the `bundle exec` command when you're inside the Terraspace project. This ensures that the terraspace version in the project's `Gemfile.lock` is used.  Typing `bundle exec` can get old quick, so you can use a [shim wrapper]({% link _docs/misc/shim.md %}) to save yourself previous finger-typing energy.
+If have multiple versions of terraspace on the same system, you should always use the `bundle exec` command when you're inside the Terraspace project. This ensures that the terraspace version in the project's `Gemfile.lock` is used.  Typing `bundle exec` can get old quick, so you can use a [shim wrapper]({% link _docs/install/shim.md %}) to save yourself previous finger-typing energy.

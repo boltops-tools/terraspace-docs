@@ -25,6 +25,12 @@ Most users have `/usr/local/bin` configured in there PATH. So these wrappers sho
 
 If you wish not to have these wrappers generated for you, set `export TS_WRAPPERS=0` before running the installer. Without the wrapper scripts, to complete the terraspace standalone installation, you must add `/opt/terraspace/embedded/bin` to your PATH. See: [embedded bin path]({% link _docs/install/standalone/details/path.md %}).
 
+## Terraspace wrapper
+
+The terraspace wrapper shim is unique in that it ensures that `bundle exec` is prepended when you are within a Terraspace project. It looks something like this:
+
+{% include install/standalone-shim.md %}
+
 ## Terraform
 
 Terraform is not included with the standalone installer. This allows you to install and run the Terraform version you want to use. Here are [Terraform Install instructions]({% link _docs/install/terraform.md %}).
