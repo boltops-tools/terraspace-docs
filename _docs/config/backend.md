@@ -29,9 +29,14 @@ Running:
 
     terraspace up demo
 
-Builds a `.terraspace-cache/dev/stacks/demo/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`. Below are examples of backends.
+Builds a `.terraspace-cache/dev/stacks/demo/backend.tf` using the `config/terraform/backend.tf`.  If you want to just build the files without deploying, you can also use `terraspace build`.
 
-{% include tabs.html %}
+## Backend Examples
+
+{% assign docs = site.docs | where: "categories","backend-examples" | sort:"order" %}
+{% for doc in docs -%}
+* [{{ doc.nav_text }}]({{ doc.url }})
+{% endfor %}
 
 ___
 
@@ -50,9 +55,3 @@ Terraspace expansion will remove the trailing dashes and slashes in case the ins
 Will result in:
 
     us-west-2/dev/demo # notice there's no trailing slash
-
-___
-
-## Why Is Env in Bucket Name?
-
-By default, the bucket name has the ENV at the end. This is done so we can easily see which environment the bucket stores Terraform statefiles for. This quickly helps with debugging. If you prefer not to have the ENV at the end of the bucket name, remove it after generating the project with `terraspace new project`.

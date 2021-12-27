@@ -108,6 +108,14 @@
           <li><a href="{% link _docs/config/app.md %}">App</a></li>
           <li><a href="{% link _docs/config/backend.md %}">Backend</a>
             <ul>
+              <li><a href="{% link _docs/config/backend/examples.md %}">Examples</a>
+                <ul>
+                {% assign docs = site.docs | where: "categories","backend-examples" | sort:"order" %}
+                {% for doc in docs -%}
+                  <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+                {% endfor %}
+                </ul>
+              </li>
               <li><a href="{% link _docs/config/backend/variables.md %}">Variables</a></li>
               <li><a href="{% link _docs/config/backend/dsl.md %}">DSL</a></li>
             </ul>
