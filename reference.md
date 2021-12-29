@@ -24,6 +24,7 @@ title: CLI Reference
 * [terraspace providers]({% link _reference/terraspace-providers.md %})
 * [terraspace refresh]({% link _reference/terraspace-refresh.md %})
 * [terraspace seed]({% link _reference/terraspace-seed.md %})
+* [terraspace setup]({% link _reference/terraspace-setup.md %})
 * [terraspace show]({% link _reference/terraspace-show.md %})
 * [terraspace state]({% link _reference/terraspace-state.md %})
 * [terraspace summary]({% link _reference/terraspace-summary.md %})
