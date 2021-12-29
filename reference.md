@@ -6,7 +6,6 @@ title: CLI Reference
 * [terraspace all]({% link _reference/terraspace-all.md %})
 * [terraspace build]({% link _reference/terraspace-build.md %})
 * [terraspace bundle]({% link _reference/terraspace-bundle.md %})
-* [terraspace check_setup]({% link _reference/terraspace-check_setup.md %})
 * [terraspace clean]({% link _reference/terraspace-clean.md %})
 * [terraspace completion]({% link _reference/terraspace-completion.md %})
 * [terraspace completion_script]({% link _reference/terraspace-completion_script.md %})
