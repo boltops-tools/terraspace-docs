@@ -14,5 +14,5 @@ Terraspace calls the `terraform` CLI. You will need terraform installed. Refer t
 
 You can use this command to check your setup:
 
-    terraspace check_setup
+    terraspace setup check
 
