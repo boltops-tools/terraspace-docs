@@ -5,8 +5,6 @@ category: gem
 order: 1
 ---
 
-One of the benefits of installing terraspace as a gem is more control over the installation process.
-
 In the Ruby world locking dependencies are usually handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The generated Terraspace project with [terraspace new project]({% link _reference/terraspace-new-project.md %}) provides a starter Gemfile. It looks something like this:
 
 ```ruby
@@ -55,4 +53,4 @@ The issue can also be helped in another way: by reducing the dependencies footpr
 
 ## Terrapace Shim Wrapper
 
-On certain system setups, you may also want or need to add a [terraspace shim]({% link _docs/misc/shim.md %}) to ensure that `bundle exec` gets called early enough. It's really system-dependent. Details are covered here: [Shim Wrapper]({% link _docs/misc/shim.md %}).
+On certain system setups, you may also want or need to add a [terraspace shim]({% link _docs/install/shim.md %}) to ensure that `bundle exec` gets called early enough. It's really system-dependent. Details are covered here: [Shim Wrapper]({% link _docs/install/shim.md %}).
