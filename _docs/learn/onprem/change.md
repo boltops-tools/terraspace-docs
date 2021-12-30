@@ -3,39 +3,26 @@ title: Change Infrastructure
 search_title: Change Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
-
 Now that we have bucket created, let's modify it. Here's the `demo/main.tf` again.
 
 app/stacks/demo/main.tf
 
 ```terraform
-resource "random_pet" "this" {
-  length = 2
-}
-
-module "bucket" {
+module "pet" {
   source     = "../../modules/example"
-  bucket     = "bucket-${random_pet.this.id}"
-  acl        = var.acl
+  length     = var.length
 }
 ```
 
-As you can see there's a `var.acl` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
+As you can see there's a `var.length` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
 
 app/stacks/demo/variables.tf
 
 ```terraform
-variable "bucket" {
-  description = "The name of the bucket. If omitted, Terraform will assign a random, unique name." # IE: terraform-2020052606510241590000000
-  type        = string
-  default     = null
-}
-
-variable "acl" {
-  description = "The canned ACL to apply. Defaults to 'private'."
-  type        = string
-  default     = "private"
+variable "length" {
+  type        = number
+  description = "number of words"
+  default     = 2
 }
 ```
 
@@ -56,18 +43,15 @@ app/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
 # Optional variables:
-# bucket = null
-# acl  = "private" # <= change this line
+# length = "2"
 ```
 
-Terraspace parses the `demo/variables.tf` file to generate the `tfvars/dev.tfvars` file.  It detected that all the variables are optional.  We'll uncomment acl and change it to `acl = "public-read"`.
+Terraspace parses the `demo/variables.tf` file to generate the `tfvars/dev.tfvars` file.  It detected that all the variables are optional.  We'll uncomment length and change it to `length = 3`.
 
 app/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
-# Optional variables:
-# bucket = null
-acl = "public-read" # <= was changed
+# length = "3" # <= was changed
 ```
 
 Next, we'll update the infrastructure.
