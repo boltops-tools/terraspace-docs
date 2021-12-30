@@ -21,7 +21,7 @@ module "bucket" {
 }
 ```
 
-As, you can see there's a `var.acl` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
+As you can see there's a `var.acl` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
 
 app/stacks/demo/variables.tf
 

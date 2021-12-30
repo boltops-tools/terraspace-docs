@@ -28,7 +28,7 @@ module "storage_account" {
 }
 ```
 
-As, you can see there's a `var.enable_https_traffic_only` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
+As you can see there's a `var.enable_https_traffic_only` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
 
 app/stacks/demo/variables.tf
 

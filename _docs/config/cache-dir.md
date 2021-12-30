@@ -22,6 +22,8 @@ The `build.cache_dir` can take:
 
 When setting it as a **String**, Terraspace uses it as a pattern and substitute values. For example,
 
+config/app.rb:
+
 ```ruby
 Terraspace.configure do |config|
   config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR"

@@ -53,6 +53,6 @@ Generates new test.
 y, [--force]                 # Bypass overwrite are you sure prompt for existing files
     [--test-name=TEST_NAME]  # Test name. Defaults to the project, module or stack name
     [--type=TYPE]            # project, stack or module
-                             # Default: project
+                             # Default: stack
 ```
 

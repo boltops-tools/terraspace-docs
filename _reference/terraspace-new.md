@@ -14,6 +14,7 @@ new subcommands
 ## Subcommands
 
 * [terraspace new arg]({% link _reference/terraspace-new-arg.md %}) - Generates new arg.
+* [terraspace new example]({% link _reference/terraspace-new-example.md %}) - Generates new example.
 * [terraspace new git_hook]({% link _reference/terraspace-new-git_hook.md %}) - Generates new git hook.
 * [terraspace new helper]({% link _reference/terraspace-new-helper.md %}) - Generates new helper.
 * [terraspace new hook]({% link _reference/terraspace-new-hook.md %}) - Generates new hook.

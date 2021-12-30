@@ -41,6 +41,18 @@
           <li><a href="{% link _docs/learn/gcp/next-steps.md %}">Next Steps</a></li>
         </ul>
       </li>
+      <li><a href="{% link _docs/learn/onprem.md %}">Non-Cloud</a>
+        <ul>
+          <li><a href="{% link _docs/learn/onprem/install.md %}">Install Terraspace</a></li>
+          <li><a href="{% link _docs/learn/onprem/new-project.md %}">Create New Project</a></li>
+          <li><a href="{% link _docs/learn/onprem/review-project.md %}">Review the Project</a></li>
+          <li><a href="{% link _docs/learn/onprem/deploy.md %}">Deploy Infrastructure</a></li>
+          <li><a href="{% link _docs/learn/onprem/change.md %}">Change Infrastructure</a></li>
+          <li><a href="{% link _docs/learn/onprem/update.md %}">Update Infrastructure</a></li>
+          <li><a href="{% link _docs/learn/onprem/destroy.md %}">Destroy Infrastructure</a></li>
+          <li><a href="{% link _docs/learn/onprem/next-steps.md %}">Next Steps</a></li>
+        </ul>
+      </li>
       <li><a href="{% link _docs/vs.md %}">Terraspace vs Others</a>
         <ul>
           {% assign docs = site.docs | where: "categories","vs" %}
@@ -101,6 +113,8 @@
           <li><a href="{% link _docs/install/ruby.md %}">Ruby</a>
           <li><a href="{% link _docs/install/dependencies.md %}">Dependencies</a></li>
           <li><a href="{% link _docs/install/terraform.md %}">Terraform</a></li>
+          <li><a href="{% link _docs/install/shim.md %}">Shim</a></li>
+          <li><a href="{% link _docs/install/gems-locking.md %}">Gems Locking</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/config.md %}">Config</a>
@@ -108,6 +122,14 @@
           <li><a href="{% link _docs/config/app.md %}">App</a></li>
           <li><a href="{% link _docs/config/backend.md %}">Backend</a>
             <ul>
+              <li><a href="{% link _docs/config/backend/examples.md %}">Examples</a>
+                <ul>
+                {% assign docs = site.docs | where: "categories","backend-examples" | sort:"order" %}
+                {% for doc in docs -%}
+                  <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+                {% endfor %}
+                </ul>
+              </li>
               <li><a href="{% link _docs/config/backend/variables.md %}">Variables</a></li>
               <li><a href="{% link _docs/config/backend/dsl.md %}">DSL</a></li>
             </ul>
@@ -312,7 +334,6 @@
       <li>Misc
         <ul>
           <li><a href="{% link _docs/misc/upgrading.md %}">Upgrading Guide</a></li>
-          <li><a href="{% link _docs/misc/shim.md %}">Shim</a></li>
           <li><a href="{% link _docs/install/gem/multiple-versions.md %}">Multiple Terraspace Versions</a></li>
           <li><a href="{% link _docs/misc/terraspace-versioning.md %}">Terraspace Versioning</a></li>
           <li><a href="{% link _docs/misc/multiple-providers.md %}">Multiple Providers</a></li>

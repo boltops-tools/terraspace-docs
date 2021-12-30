@@ -1,4 +1,13 @@
-You've seen how to get started with Terraspace and {{ include.provider }}. From here, you can check out the Docs to learn more:
+{% if include.provider == "none" %}
+You've seen how to get started with Terraspace without a cloud provider at all. Next, you might be interested in a provider with on-prem capabilities.
+
+* [OpenStack](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs)
+* [VMWare vSphere](https://registry.terraform.io/providers/hashicorp/vsphere/latest/docs)
+
+From here, you can check out the Docs to learn more:
+{% else %}
+You've seen how to get started with Terraspace and {{ include.provider }}. You can also check out the Docs to learn more:
+{% endif %}
 
 * [Intro]({% link _docs/intro.md %}): Review Terraform intro features.
 * [Backend Config]({% link _docs/config/backend.md %}): Configure the backend, where to store the state file:
@@ -9,4 +18,3 @@ You've seen how to get started with Terraspace and {{ include.provider }}. From 
 ## Learn Videos
 
 Watch BoltOps Learn video series:
-
