@@ -1,20 +1,18 @@
 ---
-title: How to Lock Gem Versions
-nav_text: Version Locking
-category: gem
-order: 1
+title: Gem Versions Locking
+nav_text: Gems Locking
 ---
 
-In the Ruby world locking dependencies are usually handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The generated Terraspace project with [terraspace new project]({% link _reference/terraspace-new-project.md %}) provides a starter Gemfile. It looks something like this:
+Gem version locking is handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The generated Terraspace project with [terraspace new project]({% link _reference/terraspace-new-project.md %}) provides a starter `Gemfile`. It looks something like this:
 
 ```ruby
 source "https://rubygems.org"
-gem "terraspace", '~> 0.6.20'
+gem "terraspace", '~> 0.7.0'
 gem "rspec-terraspace"
 gem "terraspace_plugin_aws"
 ```
 
-In this example, terraspace itself is pinned by using a version specifier `~>`. This means that when `bundle` runs it will use at least version 0.6.20 and other patch versions above within the minor version are also ok.
+In this example, terraspace itself is pinned by using a version specifier `~>`. This means that when `bundle` runs it will use at least version `0.7.0` and other patch versions above within the minor version are also ok.
 
 * Bundler Docs: [Gemfile](https://bundler.io/gemfile.html)
 
@@ -22,7 +20,7 @@ You can add and specify additional gem version dependencies if you wish or need 
 
 ```ruby
 source "https://rubygems.org"
-gem "terraspace", '~> 0.6.20'
+gem "terraspace", '~> 0.7.0'
 gem "rspec-terraspace"
 gem "terraspace_plugin_aws"
 # added for more control over the dependencies
@@ -53,4 +51,4 @@ The issue can also be helped in another way: by reducing the dependencies footpr
 
 ## Terrapace Shim Wrapper
 
-On certain system setups, you may also want or need to add a [terraspace shim]({% link _docs/install/shim.md %}) to ensure that `bundle exec` gets called early enough. It's really system-dependent. Details are covered here: [Shim Wrapper]({% link _docs/install/shim.md %}).
+On certain system setups, you may want or need to add a [terraspace shim]({% link _docs/install/shim.md %}) to ensure that `bundle exec` gets called early enough. It's really system-dependent. Details are covered here: [Shim Wrapper]({% link _docs/install/shim.md %}).

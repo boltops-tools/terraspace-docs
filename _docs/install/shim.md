@@ -2,17 +2,11 @@
 title: Shim Wrapper
 ---
 
-## Bundler already activated Warnings
+Terraspace projects have a `Gemfile.lock`. This file ensures that gem dependencies for are pinned. To use it, you run `bundle exec terraspace`. It can be annoying to remember typing `bundle exec`, though. Using a shim spares you from having to remember this, saving you precious finger-typing energy.
 
-If you are seeing an error that says a gem dependency is "already activated", for example:
+## Using a Shim
 
-    You have already activated faraday 1.7.0, but your Gemfile requires faraday 0.17.4. Prepending `bundle exec` to your command may solve this.
-
-Prepending `bundle exec` should resolve the issue.
-
-## The Short Answer: Use A Shim
-
-It can be annoying to remember typing `bundle exec`, though. A shim wrapper essentially ensures that `bundle exec` is prepended in front of terraspace when you're within a project. This saves you precious finger-typing energy. You only have to set up the shim once. You can generate a shim with:
+A shim wrapper ensures that `bundle exec` is prepended in front of terraspace when you're within a project. You only have to set up the shim once. You can generate a shim with:
 
     $ terraspace new shim
           create  /usr/local/bin/terraspace
@@ -31,7 +25,23 @@ By default, the shim is written to `/usr/local/bin/terraspace`. As long as `/usr
 
 You can change the path with the `--path` option. More info: [terraspace new shim]({% link _reference/terraspace-new-shim.md %}).
 
-The shim wrapper should generally work for most systems, it might require adjustments depending on your system.
+The shim wrapper generally work for most systems, it might require adjustments depending on your system.
+
+## Standlone Installer Shim
+
+The [standalone installers]({% link _docs/install/standalone.md %}) actually generate a shim similar to above for you already. It looks something like this:
+
+/usr/local/bin/terraspace
+
+    #!/bin/bash
+    unset GEM_HOME
+    unset GEM_PATH
+    export PATH=/opt/terraspace/embedded/bin:$PATH
+    if [ -f config/app.rb ]; then
+      exec bundle exec terraspace "$@"
+    else
+      exec terraspace "$@"
+    fi
 
 ## Rbenv Shim Slowness
 
@@ -49,4 +59,32 @@ If you are using rbenv, it can be [slow](https://github.com/rbenv/rbenv/issues/7
 
 ## Multiple Terraspace Versions
 
-See: [Multiple Terraspace Versions]({% link _docs/install/gem/multiple-versions.md %})
+A shim is recommended when you have multiple versions of Terraspace installed on the same system. See: [Multiple Terraspace Versions]({% link _docs/install/gem/multiple-versions.md %})
+
+## Long Answer: Why bundle exec?
+
+The key to understanding why `bundle exec` is needed sometimes is understadning Ruby, bundler, and system paths work. You see, when you run **any** cli command with `bundle exec` pretended, it affects the system load path.
+
+Example without:
+
+    terraspace version
+
+Example with:
+
+    bundle exec terraspace version
+
+Using `bundle exec` adjusts the load path. The load paths are adjusted to ensure that the exact versions specified in `Gemfile.lock` are used. This includes, not only terraspace, but all Ruby gem dependencies.
+
+When you don't use `bundle exec`, Ruby uses the first gems found in your system's load path. The versions are more dependent on your environment is configured. In this case, Ruby has little choice but to make some assumptions, and usually, it uses the latest version.
+
+So when using terraspace without `bundle exec`, the latest terraspace version installed on the system is used. Terraspace actually calls `bundle exec` super early on [internally](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/autoloader.rb#L2). This also helps to ensure that dependencies are locked to `Gemfile.lock`. Terraspace is only able to pin all other gems at that point, though. This approach does conveniently spare you from having to type `bundle exec` and works great for most cases, but not all.
+
+It won't work when there's a later version of terraspace installed on the system, and your `Gemfile.lock` pins a different terraspace version. In this case, you'll need to use `bundle exec` or uninstall other versions of terraspace from your system.
+
+## Bundler already activated Warnings
+
+If you are seeing an error that says a gem dependency is "already activated", for example:
+
+    You have already activated faraday 1.7.0, but your Gemfile requires faraday 0.17.4. Prepending `bundle exec` to your command may solve this.
+
+Prepending `bundle exec` should resolve the issue. Or you can generate a [shim]({% link _reference/terraspace-new-shim.md %}) as described above.
