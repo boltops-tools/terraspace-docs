@@ -8,16 +8,16 @@ Docker images with terraspace installed are published with the OS and version ta
 
 The version naming convention is:
 
-    boltops/terraspace:$OS-$VERSION
+    boltops/terraspace:$VERSION-$OS
 
 When the version is not including in the name, it's the latest version of terraspace.
 
 Examples
 
     boltops/terraspace:amzn2         # latest
-    boltops/terraspace:amzn2-0.7.0
+    boltops/terraspace:0.7.0-amzn2
     boltops/terraspace:ubuntu        # latest
-    boltops/terraspace:ubuntu-0.7.0
+    boltops/terraspace:0.7.0-ubuntu
 
 More examples:
 
@@ -38,3 +38,6 @@ Is the same as
 
     boltops/terraspace:ubuntu
 
+The top-level is also available with the version tag
+
+    boltops/terraspace:0.7.0
