@@ -3,7 +3,7 @@ title: Change Infrastructure
 search_title: Change Infrastructure AWS
 ---
 
-Now that we have bucket created, let's modify it. Here's the `demo/main.tf` again.
+Now that we have `random_pet` created, let's modify it. Here's the `demo/main.tf` again.
 
 app/stacks/demo/main.tf
 

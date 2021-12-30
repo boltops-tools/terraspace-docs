@@ -5,6 +5,8 @@ categories: backend-examples
 order: 4
 ---
 
+Here's an example with the [TFC](https://www.terraform.io/cloud) or [TFE](https://www.terraform.io/enterprise/admin/agents-on-tfe) [remote](https://www.terraform.io/language/settings/backends/remote) backend.
+
 config/terraform/backend.tf:
 
 {% highlight sh %}

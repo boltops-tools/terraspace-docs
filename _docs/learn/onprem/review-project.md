@@ -27,7 +27,7 @@ variable "length" {
 }
 ```
 
-You can see that the starter example module creates an random_pet resource.
+You can see that the starter example module creates a `random_pet` resource.
 
 ## Stack Modules
 
@@ -42,8 +42,8 @@ module "pet" {
 }
 ```
 
-You can see that it's just another terraform module, that will use the `app/modules/example` module to create the random_pet.
+You can see that it's just another terraform module, that will use the `app/modules/example` module to create the `random_pet`.
 
-{% include intro/modules-vs-stacks.md %}
+{% include intro/modules-vs-stacks.md provider="none" %}
 
 Next, we'll deploy the infrastructure.

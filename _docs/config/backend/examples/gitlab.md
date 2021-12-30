@@ -5,6 +5,8 @@ categories: backend-examples
 order: 6
 ---
 
+Here's an example with the [GitLab](https://docs.gitlab.com/ee/user/infrastructure/iac/terraform_state.html) [http backend](https://www.terraform.io/language/settings/backends/http).
+
 config/terraform/backend.tf:
 
 ```

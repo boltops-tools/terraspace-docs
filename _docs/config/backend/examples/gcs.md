@@ -5,6 +5,8 @@ categories: backend-examples
 order: 3
 ---
 
+Here's an example with the [gcs backend](https://www.terraform.io/language/settings/backends/gcs).
+
 config/terraform/backend.tf:
 
 {% highlight sh %}

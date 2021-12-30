@@ -5,6 +5,8 @@ categories: backend-examples
 order: 2
 ---
 
+Here's an example with the [azurerm backend](https://www.terraform.io/language/settings/backends/azurerm).
+
 config/terraform/backend.tf:
 
 {% highlight sh %}
@@ -46,15 +48,15 @@ app-env focused:
     * app2-dev
     * app2-prod
 
-We then know exactly what app and env the resources within the Azure Resource Groups belong to. IE: VMs, DBs, Firewalls, etc. This makes it easy to identify resources as well as clean up resources.
+Azure Resource groups help know the exact resources that belong to an app-env. IE: VMs, DBs, Firewalls, etc. It becomes easy to identify and clean up resources.
 
-There are definitely some resources that are more env-focused, though. For example, AKS clusters. It often makes sense to have a dev cluster and deploy your applications onto that cluster. You get container density as a benefit.
+There are some resources that are more env-focused. AKS clusters are a good example. It often makes sense to share a dev cluster and deploy your applications onto that cluster. Container density and less maintenance overhead are benefits.
 
-The default `resource_group_name` and is env-focused and accounts for the use-case of shared resources like AKS clusters nicely.
+The default `resource_group_name` is env-focused and nicely accounts for the use-case of shared resources like AKS clusters.
 
     resource_group_name = "<%= expansion(':ENV-:LOCATION') %>"
 
-It does not account for app-env focused resources, though. Since Terraspace does not know what app name, it does not include it. One approach is to more dynamically configure resource_group_name like so:
+It does not account for app-env focused resources, though. Since Terraspace does not know what app name, you need to provide the context. One approach is to configure resource_group_name more dynamically:
 
 config/terraform/backend.tf:
 
@@ -78,4 +80,8 @@ terraform {
 }
 {% endhighlight %}
 
-If the infrastructure components for the app is really unique, then it may also make sense to have an entirely different terraspace project.
+You can now provide `APP` and the resource group will account for it. Example:
+
+    APP=app1 terraspace up demo
+
+If the infrastructure components for the app are really unique, then it may also make sense to have an entirely different terraspace project.

@@ -54,7 +54,7 @@ Type `yes` and press enter and you'll see terraform apply finishing.
     pet_id = "charmed-bee"
     $
 
-You can see the random_pet got created.
+You can see the `random_pet` got created.
 
 Note, you can also use the `-y` option to bypass the prompt. IE: `terraspace up demo -y`.
 

@@ -6,7 +6,7 @@ To install terraspace via RubyGems.
 
     gem install terraspace
 
-Ruby 2.7 and above is recommended.
+Ruby 3.0 and above is recommended.
 
 The nice thing about this installation method is that is the standard way to install ruby libraries and gems. It  integrates with your existing Ruby installation.
 

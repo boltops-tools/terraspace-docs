@@ -5,6 +5,8 @@ categories: backend-examples
 order: 5
 ---
 
+Here's an example with the [local backend](https://www.terraform.io/language/settings/backends/local).
+
 config/terraform/backend.tf:
 
 {% highlight sh %}
