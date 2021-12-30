@@ -10,24 +10,18 @@ config/terraform/backend.tf:
 {% highlight sh %}
 terraform {
   backend "local" {
-    path = "<%= expansion('.terraform/state.tfstate') %>"
-  }
-}
-{% endhighlight %}
-
-Here's an expanded example:
-
-{% highlight sh %}
-terraform {
-  backend "local" {
-    path = ".terraform/state.tfstate"
+    path = "terraform.tfstate"
   }
 }
 {% endhighlight %}
 
 The local statefile is stored at:
 
-    ls .terraspace-cache/dev/stacks/demo/.terraform/state.tfstate
+    ls .terraspace-cache/dev/stacks/demo/terraform.tfstate
+
+Note: When using a local backend, the `config/terraform/backend.tf` file is entirely optional. Terraform defaults to a local backend with the `path = "terraform.tfstate"`. The `backend.tf` is provided as an example and shows you how to change the path.
+
+## Prefix Path
 
 If you're wondering how the prefix path `.terraspace-cache/dev/stacks/demo` was determined. It's controlled by
 
