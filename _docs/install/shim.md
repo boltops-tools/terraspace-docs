@@ -31,17 +31,7 @@ The shim wrapper generally work for most systems, it might require adjustments d
 
 The [standalone installers]({% link _docs/install/standalone.md %}) actually generate a shim similar to above for you already. It looks something like this:
 
-/usr/local/bin/terraspace
-
-    #!/bin/bash
-    unset GEM_HOME
-    unset GEM_PATH
-    export PATH=/opt/terraspace/embedded/bin:$PATH
-    if [ -f config/app.rb ]; then
-      exec bundle exec terraspace "$@"
-    else
-      exec terraspace "$@"
-    fi
+{% include install/standalone-shim.md %}
 
 ## Rbenv Shim Slowness
 
