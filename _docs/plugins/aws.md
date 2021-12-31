@@ -4,7 +4,7 @@ title: AWS Terraspace Plugin
 
 The AWS Terraspace Plugin adds support for the automatic creation of the backend storage s3 bucket and dynamodb table. By default:
 
-* S3 Buckets are secured with [encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html), have an [enforce ssl bucket policy](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-policy-for-config-rule/), have [versioning enabled](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html), have a [lifecycle policy](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-lifecycle.html), and [block public access](https://aws.amazon.com/s3/features/block-public-access/). [Bucket server access logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html) and also be optionally enabled.
+* S3 Buckets are secured with [encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/bucket-encryption.html), have an [enforce ssl bucket policy](https://aws.amazon.com/premiumsupport/knowledge-center/s3-bucket-policy-for-config-rule/), have [versioning enabled](https://docs.aws.amazon.com/AmazonS3/latest/dev/Versioning.html), have a [lifecycle policy](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/create-lifecycle.html), and [block public access](https://aws.amazon.com/s3/features/block-public-access/). [Bucket server access logging](https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html) can also be enabled.
 * DynamoDB tables have [encryption enabled](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/EncryptionAtRest.html) using the AWS Managed KMS Key for DynamoDB.
 
 The plugin settings are configurable with:
