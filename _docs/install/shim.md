@@ -65,7 +65,7 @@ Example with:
 
 Using `bundle exec` adjusts the load path. The load paths are adjusted to ensure that the exact versions specified in `Gemfile.lock` are used. This includes, not only terraspace, but all Ruby gem dependencies.
 
-When you don't use `bundle exec`, Ruby uses the first gems found in your system's load path. The versions are more dependent how on your environment is configured. In this case, Ruby has little choice but to make some assumptions and uses the first gems found based on your system load path.  Usually, the latest gem versions installed on the system are used.
+When you don't use `bundle exec`, the gem versions used are more dependent how on your environment is configured. In this case, Ruby has little choice but to make some assumptions and uses the first gems found based on your system load path.  Usually, the latest gem versions installed on the system are used.
 
 Terraspace actually calls `bundle exec` super early on [internally](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/autoloader.rb#L2). This helps mitigate dependencies graph resolution issues. But Terraspace is only able to pin at that point and won't work for all cases. Sometimes gems must be pinned even before Terraspace is loaded.
 
