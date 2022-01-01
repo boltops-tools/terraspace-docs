@@ -27,7 +27,7 @@ You can change the path with the `--path` option. More info: [terraspace new shi
 
 The shim wrapper generally work for most systems, it might require adjustments depending on your system.
 
-## Standlone Installer Shim
+## Standalone Installer Shim
 
 The [standalone installers]({% link _docs/install/standalone.md %}) actually generate a shim similar to above for you already. It looks something like this:
 
