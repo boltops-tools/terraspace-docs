@@ -29,7 +29,7 @@ The shim wrapper generally work for most systems, it might require adjustments d
 
 ## Standalone Installer Shim
 
-The [standalone installers]({% link _docs/install/standalone.md %}) actually generate a shim similar to above for you already. It looks something like this:
+The [standalone installers]({% link _docs/install/standalone.md %}) already generate a shim similar to above for you already. It looks something like this:
 
 {% include install/standalone-shim.md %}
 
