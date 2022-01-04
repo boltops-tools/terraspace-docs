@@ -16,9 +16,9 @@ app/stacks/demo/tfvars/dev.tfvars
 For example if you have these secret values:
 
     $ VAULT=REPLACE_WITH_YOUR_VAULT_NAME
-    $ az keyvault secret show --name "demo-dev-user" --vault-name $VAULT | jq '.value'
+    $ az keyvault secret show --vault-name $VAULT --name "demo-dev-user" | jq '.value'
     bob
-    $ az keyvault secret show --name "demo-dev-pass" --vault-name $VAULT | jq '.value'
+    $ az keyvault secret show --vault-name $VAULT --name "demo-dev-pass" | jq '.value'
     test
 
 .terraspace-cache/us-west-2/dev/stacks/demo/1-dev.auto.tfvars
