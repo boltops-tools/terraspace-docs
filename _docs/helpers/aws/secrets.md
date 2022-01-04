@@ -48,5 +48,5 @@ To selectively disable expansion you can provide the `expand: false` option.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= aws_secret("demo-#{Terraspace.env}-user, expand: false") %>"
-    pass = "<%= aws_secret("demo-#{Terraspace.env}-pass, expand: false") %>"
+    user = "<%= aws_secret("demo-:ENV-user, expand: false") %>"
+    pass = "<%= aws_secret("demo-:ENV-pass, expand: false") %>"
