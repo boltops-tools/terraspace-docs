@@ -46,5 +46,5 @@ To selectively disable expansion you can provide the `expand: false` option.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= google_secret("demo-#{Terraspace.env}-user", expand: false) %>"
-    pass = "<%= google_secret("demo-#{Terraspace.env}-pass", expand: false) %>"
+    user = "<%= google_secret("demo-:ENV-user", expand: false) %>"
+    pass = "<%= google_secret("demo-:ENV-pass", expand: false) %>"
