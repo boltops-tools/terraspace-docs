@@ -69,5 +69,5 @@ To selectively disable expansion you can provide the `expand: false` option.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= azure_secret("demo-#{Terraspace.env}-user", expand: false) %>"
-    pass = "<%= azure_secret("demo-#{Terraspace.env}-pass", expand: false) %>"
+    user = "<%= azure_secret("demo-:ENV-user", expand: false) %>"
+    pass = "<%= azure_secret("demo-:ENV-pass", expand: false) %>"
