@@ -10,8 +10,8 @@ The `azure_secret` helper fetches secrets from Azure Key Vault Service.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= azure_secret("demo-#{Terraspace.env}-user") %>"
-    pass = "<%= azure_secret("demo-#{Terraspace.env}-pass") %>"
+    user = "<%= azure_secret("demo-:ENV-user") %>"
+    pass = "<%= azure_secret("demo-:ENV-pass") %>"
 
 For example if you have these secret values:
 
@@ -47,3 +47,27 @@ When you create the Azure Key Vault, only the user used to create the vault has 
 Note: You may have set up the `ARM_*` env vars in the [Learn Azure Configure]({% link _docs/learn/azure/configure.md %}) Guide docs.
 
 Refer to the Docs to set up: [Assign a Key Vault access policy using the Azure portal](https://go.microsoft.com/fwlink/?linkid=2125287)
+
+## Automatic Expansion
+
+Notice how `:ENV` is expanded in the example above. Support for this was automatically added in terraspace\_plugin_azurerm 0.3.3. To update:
+
+    bundle update terraspace_plugin_azurerm
+
+It's also recommended you update generally. So you use the latest version of terraspace also.
+
+    bundle update
+
+If you need to stay with the old version of terraspace\_plugin_azurerm, then use regular Ruby:
+
+app/stacks/demo/tfvars/dev.tfvars
+
+    user = "<%= azure_secret("demo-#{Terraspace.env}-user") %>"
+    pass = "<%= azure_secret("demo-#{Terraspace.env}-pass") %>"
+
+To selectively disable expansion you can provide the `expand: false` option.
+
+app/stacks/demo/tfvars/dev.tfvars
+
+    user = "<%= azure_secret("demo-#{Terraspace.env}-user", expand: false) %>"
+    pass = "<%= azure_secret("demo-#{Terraspace.env}-pass", expand: false) %>"
