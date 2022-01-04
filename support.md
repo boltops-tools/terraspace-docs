@@ -27,16 +27,8 @@ If you would like professional help, [BoltOps](https://www.boltops.com/) provide
 
 ___
 
-## Terraspace Webinar
+## BoltOps Learn
 
-From time to time, we run Terraspace Webinars. We'll introduce Terraspace, provide a demo, and answer your questions. If you are interested, sign up here: [Terraspace Webinar Signup](https://bit.ly/301sZIQ).
+[![BoltOps Learn Badge](https://img.boltops.com/boltops-learn/boltops-learn-logo.png)](https://learn.boltops.com)
 
-___
-
-## BoltOps PRO
-
-![alt text](/img/boltops-pro.png "Boltops Pro")
-
-Pre-Built Infrastructure Code. The code is already built. Just configure, deploy, and run. Use the same code for development and production environments. You don't have to start from scratch.
-
-<a href="https://boltops.com/pro" class="btn btn-primary btn-md">BoltOps PRO</a>
+Consider subscribing to [BoltOps Learn](https://learn.boltops.com). You'll get access to training videos, many covering [Terraspace](https://learn.boltops.com/courses/terraspace-fundamentals). Subscribing also helps support and improve the project.
