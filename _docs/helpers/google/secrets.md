@@ -10,8 +10,8 @@ The `google_secret` helper fetches secret data from Google Secrets Manager.
 
 app/stacks/demo/tfvars/dev.tfvars
 
-    user = "<%= google_secret("demo-#{Terraspace.env}-user") %>"
-    pass = "<%= google_secret("demo-#{Terraspace.env}-pass") %>"
+    user = "<%= google_secret("demo-:ENV-user") %>"
+    pass = "<%= google_secret("demo-:ENV-pass") %>"
 
 For example if you have these secret values:
 
@@ -24,3 +24,27 @@ For example if you have these secret values:
 
     user = "bob"
     pass = "test"
+
+## Automatic Expansion
+
+Notice how `:ENV` is expanded in the example above. Support for this was automatically added in terraspace\_plugin_google 0.3.3. To update:
+
+    bundle update terraspace_plugin_azure
+
+It's also recommended you update generally. So you use the latest version of terraspace also.
+
+    bundle update
+
+If you need to stay with the old version of terraspace\_plugin_google, then use regular Ruby:
+
+app/stacks/demo/tfvars/dev.tfvars
+
+    user = "<%= google_secret("demo-#{Terraspace.env}-user") %>"
+    pass = "<%= google_secret("demo-#{Terraspace.env}-pass") %>"
+
+To selectively disable expansion you can provide the `expand: false` option.
+
+app/stacks/demo/tfvars/dev.tfvars
+
+    user = "<%= google_secret("demo-#{Terraspace.env}-user", expand: false) %>"
+    pass = "<%= google_secret("demo-#{Terraspace.env}-pass", expand: false) %>"
