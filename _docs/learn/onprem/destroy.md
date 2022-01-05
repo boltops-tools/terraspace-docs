@@ -3,7 +3,7 @@ title: Destroy Infrastructure
 search_title: Destroy Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/terraspace-getting-started-with-onprem.md %}
 
 Now that we've seen how to deploy infra, let's clean up and tear down the resources.
 

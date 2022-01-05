@@ -3,7 +3,7 @@ title: Deploy Infrastructure
 search_title: Deploy Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/terraspace-getting-started-with-onprem.md %}
 
 Let's go ahead and deploy the infrastructure
 

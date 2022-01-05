@@ -3,7 +3,7 @@ title: Update Infrastructure
 search_title: Update Infrastructure Non-Cloud
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/terraspace-getting-started-with-onprem.md %}
 
 Let's update the infrastructure.
 

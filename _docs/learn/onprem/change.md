@@ -3,7 +3,7 @@ title: Change Infrastructure
 search_title: Change Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/terraspace-getting-started-with-onprem.md %}
 
 Now that we have `random_pet` created, let's modify it. Here's the `demo/main.tf` again.
 
