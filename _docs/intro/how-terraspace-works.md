@@ -32,8 +32,8 @@ Terraspace performs powerful conveniences before changing into into the `.terras
 This results in something like this:
 
     terraspace up demo --upgrade --compact-warnings --no-color
-    => terraform init -upgrade -no-color -get -input=false >> /tmp/terraspace/log/init/demo.log
-    => terraform apply -compact-warnings -no-color -input=false
+    => terraform init -upgrade -no-color
+    => terraform apply -compact-warnings -no-color
 
 Notice how the options are only passed through if the underlying `terraform` command support them:
 
