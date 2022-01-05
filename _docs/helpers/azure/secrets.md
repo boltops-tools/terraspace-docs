@@ -4,6 +4,8 @@ nav_text: Secrets
 categories: helpers-azure
 ---
 
+{% include videos/learn/secrets/azure.md %}
+
 The `azure_secret` helper fetches secrets from Azure Key Vault Service.
 
 ## Example

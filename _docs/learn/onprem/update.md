@@ -3,6 +3,8 @@ title: Update Infrastructure
 search_title: Update Infrastructure Non-Cloud
 ---
 
+{% include videos/learn/terraspace-getting-started-with-aws.md %}
+
 Let's update the infrastructure.
 
     $ terraspace up demo
