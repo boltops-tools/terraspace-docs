@@ -6,7 +6,7 @@ The Azure Terraspace Plugin adds support for the automatic creation of the backe
 
 * Azure Storage Accounts have [versioning](https://docs.microsoft.com/en-us/azure/storage/blobs/versioning-overview) enabled.
 * Block Public Access: [disallow blob public access on Azure Storage account](https://azure.microsoft.com/en-us/updates/choose-to-allow-or-disallow-blob-public-access-on-azure-storage-accounts/)
-* Enable Data Protection by enabling [soft delete](https://docs.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) for blobs and containers and retain data for 365 days.
+* Enable Data Protection by enabling [soft delete](https://docs.microsoft.com/en-us/azure/storage/blobs/soft-delete-blob-overview) for blobs and containers and retaining deleted data for 365 days.
 
 The plugin settings are configurable with:
 
