@@ -25,7 +25,7 @@ Terraspace automates it with:
 
 ## Terraform CLI Options
 
-Terraspace performs powerful conveniences before changing into into the `.terraspace-cache` folder and then calling the required terraform commands. IE: `terraform init`, `terraform apply`, `terraform destroy`. Terraspace does not just blindly pass CLI options, though. It smartly passes the options to the underlying `terraform` commands only when needed. For example:
+Terraspace performs powerful conveniences before changing into the `.terraspace-cache` folder and then calling the required terraform commands. IE: `terraform init`, `terraform apply`, `terraform destroy`. Terraspace does not just blindly pass CLI options, though. It smartly passes the options to the underlying `terraform` commands only when needed. For example:
 
     terraspace up demo --upgrade --compact-warnings --no-color
 
