@@ -15,9 +15,9 @@ When the version is not including in the name, it's the latest version of terras
 Examples
 
     boltops/terraspace:amzn2         # latest
-    boltops/terraspace:0.7.0-amzn2
+    boltops/terraspace:1.0.0-amzn2
     boltops/terraspace:ubuntu        # latest
-    boltops/terraspace:0.7.0-ubuntu
+    boltops/terraspace:1.0.0-ubuntu
 
 More examples:
 
@@ -40,4 +40,4 @@ Is the same as
 
 The top-level is also available with the version tag
 
-    boltops/terraspace:0.7.0
+    boltops/terraspace:1.0.0
