@@ -6,7 +6,10 @@ You can run Terraspace within a Docker container. The Docker images are publishe
 
 Here's a "Getting Started with Terraspace and Docker" Video:
 
-<div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/GKE2DZtaJc8" frameborder="0" allowfullscreen=""></iframe></div></div>
+{% include videos/learn.md
+     url="terraspace-install/lessons/terraspace-docker-installation"
+     img="https://uploads-learn.boltops.com/tdp8ky20djzbxsbqyeblxrwuszq5"
+     premimum=false %}
 
 ## Docker Run
 

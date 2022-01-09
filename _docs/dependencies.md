@@ -8,7 +8,9 @@ If you want to deploy multiple stacks, you can do so with a single command:
 
 Here's a demo video:
 
-<div class="video-box"><div class="video-container"><iframe src="https://www.youtube.com/embed/GjlWeYAGWIE?rel=0" frameborder="0" allowfullscreen=""></iframe></div></div>
+{% include videos/learn.md
+     url="terraspace-fundamentals/lessons/terraspace-all-background-info"
+     img="https://uploads-learn.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
 
 Terraspace calculates the dependency graph and ensures they are deployed in the correct order. Here's a dependency graph example:
 
