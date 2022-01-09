@@ -3,7 +3,7 @@ title: Review Project
 search_title: Review Project Non-Cloud
 ---
 
-{% include videos/learn/terraspace-getting-started-with-onprem.md %}
+{% include videos/learn/getting-started/onprem.md %}
 
 Let's explore the generated app folder.
 

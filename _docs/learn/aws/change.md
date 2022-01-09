@@ -3,7 +3,7 @@ title: Change Infrastructure
 search_title: Change Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/getting-started/aws.md %}
 
 Now that we have bucket created, let's modify it. Here's the `demo/main.tf` again.
 

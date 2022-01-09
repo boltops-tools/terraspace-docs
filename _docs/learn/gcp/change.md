@@ -3,7 +3,7 @@ title: Change Infrastructure
 search_title: Change Infrastructure Google
 ---
 
-{% include videos/learn/terraspace-getting-started-with-google.md %}
+{% include videos/learn/getting-started/google.md %}
 
 Now that we have bucket created, let's modify it. Here's the `demo/main.tf` again.
 

@@ -3,7 +3,7 @@ title: Update Infrastructure
 search_title: Update Infrastructure Azure
 ---
 
-{% include videos/learn/terraspace-getting-started-with-google.md %}
+{% include videos/learn/getting-started/google.md %}
 
 Let's update the infrastructure.
 

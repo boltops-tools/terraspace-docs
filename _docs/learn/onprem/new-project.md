@@ -3,7 +3,7 @@ title: New Project
 search_title: New Project Non-Cloud
 ---
 
-{% include videos/learn/terraspace-getting-started-with-onprem.md %}
+{% include videos/learn/getting-started/onprem.md %}
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 

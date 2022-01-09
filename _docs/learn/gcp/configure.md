@@ -2,7 +2,7 @@
 title: Configure Google Cloud
 ---
 
-{% include videos/learn/terraspace-getting-started-with-google.md %}
+{% include videos/learn/getting-started/google.md %}
 
 Configure Google Cloud so Terraspace can connect to it. The recommended way is to:
 

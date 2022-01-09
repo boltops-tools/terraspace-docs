@@ -3,7 +3,7 @@ title: New Project
 search_title: New Project AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/getting-started/aws.md %}
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 

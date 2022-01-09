@@ -3,7 +3,7 @@ title: Change Infrastructure
 search_title: Change Infrastructure Azure
 ---
 
-{% include videos/learn/terraspace-getting-started-with-azure.md %}
+{% include videos/learn/getting-started/azure.md %}
 
 Now that we have bucket created, let's modify it. Here's the `demo/main.tf` again.
 

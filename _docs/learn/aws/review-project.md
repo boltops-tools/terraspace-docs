@@ -3,7 +3,7 @@ title: Review Project
 search_title: Review Project AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/getting-started/aws.md %}
 
 Let's explore the generated app folder.
 

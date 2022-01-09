@@ -3,7 +3,7 @@ title: Update Infrastructure
 search_title: Update Infrastructure AWS
 ---
 
-{% include videos/learn/terraspace-getting-started-with-aws.md %}
+{% include videos/learn/getting-started/aws.md %}
 
 Let's update the infrastructure.
 

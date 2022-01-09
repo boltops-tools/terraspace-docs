@@ -3,7 +3,7 @@ title: Deploy Infrastructure
 search_title: Deploy Infrastructure Azure
 ---
 
-{% include videos/learn/terraspace-getting-started-with-azure.md %}
+{% include videos/learn/getting-started/azure.md %}
 
 Let's go ahead and deploy the infrastructure
 
