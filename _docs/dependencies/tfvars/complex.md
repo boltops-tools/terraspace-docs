@@ -4,6 +4,10 @@ nav_text: "Complex Types"
 categories: dependencies-tfvars
 ---
 
+{% include videos/learn.md
+     url="terraspace-fundamentals/lessons/terraspace-tfvars-complex-types-transforming-data-structures"
+     img="https://uploads-learn.boltops.com/m6b4ul9lg74v8w6mvt1ahqwn1xr3" %}
+
 ## Simple Types
 
 Types like string, number, bool are simple and are straightforward to use.  For example:
