@@ -23,7 +23,7 @@ For example if you have these secret values:
     $ az keyvault secret show --vault-name $VAULT --name "demo-dev-pass" | jq '.value'
     test
 
-.terraspace-cache/us-west-2/dev/stacks/demo/1-dev.auto.tfvars
+.terraspace-cache/eastus/dev/stacks/demo/1-dev.auto.tfvars
 
     user = "bob"
     pass = "test"
