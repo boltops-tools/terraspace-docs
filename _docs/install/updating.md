@@ -41,6 +41,6 @@ This updates all gems defined in the `Gemfile` and still try to keep implied dep
 Often, you want to update all gems, including implied dependencies, completely. Blow away the `Gemfile.lock` and run `bundle update`. Example:
 
     rm -f Gemfile.lock
-    bunde update
+    bundle update
 
 This generates a brand new `Gemfile.lock`
