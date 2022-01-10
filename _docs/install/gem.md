@@ -31,4 +31,4 @@ Bundler will update terraspace and other dependencies to the latest.
 
 ## Shim
 
-With a gem install, consider generating a [shim]({% link _docs/install/shim.md %}) so you don't have to remember to type `bundle exec` when running `terraspace` within the Terraspace project folder.
+With a gem install, it's recommended to generate a [shim]({% link _docs/install/shim.md %}) so you don't have to remember to type `bundle exec` when running `terraspace` within the Terraspace project folder.
