@@ -5,7 +5,7 @@ category: standalone
 order: 9
 ---
 
-The standalone installer packages are published daily. This page covers more details on how the standalone installation works.
+The standalone installer packages are built within a few minutes of the terraspace gem release. This page covers more details on how the standalone installation works.
 
 ## Isolated: /opt/terraspace
 
