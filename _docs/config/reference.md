@@ -1,5 +1,6 @@
 ---
 title: Config Reference
+css: reference
 ---
 
 Here's a list of the available config settings.
