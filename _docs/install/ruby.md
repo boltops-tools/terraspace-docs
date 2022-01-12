@@ -22,11 +22,6 @@ You can also simply install rbenv by cloning down the rbenv repo to `~/.rbenv`.
     mkdir -p ~/.rbenv/plugins
     git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
-And start a new terminal and confirm that you're using ruby provided by rbenv. You should see something like this:
-
-    $ type ruby
-    ruby is /Users/tung/.rbenv/shims/ruby
-
 With the rbenv git approach, you'll be able to use the latest available rubies by updating the ruby-build plugin repo directly.
 
     cd ~/.rbenv/plugins/ruby-build && git pull
@@ -36,6 +31,11 @@ Then install different ruby versions. Example:
     rbenv install 3.0.3
     rbenv global 3.0.3
     echo 3.0.3 > ~/.ruby-version # on some systems this is needed
+
+Start a new terminal and confirm that you're using ruby provided by rbenv. You should see something like this:
+
+    $ type ruby
+    ruby is /Users/tung/.rbenv/shims/ruby
 
 ### Uninstall Ruby and rbenv
 
