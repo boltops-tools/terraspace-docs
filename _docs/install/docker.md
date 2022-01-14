@@ -2,7 +2,7 @@
 title: Terraspace with Docker
 ---
 
-You can run Terraspace within a Docker container. The Docker images are published to Dockerhub daily at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). This provides you with an isolated throwaway environment to try out Terraspace.
+You can run Terraspace within a Docker container. The Docker images are published to Dockerhub within a few minutes of a gem release at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). This provides you with an isolated throwaway environment to try out Terraspace.
 
 Here's a "Getting Started with Terraspace and Docker" Video:
 
@@ -32,7 +32,7 @@ For the Dockerfiles, see: [boltops-tools/terraspace-dockerfiles](https://github.
 
 ## Docker Pull
 
-The Docker images are published to Dockerhub daily at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). The images generally include the latest version of Terraspace and Terraform. So remember to update the cached Docker images if you've pulled them before.
+The Docker images are published to Dockerhub within a few minutes of a gem release at [boltops/terraspace](https://hub.docker.com/r/boltops/terraspace). The images generally include the latest version of Terraspace and Terraform. So remember to update the cached Docker images if you've pulled them before.
 
     docker pull boltops/terraspace
     docker pull boltops/terraspace:alpine
