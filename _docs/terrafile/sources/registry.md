@@ -23,6 +23,16 @@ Will download module to:
 
 ## Example: Private
 
+The general form is:
+
+Terrafile
+
+```ruby
+mod "webapp", source: "app.terraform.io/ORG/MODULE/PROVIDER"
+```
+
+Example, where the Terraform cloud organzation is `demo-qa`, module is `s3-webapp`, and provider is `aws`.
+
 Terrafile
 
 ```ruby
