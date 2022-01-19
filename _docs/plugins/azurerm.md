@@ -16,6 +16,8 @@ config/plugins/azurerm.rb
 TerraspacePluginAzurerm.configure do |config|
   config.auto_create = true # set to false to completely disable auto creation
 
+  config.resource_group.update_existing = false
+
   config.storage_account.sku.name = "Standard_LRS"
   config.storage_account.sku.tier = "Standard"
 

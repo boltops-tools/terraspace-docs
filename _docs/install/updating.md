@@ -14,7 +14,9 @@ So to update terrapace to the next version can remove the version specificier `'
 
     bundle update terraspace
 
-This generates a new `Gemfile.lock` that will pin a new terraspace version down.
+This generates a new `Gemfile.lock` that will pin a new terraspace version down. To confirm that the desired version of terraspace is being used:
+
+    bundle info terraspace
 
 ## Updating Plugins
 
@@ -28,7 +30,9 @@ In this case, there is already no version specifier, so you can just run:
 
     bundle update terraspace_plugin_aws
 
-And the `Gemfile.lock` will be updated and pin the latest version available.
+And the `Gemfile.lock` will be updated and pin the latest version available. Confirm that the desired version of terraspace is being used:
+
+    bundle info terraspace_plugin_aws
 
 ## Updating Everything
 
@@ -43,4 +47,6 @@ Often, you want to update all gems, including implied dependencies, completely. 
     rm -f Gemfile.lock
     bundle update
 
-This generates a brand new `Gemfile.lock`
+This generates a brand new `Gemfile.lock`. To see what versions are used:
+
+    bundle list
