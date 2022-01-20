@@ -31,3 +31,21 @@ Here's an example with `TS_ENV=dev` to explain the dotenv files precedence, from
 2. .env.dev
 3. .env.local
 4. .env - lowest precedence. always loaded.
+
+## Load Order
+
+The dotenv files load after the [config/boot.rb]({% link _docs/config/boot.md %}) hooks. To test and confirm that dotenv files are loading properly you can use an [config/inits]({% link _docs/config/inits.md %}) initializer. Example:
+
+.env
+
+    FOO=bar-base
+
+.env.dev
+
+    FOO=bar-dev
+
+config/inits/printenv.rb
+
+```ruby
+puts "printenv.rb called: ENV['FOO'] #{ENV['FOO'].inspect}"
+```
