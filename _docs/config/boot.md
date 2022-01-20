@@ -15,7 +15,7 @@ Terraspace will searches 2 files in the `config` folder. If the files exist, the
 1. **config/boot.rb**: Always runs.
 2. **config/boot/TS_ENV.rb**: Runs based on the env. IE: `TS_ENV=dev` => `config/boot/dev.rb`
 
-Both files are required and ran if they both exists. Since the `TS_ENV` one runs second, it can be used to override previously set values. 
+Both files are required and ran if they both exists. Since the `TS_ENV` one runs second, it can be used to override previously set values.
 
 ## Example: Default TS_ENV
 
@@ -27,7 +27,7 @@ config/boot.rb
 ENV['TS_ENV'] ||= 'development'
 ```
 
-This changes the default for everyone using the project, but still allows them to control the default by adding `export TS_ENV=development` to their `~/.bash_profile`. 
+This changes the default for everyone using the project, but still allows them to control the default by adding `export TS_ENV=development` to their `~/.bash_profile`.
 
 ## Example: Auto-Switch AWS_PROFILE
 
@@ -40,3 +40,14 @@ ENV['AWS_PROFILE'] = 'dev'
 ```
 
 This example is for AWS, but you can can do similiar switch logic with `GOOGLE_APPLICATION_CREDENTIALS`, etc.
+
+## Boot Ordering
+
+This `config/boot.rb` hooks run the earliest. Here's an overview of the boot ordering:
+
+1. [config/boot.rb]({% link _docs/config/boot.md %})
+2. [dotenv files]({% link _docs/config/dotenv.md %})
+3. [plugins]({% link _docs/plugins.md %}): IE: aws, azure, google
+4. [app/inits]({% link _docs/config/inits.md %}): Initializers
+
+Please refer to the source code for more details on boot ordering: [terraspace/booter.rb](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/booter.rb)
