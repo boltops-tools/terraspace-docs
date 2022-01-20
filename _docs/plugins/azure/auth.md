@@ -6,11 +6,11 @@ The Terraspace Azurerm Plugin can authenticate to the Azure REST API via the fol
 
 ![](/img/content/azure-auth-chain.png)
 
-The Terraspace Azurerm Plugin makes use of the armrest library to achieve this.
+The Terraspace Azurerm Plugin makes use of the [armrest](https://github.com/boltops-tools/armrest) gem library to achieve this.
 
 ## Environment
 
-Terraspace with authenticate to the Azure API with these environment variables:
+Terraspace will authenticate to the Azure API with these environment variables:
 
     ARM_CLIENT_ID
     ARM_CLIENT_SECRET
