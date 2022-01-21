@@ -90,16 +90,18 @@ You can filter for subtrees or subgraphs to deploy:
 
 More info: [Subgraphs Docs]({% link _docs/dependencies/subgraphs.md %})
 
-You can also configure Terraspace to completely ignore stacks with the [all.ignore_stacks]({% link _docs/config/reference.md %}) option. This can be useful if you have test stacks that you don't want to be considered as part of the graph yet.
+You can also configure Terraspace to completely ignore stacks with the [all.exclude_stacks]({% link _docs/config/reference.md %}) option. This can be useful if you have test stacks that you don't want to be considered as part of the graph yet.
 
 config/app.rb
 
 ```ruby
 Terraspace.configure do |config|
   # ...
-  config.all.ignore_stacks = ["stack1"]
+  config.all.exclude_stacks = ["stack1"]
 end
 ```
+
+More Docs: [Excluding Stacks]({% link _docs/dependencies/exclude.md %}).
 
 ## Best of Both Worlds
 
