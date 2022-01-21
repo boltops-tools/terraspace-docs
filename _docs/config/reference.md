@@ -11,7 +11,7 @@ all.concurrency | How many processes to run in parallel for each batch for the `
 all.exit_on_fail.down | Whether or not to exit if one of the down commands fails. Note: Other commands like show, validate, etc are also configurable and default to false. For `all down` , `TS_EXIT_ON_FAIL=0` will also tell Terraspace to continue on failures. | true
 all.exit_on_fail.up | Whether or not to exit if one of the up commands fails. | true
 all.include_stacks | Stacks to include and consider for the dependency graph. | nil
-all.ignore_stacks | Stacks to ignore and not to be considered as part of the dependency graph. | nil
+all.exclude_stacks | Stacks to ignore and not to be considered as part of the dependency graph. | nil
 allow.envs | Array of allowed envs to deploy to. IE: dev, prod, etc. By default, any env is allowed. | nil
 allow.regions | Array of allowed regions to deploy to. IE: us-east-1, us-west-2, etc. By default, any region is allowed. | nil
 auto_create_backend | Enable auto-creation of backend | true
