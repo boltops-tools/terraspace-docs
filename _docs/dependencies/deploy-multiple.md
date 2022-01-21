@@ -101,7 +101,7 @@ Terraspace.configure do |config|
 end
 ```
 
-More Docs: [Excluding Stacks]({% link _docs/dependencies/exclude.md %}).
+More Docs: [Excluding Stacks]({% link _docs/dependencies/exclude-stacks.md %}).
 
 ## Best of Both Worlds
 
