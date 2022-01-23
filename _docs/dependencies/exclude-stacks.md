@@ -1,5 +1,5 @@
 ---
-title: "Including and Excluding Stacks"
+title: "Terraspace All: Including and Excluding Stacks"
 nav_text: Excluding Stacks
 categories: dependencies
 ---
@@ -9,6 +9,8 @@ categories: dependencies
      img="https://uploads-learn.boltops.com/u1neymrblh5zsrify9z4rxdztvvb" %}
 
 The `terraspace all` command allows you to deploy multiple stacks simultaneously.  You can configure Terraspace to include or exclude specific stacks that `terraspace all` will deploy.
+
+**Important**: See [Including and Excluding Stacks Inference]({% link _docs/dependencies/exclude-stacks.md %}#including-and-excluding-stacks-inference) at the bottom. In general, it's recommendeded to have `terraspace all` infer which stacks are allowed be deployed from `config.allow.stacks` and `config.deny.stacks` instead of configuring `config.all.include_stacks` explicitly. Though `config.all.include_stacks` can be used if you need the control.
 
 ## Example 1: Simple Include
 
@@ -137,15 +139,11 @@ Terraspace.configure do |config|
 end
 ```
 
-This is one of the benefits that comes with the way Terraspace handles configurations. At the end of the day, you have access to the power of a full programming language, Ruby, when you need it. Of course, with great power comes great responsibility.
-
-Question: Should you use multiple vs one file?
-
-It depends, if the configurations are small, then it's clearer to have it one file. If the configurations get complex, it may make sense to separate them into multiple files. It also depends a lot on personal preference. In the above examples, it's easier to understand things in one file.
+{% include config/restricting/one-vs-multiple.md %}
 
 ## Example 5: Complete Customization with Object That Implements Call
 
-For even more control over which stacks are included or excluded you can assign an object implements `call` and returns an `Array`. This is an advanced technique. Example:
+For even more control over which stacks are included or excluded you can assign an object that implements `call` and returns an `Array`. This is an advanced technique. Example:
 
 ```ruby
 class Includer
@@ -165,4 +163,6 @@ Terraspace.configure do |config|
 end
 ```
 
-The Excluder class defines the `call` method and takes in the `stack` argument. It's value is the name of current stack being deployed. The `Includer` and `Excluder` classes should return an Array or nil.
+The `Excluder` class defines the `call` method and takes in the `stack` argument. It's value is the name of current stack being deployed. The `Includer` and `Excluder` classes should return an Array or nil. Returning `nil` is the same as not setting the option at all.
+
+{% include config/restricting/stack_inference.md allow_rules=true %}

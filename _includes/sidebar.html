@@ -162,6 +162,14 @@
           <li><a href="{% link _docs/config/reference.md %}">Reference</a></li>
           <li><a href="{% link _docs/config/env.md %}">Env Vars</a></li>
           <li><a href="{% link _docs/config/dotenv.md %}">Dot Env Files</a></li>
+          <li><a href="{% link _docs/config/restricting.md %}">Restricting</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","restricting" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{{ doc.nav_text }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
         </ul>
       </li>
       <li><a href="{% link _docs/generators.md %}">Generators</a>
