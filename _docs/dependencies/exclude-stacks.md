@@ -4,10 +4,6 @@ nav_text: Excluding Stacks
 categories: dependencies
 ---
 
-{% include videos/learn.md
-     url="terraspace-fundamentals/lessons/terraspace-all-exclude-stacks-for-specific-environments"
-     img="https://uploads-learn.boltops.com/u1neymrblh5zsrify9z4rxdztvvb" %}
-
 The `terraspace all` command allows you to deploy multiple stacks simultaneously.  You can configure Terraspace to include or exclude specific stacks that `terraspace all` will deploy.
 
 **Important**: See [Including and Excluding Stacks Inference]({% link _docs/dependencies/exclude-stacks.md %}#including-and-excluding-stacks-inference) at the bottom. In general, it's recommendeded to have `terraspace all` infer which stacks are allowed be deployed from `config.allow.stacks` and `config.deny.stacks` instead of configuring `config.all.include_stacks` explicitly. Though `config.all.include_stacks` can be used if you need the control.
