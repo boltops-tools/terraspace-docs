@@ -176,6 +176,6 @@ Terraspace.configure do |config|
 end
 ```
 
-The `AllowStack` class defines the `call` method and takes the `stack` argument. Its value is the name of the current stack being deployed. The `AllowStacks` and `DenyStacks` classes should return an Array or nil. Returning `nil` is the same as not setting the option.
+The `AllowStacks` class defines the `call` method and takes the `stack` argument. Its value is the name of the current stack being deployed. The `AllowStacks` and `DenyStacks` classes should return an Array or nil. Returning `nil` is the same as not setting the option.
 
 {% include config/restricting/stack_inference.md allow_rules=false %}
