@@ -23,11 +23,11 @@ When the `/opt/terraspace` folder is not owned by your user, you won't be able t
     => Installing dependencies with: bundle install
     Following files may not be writable, so sudo is needed:
       /opt/terraspace/embedded/bin
-      /opt/terraspace/embedded/lib/ruby/gems/2.7.0
-      /opt/terraspace/embedded/lib/ruby/gems/2.7.0/cache
-      /opt/terraspace/embedded/lib/ruby/gems/2.7.0/extensions
-      /opt/terraspace/embedded/lib/ruby/gems/2.7.0/gems
-      /opt/terraspace/embedded/lib/ruby/gems/2.7.0/specifications
+      /opt/terraspace/embedded/lib/ruby/gems/3.0.0
+      /opt/terraspace/embedded/lib/ruby/gems/3.0.0/cache
+      /opt/terraspace/embedded/lib/ruby/gems/3.0.0/extensions
+      /opt/terraspace/embedded/lib/ruby/gems/3.0.0/gems
+      /opt/terraspace/embedded/lib/ruby/gems/3.0.0/specifications
 
     Your user account isn't allowed to install to the system RubyGems.
       You can cancel this installation and run:
