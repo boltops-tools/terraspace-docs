@@ -10,13 +10,11 @@ Here's an example with the [TFC](https://www.terraform.io/cloud) or [TFE](https:
 config/terraform/backend.tf:
 
 {% highlight sh %}
-terraform
-  terraform {
-    backend "remote" {
-      organization = "ORG"
-      workspaces {
-      name = "<%= expansion(':MOD_NAME-:ENV-:REGION-:INSTANCE') %>"
-    }
+terraform {
+  backend "remote" {
+    organization = "ORG"
+    workspaces {
+    name = "<%= expansion(':MOD_NAME-:ENV-:REGION-:INSTANCE') %>"
   }
 }
 {% endhighlight %}
@@ -24,13 +22,11 @@ terraform
 Here's an expanded example:
 
 {% highlight sh %}
-terraform
-  terraform {
-    backend "remote" {
-      organization = "boltops"
-      workspaces {
-      name = "demo-dev-us-west-2"
-    }
+terraform {
+  backend "remote" {
+    organization = "boltops"
+    workspaces {
+    name = "demo-dev-us-west-2"
   }
 }
 {% endhighlight %}
