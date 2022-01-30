@@ -37,10 +37,21 @@ Run plan for all or multiple stacks.
     Time took: 11s
     $
 
+## Using Plan Outputs
+
+Using plan output path. You can specify an output path for the plan that contains pattern for expansion. Example:
+
+    $ terraspace all plan --out ":MOD_NAME.plan"
+
+You can then use this later in terraspace up:
+
+    $ terraspace all up --plan ":MOD_NAME.plan"
+
 
 ## Options
 
 ```
+o, [--out=OUT]                             # Output path. Can be a pattern like :MOD_NAME.plan
 y, [--yes], [--no-yes]                     # auto approve all batch commands
     [--exit-on-fail], [--no-exit-on-fail]  # whether or not to exit when one of the batch commands fails
 ```

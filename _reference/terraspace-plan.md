@@ -41,6 +41,14 @@ Plan stack.
 
     $
 
+Using plan output path. You can specify an output path for the plan. Example:
+
+    $ terraspace plan demo --out "my.plan"
+
+You can then use this later in terraspace up:
+
+    $ terraspace up demo --plan "my.plan"
+
 
 ## Options
 
@@ -48,7 +56,7 @@ Plan stack.
     [--auto], [--no-auto]                  # Auto mode is useful for CI automation. It enables appropriate flags.
     [--input], [--no-input]                # Ask for input for variables if not directly set.
 i, [--instance=INSTANCE]                   # Instance of stack
-o, [--out=OUT]                             # Write the output to path
+o, [--out=OUT]                             # Output path. Can be a pattern like :MOD_NAME.plan
     [--reconfigure], [--no-reconfigure]    # Add terraform -reconfigure option
     [--copy-to-root], [--no-copy-to-root]  # Copy plan file generated in the cache folder back to project root
                                            # Default: true
