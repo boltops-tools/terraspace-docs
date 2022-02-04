@@ -51,7 +51,7 @@ Build the gem package:
     $ rake build
     pkg/terraspace-0.6.22.custom.gem
 
-The produced `.gem` can used to install the gem. You can install it locally:
+The produced `.gem` file can used to install the gem. You can install it locally:
 
     $ gem install pkg/terraspace-0.6.22.custom.gem
     $ terraspace -v
