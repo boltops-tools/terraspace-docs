@@ -1,5 +1,5 @@
 ---
-title: Boot Hook
+title: Boot Hooks
 ---
 
 If you need to hook into the Terraspace boot process super-early on, Terraspace boot hooks are designed for that.

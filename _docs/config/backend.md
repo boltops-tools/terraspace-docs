@@ -46,7 +46,7 @@ For variables available see [Backend Config Variables]({% link _docs/config/back
 
 ___
 
-## Strip Trailing Behavior
+## Cleanup Behavior: Strip Trailing and Remove Double Slashes
 
 Terraspace expansion will remove the trailing dashes and slashes in case the instance option is at the end and is not set.  For example, let's say `INSTANCE` is not set.
 
@@ -55,3 +55,5 @@ Terraspace expansion will remove the trailing dashes and slashes in case the ins
 Will result in:
 
     us-west-2/dev/demo # notice there's no trailing slash
+
+Also, consecutive double slashes like `//` are squeezed into a single slash `/`. This done for the case when a variable inbetween the slashes is not set.  However, if the `//` is part of `http://` or `https://`, then the `//` is kept.
