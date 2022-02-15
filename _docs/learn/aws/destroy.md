@@ -28,34 +28,89 @@ You'll be prompted to make sure you really want to delete these resources.
 
     Terraform will perform the following actions:
 
-      # random_pet.bucket will be destroyed
+      # random_pet.this will be destroyed
       - resource "random_pet" "this" {
           - id        = "liked-poodle" -> null
           - length    = 2 -> null
           - separator = "-" -> null
         }
-
       # module.bucket.aws_s3_bucket.this will be destroyed
       - resource "aws_s3_bucket" "this" {
-          - acl                         = "public-read" -> null
-          - arn                         = "arn:aws:s3:::bucket-liked-poodle" -> null
-          - bucket                      = "bucket-liked-poodle" -> null
-          - bucket_domain_name          = "bucket-liked-poodle.s3.amazonaws.com" -> null
-          - bucket_regional_domain_name = "bucket-liked-poodle.s3.us-west-2.amazonaws.com" -> null
-          - force_destroy               = false -> null
-          - hosted_zone_id              = "Z3BJ6K6RIION7M" -> null
-          - id                          = "bucket-liked-poodle" -> null
-          - region                      = "us-west-2" -> null
-          - request_payer               = "BucketOwner" -> null
-          - tags                        = {} -> null
+          - acl                                  = "private" -> null
+          - arn                                  = "arn:aws:s3:::bucket-liked-poodle" -> null
+          - bucket                               = "bucket-liked-poodle" -> null
+          - bucket_domain_name                   = "bucket-liked-poodle.s3.amazonaws.com" -> null
+          - bucket_regional_domain_name          = "bucket-liked-poodle.s3.us-west-2.amazonaws.com" -> null
+          - cors_rule                            = [] -> null
+          - force_destroy                        = false -> null
+          - grant                                = [
+              - {
+                  - id          = ""
+                  - permissions = [
+                      - "READ",
+                    ]
+                  - type        = "Group"
+                  - uri         = "http://acs.amazonaws.com/groups/global/AllUsers"
+                },
+              - {
+                  - id          = "0a1482b6182dbd965b93fc1e091b5d434dad57eb19b5f04ffb6b9e3450677c98"
+                  - permissions = [
+                      - "FULL_CONTROL",
+                    ]
+                  - type        = "CanonicalUser"
+                  - uri         = ""
+                },
+            ] -> null
+          - hosted_zone_id                       = "Z3BJ6K6RIION7M" -> null
+          - id                                   = "bucket-liked-poodle" -> null
+          - lifecycle_rule                       = [] -> null
+          - logging                              = [] -> null
+          - region                               = "us-west-2" -> null
+          - replication_configuration            = [] -> null
+          - request_payer                        = "BucketOwner" -> null
+          - server_side_encryption_configuration = [] -> null
+          - tags                                 = {} -> null
+          - tags_all                             = {} -> null
+          - versioning                           = [
+              - {
+                  - enabled    = false
+                  - mfa_delete = false
+                },
+            ] -> null
+          - website                              = [] -> null
+        }
+      # module.bucket.aws_s3_bucket_acl.this will be destroyed
+      - resource "aws_s3_bucket_acl" "this" {
+          - acl    = "public-read" -> null
+          - bucket = "bucket-liked-poodle" -> null
+          - id     = "bucket-liked-poodle,public-read" -> null
 
-          - versioning {
-              - enabled    = false -> null
-              - mfa_delete = false -> null
+          - access_control_policy {
+              - grant {
+                  - permission = "READ" -> null
+
+                  - grantee {
+                      - type = "Group" -> null
+                      - uri  = "http://acs.amazonaws.com/groups/global/AllUsers" -> null
+                    }
+                }
+              - grant {
+                  - permission = "FULL_CONTROL" -> null
+
+                  - grantee {
+                      - display_name = "tung" -> null
+                      - id           = "0a1482b6182dbd965b93fc1e091b5d434dad57eb19b5f04ffb6b9e3450677c98" -> null
+                      - type         = "CanonicalUser" -> null
+                    }
+                }
+
+              - owner {
+                  - display_name = "tung" -> null
+                  - id           = "0a1482b6182dbd965b93fc1e091b5d434dad57eb19b5f04ffb6b9e3450677c98" -> null
+                }
             }
         }
-
-    Plan: 0 to add, 0 to change, 2 to destroy.
+    Plan: 0 to add, 0 to change, 3 to destroy.
 
     Do you really want to destroy all resources?
       Terraform will destroy all your managed infrastructure, as shown above.
@@ -67,12 +122,14 @@ Once again, we prompted to `Enter a value:`. Type `yes` and press enter to destr
 
       Enter a value: yes
 
-    module.bucket.aws_s3_bucket.this: Destroying... [id=bucket-liked-poodle]
-    module.bucket.aws_s3_bucket.this: Destruction complete after 1s
-    random_pet.bucket: Destroying... [id=liked-poodle]
-    random_pet.bucket: Destruction complete after 0s
+    module.bucket.aws_s3_bucket_acl.this: Destroying... [id=bucket-coherent-swine,public-read]
+    module.bucket.aws_s3_bucket_acl.this: Destruction complete after 0s
+    module.bucket.aws_s3_bucket.this: Destroying... [id=bucket-coherent-swine]
+    module.bucket.aws_s3_bucket.this: Destruction complete after 0s
+    random_pet.this: Destroying... [id=coherent-swine]
+    random_pet.this: Destruction complete after 0s
 
-    Destroy complete! Resources: 2 destroyed.
+    Destroy complete! Resources: 3 destroyed.
     $
 
 Congrats! You have successfully created, modified, and destroy infrastructure with terraspace.
