@@ -23,4 +23,16 @@ Will download the modules to:
     vendor/modules/demo3
     vendor/modules/demo4
 
+## Install
+
+In order to use gcs as a lono bundler source, please add the `google-cloud-storage` gem to your Terraspace project's Gemfile and run bundle.
+
+    To add the gem to your Gemfile, you can run:
+
+        bundle add google-cloud-storage
+
+    Then download blueprints in defined your Terrafile with:
+
+        terraspace bundle
+
 {% include terrafile/archive-support.md %}
