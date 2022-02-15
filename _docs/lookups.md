@@ -2,7 +2,9 @@
 title: Lookups
 ---
 
-The [Project Structure]({% link _docs/intro/structure.md %}) docs explains how modules and stacks are generally defined in the `app` folder. Modules and stacks can also be defined in the `vendor` folder also. The vendor folder neatly organizes 3rd party vendor modules. Terraspace commands like [terraspace build]({% link _reference/terraspace-build.md %}) and [terraspace up]({% link _reference/terraspace-up.md %}) look for modules to build from both `app` and `vendor` folders.
+The [Project Structure]({% link _docs/intro/structure.md %}) docs explains how modules and stacks are generally defined in the `app` folder. Modules and stacks can also be defined in the `vendor` folder also.
+
+Terraspace commands like [terraspace build]({% link _reference/terraspace-build.md %}) and [terraspace up]({% link _reference/terraspace-up.md %}) search for modules in the `app/modules` and `vendor/modules` folders. It similar to how `LOAD_PATH` works. This allows 3rd party modules to be neatly organized.
 
 ## Example
 

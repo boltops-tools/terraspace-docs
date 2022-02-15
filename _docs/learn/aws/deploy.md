@@ -23,37 +23,70 @@ The `terraspace up` command will build the files and then essentially run `terra
       + create
 
     Terraform will perform the following actions:
-
-      # random_pet.bucket will be created
+      # random_pet.this will be created
       + resource "random_pet" "this" {
           + id        = (known after apply)
           + length    = 2
           + separator = "-"
         }
-
       # module.bucket.aws_s3_bucket.this will be created
       + resource "aws_s3_bucket" "this" {
-          + acceleration_status         = (known after apply)
-          + acl                         = "private"
-          + arn                         = (known after apply)
-          + bucket                      = (known after apply)
-          + bucket_domain_name          = (known after apply)
-          + bucket_regional_domain_name = (known after apply)
-          + force_destroy               = false
-          + hosted_zone_id              = (known after apply)
-          + id                          = (known after apply)
-          + region                      = (known after apply)
-          + request_payer               = (known after apply)
-          + website_domain              = (known after apply)
-          + website_endpoint            = (known after apply)
+          + acceleration_status                  = (known after apply)
+          + acl                                  = (known after apply)
+          + arn                                  = (known after apply)
+          + bucket                               = (known after apply)
+          + bucket_domain_name                   = (known after apply)
+          + bucket_regional_domain_name          = (known after apply)
+          + cors_rule                            = (known after apply)
+          + force_destroy                        = false
+          + grant                                = (known after apply)
+          + hosted_zone_id                       = (known after apply)
+          + id                                   = (known after apply)
+          + lifecycle_rule                       = (known after apply)
+          + logging                              = (known after apply)
+          + policy                               = (known after apply)
+          + region                               = (known after apply)
+          + replication_configuration            = (known after apply)
+          + request_payer                        = (known after apply)
+          + server_side_encryption_configuration = (known after apply)
+          + tags_all                             = (known after apply)
+          + versioning                           = (known after apply)
+          + website                              = (known after apply)
+          + website_domain                       = (known after apply)
+          + website_endpoint                     = (known after apply)
 
-          + versioning {
-              + enabled    = (known after apply)
-              + mfa_delete = (known after apply)
+          + object_lock_configuration {
+              + object_lock_enabled = (known after apply)
+              + rule                = (known after apply)
+            }
+        }
+      # module.bucket.aws_s3_bucket_acl.this will be created
+      + resource "aws_s3_bucket_acl" "this" {
+          + acl    = "private"
+          + bucket = (known after apply)
+          + id     = (known after apply)
+
+          + access_control_policy {
+              + grant {
+                  + permission = (known after apply)
+
+                  + grantee {
+                      + display_name  = (known after apply)
+                      + email_address = (known after apply)
+                      + id            = (known after apply)
+                      + type          = (known after apply)
+                      + uri           = (known after apply)
+                    }
+                }
+
+              + owner {
+                  + display_name = (known after apply)
+                  + id           = (known after apply)
+                }
             }
         }
 
-    Plan: 2 to add, 0 to change, 0 to destroy.
+    Plan: 3 to add, 0 to change, 0 to destroy.
 
     Do you want to perform these actions?
       Terraform will perform the actions described above.
@@ -67,10 +100,12 @@ Type `yes` and press enter and you'll see terraform apply finishing.
 
       Enter a value: yes
 
-    random_pet.bucket: Creating...
-    random_pet.bucket: Creation complete after 0s [id=liked-poodle]
+    random_pet.this: Creating...
+    random_pet.this: Creation complete after 0s [id=liked-poodle]
     module.bucket.aws_s3_bucket.this: Creating...
     module.bucket.aws_s3_bucket.this: Creation complete after 1s [id=bucket-liked-poodle]
+    module.bucket.aws_s3_bucket_acl.this: Creating...
+    module.bucket.aws_s3_bucket_acl.this: Creation complete after 0s [id=bucket-liked-poodle,private]
 
     Apply complete! Resources: 2 added, 0 changed, 0 destroyed.
 

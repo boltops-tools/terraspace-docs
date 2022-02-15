@@ -26,24 +26,13 @@ Terraspace will show you a preview of the changes and prompt you to update the i
 
     Terraform will perform the following actions:
 
-      # module.bucket.aws_s3_bucket.this will be updated in-place
-      ~ resource "aws_s3_bucket" "this" {
-          ~ acl                         = "private" -> "public-read"
-            arn                         = "arn:aws:s3:::bucket-liked-poodle"
-            bucket                      = "bucket-liked-poodle"
-            bucket_domain_name          = "bucket-liked-poodle.s3.amazonaws.com"
-            bucket_regional_domain_name = "bucket-liked-poodle.s3.us-west-2.amazonaws.com"
-            force_destroy               = false
-            hosted_zone_id              = "Z3BJ6K6RIION7M"
-            id                          = "bucket-liked-poodle"
-            region                      = "us-west-2"
-            request_payer               = "BucketOwner"
-            tags                        = {}
+      # module.bucket.aws_s3_bucket_acl.this will be updated in-place
+      ~ resource "aws_s3_bucket_acl" "this" {
+          ~ acl    = "private" -> "public-read"
+            id     = "bucket-liked-poodle,private"
+            # (1 unchanged attribute hidden)
 
-            versioning {
-                enabled    = false
-                mfa_delete = false
-            }
+            # (1 unchanged block hidden)
         }
 
     Plan: 0 to add, 1 to change, 0 to destroy.
@@ -58,8 +47,8 @@ Once again, we shown what will change and prompted to `Enter a value:`. Type `ye
 
       Enter a value: yes
 
-    module.bucket.aws_s3_bucket.this: Modifying... [id=bucket-liked-poodle]
-    module.bucket.aws_s3_bucket.this: Modifications complete after 1s [id=bucket-liked-poodle]
+    module.bucket.aws_s3_bucket_acl.this: Modifying... [id=bucket-liked-poodle,private]
+    module.bucket.aws_s3_bucket_acl.this: Modifications complete after 1s [id=bucket-liked-poodle,public-read]
 
     Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 
