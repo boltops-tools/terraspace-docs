@@ -4,6 +4,8 @@ title: Upgrading Guide
 
 This covers upgrading Terraspace. Notes about compatible dependent libraries may be listed here. For most versions updates, no upgrade steps are necessary. Please also refer to the [CHANGELOG](https://github.com/boltops-tools/terraspace/blob/master/CHANGELOG.md).
 
+Also see the [Updating Docs]({% link _docs/install/updating.md %})
+
 ## Summary
 
 The following table summarizes the releases. Only some highlighted releases are in the list.
