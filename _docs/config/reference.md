@@ -26,7 +26,7 @@ init.mode | Can be: auto, never, always. auto means init will only be called whe
 layering.names | Map layering names to friendly names. Currently only supports namespace. More docs: [Layering Friendly Names]({% link _docs/tfvars/friendly-names.md %}) | {}
 layering.enable_names.expansion | Enable or disable friendly name mapping where `expansion` is used. This occurs for `build.cache_dir` and [terraform backends]({% link _docs/config/backend.md %}). It can be useful to disable this if you've changed the default settings and want to keep original path and state file. More docs: [Build Cache Dir]({% link _docs/config/cache-dir.md %}) | true
 log.root | The root folder where logs are written to. | log
-logger | Logger instance to use. | Logger.new($stdout)
+logger | Logger instance to use. | Logger.new($stderr)
 logger.formatter | Logger Formatter to use. See [Formatter](https://ruby-doc.org/stdlib-2.7.1/libdoc/logger/rdoc/Logger/Formatter.html) for interface. | [Terraspace::Logger::Formatter](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/logger/formatter.rb)
 logger.level | Logger level | info
 summary.prune | Prune old state files with no resources to speed up summary call over time. Note: This removes old state files, so it deletes some state history. | false
