@@ -19,69 +19,95 @@ end
 This will show the **found** layers.
 
     $ terraspace build demo
-    Vars Layers:
-        config/blueprints/demo/vars/base.rb
-        config/blueprints/demo/vars/dev.rb
-    Params Layers:
-        config/blueprints/demo/params/base.txt
-        config/blueprints/demo/params/dev.txt
+    Layers for demo:
+        app/stacks/demo/tfvars/base.tfvars
+        app/stacks/demo/tfvars/dev.tfvars
 
 ## All Considered Layers
 
-If you want to also see all the considered layers use `TS_SHOW_ALL_LAYERS=1`
+If you want to also see all the considered layers use `TS_SHOW_ALL_LAYERS=1`. Remember, `config.logger.level = "debug"` needs to also be configured.
 
     $ export TS_SHOW_ALL_LAYERS=1
     $ terraspace build demo
-    Vars Layers:
-        app/blueprints/demo/config/vars.rb
-        app/blueprints/demo/config/vars/base.rb
-        app/blueprints/demo/config/vars/dev.rb
-        app/blueprints/demo/config/vars/us-west-2.rb
-        app/blueprints/demo/config/vars/us-west-2/base.rb
-        app/blueprints/demo/config/vars/us-west-2/dev.rb
-        app/blueprints/demo/config/vars/111111111111.rb
-        app/blueprints/demo/config/vars/111111111111/base.rb
-        app/blueprints/demo/config/vars/111111111111/dev.rb
-        app/blueprints/demo/config/vars/111111111111/us-west-2.rb
-        app/blueprints/demo/config/vars/111111111111/us-west-2/base.rb
-        app/blueprints/demo/config/vars/111111111111/us-west-2/dev.rb
-        config/blueprints/demo/vars.rb
-        config/blueprints/demo/vars/base.rb
-        config/blueprints/demo/vars/dev.rb
-        config/blueprints/demo/vars/us-west-2.rb
-        config/blueprints/demo/vars/us-west-2/base.rb
-        config/blueprints/demo/vars/us-west-2/dev.rb
-        config/blueprints/demo/vars/111111111111.rb
-        config/blueprints/demo/vars/111111111111/base.rb
-        config/blueprints/demo/vars/111111111111/dev.rb
-        config/blueprints/demo/vars/111111111111/us-west-2.rb
-        config/blueprints/demo/vars/111111111111/us-west-2/base.rb
-        config/blueprints/demo/vars/111111111111/us-west-2/dev.rb
-    Params Layers:
-        app/blueprints/demo/config/params.txt
-        app/blueprints/demo/config/params/base.txt
-        app/blueprints/demo/config/params/dev.txt
-        app/blueprints/demo/config/params/us-west-2.txt
-        app/blueprints/demo/config/params/us-west-2/base.txt
-        app/blueprints/demo/config/params/us-west-2/dev.txt
-        app/blueprints/demo/config/params/111111111111.txt
-        app/blueprints/demo/config/params/111111111111/base.txt
-        app/blueprints/demo/config/params/111111111111/dev.txt
-        app/blueprints/demo/config/params/111111111111/us-west-2.txt
-        app/blueprints/demo/config/params/111111111111/us-west-2/base.txt
-        app/blueprints/demo/config/params/111111111111/us-west-2/dev.txt
-        config/blueprints/demo/params.txt
-        config/blueprints/demo/params/base.txt
-        config/blueprints/demo/params/dev.txt
-        config/blueprints/demo/params/us-west-2.txt
-        config/blueprints/demo/params/us-west-2/base.txt
-        config/blueprints/demo/params/us-west-2/dev.txt
-        config/blueprints/demo/params/111111111111.txt
-        config/blueprints/demo/params/111111111111/base.txt
-        config/blueprints/demo/params/111111111111/dev.txt
-        config/blueprints/demo/params/111111111111/us-west-2.txt
-        config/blueprints/demo/params/111111111111/us-west-2/base.txt
-        config/blueprints/demo/params/111111111111/us-west-2/dev.txt
+    Layers for demo:
+        config/terraform/tfvars/base.tfvars
+        config/terraform/tfvars/dev.tfvars
+        config/terraform/tfvars/dev/base.tfvars
+        config/terraform/tfvars/dev/dev.tfvars
+        config/terraform/tfvars/us-west-2.tfvars
+        config/terraform/tfvars/us-west-2/base.tfvars
+        config/terraform/tfvars/us-west-2/dev.tfvars
+        config/terraform/tfvars/us-west-2/dev/base.tfvars
+        config/terraform/tfvars/us-west-2/dev/dev.tfvars
+        config/terraform/tfvars/536766270177.tfvars
+        config/terraform/tfvars/536766270177/base.tfvars
+        config/terraform/tfvars/536766270177/dev.tfvars
+        config/terraform/tfvars/536766270177/dev/base.tfvars
+        config/terraform/tfvars/536766270177/dev/dev.tfvars
+        config/terraform/tfvars/536766270177/us-west-2.tfvars
+        config/terraform/tfvars/536766270177/us-west-2/base.tfvars
+        config/terraform/tfvars/536766270177/us-west-2/dev.tfvars
+        config/terraform/tfvars/536766270177/us-west-2/dev/base.tfvars
+        config/terraform/tfvars/536766270177/us-west-2/dev/dev.tfvars
+        config/terraform/tfvars/aws.tfvars
+        config/terraform/tfvars/aws/base.tfvars
+        config/terraform/tfvars/aws/dev.tfvars
+        config/terraform/tfvars/aws/dev/base.tfvars
+        config/terraform/tfvars/aws/dev/dev.tfvars
+        config/terraform/tfvars/aws/us-west-2.tfvars
+        config/terraform/tfvars/aws/us-west-2/base.tfvars
+        config/terraform/tfvars/aws/us-west-2/dev.tfvars
+        config/terraform/tfvars/aws/us-west-2/dev/base.tfvars
+        config/terraform/tfvars/aws/us-west-2/dev/dev.tfvars
+        config/terraform/tfvars/aws/536766270177.tfvars
+        config/terraform/tfvars/aws/536766270177/base.tfvars
+        config/terraform/tfvars/aws/536766270177/dev.tfvars
+        config/terraform/tfvars/aws/536766270177/dev/base.tfvars
+        config/terraform/tfvars/aws/536766270177/dev/dev.tfvars
+        config/terraform/tfvars/aws/536766270177/us-west-2.tfvars
+        config/terraform/tfvars/aws/536766270177/us-west-2/base.tfvars
+        config/terraform/tfvars/aws/536766270177/us-west-2/dev.tfvars
+        config/terraform/tfvars/aws/536766270177/us-west-2/dev/base.tfvars
+        config/terraform/tfvars/aws/536766270177/us-west-2/dev/dev.tfvars
+        app/stacks/demo/tfvars/base.tfvars
+        app/stacks/demo/tfvars/dev.tfvars
+        app/stacks/demo/tfvars/dev/base.tfvars
+        app/stacks/demo/tfvars/dev/dev.tfvars
+        app/stacks/demo/tfvars/us-west-2.tfvars
+        app/stacks/demo/tfvars/us-west-2/base.tfvars
+        app/stacks/demo/tfvars/us-west-2/dev.tfvars
+        app/stacks/demo/tfvars/us-west-2/dev/base.tfvars
+        app/stacks/demo/tfvars/us-west-2/dev/dev.tfvars
+        app/stacks/demo/tfvars/536766270177.tfvars
+        app/stacks/demo/tfvars/536766270177/base.tfvars
+        app/stacks/demo/tfvars/536766270177/dev.tfvars
+        app/stacks/demo/tfvars/536766270177/dev/base.tfvars
+        app/stacks/demo/tfvars/536766270177/dev/dev.tfvars
+        app/stacks/demo/tfvars/536766270177/us-west-2.tfvars
+        app/stacks/demo/tfvars/536766270177/us-west-2/base.tfvars
+        app/stacks/demo/tfvars/536766270177/us-west-2/dev.tfvars
+        app/stacks/demo/tfvars/536766270177/us-west-2/dev/base.tfvars
+        app/stacks/demo/tfvars/536766270177/us-west-2/dev/dev.tfvars
+        app/stacks/demo/tfvars/aws.tfvars
+        app/stacks/demo/tfvars/aws/base.tfvars
+        app/stacks/demo/tfvars/aws/dev.tfvars
+        app/stacks/demo/tfvars/aws/dev/base.tfvars
+        app/stacks/demo/tfvars/aws/dev/dev.tfvars
+        app/stacks/demo/tfvars/aws/us-west-2.tfvars
+        app/stacks/demo/tfvars/aws/us-west-2/base.tfvars
+        app/stacks/demo/tfvars/aws/us-west-2/dev.tfvars
+        app/stacks/demo/tfvars/aws/us-west-2/dev/base.tfvars
+        app/stacks/demo/tfvars/aws/us-west-2/dev/dev.tfvars
+        app/stacks/demo/tfvars/aws/536766270177.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/base.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/dev.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/dev/base.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/dev/dev.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/us-west-2.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/us-west-2/base.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/us-west-2/dev.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/us-west-2/dev/base.tfvars
+        app/stacks/demo/tfvars/aws/536766270177/us-west-2/dev/dev.tfvars
 
 ## Useful With
 
