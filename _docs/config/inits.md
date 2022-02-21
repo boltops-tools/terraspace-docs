@@ -12,7 +12,7 @@ config/inits/layering.rb
 Terraspace::Layering.module_eval do
   def pre_layers
     [
-      ENV['TEAM'],
+      "teams/#{ENV['TEAM']}",
     ]
   end
 end

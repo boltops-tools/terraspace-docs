@@ -9,8 +9,8 @@ config/app.rb
 ```ruby
 Terraspace.configure do |config|
   config.layering.names = {
-    111111111111: "dev-account",
-    222222222222: "prod-account",
+    "111111111111" => "dev-account",
+    "222222222222" => "prod-account",
   }
 end
 ```
