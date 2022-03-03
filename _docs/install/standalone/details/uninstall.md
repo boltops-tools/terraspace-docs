@@ -11,6 +11,6 @@ To fully clean up and uninstall terraspace. First, run the package manger uninst
 
     rm -rf /opt/terraspace
 
-Then remove the terraspace wrappers in `/usr/local/bin`. You can remove them with this command:
+Also, the standalone installer do not remove the terraspace wrappers in `/usr/local/bin`. This is updating packages on some OSes will also perform a cleanup and remove the old terraspace version. The removal process will then remove the wrapper scripts which are needed. You can remove the terraspace wrappers with this command though:
 
     grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f
