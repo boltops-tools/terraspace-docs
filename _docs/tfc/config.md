@@ -14,8 +14,8 @@ config/app.rb
 
 ```ruby
 Terraspace.configure do |config|
-  config.cloud.overwrite = true # non-sensitive variables
-  config.cloud.overwrite_sensitive = true
+  config.tfc.overwrite = true # non-sensitive variables
+  config.tfc.overwrite_sensitive = true
 end
 ```
 

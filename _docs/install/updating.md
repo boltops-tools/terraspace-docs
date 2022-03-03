@@ -10,7 +10,7 @@ Gemfile
 gem "terraspace", '~> 1.0.0'
 ```
 
-So to update terrapace to the next version can remove the version specificier `'~> 1.0.0'` entirely or update it to the version you wish.  Then run:
+So to update terraspace to the next version can remove the version specificier `'~> 1.0.0'` entirely or update it to the version you wish.  Then run:
 
     bundle update terraspace
 

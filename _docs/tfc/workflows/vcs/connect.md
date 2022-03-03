@@ -14,7 +14,7 @@ From here, you can grab the OAuth Token ID.
 
 ## Configure VCS Connection
 
-To connect VCS to your workspace, configure the `config.cloud.workspace.attrs` settings:
+To connect VCS to your workspace, configure the `config.tfc.workspace.attrs` settings:
 
 config/app.rb:
 
@@ -27,7 +27,7 @@ Terraspace.configure do |config|
     "ingress-submodules": true,
     "branch": "master",
   }
-  config.cloud.workspace.attrs['vcs-repo'] = vcs_repo
+  config.tfc.workspace.attrs['vcs-repo'] = vcs_repo
 end
 ```
 
@@ -81,7 +81,7 @@ TFC maintains previous settings if the config is not set. If you need to disconn
 ```ruby
 Terraspace.configure do |config|
   # ...
-  config.cloud.workspace.attrs['vcs-repo'] = nil
+  config.tfc.workspace.attrs['vcs-repo'] = nil
 end
 ```
 

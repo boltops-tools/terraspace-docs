@@ -21,7 +21,7 @@ The following section provides a little more detail on each version upgrade. Not
 
 ### 0.3.0
 
-* TFC vars related options like `cloud.overwrite` have been move to `cloud.vars`. IE:  `config.overwrite` => `config.cloud.overwrite`
+* TFC vars related options like `cloud.overwrite` have been move to `cloud.vars`. IE:  `config.overwrite` => `config.tfc.overwrite`
 * TFC option. The `cloud.relative_root` has been renamed to `cloud.working_dir_prefix`.
 * See [Config Reference Docs]({% link _docs/config/reference.md %}) for up-to-date list.
 

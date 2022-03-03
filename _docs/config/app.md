@@ -15,7 +15,7 @@ end
 
 ## Custom Logger
 
-To use a custom logger.
+The default logger logs to `$stderr`. To use a custom logger to log to `$stdout`.
 
 ```ruby
 Terraspace.configure do |config|
