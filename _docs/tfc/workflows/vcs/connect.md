@@ -6,7 +6,7 @@ Terraspace supports automating most of the VCS connection setup for your workspa
 
 ## Prerequisite: VCS Provider OAuth Token
 
-As a prerequisite, set up a VCS Provider. Follow the Terraform Docs: [Configuring OAuth Access](https://www.terraform.io/docs/tfc/vcs/github.html). Once done, you'll see something like this:
+As a prerequisite, set up a VCS Provider. Follow the Terraform Docs: [Configuring OAuth Access](https://www.terraform.io/cloud-docs/vcs/github). Once done, you'll see something like this:
 
 ![](https://img.boltops.com/boltops/tools/terraspace/vcs/github-oauth.png)
 

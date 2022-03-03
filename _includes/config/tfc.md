@@ -4,4 +4,4 @@ tfc.hostname | Hostname used for TFE Terraform token used for authenticated API 
 tfc.vars.overwrite | Whether or not to overwrite non-sensitive variables. | true
 tfc.vars.overwrite_sensitive | Whether or not to overwrite sensitive variables. | true
 tfc.vars.show_message | Normally, only "Creating" variable messages are shown. Can be set to: all, update, create, none  | create
-tfc.workspace.attrs | Custom workspace attributes to set as part of the sync to TFC. Can be useful for `vcs-repo`. See [TFC API Workspace Docs](https://www.terraform.io/docs/tfc/api/workspaces.html) | {}
+tfc.workspace.attrs | Custom workspace attributes to set as part of the sync to TFC. Can be useful for `vcs-repo`. See [TFC API Workspace Docs](https://www.terraform.io/cloud-docs/api-docs/workspaces) | {}

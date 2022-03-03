@@ -2,7 +2,7 @@
 title: CLI Workflow
 ---
 
-The [CLI workflow](https://www.terraform.io/docs/tfc/run/cli.html) is nice this because it offers the best of both worlds. You get to use the familiar CLI. At the same time, the `terraform apply` runs remotely in a throwaway virtual machine. So you get a consistent environment.
+The [CLI workflow](https://www.terraform.io/cloud-docs/run/cli) is nice this because it offers the best of both worlds. You get to use the familiar CLI. At the same time, the `terraform apply` runs remotely in a throwaway virtual machine. So you get a consistent environment.
 
 ## Summary
 

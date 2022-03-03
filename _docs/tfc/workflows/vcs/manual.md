@@ -21,5 +21,5 @@ Step #7 is important as modules from outside the path that is set can result in 
 
 ## Resources
 
-* Terraform docs for [Github](https://www.terraform.io/docs/tfc/vcs/github-app.html) which this doc is based on.
-* Terraform docs for all other [VCS integrations](https://www.terraform.io/docs/tfc/vcs/index.html).
+* Terraform docs for [Github](https://www.terraform.io/cloud-docs/vcs/github-app) which this doc is based on.
+* Terraform docs for all other [VCS integrations](https://www.terraform.io/cloud-docs/vcs).
