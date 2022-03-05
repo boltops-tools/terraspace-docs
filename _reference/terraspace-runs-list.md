@@ -52,7 +52,7 @@ You can provide a list of statuses to the `--status` filter option.
 ## Options
 
 ```
-[--format=FORMAT]         # Output formats: csv, table, tab, json
+[--format=FORMAT]         # Output formats: csv, equal, table, tab, json
 [--status=one two three]  # Filter by statuses: pending, planned, all
                           # Default: ["pending", "planned"]
 ```

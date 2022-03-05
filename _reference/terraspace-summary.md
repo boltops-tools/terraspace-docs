@@ -28,7 +28,7 @@ Also, check out `terraspace all show`.
 
 ```
 [--mod=MOD]                  # Module to build to generate a backend file for discovery. By default the last module is used. Usually, it wont matter.
-[--init], [--no-init]        # Instance of stack
+[--init], [--no-init]        # Whether or not to run init
                              # Default: true
 [--details], [--no-details]  # Show details of the listed resources
 [--verbose], [--no-verbose]  

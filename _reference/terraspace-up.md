@@ -55,7 +55,7 @@ You can then use this later in terraspace up:
 
 ```
     [--auto], [--no-auto]                # Auto mode is useful for CI automation. It enables appropriate flags.
-    [--init], [--no-init]                # Instance of stack
+    [--init], [--no-init]                # Whether or not to run init
                                          # Default: true
     [--input], [--no-input]              # Ask for input for variables if not directly set.
 i, [--instance=INSTANCE]                 # Instance of stack
