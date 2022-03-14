@@ -2,7 +2,9 @@
 title: Shim Wrapper
 ---
 
-Terraspace projects have a `Gemfile.lock`. This file ensures that gem dependencies for are pinned. To use it, you run `bundle exec terraspace`. It can be annoying to remember typing `bundle exec`, though. Using a shim spares you from having to remember this, saving you precious finger-typing energy.
+Terraspace projects have a `Gemfile.lock`. This file ensures that gem dependencies for are pinned. The concept is similar to `package.json` and `package-lock.json` in the nodejs world and sort of like `requirements.txt` and `pyenv` in the python world.
+
+To use it, you run `bundle exec terraspace`. It can be annoying to remember typing `bundle exec`, though. Using a shim spares you from having to remember this, saving you precious finger-typing energy.
 
 ## Using a Shim
 

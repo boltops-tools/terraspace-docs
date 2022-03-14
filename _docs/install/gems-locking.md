@@ -3,7 +3,9 @@ title: Gem Versions Locking
 nav_text: Gems Locking
 ---
 
-Gem version locking is handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The generated Terraspace project with [terraspace new project]({% link _reference/terraspace-new-project.md %}) provides a starter `Gemfile`. It looks something like this:
+Gem version locking is handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The concept is similar to `package.json` and `package-lock.json` in the nodejs world and sort of like `requirements.txt` and `pyenv` in the python world.
+
+The generated Terraspace project with [terraspace new project]({% link _reference/terraspace-new-project.md %}) provides a starter `Gemfile`. It looks something like this:
 
 ```ruby
 source "https://rubygems.org"
