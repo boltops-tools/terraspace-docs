@@ -7,7 +7,7 @@ order: 6
 
 {% include videos/learn.md
      url="terraspace-onprem/lessons/terraspace-gitlab-http-backend"
-     img="https://uploads-learn.boltops.com/4sg2231obqo8r39b97e1fd4as0jn" %}
+     img="https://learn-uploads.boltops.com/4sg2231obqo8r39b97e1fd4as0jn" %}
 
 Here's an example with the [GitLab](https://docs.gitlab.com/ee/user/infrastructure/iac/terraform_state.html) [http backend](https://www.terraform.io/language/settings/backends/http).
 

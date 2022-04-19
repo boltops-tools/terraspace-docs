@@ -6,7 +6,7 @@ categories: restricting
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-config-allow-and-deny-stacks-for-specific-environments"
-     img="https://uploads-learn.boltops.com/pcsmvsrn6qn3y6ki91l5y3e95q26" %}
+     img="https://learn-uploads.boltops.com/pcsmvsrn6qn3y6ki91l5y3e95q26" %}
 
 If you want to restrict which stacks can be deployed to, you can use:
 

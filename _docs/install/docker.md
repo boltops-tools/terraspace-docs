@@ -8,7 +8,7 @@ Here's a "Getting Started with Terraspace and Docker" Video:
 
 {% include videos/learn.md
      url="terraspace-install/lessons/terraspace-docker-installation"
-     img="https://uploads-learn.boltops.com/tdp8ky20djzbxsbqyeblxrwuszq5"
+     img="https://learn-uploads.boltops.com/tdp8ky20djzbxsbqyeblxrwuszq5"
      premimum=false %}
 
 ## Docker Run

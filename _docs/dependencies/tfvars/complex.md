@@ -6,7 +6,7 @@ categories: dependencies-tfvars
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-tfvars-complex-types-transforming-data-structures"
-     img="https://uploads-learn.boltops.com/m6b4ul9lg74v8w6mvt1ahqwn1xr3" %}
+     img="https://learn-uploads.boltops.com/m6b4ul9lg74v8w6mvt1ahqwn1xr3" %}
 
 ## Simple Types
 

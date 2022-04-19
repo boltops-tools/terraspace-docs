@@ -4,7 +4,7 @@ title: Deploy All
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-all-background-info"
-     img="https://uploads-learn.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
+     img="https://learn-uploads.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
 
 Also, check out the blog post: [Terraspace All: Deploy Multiple Stacks or Terraform Modules At Once](https://blog.boltops.com/2020/09/19/terraspace-all-deploy-multiple-stacks-at-once)
 

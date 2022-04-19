@@ -6,7 +6,7 @@ Terraspace is a Terraform Framework that optimizes for infrastructure-as-code ha
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-quick-start"
-     img="https://uploads-learn.boltops.com/nl05oz6sjwldtyveahekyzugmuce"
+     img="https://learn-uploads.boltops.com/nl05oz6sjwldtyveahekyzugmuce"
      premium=false %}
 
 Also, check out the blog post: [Introducing Terraspace: The Terraform Framework](https://blog.boltops.com/2020/08/22/introducing-terraspace-the-terraform-framework)

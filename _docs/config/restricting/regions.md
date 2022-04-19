@@ -6,7 +6,7 @@ categories: restricting
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-restricting-deployment-to-allowed-aws-regions"
-     img="https://uploads-learn.boltops.com/w0gh4hfn2pu3p07j71y8wc6jhgkm" %}
+     img="https://learn-uploads.boltops.com/w0gh4hfn2pu3p07j71y8wc6jhgkm" %}
 
 If you want to restrict which regions can be deployed, you can use:
 

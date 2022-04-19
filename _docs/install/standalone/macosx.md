@@ -11,7 +11,7 @@ Here's a "Mac OSX Homebrew Install" Video:
 
 {% include videos/learn.md
      url="terraspace-install/lessons/terraspace-standalone-macosx-installation"
-     img="https://uploads-learn.boltops.com/8o4xs73qwjrm4eg04oc8n8ocsneq"
+     img="https://learn-uploads.boltops.com/8o4xs73qwjrm4eg04oc8n8ocsneq"
      premimum=false %}
 
 ## Homebrew

@@ -10,7 +10,7 @@ Here's a demo video:
 
 {% include videos/learn.md
      url="terraspace-fundamentals/lessons/terraspace-all-background-info"
-     img="https://uploads-learn.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
+     img="https://learn-uploads.boltops.com/awqvc0tfgo7hs2x0qsstr8nvxi8s" %}
 
 Terraspace calculates the dependency graph and ensures they are deployed in the correct order. Here's a dependency graph example:
 

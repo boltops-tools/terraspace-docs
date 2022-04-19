@@ -4,7 +4,7 @@ title: Terraform Statefile Approaches and Thoughts
 
 {% include videos/learn.md
      url="terraform-fundamentals/lessons/the-best-terraform-statefile-approach"
-     img="https://uploads-learn.boltops.com/zrnjs639k6b7en34796wy5gmmf0c" %}
+     img="https://learn-uploads.boltops.com/zrnjs639k6b7en34796wy5gmmf0c" %}
 
 {% include state/preamble.md %}
 
