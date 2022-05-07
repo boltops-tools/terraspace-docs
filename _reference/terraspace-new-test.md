@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new test.
+Generates test.
 
 ## Stack Examples
 

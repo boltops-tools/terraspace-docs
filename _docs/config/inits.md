@@ -18,6 +18,6 @@ Terraspace::Layering.module_eval do
 end
 ```
 
-This example customizes Terraspace layering processing. More info: [Custom Layering]({% link _docs/tfvars/custom-layering.md %}).
+This example customizes Terraspace layering processing. More info: [Custom Layering]({% link _docs/layering/custom-layering.md %}).
 
 Config initializers are a generalized system, so the way you use it really depends on what you're trying to do.

@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new module.
+Generates module.
 
 ## Example
 

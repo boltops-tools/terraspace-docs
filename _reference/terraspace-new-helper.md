@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new helper.
+Generates helper.
 
 ## Project Examples
 

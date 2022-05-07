@@ -5,11 +5,11 @@ reference: true
 
 ## Usage
 
-    terraspace new plugin NAME
+    terraspace new plugin SUBCOMMAND
 
 ## Description
 
-Generates plugin.
+plugin subcommands
 
 ## Example
 
@@ -61,10 +61,9 @@ Generates plugin.
           create  terraspace_plugin_mycloud/terraspace_plugin_mycloud.gemspec
     $
 
+## Subcommands
 
-## Options
+* [terraspace plugin ci]({% link _reference/terraspace-plugin-ci.md %}) - Generates CI Plugin.
+* [terraspace plugin core]({% link _reference/terraspace-plugin-core.md %}) - Generates Core plugin.
 
-```
-y, [--force]  # Bypass overwrite are you sure prompt for existing files
-```
 

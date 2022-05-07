@@ -141,7 +141,7 @@ You can use the same code for different environments in the different regions al
     AWS_REGION=us-east-1 TS_ENV=prod terraspace up demo
     AWS_REGION=us-west-2 TS_ENV=prod terraspace up demo
 
-For more details, check out: [Tfavrs Layering]({% link _docs/tfvars/full-layering.md %})
+For more details, check out: [Tfavrs Layering]({% link _docs/layering/full-layering.md %})
 
 Terraspace also provide a standard directory structure:
 

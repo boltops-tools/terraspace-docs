@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new example.
+Generates example.
 
 ## Example
 

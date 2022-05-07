@@ -4,7 +4,7 @@ nav_text: Multiple Environments
 categories: patterns
 ---
 
-You can use Terraspace to easily create multiple environments with the same infrastructure code.  This is thanks to [Terraspace Layering]({% link _docs/tfvars/layering.md %}). We'll walk through an example to help understand how it works.
+You can use Terraspace to easily create multiple environments with the same infrastructure code.  This is thanks to [Terraspace Layering]({% link _docs/layering/layering.md %}). We'll walk through an example to help understand how it works.
 
 ## Creating Multiple Environments
 
@@ -26,4 +26,4 @@ The tfvar files are processed and "layered".  Example:
 
 You can use the same infrastructure code with different variables to create different versions of your environments easily.
 
-Learn more about: [Tfvars & Layering]({% link _docs/tfvars/layering.md %}).
+Learn more about: [Tfvars & Layering]({% link _docs/layering/layering.md %}).

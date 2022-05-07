@@ -38,7 +38,7 @@ Name | Description
 app/modules | Reusable modules or library code. Use `terraspace new module` to generate a module.
 app/modules/example/test | Which each module, you can have an optional test folder where you would put tests specific to the module: [Module-level tests]({% link _docs/testing/module.md %})
 app/stack | Business specific modules. Use `terraspace new stack` to generate a stack. It is often useful to start here and then abstract generic logic to the `app/modules` folder.
-app/stack/demo/tfvars | Within each stack folder, you can have a tfvars folder and define different variables. You can use [tfvars layering]({% link _docs/tfvars/layering.md %}) to use the same code to create different environments.
+app/stack/demo/tfvars | Within each stack folder, you can have a tfvars folder and define different variables. You can use [tfvars layering]({% link _docs/layering/layering.md %}) to use the same code to create different environments.
 config/app.rb | Terraspace [project-level settings]({% link _docs/config/app.md %}). Configure things like the logger and [test framework]({% link _docs/testing.md %}).
 config/args | Terraspace supports customizing the args passed to the terraform commands. See [Config Args Docs]({% link _docs/config/args.md %}).
 config/env | Where you put environment-specific overrides of the `config/app.rb` settings.

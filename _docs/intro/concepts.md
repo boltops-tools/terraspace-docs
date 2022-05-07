@@ -14,6 +14,6 @@ Terraspace uses Conventions Over Configuration to remove boilerplate setup and m
 
 ## Tfvars Layering
 
-Terraspace introduces [Tfvars Layering]({% link _docs/tfvars/layering.md %}). You can use the same infrastructure code with different tfvar files to create multiple environments like dev, prod, uat, stage, etc.  Layering DRYs up the usage of multiple tfvar files. Additionally, Layering allows you to use same infrastructure code to deploy to multiple regions and or accounts.
+Terraspace introduces [Tfvars Layering]({% link _docs/layering/layering.md %}). You can use the same infrastructure code with different tfvar files to create multiple environments like dev, prod, uat, stage, etc.  Layering DRYs up the usage of multiple tfvar files. Additionally, Layering allows you to use same infrastructure code to deploy to multiple regions and or accounts.
 
 {% include intro/testing.md %}

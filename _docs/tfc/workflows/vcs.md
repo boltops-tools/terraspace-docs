@@ -41,6 +41,6 @@ Note, when the VCS workflow mode is used, you cannot use the CLI workflow. TFC o
 
 If you want to use the [CLI workflow]({% link _docs/tfc/workflows/cli.md %}), you must disconnect VCS from the workspace.
 
-## Instance Option
+## Terraspace Extra
 
-The [--instance option]({% link _docs/tfvars/instance-option.md %}) is not currently supported with the VCS-Driven workflow.
+[TS_EXTRA]({% link _docs/layering/extra.md %}) is not currently supported with the VCS-Driven workflow.
