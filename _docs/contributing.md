@@ -62,7 +62,7 @@ We want the Terraspace documentation to be the best it can be. We've open-source
 
 ### How to submit changes
 
-You can find the documentation for [https://terraspace.cloud.com](https://terraspace.cloud) in the [docs](https://github.com/boltops-tools/terraspace-docs/tree/master) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
+You can find the documentation for [https://terraspace.cloud](https://terraspace.cloud) in the [docs](https://github.com/boltops-tools/terraspace-docs/tree/master) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
 
 One gotcha, all pull requests should be directed at the `master` branch (the default branch).
 
@@ -76,7 +76,7 @@ Any time you propose a code change, you should also include updates to the docum
 
 #### Documentation
 
-If your contribution changes any Terraspace behavior, make sure to update the documentation. Documentation lives in the `docs` folder.  It's a Jekyll site and can be started with `cd docs && bin/web`. If the docs are missing information, please feel free to add it in. Great docs make a great project. Include changes to the documentation within your pull request, and once merged, `https://terraspace.cloud.com` will be updated.
+If your contribution changes any Terraspace behavior, make sure to update the documentation. Documentation lives in the `docs` folder.  It's a Jekyll site and can be started with `cd docs && bin/web`. If the docs are missing information, please feel free to add it in. Great docs make a great project. Include changes to the documentation within your pull request, and once merged, `https://terraspace.cloud` will be updated.
 
 #### Tests
 
