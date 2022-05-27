@@ -12,9 +12,9 @@ See [the support guidelines]({% link support.md %})
 
 Whether you're a developer, an infrastructure engineer, or just an enthusiast, there are lots of ways to contribute. Here are a few ideas:
 
-* [Install Terraspace on your computer](https://terraspace.cloud.com/docs/install/) and kick the tires. Does it work? Does it do what you'd expect? If not, [open an issue](https://github.com/boltops-tools/terraspace/issues/new/choose) and let us know.
+* [Install Terraspace on your computer](https://terraspace.cloud/docs/install/) and kick the tires. Does it work? Does it do what you'd expect? If not, [open an issue](https://github.com/boltops-tools/terraspace/issues/new/choose) and let us know.
 * Comment on some of the project's [open issues](https://github.com/boltops-tools/terraspace/issues). Have you experienced the same problem? Know a workaround? Do you have a suggestion for how the feature could be better?
-* Read through [the documentation](https://terraspace.cloud.com/docs/), and click the "improve this page" button, any time you see something confusing or have a suggestion for something that could be improved.
+* Read through [the documentation](https://terraspace.cloud/docs/), and click the "improve this page" button, any time you see something confusing or have a suggestion for something that could be improved.
 * Browse through the [Terraspace Community forum](https://community.boltops.com), and lend a hand answering questions. There's a good chance you've already experienced what another user is experiencing.
 * Find [an open issue](https://github.com/boltops-tools/terraspace/issues) (especially [those labeled `help wanted`](https://github.com/boltops-tools/terraspace/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22)), and submit a proposed fix. If it's your first pull request, we promise we won't bite and are glad to answer any questions.
 * Help evaluate [open pull requests](https://github.com/boltops-tools/terraspace/pulls), by testing the changes locally and reviewing what's proposed.
@@ -62,7 +62,7 @@ We want the Terraspace documentation to be the best it can be. We've open-source
 
 ### How to submit changes
 
-You can find the documentation for [https://terraspace.cloud.com](https://terraspace.cloud.com) in the [docs](https://github.com/boltops-tools/terraspace-docs/tree/master) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
+You can find the documentation for [https://terraspace.cloud.com](https://terraspace.cloud) in the [docs](https://github.com/boltops-tools/terraspace-docs/tree/master) directory. See the section above, [submitting a pull request](#submitting-a-pull-request) for information on how to propose a change.
 
 One gotcha, all pull requests should be directed at the `master` branch (the default branch).
 
