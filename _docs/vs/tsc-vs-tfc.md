@@ -41,6 +41,8 @@ Terraform Cloud provides remote runners to run your `terraform apply`, Terraspac
 
 Since you bring your own machine with Terraspace Cloud, you have **full** control over the system. Since you have more control over the CI workflow, you can add your own tool cost analysis, or compliance framework as you wish. It is also faster, especially when developing from your machine, as you do not have to wait for the overhead of a new VM machine to spin up for every small change. Terraspace Cloud simply records the plans and updates.
 
+![](https://img.boltops.com/images/terraspace/cloud/stacks/github-ci.png)
+
 ## Backend State Control
 
 You can keep state with your current backend. All you do is enable terraspace `config.cloud` settings, run `terraspace up`, and you're using Teraspace Cloud. There's no work to migrate things like moving the backend state from s3 to the tfc remote backend.
