@@ -2,7 +2,7 @@
 title: Terraspace Cloud
 ---
 
-Terraspace Cloud adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed it work with Terraspace.
+[Terraspace Cloud](https://blog.boltops.com/2022/06/10/terraspace-cloud/) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed it work with Terraspace.
 
 ## Features
 
@@ -11,3 +11,5 @@ Terraspace Cloud adds additional features and conveniences to the [Terraspace Fr
 * **CI/CD Integration**: Integration with popular CI/CD systems like GitHub Actions, GitLab Pipelines, etc. GitHub Pull Request and GitLab Merge Request integration provides a comment with a link to the visual dashboard.
 
 Terraspace Cloud provides these additional conveniences as a optional paid managed service. The Terraform Framework itself is open source and free to use.
+
+[Terraspace Cloud Pricing](https://app.terraspace.cloud/pricing)

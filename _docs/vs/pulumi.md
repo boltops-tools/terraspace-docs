@@ -2,6 +2,7 @@
 title: Terraspace vs Pulumi
 nav_text: Pulumi
 categories: vs
+order: 4
 ---
 
 Pulumi allows you to use a general purpose languages like Python, TypeScript, JavaScript, Go, .NET, Java, and YAML, to write Infrastructure as Code. Terraspace just Terraform HCL code with some conventions and with a little bit of Ruby sprinkles.  Terraspace utlimately builds a Terraform project and then runs `terraform apply`. Essentialy, Terraspace is Terraform.

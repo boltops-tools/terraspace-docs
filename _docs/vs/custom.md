@@ -2,6 +2,7 @@
 title: Terraspace vs Custom Solutions
 nav_text: Custom Solutions
 categories: vs
+order: 1
 ---
 
 Though Terraform provides us the essentials to help build infrastructure-as-code, it leaves much up to us to figure out.  Usually, companies end up home-growing custom scripts on top of Terraform to build infrastructure code. Typically, these are a bunch of bash scripts that duck-tape things together. It ends up like a science project.

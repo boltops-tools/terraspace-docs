@@ -55,7 +55,7 @@
       </li>
       <li><a href="{% link _docs/vs.md %}">Terraspace vs Others</a>
         <ul>
-          {% assign docs = site.docs | where: "categories","vs" %}
+          {% assign docs = site.docs | where: "categories","vs" | sort: "order" %}
           {% for doc in docs -%}
           <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
           {% endfor %}

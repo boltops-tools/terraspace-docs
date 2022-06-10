@@ -2,6 +2,7 @@
 title: Terraspace vs Terraform
 nav_text: Terraform
 categories: vs
+order: 2
 ---
 
 In [How Terraspace Works]({% link _docs/intro/how-terraspace-works.md %}), a simple explanation is provided on how Terraspace works. Essentially:

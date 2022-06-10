@@ -2,6 +2,7 @@
 title: Terraspace vs Terragrunt
 nav_text: Terragrunt
 categories: vs
+order: 3
 ---
 
 {% include videos/learn.md
