@@ -5,28 +5,46 @@ category: vs
 order: 5
 ---
 
-For those familar with Terraform Cloud, you may wonder what is different between Terraspace Cloud vs Terraform Cloud. IE: TSC vs TFC. Though Terraspace and Terraform Cloud both provide a GUI or website interface to visualize your terraform applies, the two have some pretty large differences.
+Both Terraform Cloud and Terraspace Cloud are optional paid managed services. Both both provide a Team-based permissions, History tracking, and GUI interface. What makes them different is that Terraspace Cloud is designed specifically for the Terraform Framework.
 
 ## Dashboard
 
-Both systems provide a user-friendly dashboard so you can see what stacks have been deployed with it's history.
+Both services provide a user-friendly dashboard to see what stacks have been historically deployed. In Terraspace Cloud, the deployments are called stacks, and applies are called updates:
 
-## Remote Runners
+![](https://img.boltops.com/images/terraspace/cloud/stacks/stack-updates-v3.png)
 
-Terraform Cloud provides remote runners to run your `terraform apply`, Terraspace Cloud does not. Instead Terraspace Cloud allows you to bring your own runner or CI systems to the table. There are some pros and cons with this.
+In the Terraform Cloud, deployments are called workspaces, and applies are called runs.
 
-Since you bring your own machine with Terraspace Cloud, you have full control over the system. It is also faster, especially when developing from your machine, as you do not have wait for a fresh machine to spin up every time you want to make a small change.
+![](https://img.boltops.com/images/terraspace/cloud/stacks/terraform-runs.png)
 
-Since you have more control over the CI workflow, you can add your own tool cost analysis, or compliance framework as you wish.
+A difference is that with Terraspace, you don't have to create the stack ahead of time like you have to do Terraform Cloud workspaces. With Terraspace, you codify things like tfvars and reference secrets and deploy. Terraspace simply creates the stacks as needed. There's less manual work.
 
-The trade-off is you manage the machine yourself. However, there are plenty of CI providers out there already. You're probably already using one of them. Terraspace helps you integrate with these CI systems like GitHub Actions, GitLab Pipelines, etc. This the same approach Pulumi took to to CI/CD.
+## Team Management
+
+Both services provide a Team-based management and permissions system. Terraform Cloud permissions are [focused on workspaces](https://www.terraform.io/cloud-docs/users-teams-organizations/permissions). Generally, admins grant permissions to teams on a per-workspace basis.
+
+Terraspace Cloud permissions work more naturally. You define permissions and specify which projects, envs, and stacks the team will have permissions to. Terraspace Cloud Team-based permissions are more dynamic and powerful in this way. Here's an example.
+
+![](https://img.boltops.com/images/terraspace/cloud/stacks/terraform-runs.png)
+
+Since Terrapace provides the ability to dynamically build terraform projects and deploy them, it makes sense for a permission system with more power. The `envs: dev` in the permission means that users in the dev team only have access to `TS_ENV=dev` stacks. You can finely control the permissions based on variables. Terraspace Cloud Permissions system was explicitly designed for Terraspace.
 
 ## Version Control Workflow
 
-Terraspace also supports TFC and you can use Terraspace directly with TFC. However, if you're using TFC with the version control integration, you have to make sure to commit the `.terraspace-cache` folder and its artifacts.  This is because there's terraspace is a 2nd class citizen in TFC. TFC is not even aware of Terraspace.
+Terraspace also supports TFC, and you can use Terraspace directly with TFC. However, if you're using TFC with the version control integration, you have to make sure to commit the `.terraspace-cache` folder and its artifacts.  This is awkward but must be done since Terraform Cloud doesn't allow you to run arbitrary commands like `terraspace up`.
 
-With TSC, Terraspace is a first citizen and it's directly integrated with the way Terraspace Cloud works. You do not have to commit any artifacts into your version control, you commit pure and clean source code.
+With TSC, Terraspace is naturally integrated with the way Terraspace Cloud works. You do not have to commit any artifacts into your version control, you commit pure and clean source code. Your CI/CD process calls `terraspace up` directly. Docs: [CI/CD]({% link _docs/ci.md %}).
 
-## Backend State Migration
+## CI/CD Approach
 
-You can keep state with your own current backend. All you do is sign up for an account and enable terraspace cloud configs and you're using Teraspace Cloud. There's no work to migrate state. IE: Moving the backend state from s3 to the tfc remote backend.
+Terraform Cloud provides remote runners to run your `terraform apply`, Terraspace Cloud does not. Instead, Terraspace Cloud allows you to bring your own runner or CI systems to the table. Terraspace helps you integrate with CI systems like GitHub Actions, GitLab Pipelines, etc. This the same approach Pulumi took to CI/CD.
+
+Since you bring your own machine with Terraspace Cloud, you have **full** control over the system. Since you have more control over the CI workflow, you can add your own tool cost analysis, or compliance framework as you wish. It is also faster, especially when developing from your machine, as you do not have to wait for the overhead of a new VM machine to spin up for every small change. Terraspace Cloud simply records the plans and updates.
+
+## Backend State Control
+
+You can keep state with your current backend. All you do is enable terraspace `config.cloud` settings, run `terraspace up`, and you're using Teraspace Cloud. There's no work to migrate things like moving the backend state from s3 to the tfc remote backend.
+
+## Summary
+
+Though Terraform Cloud and Terraspace Cloud seem similar, they are quite different. Terraspace Cloud directly with the Terraspace framework. It provides extra features like Team Management, Permissions, History, and a GUI visual interface to Terraspace in a natural way.
