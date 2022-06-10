@@ -38,9 +38,10 @@ Terraspace::Cloud::Ci.register(
 )
 ```
 
-* name: The CI Plugin name.
-* env_key: The env key that is used to detect whether or not the CI plugin should be used.
-* root: This is the root of the CI plugin. It's use so that a template can be looked up as a part of the `terraspace new ci` command.  The `__dir__` ruby special variable just means the directory of the current source code file itself. So the `terraspace_ci_github/lib` folder.
+* **name**: The CI Plugin name.
+* **env_key**: The env key that is used to detect whether or not the CI plugin should be used.
+* **root**: This is the root of the CI plugin. It's use so that a template can be looked up as a part of the `terraspace new ci` command.  The `__dir__` ruby special variable just means the directory of the current source code file itself. So the `terraspace_ci_github/lib` folder.
+* **exe**: A folder or file. The generator will make these files executable as part of generation. If it's a folder, all files within the folder are made executable.
 
 ## Interface
 
