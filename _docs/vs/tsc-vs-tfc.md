@@ -17,7 +17,7 @@ In the Terraform Cloud, deployments are called workspaces, and applies are calle
 
 ![](https://img.boltops.com/images/terraspace/cloud/stacks/terraform-runs.png)
 
-A difference is that with Terraspace, you don't have to create the stack ahead of time like you have to do Terraform Cloud workspaces. With Terraspace, you codify things like tfvars and reference secrets and deploy. Terraspace simply creates the stacks as needed. There's less manual work.
+A difference is that with Terraspace, you don't have to create the stack ahead of time like you have to do Terraform Cloud workspaces. With Terraspace, you codify things like tfvars and reference secrets and deploy. There's no need to manually precreate workspaces or stacks. They get created as you deploy.
 
 ## Team Management
 
@@ -40,8 +40,6 @@ With TSC, Terraspace is naturally integrated with the way Terraspace Cloud works
 Terraform Cloud provides remote runners to run your `terraform apply`, Terraspace Cloud does not. Instead, Terraspace Cloud allows you to bring your own runner or CI systems to the table. Terraspace helps you integrate with CI systems like GitHub Actions, GitLab Pipelines, etc. This the same approach Pulumi took to CI/CD.
 
 Since you bring your own machine with Terraspace Cloud, you have **full** control over the system. Since you have more control over the CI workflow, you can add your own tool cost analysis, or compliance framework as you wish. It is also faster, especially when developing from your machine, as you do not have to wait for the overhead of a new VM machine to spin up for every small change. Terraspace Cloud simply records the plans and updates.
-
-![](https://img.boltops.com/images/terraspace/cloud/stacks/github-ci.png)
 
 ## Backend State Control
 
