@@ -79,6 +79,7 @@ module TerraspaceCiGithub
     def data
       {
         build_system: "github",
+        host: "github.com",
         full_repo: full_repo,
         branch_name: branch_name,
         commit_url: commit_url,
