@@ -14,11 +14,11 @@ Variable | Example | Description
 --- | --- | ---
 BUILD_DIR | stacks/demo | The build directory name.
 ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
+EXTRA | bob | The [extra concept]({% link _docs/layering/extra.md %}). IE: TS_EXTRA=bob terraspace up demo
 MOD_NAME | demo | The module name or stack name, which is also a module.
 TYPE | stack | The type name. IE: stack or module
 TYPE_DIR | stacks | The type dir. IE: stacks or modules
-TYPE_INSTANCE | stack-bob | The type with the [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob. The separator is a `-`
-INSTANCE | bob | The [instance option]({% link _docs/tfvars/instance-option.md %}). IE: terraspace up demo --instance bob
+TYPE_EXTRA | stack-bob | The type with [TS_EXTRA]({% link _docs/layering/extra.md %}). IE: TS_EXTRA=bob terraspace up demo. The separator is a `-`
 
 </div>
 

@@ -3,7 +3,7 @@
 
 * [Generators]({% link _docs/generators.md %}) Built-in generators to quickly create starter modules. Focus on code instead of boilerplate structure.
 
-* [Multiple Environments]({% link _docs/intro/deploy-all.md %}) [Tfvars]({% link _docs/intro.md %}) & [Layering]({% link _docs/tfvars/full-layering.md %}) allow you to use the same code with different tfvars to create multiple environments. Terraspace conventionally loads tfvars from the `tfvars` folder. Rich layering support allows you to build different environments like dev and prod with the same code. Examples are in [Full Layering]({% link _docs/tfvars/full-layering.md %}).
+* [Multiple Environments]({% link _docs/intro/deploy-all.md %}) [Tfvars]({% link _docs/intro.md %}) & [Layering]({% link _docs/layering/full-layering.md %}) allow you to use the same code with different tfvars to create multiple environments. Terraspace conventionally loads tfvars from the `tfvars` folder. Rich layering support allows you to build different environments like dev and prod with the same code. Examples are in [Full Layering]({% link _docs/layering/full-layering.md %}).
 
 * [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}) The ability to deploy multiple stacks with a single command. Terraspace calculates the [dependency graph]({% link _docs/dependencies/subgraphs.md %}) and deploys stacks in the right order. You can also target specific stacks and deploy [subgraphs]({% link _docs/dependencies/subgraphs.md %}).
 

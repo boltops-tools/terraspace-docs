@@ -7,7 +7,7 @@ search_title: New Project AWS
 
 We'll use [terraspace new project]({% link _reference/terraspace-new-project.md %}) to generate a new terraspace project.
 
-    $ terraspace new project infra --plugin aws --examples
+    terraspace new project infra --plugin aws --examples
 
 For this tutorial, we're using the `--examples` option to generate a starter example.
 

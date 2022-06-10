@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new git hook.
+Generates git hook.
 
 ## Example
 

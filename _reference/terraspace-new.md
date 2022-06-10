@@ -13,17 +13,18 @@ new subcommands
 
 ## Subcommands
 
-* [terraspace new arg]({% link _reference/terraspace-new-arg.md %}) - Generates new arg.
-* [terraspace new example]({% link _reference/terraspace-new-example.md %}) - Generates new example.
-* [terraspace new git_hook]({% link _reference/terraspace-new-git_hook.md %}) - Generates new git hook.
-* [terraspace new helper]({% link _reference/terraspace-new-helper.md %}) - Generates new helper.
-* [terraspace new hook]({% link _reference/terraspace-new-hook.md %}) - Generates new hook.
-* [terraspace new module]({% link _reference/terraspace-new-module.md %}) - Generates new module.
-* [terraspace new plugin]({% link _reference/terraspace-new-plugin.md %}) - Generates plugin.
-* [terraspace new project]({% link _reference/terraspace-new-project.md %}) - Generates new project.
+* [terraspace new arg]({% link _reference/terraspace-new-arg.md %}) - Generates arg.
+* [terraspace new ci]({% link _reference/terraspace-new-ci.md %}) - Generates ci starter structure.
+* [terraspace new example]({% link _reference/terraspace-new-example.md %}) - Generates example.
+* [terraspace new git_hook]({% link _reference/terraspace-new-git_hook.md %}) - Generates git hook.
+* [terraspace new helper]({% link _reference/terraspace-new-helper.md %}) - Generates helper.
+* [terraspace new hook]({% link _reference/terraspace-new-hook.md %}) - Generates hook.
+* [terraspace new module]({% link _reference/terraspace-new-module.md %}) - Generates module.
+* [terraspace new plugin]({% link _reference/terraspace-new-plugin.md %}) - plugin subcommands
+* [terraspace new project]({% link _reference/terraspace-new-project.md %}) - Generates project.
 * [terraspace new shim]({% link _reference/terraspace-new-shim.md %}) - Generates terraspace shim.
-* [terraspace new stack]({% link _reference/terraspace-new-stack.md %}) - Generates new stack.
-* [terraspace new test]({% link _reference/terraspace-new-test.md %}) - Generates new test.
+* [terraspace new stack]({% link _reference/terraspace-new-stack.md %}) - Generates stack.
+* [terraspace new test]({% link _reference/terraspace-new-test.md %}) - Generates test.
 
 ## Options
 

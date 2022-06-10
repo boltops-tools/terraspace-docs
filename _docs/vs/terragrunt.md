@@ -65,7 +65,7 @@ Terrapace leverages tfvars files and allows you to compose multiple tfvars toget
 
 With Terragrunt, you must duplicate the `terragrunt.hcl` files . Terraspace Variables Layering handles things in a DRYer fashion.
 
-Docs: [Tfvars]({% link _docs/tfvars.md %}) and [Layering]({% link _docs/tfvars/layering.md %})
+Docs: [Tfvars and Layering]({% link _docs/layering/layering.md %})
 
 ## Deploy All Essentials
 
@@ -193,6 +193,6 @@ Docs: [Configurable Framework Behavior]({% link _docs/config/reference.md %}):
 
 We cover plenty of differences between Terraspace and Terragrunt here. Overall, the two are quite different tools. At the end of the day, Terraspace is a full-fledged framework. Whereas, Terragrunt is a thin wrapper. We're really comparing apples to oranges here.
 
-At this point, if you're still wondering what's right for you. Think that theorizing will only get you so far. Building a small test proof-of-concept project with each tool is sometimes the fastest path to reaching a decision. Go out there and start building! A good place to start is the [Terrspace Getting Started Guides]({% link getting-started.md %}).
+At this point, if you're still wondering what's right for you. Think that theorizing will only get you so far. Building a small test proof-of-concept project with each tool is sometimes the fastest path to reaching a decision. Go out there and start building! A good place to start is the [Terraspace Getting Started Guides]({% link getting-started.md %}).
 
 For another similar comparison, check out this blog post: [Terraform vs Terragrunt vs Terraspace](https://blog.boltops.com/2020/09/28/terraform-vs-terragrunt-vs-terraspace)

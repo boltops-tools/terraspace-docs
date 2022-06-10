@@ -21,7 +21,7 @@ terraform {
 }
 ```
 
-The workspace name also includes INSTANCE. INSTANCE is only set if the [--instance option]({% link _docs/tfvars/instance-option.md %}) is set.  Additionally, expansion will strip any trailing `-`. So:
+The workspace name also includes INSTANCE. INSTANCE is only set if the [--instance option]({% link _docs/layering/instance-option.md %}) is set.  Additionally, expansion will strip any trailing `-`. So:
 
     :MOD_NAME-:ENV-:REGION-:INSTANCE
 
@@ -87,4 +87,4 @@ Terraspace.configure do |config|
 end
 ```
 
-Note: `BUILD_DIR` already includes the [--instance option]({% link _docs/tfvars/instance-option.md %}) info.
+Note: `BUILD_DIR` already includes the [TS_EXTRA]({% link _docs/layering/extra.md %}) info.

@@ -9,7 +9,7 @@ reference: true
 
 ## Description
 
-Generates new stack.
+Generates stack.
 
 ## Example
 

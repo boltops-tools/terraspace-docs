@@ -21,7 +21,6 @@ end
 
 Here's a table with the cloud related config settings:
 
-Name | Description | Default
---- | --- | ---
-build.clean_cache | Disable cleaning the `.terraspace-cache` entirely. Terrspace generally tries to only remove the cache files in a way to allow the TFC VCS-Driven workflow to work. But it may not work for your needs, depending on Terraspace is configured. This setting keeps the cache. You can manually delete items from the `.terraspace-cache` manually. | true
-{% include config/tfc.md %}
+{% include config/reference/header.md %}
+{% include config/reference/tfc.md %}
+{% include config/reference/footer.md %}
