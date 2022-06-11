@@ -12,12 +12,22 @@ The following table summarizes the releases. Only some highlighted releases are 
 
 Version | Notes
 --- | ---
+2.0.0 | The generated backend.tf has a new key pattern. See below.
 0.3.0 | Some config options where renamed. See below.
 0.2.0 | Just make sure youre using the a compatible version the provider plugins. Upgrading terraspace should have already done this, but just in case this is noted.
 
 ## Upgrade Details
 
 The following section provides a little more detail on each version upgrade. Note, we'll not provide more details for all versions.
+
+### 2.0.0
+
+* The generated backend.tf for the different cloud provider plugins have a new pattern. The update is in the plugins themselves since they provide the template to the core terraspace framework.
+* This will not affect terraspace projects that were generated from older versions of Terraspace, IE: v1 and below. By design, you have to manually update the `config/terraform/backend.tf` since it will change your state file location. Here are the GitHub Compares and some examples of the backend "key" changes:
+  * AWS: [v0.3.8...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.3.8...v0.4.0). `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
+  * Azurerm: [v0.5.1...v0.6.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.5.1...v0.6.0) `:LOCATION/:ENV/:BUILD_DIR/terraform.tfstate` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
+  * Google: [v0.3.5...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.3.5...v0.4.0) `:REGION/:ENV/:BUILD_DIR` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION`
+* If you want to upgrade to take advantage of features like [app, role]({% link _docs/layering/app-layering.md %}), and [extra layering]({% link _docs/layering/extra-layering.md %}), then you should update the keys and **move** your statefiles in your respective backend.
 
 ### 0.3.0
 
