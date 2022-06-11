@@ -17,7 +17,7 @@ In the Terraform Cloud, deployments are called workspaces, and applies are calle
 
 ![](https://img.boltops.com/images/terraspace/cloud/stacks/terraform-runs.png)
 
-A difference is that with Terraspace, you don't have to create the stack ahead of time like you have to do Terraform Cloud workspaces. With Terraspace, you can define tfvars and reference secrets vi code. There's no need to manually pre-create workspaces or stacks. They get created as you deploy.
+A difference is that with Terraspace, you don't have to create the stack ahead of time like you have to do Terraform Cloud workspaces. With Terraspace, you can define tfvars and reference secrets with code. There's no need to manually pre-create workspaces or stacks. They get created as you deploy.
 
 ## Team Management
 
@@ -37,9 +37,9 @@ With TSC, Terraspace is naturally integrated with the way Terraspace Cloud works
 
 ## CI/CD Approach
 
-Terraform Cloud provides remote runners to run your `terraform apply`,  Instead, Terraspace Cloud allows you to bring your own runner or CI systems to the table. Terraspace helps you integrate with CI systems like GitHub Actions, GitLab Pipelines, etc. This is the same approach Pulumi took to CI/CD.
+Terraform Cloud provides remote runners to run your `terraform apply`.  With Terraspace Cloud, you bring your own runner or CI systems to the table. Terraspace helps you integrate with CI systems like GitHub Actions, GitLab Pipelines, etc. This is the same approach Pulumi takes to CI/CD.
 
-Since you bring your own machine with Terraspace Cloud, you have **full** control over the system. You can add your own cost analysis tool, or compliance framework as you wish. It is also faster, especially when developing from your machine, as you do not have to wait for the overhead of a new VM machine to spin up for every small change. Terraspace Cloud simply records the plans and updates.
+Since you bring your own machine with Terraspace Cloud, you have **full** control over the system. You can add your own cost analysis tool, or compliance framework as you wish. It is also faster, especially when developing from your machine. You do not have to wait for the overhead of a new VM machine to spin up for every small change. Terraspace Cloud records the plans and updates.
 
 ![](https://img.boltops.com/images/terraspace/cloud/stacks/github-ci.png)
 
