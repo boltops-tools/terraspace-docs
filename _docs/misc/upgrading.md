@@ -27,7 +27,7 @@ The following section provides a little more detail on each version upgrade. Not
   * AWS: [v0.3.8...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.3.8...v0.4.0). `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
   * Azurerm: [v0.5.1...v0.6.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.5.1...v0.6.0) `:LOCATION/:ENV/:BUILD_DIR/terraform.tfstate` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
   * Google: [v0.3.5...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.3.5...v0.4.0) `:REGION/:ENV/:BUILD_DIR` => `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION`
-* If you want to upgrade to take advantage of features like [app, role]({% link _docs/layering/app-layering.md %}), and [extra layering]({% link _docs/layering/extra-layering.md %}), then you should update the keys and **move** your statefiles in your respective backend.
+* If you want to upgrade to take advantage of features like [app, role]({% link _docs/layering/app-layering.md %}), and [extra layering]({% link _docs/layering/extra.md %}), then you should update the keys and **move** your statefiles in your respective backend.
 
 ### 0.3.0
 
