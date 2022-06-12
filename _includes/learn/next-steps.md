@@ -11,7 +11,7 @@ You've seen how to get started with Terraspace and {{ include.provider }}. You c
 
 * [Intro]({% link _docs/intro.md %}): Review Terraform intro features.
 * [Backend Config]({% link _docs/config/backend.md %}): Configure the backend, where to store the state file:
-* [Terraspace Cloud]({% link _docs/cloud.md %}): Configure Terraspace Cloud to use extra features Team and Permission Management, Dashhoard, History, and CI/CD Integration.
+* [Terraspace Cloud]({% link _docs/cloud.md %}): Upgrade to Terraspace Cloud for extra features like Team Management, Permissions, History, a Web Dashhoard, and CI/CD Integration.
 * [Deploy Multiple Stacks]({% link _docs/intro/deploy-all.md %}): Deploy all or segments of your infrastruture.
 * [Terrafile]({% link _docs/terrafile.md %}): Use modules from anywhere you want.
 * [State File Thoughts]({% link _docs/state/approaches.md %}): General state file thoughts.
