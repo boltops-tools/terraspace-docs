@@ -83,7 +83,7 @@ The build cache is important when using the [VCS-Driven workflow]({% link _docs/
 ```ruby
 Terraspace.configure do |config|
   config.build.cache_root = nil # defaults to /full/path/to/.terraspace-cache
-  config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR"
+  config.build.cache_dir = ":REGION/:APP/:ROLE/:ENV/:BUILD_DIR"
 end
 ```
 

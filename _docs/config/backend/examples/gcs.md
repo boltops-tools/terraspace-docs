@@ -13,7 +13,7 @@ config/terraform/backend.tf:
 terraform {
   backend "gcs" {
     bucket = "<%= expansion('terraform-state-:PROJECT-:REGION-:ENV') %>"
-    prefix = "<%= expansion(':REGION/:ENV/:BUILD_DIR') %>"
+    prefix = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION') %>"
   }
 }
 {% endhighlight %}

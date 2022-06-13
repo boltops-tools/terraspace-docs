@@ -93,14 +93,14 @@ config/terraform/backend.rb
 ```ruby
 backend("s3",
   bucket:         "my-bucket",
-  key:            ":REGION/:ENV/:BUILD_DIR/terraform.tfstate",
+  key:            ":TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate",
   region:         ":REGION",
 )
 ```
 
 The bucket key example:
 
-    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
+    :TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate
 
 Gets expanded to actual values:
 
@@ -112,7 +112,7 @@ The finest-grain approach is to have a statefile per module.  So instead of depl
 
 The `:BUILD_DIR` above includes the name of the "type_dir", which is either modules or stacks.  So if you happened to deploy a module from `app/modules/instance`, the statefile would expand out from
 
-    :REGION/:ENV/:BUILD_DIR/terraform.tfstate
+    :TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate
 
 To:
 

@@ -7,7 +7,7 @@ The `build.cache_dir` setting controls where the generated terraform project wil
 ```ruby
 Terraspace.configure do |config|
   config.build.cache_root = nil # defaults to /full/path/to/.terraspace-cache
-  config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR" # default
+  config.build.cache_dir = ":REGION/:APP/:ROLE/:ENV/:BUILD_DIR" # default
 end
 ```
 
@@ -26,7 +26,7 @@ config/app.rb:
 
 ```ruby
 Terraspace.configure do |config|
-  config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR"
+  config.build.cache_dir = ":REGION/:APP/:ROLE/:ENV/:BUILD_DIR"
 end
 ```
 
@@ -41,7 +41,7 @@ When setting it as a Object, the instance method `call` should also return a Str
 ```ruby
 class CustomBuildDir
   def call(mod)
-    ":CACHE_ROOT/my-cache/:NAMESPACE/:REGION/:ENV/:BUILD_DIR" # String is returned
+    "my-cache/:NAMESPACE/:REGION/:ENV/:BUILD_DIR" # String is returned
   end
 end
 

@@ -98,7 +98,7 @@ state_key = case mod_name
             when "db"
               "path2/to/existing/terraform.tfstate"
             else
-              ":REGION/:ENV/:BUILD_DIR/terraform.tfstate" # fallback to default terraspace variable notation
+              ":TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate" # fallback to default terraspace variable notation
             end
 
 backend("s3",

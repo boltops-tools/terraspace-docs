@@ -22,7 +22,7 @@ The summary is based on the statefiles in the bucket, regardless of whether or n
 ## Considerations
 
 * The summary command is supported for aws, google, and azure only. IE: It is not supported for local backends or TFC.
-* It download all statefiles for the specific TS_ENV. For performance, it requires `:ENV` to be the "containing folder" for all the state files. IE: The default backend.tf `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` works.
+* It download all statefiles for the specific TS_ENV. For performance, it requires `:ENV` to be the "containing folder" for all the state files. IE: The default backend.tf `:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate` works.
 
 ## All Show Command
 

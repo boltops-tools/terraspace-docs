@@ -12,10 +12,10 @@ config/terraform/backend.tf:
 {% highlight sh %}
 terraform {
   backend "azurerm" {
-    resource_group_name = "<%= expansion(':ENV-:LOCATION') %>"
-    storage_account_name = "<%= expansion('ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
+    resource_group_name = "<%= expansion(':APP-:ENV-:LOCATION') %>"
+    storage_account_name = "<%= expansion('ts:APP_HASH:SUBSCRIPTION_HASH:LOCATION_HASH:ENV') %>"
     container_name = "terraform-state"
-    key = "<%= expansion(':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
+    key = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate') %>"
   }
 }
 {% endhighlight %}
@@ -53,7 +53,7 @@ There are some resources that are more env-focused. AKS clusters are a good exam
 
 The default `resource_group_name` is env-focused and nicely accounts for the use-case of shared resources like AKS clusters.
 
-    resource_group_name = "<%= expansion(':ENV-:LOCATION') %>"
+    resource_group_name = "<%= expansion(':APP-:ENV-:LOCATION') %>"
 
 It does not account for app-env focused resources, though. Since Terraspace does not know what app name, you need to provide the context. One approach is to configure resource_group_name more dynamically:
 
@@ -73,9 +73,9 @@ end
 terraform {
   backend "azurerm" {
     resource_group_name = "<%= resource_group_name %>"
-    storage_account_name = "<%= expansion('ts:SUBSCRIPTION_HASH:LOCATION:ENV') %>"
+    storage_account_name = "<%= expansion('ts:APP_HASH:SUBSCRIPTION_HASH:LOCATION_HASH:ENV') %>"
     container_name = "terraform-state"
-    key = "<%= expansion(':LOCATION/:ENV/:BUILD_DIR/terraform.tfstate') %>"
+    key = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate') %>"
   }
 }
 {% endhighlight %}

@@ -31,7 +31,7 @@ config/app.rb:
 
 ```ruby
 Terraspace.configure do |config|
-  config.build.cache_dir = ":CACHE_ROOT/:REGION/:ENV/:BUILD_DIR"
+  config.build.cache_dir = ":REGION/:APP/:ROLE/:ENV/:BUILD_DIR"
 end
 ```
 
