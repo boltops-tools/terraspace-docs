@@ -47,7 +47,9 @@ ___
 
 Variable | Example | Description
 --- | --- | ---
+APP_HASH | wxyz | Short consistent hash based on TS_APP value.
 LOCATION         | eastus | Azure Location. Can be set with `ARM_LOCATION`. Also can be set by `az configure --defaults location=westus`
+LOCATION_HASH | wxyz | Short consistent hash based on Azure location.
 SUSCRIPTION      | EXAMPLE88-c44e-4677-bf0eEXAMPLE | Azure subscription id. Can be set by `ARM_SUBSCRIPTION_ID`.
 SUSCRIPTION_HASH | wxyz | Short consistent hash based on subscription id.
 
