@@ -63,4 +63,6 @@ Next, let's take a look at the `config/terraform/provider.tf` file.
 
 You can see it's actually commented out. This is because we have already configured `GOOGLE_APPLICATION_CREDENTIALS`, `GOOGLE_PROJECT`, etc. It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
 
+{% include learn/cloud.md %}
+
 Next, we'll review generated app folder files.

@@ -65,4 +65,6 @@ provider "azurerm" {
 
 It should be fine to leave the generated config files as-is for this tutorial. For real-world use, you may want to pin down the terraform version.
 
+{% include learn/cloud.md %}
+
 Next, we'll review generated app folder files.
