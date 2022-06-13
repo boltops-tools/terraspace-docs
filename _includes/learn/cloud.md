@@ -1,6 +1,7 @@
 ## Terraspace Cloud
 
-You can configure your app settings to enable [Terraspace Cloud](https://blog.boltops.com/2022/06/10/terraspace-cloud/). This provides a nice GUI interface to track your plans and updates. It is optional.
+You can configure your app settings to enable [Terraspace Cloud](https://blog.boltops.com/2022/06/10/terraspace-cloud/). This provides a nice GUI interface to track your plans and updates. This is optional.
+
 config/app.rb
 
 ```ruby
