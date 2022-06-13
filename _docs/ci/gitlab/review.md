@@ -4,7 +4,7 @@ title: GitLab CI Review
 
 We use GitLab Pipelines to set up CI with Terraspace. The workflow we used was:
 
-1. **Pull Request**: Shows previews of changes using `terraspace plan`
+1. **Merge Request**: Shows previews of changes using `terraspace plan`
 2. **Push or Branch**: Automatically updates the infrastructure using `terraspace up` on `TS_ENV=dev`
 3. **Manual Web**: We used a manually trigger web pipeline to review the changes again and apply to `TS_ENV=prod`
 

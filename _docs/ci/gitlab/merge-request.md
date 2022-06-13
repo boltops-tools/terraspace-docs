@@ -26,7 +26,7 @@ plan_dev:
 ```
 {% endraw -%}
 
-The difference here is that this will create a GitLab pipeline that only runs on `pull_request` events and will run a `terraspace plan`.
+The difference here is that this will create a GitLab pipeline that only runs on `merge_request` events and will run a `terraspace plan`.
 
 ## Create Branch and PR
 

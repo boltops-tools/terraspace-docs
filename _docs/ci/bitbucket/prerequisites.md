@@ -2,4 +2,4 @@
 title: Prerequisites
 ---
 
-{% include ci/prereq.md name="Bitbucket" %}
+{% include ci/prereq.md name="Bitbucket" host="bitbucket.org" %}

@@ -15,7 +15,7 @@ Create a {{ include.name }} repo and push the project to it. Here are some examp
     git init
     git add .
     git commit -m 'first commit'
-    git remote add origin git@github.com:USER/REPO.git # replace USER and REPO with your own info
+    git remote add origin git@{{ include.host }}:USER/REPO.git # replace USER and REPO with your own info
     git push -u origin main
 
 ## The terraspace_ci_{{ include.name | downcase }} gem
