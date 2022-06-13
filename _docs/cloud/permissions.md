@@ -2,7 +2,7 @@
 title: Terraspace Cloud Permissions
 nav_text: Permissions
 category: cloud
-order: 2
+order: 3
 ---
 
 Terraspace Cloud provides flexible team-based permissions system. You can define rules to allow which projects, envs, stacks, etc users have permissions on.
