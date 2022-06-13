@@ -12,10 +12,12 @@ ___
 
 Variable | Example | Description
 --- | --- | ---
+APP | app1 | Optional. Terraspace app. Can be set like so `TS_APP=app1`. See: [App and Role Layering]({% link _docs/layering/app-layering.md %}).
 BUILD_DIR | stacks/demo | The build directory name.
 ENV | dev | Terraspace env. Can be set like so `TS_ENV=dev`
 EXTRA | bob | The [extra concept]({% link _docs/layering/extra.md %}). IE: TS_EXTRA=bob terraspace up demo
 MOD_NAME | demo | The module name or stack name, which is also a module.
+ROLE | deploy | Optional. Terraspace role. Can be set like so `TS_ROLE=deploy`. See: [App and Role Layering]({% link _docs/layering/app-layering.md %}).
 TYPE | stack | The type name. IE: stack or module
 TYPE_DIR | stacks | The type dir. IE: stacks or modules
 TYPE_EXTRA | stack-bob | The type with [TS_EXTRA]({% link _docs/layering/extra.md %}). IE: TS_EXTRA=bob terraspace up demo. The separator is a `-`

@@ -47,6 +47,8 @@ terraform {
 
 If you're already familiar with terraform, then you'll probably notice that there's ERB templating.  Terraspace allows you use templating in your tf files. When we deploy the terraspace project, it compiles the config file down to a standard terraform file. The templating is particularly useful in `backend.tf` as it gives dynamic control over bucket, key, and region.
 
+For variables available see: [Backend Config Variables]({% link _docs/config/backend/variables.md %})
+
 When we later deploy, the `backend.tf` gets compiled down to a standard terraform tf file. Terraspace will then automatically create the google cloud storage bucket for you.
 
 Next, let's take a look at the `config/terraform/provider.tf` file.
