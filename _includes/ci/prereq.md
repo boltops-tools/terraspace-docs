@@ -35,6 +35,19 @@ gem "terraspace_ci_{{ include.name | downcase }}" # <= Should have this
 
 The Gemfile also happens to be using AWS cloud plugin. You can use any cloud plugin, of course.
 
+Also, make sure that you're using Terraspace 2.0 or above. You can check with `bundle info terraspace` and should see something like:
+
+    $ bundle info terraspace
+    * terraspace (2.0.0)
+
+If not, you can update terraspace with
+
+    bundle update terraspace
+
+Or more generally, update all gem dependencies
+
+    bundle update
+
 ## Configure Terraspace Cloud
 
 Configure the `cloud.org` and `cloud.project` settings.
