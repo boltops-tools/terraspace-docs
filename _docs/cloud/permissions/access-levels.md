@@ -5,6 +5,8 @@ category: permissions
 order: 8
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 When you create a permissions rule it can be assigned one of 3 access levels: read, write, admin. Here's a table that covers these levels.
 
 Level | Description

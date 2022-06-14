@@ -5,6 +5,8 @@ category: permissions
 order: 6
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 Here are steps to configure and deploy with the token.
 
 {% include cloud/setup-deploy.md %}

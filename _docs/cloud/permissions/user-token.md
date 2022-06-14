@@ -5,6 +5,8 @@ category: permissions
 order: 5
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 To use the permission, we'll create a **user token**.
 
 1. Click on your user name in the upper right-hand corner and go to **Settings**

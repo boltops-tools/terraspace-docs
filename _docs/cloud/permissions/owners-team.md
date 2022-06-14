@@ -5,6 +5,8 @@ category: permissions
 order: 7
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 The Owners Team is a special team that gets created as part of creating a Org.
 
 * Members of this team have the ability to add other users to the org.

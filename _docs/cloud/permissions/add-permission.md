@@ -5,6 +5,8 @@ category: permissions
 order: 3
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 Now we'll add permissions to the team.
 
 1. If you're on the Team show page where you add users, you can click on **Permissions**. If you're on the Teams list page, you can click on the **Permissions** link next to the team.

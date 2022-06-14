@@ -5,6 +5,8 @@ category: permissions
 order: 2
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 Now let's create a team and add the user to the team.
 
 1. On the left-hand menu, click on **Teams**

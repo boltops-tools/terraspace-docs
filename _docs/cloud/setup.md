@@ -5,6 +5,8 @@ category: cloud
 order: 1
 ---
 
+{% include videos/learn/cloud/setup.md %}
+
 You can set up up Terraspace Cloud with these steps:
 
 1. Sign up for an account at [app.terraspace.cloud](https://app.terraspace.cloud)

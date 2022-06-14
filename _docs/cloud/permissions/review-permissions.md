@@ -5,6 +5,8 @@ category: permissions
 order: 4
 ---
 
+{% include videos/learn/cloud/permissions.md %}
+
 Terraspace Cloud Permissions are designed to be quite flexible and is designed to work with the way Terraspace works.
 
 With a terraspace project, you define stacks and deploy different instances of these stacks like one for `TS_ENV=dev` and `TS_ENV=prod`. The system is allows you to finely scope these permissions.
