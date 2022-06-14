@@ -17,7 +17,7 @@ end
 
 ## Record Changes Only
 
-By default, terraspace cloud will only record plans and updates when changes are detected. This helps reduce noise.  You can adjust this behavior with:
+By default, terraspace cloud will only record plans and updates when changes are detected. This helps maintain a high signal-to-noise ratio.  You can adjust this behavior with:
 
 config/app.rb
 
