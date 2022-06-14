@@ -9,5 +9,6 @@ This doc covers the quota limits for Terraspace Cloud Permissions.
 
 Name | Description | Quota
 ---|---|---
+Orgs | Number of total orgs a user can create | 5
 Permissions | Number of permissions for each team | 5
-Team | Number of total teams in an org | 20
+Teams | Number of total teams in an org | 20
