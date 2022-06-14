@@ -118,6 +118,17 @@ To:
 
     us-west-2/dev/modules/instance/terraform.tfstate
 
+## Terraform Performance
+
+An additional benefit to separate statefiles is a speed. The terraform plan and apply is faster since there are less resources for terraform to resolve. You don't want to wait 20-40m for a terraform to run 😟  See:
+
+* [Terraform with large set of resources take very long time to run #18981](https://github.com/hashicorp/terraform/issues/18981)
+* [Terraform init is extremely slow #27379](https://github.com/hashicorp/terraform/issues/27379)
+* [How to reduce the time it takes to refresh Terraform's state?](https://stackoverflow.com/questions/51336997/how-to-reduce-the-time-it-takes-to-refresh-terraforms-state)
+
+For companies managing a decent amount of infrastructure with terraform  separate statefiles, it simply becomes a must for performance reasons.
+
+
 ## Why the default?
 
 Terraspace default is to have a state file on a per stack basis, which is intended to group modules together. This allows fine-grain control and isolation protection when running `terraform apply`. It is also the recommendation from Terraform themselves: [One Workspace Per Environment Per Terraform Configuration](https://www.terraform.io/docs/cloud/guides/recommended-practices/part1.html#one-workspace-per-environment-per-terraform-configuration).
