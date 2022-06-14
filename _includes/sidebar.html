@@ -172,62 +172,6 @@
           <li><a href="{% link _docs/config/reference.md %}">Reference</a></li>
         </ul>
       </li>
-      <li><a href="{% link _docs/generators.md %}">Generators</a>
-        <ul>
-          <li><a href="{% link _docs/generators/project.md %}">Project</a></li>
-          <li><a href="{% link _docs/generators/module.md %}">Module</a></li>
-          <li><a href="{% link _docs/generators/stack.md %}">Stack</a></li>
-          <li><a href="{% link _docs/generators/cheatsheet.md %}">Cheatsheet</a></li>
-        </ul>
-      </li>
-      <li><a href="{% link _docs/layering.md %}">Tfvars & Layering</a>
-          <ul>
-            {% assign docs = site.docs | where: "categories","layering" | sort: "order" %}
-            {% for doc in docs -%}
-              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
-            {% endfor %}
-          </ul>
-      </li>
-      <li><a href="{% link _docs/dependencies.md %}">Dependency Graphs</a>
-        <ul>
-          {% assign docs = site.docs | where: "categories","dependencies" %}
-          {% for doc in docs -%}
-          {% if doc.nav_text == "Tfvars" %}
-          <li><a href='{{doc.url}}'>{{doc.nav_text}}</a>
-            <ul>
-              {% assign docs = site.docs | where: "categories","dependencies-tfvars" %}
-              {% for doc in docs -%}
-              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
-              {% endfor %}
-            </ul>
-          </li>
-          {% else %}
-          <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
-          {% endif %}
-          {% endfor %}
-        </ul>
-      </li>
-      <li><a href="{% link _docs/terrafile.md %}">Terrafile</a>
-        <ul>
-          <li><a href="{% link _docs/terrafile/usage.md %}">Usage</a></li>
-          <li><a href="{% link _docs/terrafile/options.md %}">Options</a>
-            <ul>
-              <li><a href="{% link _docs/terrafile/options/stack.md %}">Stack</a></li>
-            </ul>
-          </li>
-          <li><a href="{% link _docs/terrafile/sources.md %}">Sources</a>
-            <ul>
-              {% assign docs = site.docs | where: "categories","sources" | sort:"order" %}
-              {% for doc in docs -%}
-              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
-              {% endfor %}
-            </ul>
-          <li><a href="{% link _docs/terrafile/example.md %}">Example</a>
-          <li><a href="{% link _docs/terrafile/version-locking.md %}">Version Locking</a></li>
-          <li><a href="{% link _docs/terrafile/terraform-notation.md %}">Terraform Notation</a></li>
-          <li><a href="{% link _docs/terrafile/env-vars.md %}">Env Vars</a></li>
-        </ul>
-      </li>
       <li><a href="{% link _docs/cloud.md %}">Cloud</a>
         <ul>
         {% assign docs = site.docs | where: "categories","cloud" | sort:"order" %}
@@ -288,6 +232,62 @@
           <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
           {% endif %}
         {% endfor %}
+        </ul>
+      </li>
+      <li><a href="{% link _docs/generators.md %}">Generators</a>
+        <ul>
+          <li><a href="{% link _docs/generators/project.md %}">Project</a></li>
+          <li><a href="{% link _docs/generators/module.md %}">Module</a></li>
+          <li><a href="{% link _docs/generators/stack.md %}">Stack</a></li>
+          <li><a href="{% link _docs/generators/cheatsheet.md %}">Cheatsheet</a></li>
+        </ul>
+      </li>
+      <li><a href="{% link _docs/layering.md %}">Tfvars & Layering</a>
+          <ul>
+            {% assign docs = site.docs | where: "categories","layering" | sort: "order" %}
+            {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
+            {% endfor %}
+          </ul>
+      </li>
+      <li><a href="{% link _docs/dependencies.md %}">Dependency Graphs</a>
+        <ul>
+          {% assign docs = site.docs | where: "categories","dependencies" %}
+          {% for doc in docs -%}
+          {% if doc.nav_text == "Tfvars" %}
+          <li><a href='{{doc.url}}'>{{doc.nav_text}}</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","dependencies-tfvars" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          {% else %}
+          <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+      <li><a href="{% link _docs/terrafile.md %}">Terrafile</a>
+        <ul>
+          <li><a href="{% link _docs/terrafile/usage.md %}">Usage</a></li>
+          <li><a href="{% link _docs/terrafile/options.md %}">Options</a>
+            <ul>
+              <li><a href="{% link _docs/terrafile/options/stack.md %}">Stack</a></li>
+            </ul>
+          </li>
+          <li><a href="{% link _docs/terrafile/sources.md %}">Sources</a>
+            <ul>
+              {% assign docs = site.docs | where: "categories","sources" | sort:"order" %}
+              {% for doc in docs -%}
+              <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
+              {% endfor %}
+            </ul>
+          <li><a href="{% link _docs/terrafile/example.md %}">Example</a>
+          <li><a href="{% link _docs/terrafile/version-locking.md %}">Version Locking</a></li>
+          <li><a href="{% link _docs/terrafile/terraform-notation.md %}">Terraform Notation</a></li>
+          <li><a href="{% link _docs/terrafile/env-vars.md %}">Env Vars</a></li>
         </ul>
       </li>
       <li><a href="{% link _docs/tfc.md %}">TFC</a>

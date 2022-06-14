@@ -15,7 +15,22 @@ Terraspace.configure do |config|
 end
 ```
 
-Here's a table with the cloud related config settings:
+## Record Changes Only
+
+By default, terraspace cloud will only record plans and updates when changes are detected. This helps reduce noise.  You can adjust this behavior with:
+
+config/app.rb
+
+```ruby
+Terraspace.configure do |config|
+  # "all" records all plans and updates.
+  # "changes" only records when there are changes
+  # the default is "changes", this overrides the default behavior
+  config.cloud.record = "all"
+end
+```
+
+This tells terraspace to record all plans and updates regardless of whether or not changes are detected.
 
 {% include config/reference/header.md %}
 {% include config/reference/cloud.md %}
