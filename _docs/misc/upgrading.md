@@ -12,6 +12,7 @@ The following table summarizes the releases. Only some highlighted releases are 
 
 Version | Notes
 --- | ---
+2.0.1 | The generated backend.tf has a new key pattern. See below.
 2.0.0 | The generated backend.tf has a new key pattern. See below.
 0.3.0 | Some config options where renamed. See below.
 0.2.0 | Just make sure youre using the a compatible version the provider plugins. Upgrading terraspace should have already done this, but just in case this is noted.
@@ -19,6 +20,14 @@ Version | Notes
 ## Upgrade Details
 
 The following section provides a little more detail on each version upgrade. Note, we'll not provide more details for all versions.
+
+### 2.0.1
+
+* The generated backend.tf for the different cloud provider plugins have a new pattern. It also includes `:PROJECT`. This accounts for different statefiles for different terraspace projects.
+* AWS: [v0.4.0...v0.4.1](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.4.0...v0.4.1).
+* Azurerm: [v0.6.0...v0.6.1](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.6.0...v0.6.1)
+* Google: [v0.4.0...v0.4.1](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.4.0...v0.4.1)
+* This should have originally been in terraspace 2.0. Went with patch release since Terraspace 2.0 has only been out for a few days.
 
 ### 2.0.0
 
