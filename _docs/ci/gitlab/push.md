@@ -11,7 +11,7 @@ We'll review the **push** part of the pipeline. Here's the relevant part of `.gi
 image: ruby:latest
 
 stages:
-  - plan dev
+  - up dev
 # ...
 
 before_script: |

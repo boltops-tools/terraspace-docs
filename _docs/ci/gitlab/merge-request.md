@@ -12,7 +12,7 @@ image: ruby:latest
 
 stages:
 # ...
-  - up dev
+  - plan dev
 # ...
 
 # Runs on Merge Request Only
