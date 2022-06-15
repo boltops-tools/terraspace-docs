@@ -2,6 +2,8 @@
 title: Merge Request
 ---
 
+{% include videos/learn/cloud/gitlab.md %}
+
 Let's take a look at Merge Request workflow. Here's the YAML.
 
 .gitlab-ci.yml

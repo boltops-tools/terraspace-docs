@@ -2,6 +2,8 @@
 title: Push Workflow
 ---
 
+{% include videos/learn/cloud/gitlab.md %}
+
 We'll review the **push** part of the pipeline. Here's the relevant part of `.gitlab-ci.yml` that handles it.
 
 .gitlab-ci.yml

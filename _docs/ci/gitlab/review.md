@@ -2,6 +2,8 @@
 title: GitLab CI Review
 ---
 
+{% include videos/learn/cloud/gitlab.md %}
+
 We use GitLab Pipelines to set up CI with Terraspace. The workflow we used was:
 
 1. **Merge Request**: Shows previews of changes using `terraspace plan`

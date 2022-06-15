@@ -2,6 +2,8 @@
 title: Manual Web Pipeline
 ---
 
+{% include videos/learn/cloud/gitlab.md %}
+
 The Web Pipeline is a pipeline designed to be run manually so a human can approve the changes.  We'll use it to apply the changes to production. Let's take a look at it.
 
 .gitlab-ci.yml
