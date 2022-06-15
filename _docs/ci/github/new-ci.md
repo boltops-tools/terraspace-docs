@@ -17,4 +17,12 @@ Here's an example with output
 
 A `.github/workflows` folder was created with some starter files.
 
+## GitHub Workflows
+
+There are 3 different workflows.
+
+1. **Push Workflow**: Runs when you push a new commit to a specified branch.
+2. **Pull Request**: Runs when you creates a new pull request from a source branch with one or more commits.
+3. **Workflow Dispatch**: Runs manually via the web console.
+
 Next, we'll review these files and their workflows.

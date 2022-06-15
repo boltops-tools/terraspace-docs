@@ -30,7 +30,7 @@ plan_dev:
 
 The difference here is that this will create a GitLab pipeline that only runs on `merge_request` events and will run a `terraspace plan`.
 
-## Create Branch and PR
+## Create Branch and MR
 
     git checkout feature1
     vim app/stacks/demo/main.tf
@@ -60,14 +60,14 @@ Click on Details to see the Pipeline Logging output.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/gitlab/merge-request/merge-request-create-done.png)
 
-A `plan` was run and provided a preview of what would happen. Any additional `git push` to the PR branch will provide updated previews.
+A `plan` was run and provided a preview of what would happen. Any additional `git push` to the MR branch will provide updated previews.
 
 ## Merge Request Comment
 
-Also, a PR comment with a Terraspace cloud link was added.
+Also, a MR comment with a Terraspace cloud link was added.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/gitlab/merge-request/merge-request-comment.png)
 
-If you merge the PR, the [Push Pipeline]({% link _docs/ci/gitlab/push.md %}) that we covered earlier will automatically apply the preview.
+If you merge the MR, the [Push Pipeline]({% link _docs/ci/gitlab/push.md %}) that we covered earlier will automatically apply the preview.
 
 Next, we'll cover the Manual Web Pipeline.
