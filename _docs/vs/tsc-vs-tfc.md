@@ -35,7 +35,7 @@ Terraspace also supports TFC, and you can use Terraspace directly with TFC. Howe
 
 With TSC, Terraspace is naturally integrated with the way Terraspace Cloud works. You do not have to commit any artifacts into your version control, you commit pure and clean source code. Your CI/CD process calls `terraspace up` directly. Docs: [CI/CD]({% link _docs/ci.md %}).
 
-## CI/CD Approach
+## CI/CD
 
 Terraform Cloud provides remote runners to run your `terraform apply`.  With Terraspace Cloud, you bring your own runner or CI systems to the table. Terraspace helps you integrate with CI systems like GitHub Actions, GitLab Pipelines, etc. This is the same approach Pulumi takes to CI/CD.
 
@@ -45,7 +45,7 @@ Since you bring your own machine with Terraspace Cloud, you have **full** contro
 
 ## Backend State Control
 
-You can keep state with your current backend. All you do is enable terraspace `config.cloud` settings, run `terraspace up`, and you're using Teraspace Cloud. There's no work to migrate things like moving the backend state from s3 to the TFC remote backend.
+You can keep state with your current backend. All you do is enable terraspace `config.cloud` settings, run `terraspace up`, and you're using Teraspace Cloud. There's zero work to migrate things like moving the backend state from s3 to the TFC remote backend.
 
 ## Summary
 
