@@ -36,7 +36,7 @@ The difference here is that this will create a GitLab pipeline that only runs on
     git commit -m "change code"
     git push -u origin feature1
 
-To create a Pull Request, you can either go to the url printed out from `git push`
+To create a Merge Request, you can either go to the url printed out from `git push`
 
     https://gitlab.com/ORG/REPO/-/merge_requests/new?merge_request%5Bsource_branch%5D=feature1
 
@@ -60,7 +60,7 @@ Click on Details to see the Pipeline Logging output.
 
 A `plan` was run and provided a preview of what would happen. Any additional `git push` to the PR branch will provide updated previews.
 
-## Pull Request Comment
+## Merge Request Comment
 
 Also, a PR comment with a Terraspace cloud link was added.
 

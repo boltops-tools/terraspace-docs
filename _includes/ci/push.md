@@ -4,7 +4,7 @@ We should set these environment variables. Note that the AWS variables are requi
 
 * **AWS Variables**: The workflow is environment configured with `AWS_*` variables, so the CI machine has permissions to create resources on AWS. The AWS token need these [minimal permissions]({% link _docs/plugins/aws/minimal-iam.md %}).
 {% if include.name == "GitLab" %}
-* **GITLAB_TOKEN**: Terraspace uses this to grab additional information like commit messages and Merge Request comments with the terraspace cloud link.
+* **GITLAB_TOKEN**: Terraspace uses this to grab additional information like commit messages and Merge Request comments with the terraspace cloud link. The token should have permissions: read_repository and api so it can create the PR comment.
 {% elsif include.name == "GitHub" %}
 * **GH_TOKEN**: Terraspace uses this to grab additional information like commit messages and PR comments with the terraspace cloud link.
 {% endif %}

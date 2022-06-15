@@ -59,4 +59,4 @@ You can see that a resource was created.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/gitlab/push/push-ci-finished.png)
 
-Next, we'll look at the Pull Request Pipeline.
+Next, we'll look at the Merge Request Pipeline.
