@@ -2,6 +2,8 @@
 title: Workflow Dispatch
 ---
 
+{% include videos/learn/cloud/github.md %}
+
 The Workflow Dispatch is generalized and flexible.  It can be use to run any general terraspace command with the GitHub Actions. Let's take a look at it.
 
 .github/workflows/workflow_dispatch.yml

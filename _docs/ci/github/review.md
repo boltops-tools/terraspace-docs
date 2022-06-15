@@ -2,6 +2,8 @@
 title: GitHub CI Review
 ---
 
+{% include videos/learn/cloud/github.md %}
+
 We use GitHub Actions to set up CI with Terraspace. The workflow we used was:
 
 1. **Pull Request**: Shows previews of changes using `terraspace plan`

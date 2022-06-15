@@ -2,6 +2,8 @@
 title: Pull Request
 ---
 
+{% include videos/learn/cloud/github.md %}
+
 Let's take a look at PR workflow.
 
 .github/workflows/pull_request.yml

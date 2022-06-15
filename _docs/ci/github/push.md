@@ -2,6 +2,8 @@
 title: Push Workflow
 ---
 
+{% include videos/learn/cloud/github.md %}
+
 Let's take a look at the push workflow.
 
 .github/workflows/push.yml
