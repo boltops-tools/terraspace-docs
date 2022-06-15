@@ -2,7 +2,7 @@
 
 You'll need to set up the following:
 
-1. A Terraspace project repo on GitLab
+1. A Terraspace project repo on {{ include.name }}
 2. The terraspace_ci_{{ include.name | downcase }} gem
 3. Configure Terraspace Cloud
 
