@@ -38,7 +38,7 @@ The Gemfile also happens to be using AWS cloud plugin. You can use any cloud plu
 Also, make sure that you're using Terraspace 2.0 or above. You can check with `bundle info terraspace` and should see something like:
 
     $ bundle info terraspace
-    * terraspace (2.0.0)
+    * terraspace (2.0.1)
 
 If not, you can update terraspace with
 
