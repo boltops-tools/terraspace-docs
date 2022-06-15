@@ -7,6 +7,7 @@ category: ci
 Terraspace provides a generic way to set CI system values if the CI system you're using is not supported. You can set the following env variable values as part your build system before calling terraspace commands like `terraspace plan` or `terraspace up`.
 
     TS_CI_REPO=org/repo
+    TS_CI_HOST=domain.com
     TS_CI_BRANCH=main
     TS_CI_COMMIT_URL=https://domain.com/org/repo/commit/79cd3b42c043c1bbcec900f570747ca27e868d6b
     TS_CI_BRANCH_URL=https://domain.com/org/repo/tree/pr2
