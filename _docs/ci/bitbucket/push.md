@@ -2,6 +2,8 @@
 title: Push Workflow
 ---
 
+{% include videos/learn/cloud/bitbucket.md %}
+
 We'll review the **push** part of the pipeline. Here's the relevant part of `bitbucket-pipelines.yml` that handles it.
 
 bitbucket-pipelines.yml

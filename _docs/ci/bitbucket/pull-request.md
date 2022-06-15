@@ -2,6 +2,8 @@
 title: Pull Request
 ---
 
+{% include videos/learn/cloud/bitbucket.md %}
+
 Let's take a look at Pull Request pipeline.
 
 bitbucket-pipelines.yml

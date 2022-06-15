@@ -2,6 +2,8 @@
 title: Bitbucket CI Review
 ---
 
+{% include videos/learn/cloud/bitbucket.md %}
+
 We use Bitbucket Pipelines to set up CI with Terraspace. The workflow we used was:
 
 1. **Pull Request**: Shows previews of changes using `terraspace plan`

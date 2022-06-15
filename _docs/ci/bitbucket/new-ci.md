@@ -2,6 +2,8 @@
 title: New CI
 ---
 
+{% include videos/learn/cloud/bitbucket.md %}
+
 We'll use [terraspace new ci]({% link _reference/terraspace-new-ci.md %}) to generate a starter CI folder structure.
 
     terraspace new ci

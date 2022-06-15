@@ -2,6 +2,8 @@
 title: Manual Custom Pipeline
 ---
 
+{% include videos/learn/cloud/bitbucket.md %}
+
 The Custom Pipeline is a pipeline designed to be run manually so a human can approve the changes.  We'll use it to apply the changes to production. Let's take a look at it.
 
 bitbucket-pipelines.yml
