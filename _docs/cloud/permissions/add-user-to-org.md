@@ -7,7 +7,7 @@ order: 1
 
 {% include videos/learn/cloud/permissions.md %}
 
-First thing is is to add the user to your org.
+First thing is to add the user to your org.
 
 1. Click on your user name in the upper right-hand corner and go to **Settings**
 2. On the left-hand menu, click on the **Organizations** link
