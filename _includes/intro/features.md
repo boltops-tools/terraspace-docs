@@ -16,3 +16,5 @@
 * [Testing]({% link _docs/testing.md %}) A testing framework that allows you to create test harnesses, deploy real-resources, and have higher confidence that your code works.
 
 * [Terraform Cloud and Terraform Enterprise Support]({% link _docs/tfc.md %}) TFC and TFE are both supported. Terraspace adds additional conveniences to make working with Terraform Cloud Workspaces easier.
+
+* [Terraspace Cloud]({% link _docs/cloud.md %}) Terraspace Cloud adds additional features like  Team and Permissions Management, Dashboard and History, and CI/CD Integration.
