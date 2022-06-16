@@ -22,6 +22,10 @@ After you've set up the first 2 steps, any stack updates will be tracked by Terr
 
     terraspace up demo
 
-When the update completes, you'll see a link to the update that look something like this:
+When the update completes, you'll see a link to the update:
 
     Terraspace Cloud Stack demo-dev https://app.terraspace.cloud/boltops/main/demo/updates/update-nvEHbKSiGRe8nYTm
+
+The update looks something like this:
+
+![](https://img.boltops.com/images/terraspace/cloud/stacks/stack-update-log.png)
