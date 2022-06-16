@@ -44,7 +44,7 @@ terraform {
     resource_group_name  = "<%= expansion(':APP-:ENV-:LOCATION') %>"
     storage_account_name = "<%= expansion('ts:APP_HASH:SUBSCRIPTION_HASH:LOCATION_HASH:ENV') %>"
     container_name       = "terraform-state"
-    key                  = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate') %>"
+    key                  = "<%= expansion(':PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate') %>"
   }
 }
 ```

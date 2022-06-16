@@ -47,14 +47,14 @@ config/terraform/backend.tf
 terraform {
   backend "gcs" {
     bucket = "<%= expansion('terraform-state-:PROJECT-:REGION-:ENV', backend: "gcs") %>"
-    prefix = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION', backend: "gcs") %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
+    prefix = "<%= expansion(':PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION', backend: "gcs") %>" # variable notation expanded by terraspace IE: us-central1/dev/modules/vm
   }
 }
 <% else %>
 terraform {
   backend "s3" {
     bucket         = "<%= expansion('terraform-state-:ACCOUNT-:REGION-:ENV', backend: "s3") %>"
-    key            = "<%= expansion(':TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate', backend: "s3") %>"
+    key            = "<%= expansion(':PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate', backend: "s3") %>"
     region         = "<%= expansion(':REGION', backend: "s3") %>"
     encrypt        = true
     dynamodb_table = "terraform_locks"
