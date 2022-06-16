@@ -26,6 +26,10 @@ When the update completes, you'll see a link to the update:
 
     Terraspace Cloud Stack demo-dev https://app.terraspace.cloud/boltops/main/demo/updates/update-nvEHbKSiGRe8nYTm
 
-The update looks like this:
+The dashboard looks like this:
+
+![](https://img.boltops.com/images/terraspace/cloud/stacks/stack-updates-v3.png)
+
+And update logs:
 
 ![](https://img.boltops.com/images/terraspace/cloud/stacks/stack-update-log.png)

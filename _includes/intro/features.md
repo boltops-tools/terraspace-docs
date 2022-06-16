@@ -17,4 +17,4 @@
 
 * [Terraform Cloud and Terraform Enterprise Support]({% link _docs/tfc.md %}) TFC and TFE are both supported. Terraspace adds additional conveniences to make working with Terraform Cloud Workspaces easier.
 
-* [Terraspace Cloud]({% link _docs/cloud.md %}) Terraspace Cloud adds additional features like  Team and Permissions Management, Dashboard and History, and CI/CD Integration.
+* [Terraspace Cloud]({% link _docs/cloud.md %}) [Terraspace Cloud]({% link _docs/cloud.md %}) adds additional features like [Team and Permissions Management]({% link _docs/cloud/permissions.md %}), [Dashboard and History]({% link _docs/cloud/setup.md %}), and [CI/CD Integration]({% link _docs/ci.md %}).
