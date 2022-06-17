@@ -13,7 +13,7 @@ First thing is to add the user to your org.
 2. On the left-hand menu, click on the **Organizations** link
 3. Click on the **Settings** link of the organization you want to add the user to
 4. Click on **Users**
-5. Type in the email of the user and click **Add User to Org**
+5. Type in the username and click **Add User to Org**
 
 The form looks like this:
 
