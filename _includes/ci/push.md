@@ -23,7 +23,7 @@ With GitHub, you have to configure these secrets before running the workflow.
 1. Go to the Repo **Settings**. It's the tab on the left-hand side. You must own the repo or have admin permissions to see it.
 2. On the left-hand menu, go to **CI/CD**.
 3. Under the **Variables** section on the page, click **Expand**
-4. Create the variable, IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `GITLAB_TOKEN`, and `TS_TOKEN`. You might want to uncheck **Protect variable** if your branch is not protected.
+4. Create the variable, IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `GITLAB_TOKEN`, and `TS_TOKEN`. You should uncheck **Protect variable** if your branch is not protected.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/gitlab/push/gitlab-variables.png)
 {% elsif include.name == "GitHub" %}
