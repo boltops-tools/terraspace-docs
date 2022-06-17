@@ -2,7 +2,7 @@
 title: Terraspace Cloud
 ---
 
-[Terraspace Cloud](https://blog.boltops.com/2022/06/10/terraspace-cloud/) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed it work with Terraspace.
+[Terraspace Cloud](https://app.terraspace.cloud) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed it work with Terraspace.
 
 ## Features
 
@@ -12,4 +12,5 @@ title: Terraspace Cloud
 
 Terraspace Cloud provides these additional conveniences as an optional paid managed service. The Terraform Framework itself is open source and free to use.
 
-[Terraspace Cloud Pricing](https://app.terraspace.cloud/pricing)
+* [Terraspace Cloud Pricing](https://app.terraspace.cloud/pricing)
+* [Terraspace Cloud Blog Post](https://blog.boltops.com/2022/06/10/terraspace-cloud/)
