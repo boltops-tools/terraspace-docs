@@ -14,7 +14,11 @@ Now let's create a team and add the user to the team.
 3. Click on the newly created team **dev**, that takes you to the team show page where you can add a team member.
 4. Type in the user email and click **Add User to Team**. Note: You will only be able to add users who are part of the org. You added the user to the org in the previous step.
 
-The form looks like this:
+The create team form looks like this:
+
+![](https://img.boltops.com/images/terraspace/cloud/permissions/create-team.png)
+
+The add user to team form looks like this:
 
 ![](https://img.boltops.com/images/terraspace/cloud/permissions/add-user-to-team.png)
 
