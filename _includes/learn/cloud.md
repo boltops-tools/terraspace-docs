@@ -13,5 +13,5 @@ end
 
 To learn more:
 
-* [Terraspace Cloud]({% link _docs/cloud.md %}).
-* [Terraspace Cloud Setup]({% link _docs/cloud/setup.md %}).
+* [Terraspace Cloud]({% link _docs/cloud.md %})
+* [Terraspace Cloud Setup]({% link _docs/cloud/setup.md %})
