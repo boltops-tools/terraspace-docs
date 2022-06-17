@@ -60,7 +60,7 @@ Click on Details to see the Pipeline Logging output.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/gitlab/merge-request/merge-request-create-done.png)
 
-A `plan` was run and provided a preview of what would happen. Any additional `git push` to the MR branch will provide updated previews.
+A `plan` was run and provides a preview of what would happen. Any additional `git push` to the MR branch will provide updated previews.
 
 ## Merge Request Comment
 
