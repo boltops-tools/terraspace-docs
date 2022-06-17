@@ -12,7 +12,7 @@ Now let's create a team and add the user to the team.
 1. On the left-hand menu, click on **Teams**
 2. Specific a Team Name like **dev** and click **Create Team**.
 3. Click on the newly created team **dev**, that takes you to the team show page where you can add a team member.
-4. Type in the user email and click **Add User to Team**. Note: You will only be able to add users who are part of the org. You added the user to the org in the previous step.
+4. Type in the username and click **Add User to Team**. Note: You will only be able to add users who are part of the org. You added the user to the org in the previous step.
 
 The create team form looks like this:
 
