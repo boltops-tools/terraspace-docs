@@ -15,4 +15,4 @@ Here's an example of what `terraspace all` logs for an individual stacks looks l
 
 ![](https://img.boltops.com/images/terraspace/cloud/all/terraspace-all-logs.png)
 
-The logs show that the update was triggered from the `terraspace all` command and provides summarized log output from the previous `terraspace up` batches.
+The logs show that the update was triggered from the `terraspace all` command and provides summarized log output from the previous `terraspace up` batches. It also shows the full log of the individual `terraspace up` command. 
