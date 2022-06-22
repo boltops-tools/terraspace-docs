@@ -20,15 +20,15 @@ Install
     apt-get update
     apt-get install -y terraspace
 
-Upgrade
-
-    apt-get install -y terraspace
+{% include install/upgrade-command.md %}
 
 Remove
 
     apt-get remove -y terraspace
 
 {% include install/wrappers.md %}
+
+{% include install/upgrade-why.md %}
 
 ## Deb Install
 

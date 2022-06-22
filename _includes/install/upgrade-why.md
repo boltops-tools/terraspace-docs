@@ -1,0 +1,3 @@
+## Why Upgrade with bundle?
+
+You should use bundle to upgrade terraspace because it'll ensure that all of your project gem dependencies are installed, not just terraspace. The standalone installs an embedded version of ruby, bundle, and terraspace in `/opt/terraspace/embedded`. It'll work on the first install on a clean machine, but is will likely not work when upgrading because the embedded install has a different set of gem dependencies than your project's `Gemfile.lock`.

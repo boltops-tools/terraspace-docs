@@ -2,6 +2,7 @@
 title: "Standalone Path"
 nav_text: Path
 category: standalone-details
+order: 2
 ---
 
 By default, the standalone installer creates wrapper scripts in `/usr/local/bin`. Here are some of them:

@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting
-nav_text: Troubleshoot
+nav_text: Troubleshooting
 category: standalone-details
-order: 1
+order: 3
 ---
 
 Below are some troubleshooting notes:

@@ -90,10 +90,10 @@
               {% if doc.nav_text == "Details" %}
               <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a>
                 <ul>
-                  <li><a href="{% link _docs/install/standalone/details/permissions.md %}">Permissions</a></li>
-                  <li><a href="{% link _docs/install/standalone/details/path.md %}">Path</a></li>
-                  <li><a href="{% link _docs/install/standalone/details/troubleshoot.md %}">Troubleshooting</a></li>
-                  <li><a href="{% link _docs/install/standalone/details/uninstall.md %}">Uninstall</a></li>
+                {% assign docs = site.docs | where: "categories","standalone-details" | sort:"order" %}
+                {% for doc in docs -%}
+                  <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
+                {% endfor %}
                 </ul>
               </li>
               {% else %}

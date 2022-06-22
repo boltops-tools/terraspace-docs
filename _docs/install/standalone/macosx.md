@@ -23,10 +23,7 @@ Install
     brew tap boltops-tools/software
     brew install terraspace
 
-Upgrade
-
-    brew update
-    brew install terraspace
+{% include install/upgrade-command.md %}
 
 Uninstall
 
@@ -38,6 +35,8 @@ Cleanup
     grep -l /opt/terraspace /usr/local/bin/* | xargs rm -f
 
 {% include install/wrappers.md %}
+
+{% include install/upgrade-why.md %}
 
 ## DMG
 

@@ -2,6 +2,7 @@
 title: "Standalone Permissions"
 nav_text: Permissions
 category: standalone-details
+order: 1
 ---
 
 The Terraspace standalone installer will make sure that the owner and permissions of the `/opt/terraspace` folder is your user.

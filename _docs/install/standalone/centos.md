@@ -19,16 +19,15 @@ Install
 
     yum install -y terraspace
 
-Upgrade
-
-    yum makecache
-    yum update -y terraspace
+{% include install/upgrade-command.md %}
 
 Uninstall
 
     yum remove -y terraspace
 
 {% include install/wrappers.md %}
+
+{% include install/upgrade-why.md %}
 
 ## Fedora Notes
 
@@ -56,10 +55,6 @@ You can also download the rpm package and install it directly. Here are the comm
     sudo su
     rpm -ivh terraspace-latest.rpm
     terraspace -h
-
-To upgrade an existing install also use the `-U` flag.
-
-    rpm -Uivh terraspace-latest.rpm
 
 You can check [terraspace-latest.rpm.metadata.json](https://yum.boltops.com/packages/terraspace/terraspace-latest.rpm.metadata.json) to verify the package checksum. Here's the checksum command.
 
