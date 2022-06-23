@@ -26,6 +26,8 @@ When the update completes, you'll see a link to the update:
 
     Terraspace Cloud Stack demo-dev https://app.terraspace.cloud/boltops/main/demo/updates/update-nvEHbKSiGRe8nYTm
 
+Note: By default, terraspace cloud will only record plans and updates when changes are detected. This helps maintain a high signal-to-noise ratio.  You can adjust this behavior with `config.cloud.record = "all"`. See: [Cloud Config cloud.record]({% link _docs/cloud/config.md %}#record-changes-only)
+
 The dashboard looks like this:
 
 ![](https://img.boltops.com/images/terraspace/cloud/stacks/stack-updates-v3.png)
