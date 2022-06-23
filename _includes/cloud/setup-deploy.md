@@ -26,7 +26,7 @@ When the update completes, you'll see a link to the update:
 
     Terraspace Cloud Stack demo-dev https://app.terraspace.cloud/boltops/main/demo/updates/update-nvEHbKSiGRe8nYTm
 
-Note: By default, the Terraspace Cloud Stack url is only generated when changes are detected to keep a high signal-to-noise ratio.  You can adjust this behavior with `config.cloud.record`. See: [Cloud Config cloud.record]({% link _docs/cloud/config.md %}#record-changes-only)
+Note: By default, the Terraspace Cloud Stack url is only generated when changes are detected to keep a high signal-to-noise ratio.  You can adjust this behavior with [config.cloud.record]({% link _docs/cloud/config.md %}#record-changes-only)
 
 The dashboard looks like this:
 
