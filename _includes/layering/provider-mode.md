@@ -50,5 +50,5 @@ Here's a concrete example:
 
 * Only the app level layers are shown for clarity.
 * All layers except for the first, tfvars root folder, are provider specific.
-* The region maps to an AWS region, Azure location, or Google region. For `location` can be also used instead.
+* The region maps to an AWS region, Azure location, or Google region. For Azure, `location` and `region` are aliased. 
 * The `namespace` an AWS account, Azure subscription, or Google project.
