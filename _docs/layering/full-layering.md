@@ -27,7 +27,7 @@ This is an AWS example, if you're using another cloud provider plugin, the regio
 
 ## Env Folders
 
-The simple layering structure is having the files at the top-level like so:
+A simple layering structure is having the files at the top-level like so:
 
     app/stacks/server/tfvars
     ├── base.tfvars
