@@ -43,7 +43,7 @@ You can also structure your tfvars so that they are within env folders like so:
     └── prod
         └── base.tfvars
 
-Generally, the simplier structure is should be used. Unless you're using [TS_EXTRA]({% link _docs/layering/extra.md %}), where it becomes useful for tidying up the multiple extra-base tfvars files.
+Generally, the simplier structure is should be used. Unless you're using [TS_EXTRA]({% link _docs/layering/extra.md %}), where the additional folder structure becomes useful for tidying up the multiple extra-base tfvars files.
 
 ## Project-level and Stack-level Layering
 
