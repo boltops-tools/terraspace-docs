@@ -43,6 +43,8 @@ A good bit of the logic is in the `.bitbucket/bin` supporting files. The install
     bundle
     bundle exec terraspace new shim
     export PATH="/usr/local/bin:$PATH"
+    # install infracost
+    curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
 
 The `bin/terraspace` script is a wrapper that mainly sets up the PATH.
 

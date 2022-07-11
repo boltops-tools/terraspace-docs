@@ -1,6 +1,6 @@
 ---
 title: Bitbucket Pipelines
-title: Bitbucket
+nav_text: Bitbucket
 order: 3
 category: ci
 ---

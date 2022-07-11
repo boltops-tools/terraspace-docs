@@ -29,6 +29,8 @@ before_script: |
   bundle exec terraspace new shim
   echo 'export PATH="/usr/local/bin:$PATH' >> ~/.bash_profile
   export PATH="/usr/local/bin:$PATH"
+  # install infracost
+  curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
 
 # ...
 

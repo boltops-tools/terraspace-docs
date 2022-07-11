@@ -4,12 +4,13 @@ We should set these environment variables. Note that the AWS variables are requi
 
 * **AWS Variables**: The workflow is environment configured with `AWS_*` variables, so the CI machine has permissions to create resources on AWS. The AWS token need these [minimal permissions]({% link _docs/plugins/aws/minimal-iam.md %}).
 {% if include.name == "GitLab" %}
-* **GITLAB_TOKEN**: Terraspace uses this to grab additional information like commit messages and Merge Request comments with the terraspace cloud link. The token should have permissions: read_repository and api so it can create the MR comment.
+* **GITLAB_TOKEN**: Terraspace uses this to grab additional information like commit messages and Merge Request comments with the terraspace cloud link. The token should have "api" permission so it can post the Merge Request comment.
 {% elsif include.name == "GitHub" %}
-* **GH_TOKEN**: Terraspace uses this to grab additional information like commit messages and PR comments with the terraspace cloud link. The token should have permissions: repo so it can create the PR comment.
+* **GH_TOKEN**: This token is grabbed from the GitHub Actions env itself via `github.token`. This allows Terraspace to grab additional information like commit messages and post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. If you choose to use create and use your own token, it should have "repo" permissions so it can create the PR comment.
 {% elsif include.name == "GitHub" %}
 {% endif %}
 * **TS_TOKEN**: This allows Terraspace to communicate to Terraspace Cloud and record plans, updates, etc.
+* **INFRACOST_API_KEY**: You will need an infracost API key if you are using [Cost Estimation]({% link _docs/cloud/cost-estimation.md %}).
 
 {% if include.name == "GitLab" %}
 With GitLab, you set the environment variables in the Settings -> CI/CD -> Variables section.

@@ -59,6 +59,6 @@ A `plan` was run and provided a preview of what would happen. Any additional `gi
 
 If you merge the PR, the [Push Pipeline]({% link _docs/ci/gitlab/push.md %}) that we covered earlier will automatically apply the preview.
 
-Note: Currently, the terraspace_ci_bitbucket plugin does not create a PR comment. Pull Requests with improvements are welcomed.
+Note: Bitbucket CI integration does not support creating a PR comment yet. Pull Requests with improvements are welcomed.
 
 Next, we'll cover the Manual Custom Pipeline.

@@ -30,7 +30,10 @@ source "https://rubygems.org"
 gem "terraspace"
 gem "rspec-terraspace"
 gem "terraspace_plugin_aws"
-gem "terraspace_ci_{{ include.name | downcase }}" # <= Should have this
+gem "terraspace_ci_{{ include.name | downcase }}"  # <= Should have this
+{% if include.name == "GitHub" or include.name == "GitLab" -%}
+gem "terraspace_vcs_{{ include.name | downcase }}" # <= And this also
+{% endif -%}
 ```
 
 The Gemfile also happens to be using AWS cloud plugin. You can use any cloud plugin, of course.
@@ -58,6 +61,11 @@ config/app.rb
 Terraspace.configure do |config|
   config.cloud.org = "boltops"  # replace with your org name
   config.cloud.project = "main" # replace with your project name
+
+  # Uncomment to enable cost estimation
+  # Make sure to set the INFRACOST_API_KEY as an env var
+  # Need the cost estimation plan https://app.terraspace.cloud/pricing
+  # config.cloud.cost.enabled = true
 end
 ```
 
