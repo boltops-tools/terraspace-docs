@@ -1,6 +1,6 @@
 ---
 title: GitLab Pipelines
-title: GitLab
+nav_text: GitLab
 order: 2
 category: ci
 ---

@@ -31,9 +31,10 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: us-west-2
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      GH_TOKEN: ${{ github.token }}
       TS_ENV: ${{ github.event.inputs.env }}
       TS_TOKEN: ${{ secrets.TS_TOKEN }}
+      # INFRACOST_API_KEY: ${{ secrets.TS_TOKEN }} # needed if using cost estimation
 
     steps:
     - name: Checkout
