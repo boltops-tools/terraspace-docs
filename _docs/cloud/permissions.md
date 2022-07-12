@@ -2,7 +2,7 @@
 title: Terraspace Cloud Permissions
 nav_text: Permissions
 category: cloud
-order: 4
+order: 5
 ---
 
 {% include videos/learn/cloud/permissions.md %}
