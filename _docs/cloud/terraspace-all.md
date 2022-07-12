@@ -2,7 +2,7 @@
 title: Terraspace Cloud Terraspace All Logging
 nav_text: Terraspace All
 category: cloud
-order: 6
+order: 8
 ---
 
 {% include videos/learn/cloud/terraspace-all.md %}

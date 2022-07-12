@@ -16,3 +16,5 @@ You can set up up Terraspace Cloud with these steps:
 {% include cloud/signup-account.md %}
 
 {% include cloud/setup-deploy.md %}
+
+{% include cloud/dashboard.md %}

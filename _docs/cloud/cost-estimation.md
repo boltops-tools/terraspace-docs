@@ -2,7 +2,7 @@
 title: Terraspace Cost Estimation
 nav_text: Cost Estimation
 category: cloud
-order: 3
+order: 4
 ---
 
 Terraspace Cloud can provide cost estimates for your Terraform resources. Terraspace integrates the [infracost](https://www.infracost.io/) estimation reports with the Terraspace Cloud dashboard and Pull Request comments.
