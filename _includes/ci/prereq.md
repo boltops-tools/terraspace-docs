@@ -38,10 +38,10 @@ gem "terraspace_vcs_{{ include.name | downcase }}" # <= And this also
 
 The Gemfile also happens to be using AWS cloud plugin. You can use any cloud plugin, of course.
 
-Also, make sure that you're using Terraspace 2.0 or above. You can check with `bundle info terraspace` and should see something like:
+Also, make sure that you're using Terraspace 2.1 or above. You can check with `bundle info terraspace` and should see something like:
 
     $ bundle info terraspace
-    * terraspace (2.0.1)
+    * terraspace (2.1.0)
 
 If not, you can update terraspace with
 
