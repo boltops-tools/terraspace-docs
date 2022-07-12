@@ -5,7 +5,7 @@ category: cloud
 order: 2
 ---
 
-When using [Terraspace Cloud](https://app.terraspace.cloud/), Terraspace adds additional convenience like Team Management, Permissions, History, and a GUI visual interface. This page covers the available `config.cloud` settings.
+When using [Terraspace Cloud](https://app.terraspace.cloud/), Terraspace adds additional convenience like Team Management, Permissions, History, a GUI visual interface, Real-time logging, and Cost Estimates. This page covers the available `config.cloud` settings.
 
 config/app.rb
 
