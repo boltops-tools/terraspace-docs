@@ -2,7 +2,7 @@
 title: Terraspace Cloud
 ---
 
-[Terraspace Cloud](https://app.terraspace.cloud) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed it work with Terraspace.
+[Terraspace Cloud](https://app.terraspace.cloud) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed for Terraspace.
 
 ## Features
 
