@@ -44,7 +44,7 @@ With GitHub, you have to configure these secrets before running the workflow.
 
 ## Terraspace Command
 
-At the very end, the `terraspace up demo -y` command will run to deploy the demo stack. You can customize this command or add additional commands. IE: You might want to use `terraspace all up` if you prefer.
+At the very end, the `terraspace up demo -y` command will run to deploy the demo stack. You can customize this command or add additional commands. IE: You probably want to use `terraspace all up` if you prefer.
 
 ## Commit and Push
 

@@ -55,7 +55,7 @@ The backend is completely commented out. With a non-cloud generated project, Ter
 
 The default Terraform behavior is to use a local backend with a state file path at `terraform.tfstate`. So it works the same commented or uncommented out.
 
-You might want to check out how to configure different backends: [Backend Examples]({% link _docs/config/backend/examples/local.md %}). The [GitLab backend example]({% link _docs/config/backend/examples/gitlab.md %}) uses a http backend.
+You probably want to check out how to configure different backends: [Backend Examples]({% link _docs/config/backend/examples/local.md %}). The [GitLab backend example]({% link _docs/config/backend/examples/gitlab.md %}) uses a http backend.
 
 Next, let's take a look at `config/terraform/provider.tf`
 

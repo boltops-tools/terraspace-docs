@@ -90,3 +90,7 @@ If you're interested in integrating Cost Estimates with CI/CD, take a look at th
 * [GitHub]({% link _docs/ci/github.md %}): Pull Request Comments with the Cost Estimation is supported.
 * [GitLab]({% link _docs/ci/gitlab.md %}): Merge Request Comments with the Cost Estimation is supported.
 * [Bitbucket]({% link _docs/ci/bitbucket.md %}): Pull Request Comments with the Cost Estimation is not yet supported. Pull Requests are welcomed.
+
+Here's an example of a Pull Request comment that Terraspace adds:
+
+![](https://img.boltops.com/images/terraspace/cloud/costs/github-pr-comment-v2.png)
