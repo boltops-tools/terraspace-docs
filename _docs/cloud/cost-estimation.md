@@ -13,7 +13,7 @@ Note: Cost estimation is a paid feature, available as part of the Cost upgraded 
 
 You can set up Cost Estimation with these steps:
 
-1. Sign up for an account at [app.terraspace.cloud](https://app.terraspace.cloud)
+1. Sign up for an account at [Terraspace Cloud](https://app.terraspace.cloud)
 2. Configure Terraspace
 3. Install Infracost
 4. Deploy a Stack

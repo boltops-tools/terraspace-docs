@@ -9,7 +9,7 @@ order: 1
 
 You can set up up Terraspace Cloud with these steps:
 
-1. Sign up for an account at [app.terraspace.cloud](https://app.terraspace.cloud)
+1. Sign up for an account at [Terraspace Cloud](https://app.terraspace.cloud)
 2. Configure Terraspace
 3. Deploy a stack
 
