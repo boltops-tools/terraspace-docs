@@ -1,5 +1,5 @@
 ---
-title: Terraspace Cloud Dashbaord
+title: Terraspace Cloud Dashboard
 nav_text: Dashboard
 category: cloud
 order: 2
