@@ -25,6 +25,7 @@ TYPE_EXTRA | stack-bob | The type with [TS_EXTRA]({% link _docs/layering/extra.m
 
 </div>
 
+As of Terraspace v2, any environment variable is also expanded and available in the expansion helper. IE: `MY_VAR=foo` can be use in the expansion method. For those interested, here's the expanded interface source code: [terraspace/plugin/expander/interface.rb](https://github.com/boltops-tools/terraspace/blob/10263df3c161d2b3fb5ed7e1db8a146ad781baa3/lib/terraspace/plugin/expander/interface.rb#L79).
 ___
 
 ## AWS Specific Variables
