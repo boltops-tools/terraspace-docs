@@ -41,6 +41,13 @@ ENV['AWS_PROFILE'] = 'dev'
 
 This example is for AWS, but you can can do similiar switch logic with `GOOGLE_APPLICATION_CREDENTIALS`, etc.
 
+## Other Examples
+
+Users have done interesting things with the boot hook. Here's are some community examples:
+
+* [Assuming AWS Roles](https://community.boltops.com/t/customized-layering-support/632/14)
+* [Access to Command ARGV](https://community.boltops.com/t/does-terraspace-boot-hook-have-access-to-know-what-command-is-being-run/642)
+
 ## Boot Ordering
 
 This `config/boot.rb` hooks run the earliest. Here's an overview of the boot ordering:
