@@ -120,7 +120,7 @@ The command to start the pipeline:
       --header 'Accept: application/json'    \
       --header 'Content-Type: application/json' \
       --request POST \
-      --data '{"branch":"feature","parameters":{"manual":true}}' \
+      --data '{"branch":"main","parameters":{"manual":true}}' \
       https://circleci.com/api/v2/project/$PROJECT_SLUG/pipeline
 
 Next, we'll review what we learned.
