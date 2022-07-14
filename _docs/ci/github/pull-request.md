@@ -82,4 +82,4 @@ Also, PR comment with a Terraspace Cloud link was added.
 
 If you merge the PR, the [Push Workflow]({% link _docs/ci/github/push.md %}) that we covered earlier will automatically apply the preview.
 
-Next, we'll cover the workflow dispatch.
+Next, we'll cover the manual workflow dispatch.

@@ -227,6 +227,17 @@
               <li><a href="{% link _docs/ci/bitbucket/review.md %}">Review</a></li>
             </ul>
           </li>
+          {% elsif doc.url == "/docs/ci/circleci/" %}
+          <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a>
+            <ul>
+              <li><a href="{% link _docs/ci/circleci/prerequisites.md %}">Prerequisites</a></li>
+              <li><a href="{% link _docs/ci/circleci/new-ci.md %}">New CI</a></li>
+              <li><a href="{% link _docs/ci/circleci/push.md %}">Main Push</a></li>
+              <li><a href="{% link _docs/ci/circleci/branch.md %}">Branch Push</a></li>
+              <li><a href="{% link _docs/ci/circleci/manual.md %}">Manual Workflow</a></li>
+              <li><a href="{% link _docs/ci/circleci/review.md %}">Review</a></li>
+            </ul>
+          </li>
           {% else %}
           <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
           {% endif %}

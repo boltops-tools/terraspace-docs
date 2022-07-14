@@ -6,10 +6,11 @@ We should set these environment variables. Note that the AWS variables are requi
 {% if include.name == "GitLab" %}
 * **GITLAB_TOKEN**: Terraspace uses this to grab additional information like commit messages and Merge Request comments with the terraspace cloud link. The token should have "api" permission so it can post the Merge Request comment.
 {% elsif include.name == "GitHub" %}
-* **GH_TOKEN**: This token is grabbed from the GitHub Actions env itself via `github.token`. This allows Terraspace to grab additional information like commit messages and post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. If you choose to use create and use your own token, it should have "repo" permissions so it can create the PR comment.
-{% elsif include.name == "GitHub" %}
+* **GH_TOKEN**: This token is grabbed from the GitHub Actions env itself via `github.token`. This allows Terraspace post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. If you choose to use create and use your own token, it should have "repo" permissions so it can create the PR comment.
+{% elsif include.name == "CircleCI" %}
+* **GH_TOKEN**: This allows Terraspace to post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. The token should have "repo" permissions so it can create the PR comment.
 {% endif %}
-* **TS_TOKEN**: This allows Terraspace to communicate to Terraspace Cloud and record plans, updates, etc.
+* **TS_TOKEN**: This allows Terraspace work with Terraspace Cloud. IE: Save plans, applies, cost etimates, live streams, etc.
 * **INFRACOST_API_KEY**: You will need an infracost API key if you are using [Cost Estimation]({% link _docs/cloud/cost-estimation.md %}).
 
 {% if include.name == "GitLab" %}
@@ -18,9 +19,9 @@ With GitLab, you set the environment variables in the Settings -> CI/CD -> Varia
 With GitHub, you have to configure these secrets before running the workflow.
 {% endif %}
 
+{% if include.name == "GitLab" %}
 **Steps:**
 
-{% if include.name == "GitLab" %}
 1. Go to the Repo **Settings**. It's the tab on the left-hand side. You must own the repo or have admin permissions to see it.
 2. On the left-hand menu, go to **CI/CD**.
 3. Under the **Variables** section on the page, click **Expand**
@@ -31,15 +32,21 @@ With GitHub, you have to configure these secrets before running the workflow.
 1. Go to the Repo **Settings**. It's the tab on the right-hand side. You must own the repo or have admin permissions to see it.
 2. On the left-hand menu, go to **Secrets / Actions**.
 3. Click on the **New repository secret**
-4. Create the secrets, IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `GH_TOKEN`, and `TS_TOKEN`.
+4. Create the secrets, IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `GH_TOKEN`, and `TS_TOKEN`, etc.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/github/push/github-secrets.png)
 {% elsif include.name == "Bitbucket" %}
 1. Go to **Repository Settings** on the left-hand side.
 2. Go to **Repository variables** under the Pipelines section on the left-hand side. Note, you might have to enable Pipelines first.
-3. Add the variables, , IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, and `TS_TOKEN`.
+3. Add the variables, , IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, and `TS_TOKEN`, etc.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/bitbucket/push/repository-variables.png)
+{% elsif include.name == "CircleCI" %}
+1. Go to **Project Settings**.
+2. Go to **Environment Variables**
+3. Add the variables, , IE: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, and `TS_TOKEN`, `GH_TOKEN`, etc.
+
+![](https://img.boltops.com/images/terraspace/cloud/ci/circleci/push/environment-variables.png)
 {% endif %}
 
 ## Terraspace Command
