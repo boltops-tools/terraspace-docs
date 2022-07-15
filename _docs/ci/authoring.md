@@ -21,7 +21,6 @@ Here are some of the important generated files to review and implement:
     lib/terraspace_ci_github.rb
     lib/terraspace_ci_github/vars.rb
     lib/terraspace_ci_github/interface.rb
-    lib/terraspace_ci_github/pr.rb
 
 ## Registration
 
@@ -52,20 +51,15 @@ lib/terraspace_ci_github/interface.rb
 ```ruby
 module TerraspaceCiGithub
   class Interface
-    # required interface
+    # Required interface. Must return hash
     def vars
       Vars.new.data
-    end
-
-    # optional interface
-    def comment(url)
-      Pr.new.comment(url)
     end
   end
 end
 ```
 
-There are only 2 methods, `vars` and `comment(url)`. The `vars` method must return a Hash of properties to be stored on terraspace cloud. The `comment(url)` method should post a comment on the PR with the Terraspace URL link. The comment is optional since most systems do not support PRs and comments.
+There are only one method, `vars`. The `vars` method must return a Hash of properties to be stored on Terraspace cloud.
 
 ## Vars
 
@@ -98,46 +92,8 @@ module TerraspaceCiGithub
   ...
 ```
 
-## PR Comment
+## Template
 
-By default the `terraspace new plugin ci` generator will not include the PR code unless the `--pr` optional is used.
-
-Here the relevant part of the `Pr#comment` method.
-
-lib/terraspace_ci_github/pr.rb
-
-```ruby
-module TerraspaceCiGithub
-  class Pr < Base
-    def comment(url)
-      return unless ENV['GITHUB_EVENT_NAME'] == 'pull_request'
-      return unless github_token?
-
-      repo = ENV['GITHUB_REPOSITORY'] # org/repo
-      number = ENV['GITHUB_REF_NAME'].split('/').first # IE: 2/merge
-      marker = "<!-- terraspace marker -->"
-      body = marker + "\n"
-      body << "Terraspace Cloud Url #{url}"
-
-      comments = client.issue_comments(repo, number)
-      found_comment = comments.find do |comment|
-        comment.body.starts_with?(marker)
-      end
-
-      if found_comment
-        client.update_comment(repo, found_comment.id, body) unless found_comment.body == body
-      else
-        client.add_comment(repo, number, body)
-      end
-    end
-  end
-end
-```
-
-Notice, how it will find and updating existing comments. You should do this also or else the comments will get noisy.
-
-## Templates
-
-You can define starter templates to help users get started using your ci plugin quickly. You define the template in `lib/template`.
+You can define starter template to help users get started using your ci plugin quickly. You define the template in `lib/template`.
 
 The `terraspace new ci` generator command uses these files. Provide a good starting example and add to the Terraspace Docs site. Check out other ci plugin for examples.
