@@ -2,7 +2,11 @@
 
 You'll need to set up the following:
 
+{% if include.name == "Azure" -%}
 1. A Terraspace project repo on Azure Repos
+{% else -%}
+1. A Terraspace project repo on {{ include.name }}
+{% endif -%}
 2. The ci plugin gem
 3. Configure Terraspace Cloud
 
