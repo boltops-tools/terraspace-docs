@@ -76,9 +76,9 @@ A `plan` was run and provided a preview of what would happen. Any additional `gi
 
 ## Pull Request Comment
 
-Also, PR comment with a Terraspace Cloud link was added.
+Also, PR comment with a Terraspace Cloud link was added. It looks something like this.
 
-![](https://img.boltops.com/images/terraspace/cloud/ci/github/pull-request/pr-comment.png)
+![](https://img.boltops.com/images/terraspace/cloud/costs/github-pr-comment-v2.png)
 
 If you merge the PR, the [Push Workflow]({% link _docs/ci/github/push.md %}) that we covered earlier will automatically apply the preview.
 
