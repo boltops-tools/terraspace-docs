@@ -7,7 +7,6 @@
       terraspace up
       terraspace down
       terraspace all up
-      terraspace summary
       terraspace test
 
 - title: Generators
