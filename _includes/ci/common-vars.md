@@ -1,0 +1,2 @@
+* **TS_TOKEN**: This allows Terraspace work with Terraspace Cloud. IE: Save plans, applies, cost etimates, live streams, etc.
+* **INFRACOST_API_KEY**: You will need an infracost API key if you are using [Cost Estimation]({% link _docs/cloud/cost-estimation.md %}).

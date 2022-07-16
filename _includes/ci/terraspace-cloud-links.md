@@ -1,1 +1,1 @@
-Terraspace Cloud also provides links with the plan or update history. This makes it easy to see infrastructure change history.
+[Terraspace Cloud]({% link _docs/cloud.md %}) also provides links with the plan or update history. This makes it easy to see infrastructure change history.

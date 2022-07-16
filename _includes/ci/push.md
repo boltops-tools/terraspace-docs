@@ -1,3 +1,4 @@
+{% if include.name != "Azure" %}
 ## Environment Variables
 
 We should set these environment variables. Note that the AWS variables are required only if you're using terraspace_plugin_aws.
@@ -10,8 +11,9 @@ We should set these environment variables. Note that the AWS variables are requi
 {% elsif include.name == "CircleCI" %}
 * **GH_TOKEN**: This allows Terraspace to post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. The token should have "repo" permissions so it can create the PR comment.
 {% endif %}
-* **TS_TOKEN**: This allows Terraspace work with Terraspace Cloud. IE: Save plans, applies, cost etimates, live streams, etc.
-* **INFRACOST_API_KEY**: You will need an infracost API key if you are using [Cost Estimation]({% link _docs/cloud/cost-estimation.md %}).
+{% include ci/common-vars.md %}
+
+{% endif %}
 
 {% if include.name == "GitLab" %}
 With GitLab, you set the environment variables in the Settings -> CI/CD -> Variables section.
@@ -55,10 +57,14 @@ At the very end, the `terraspace up demo -y` command will run to deploy the demo
 
 ## Commit and Push
 
-Let's commit and push the files to start the workflow.
+Let's commit and push the files.
 
     git add .
     git commit -m 'add ci'
     git push -u origin main
 
+{% if include.name == "Azure" %}
+Once the YAML files are push, we'll be able to create the initial pipelines.
+{% else %}
 This starts the build process immediately.
+{% endif %}

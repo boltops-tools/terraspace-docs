@@ -238,6 +238,18 @@
               <li><a href="{% link _docs/ci/circleci/review.md %}">Review</a></li>
             </ul>
           </li>
+          {% elsif doc.url == "/docs/ci/azure/" %}
+          <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a>
+            <ul>
+              <li><a href="{% link _docs/ci/azure/prerequisites.md %}">Prerequisites</a></li>
+              <li><a href="{% link _docs/ci/azure/new-ci.md %}">New CI</a></li>
+              <li><a href="{% link _docs/ci/azure/variables.md %}">Variables</a></li>
+              <li><a href="{% link _docs/ci/azure/push.md %}">Main Push</a></li>
+              <li><a href="{% link _docs/ci/azure/branch.md %}">Branch Push</a></li>
+              <li><a href="{% link _docs/ci/azure/manual.md %}">Manual Workflow</a></li>
+              <li><a href="{% link _docs/ci/azure/review.md %}">Review</a></li>
+            </ul>
+          </li>
           {% else %}
           <li><a href="{{ doc.url }}">{% if doc.nav_text %}{{ doc.nav_text }}{% else %}{{ doc.title }}{% endif %}</a></li>
           {% endif %}
@@ -392,7 +404,11 @@
       </li>
       <li><a href="{% link _docs/plugins.md %}">Plugins</a>
         <ul>
-          <li><a href="{% link _docs/plugins/aws.md %}">AWS</a></li>
+          <li><a href="{% link _docs/plugins/aws.md %}">AWS</a>
+            <ul>
+              <li><a href="{% link _docs/plugins/aws/minimal-iam.md %}">Minimal IAM</a></li>
+            </ul>
+          </li>
           <li><a href="{% link _docs/plugins/azurerm.md %}">Azure</a>
             <ul>
               <li><a href="{% link _docs/plugins/azure/auth.md %}">Auth</a></li>
