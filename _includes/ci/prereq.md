@@ -20,7 +20,7 @@ Create a {{ include.name }} repo and push the project to it. Here are some examp
     git add .
     git commit -m 'first commit'
     {% if include.name == "Azure" -%}
-    git remote add origin git@ssh.dev.azure.com:v3/ORG/PROJECT/REPO # replace ORG, USER and REPO with your own info
+    git remote add origin git@ssh.dev.azure.com:v3/ORG/PROJECT/REPO # replace ORG, PROJECT and REPO with your own info
     {% else -%}
     git remote add origin git@{{ include.host }}:USER/REPO.git # replace USER and REPO with your own info
     {% endif -%}
