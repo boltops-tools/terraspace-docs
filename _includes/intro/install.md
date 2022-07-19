@@ -4,7 +4,7 @@ Install terraspace via RubyGems.
 
     gem install terraspace
 
-Ruby 3.0 and above is recommended. For other ways to install Terraspace see: [Install Docs]({% link _docs/install.md %}).
+{% include install/ruby-recommended.md %} For other ways to install Terraspace see: [Install Docs]({% link _docs/install.md %}).
 
 ## Terraform
 
@@ -15,4 +15,3 @@ Terraspace calls the `terraform` CLI. You will need terraform installed. Refer t
 You can use this command to check your setup:
 
     terraspace setup check
-

@@ -1,0 +1,1 @@
+Ruby 3.0 and above is recommended.

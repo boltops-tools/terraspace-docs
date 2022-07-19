@@ -2,6 +2,10 @@
 title: Install Ruby
 ---
 
+## Ruby Recommendations
+
+{% include install/ruby-recommended.md %}
+
 On a new system, the recommended way to install Ruby is via [rbenv](https://github.com/rbenv/rbenv). Here are 2 ways to install rbenv:
 
 1. Install rbenv with git
