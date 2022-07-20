@@ -25,9 +25,9 @@ The following section provides a little more detail on each version upgrade. Not
 
 * The generated backend.tf for the different cloud provider plugins have a new pattern. The update is in the **plugins** themselves since they provide the template to the core terraspace framework.
 * Here are the GitHub Compares and some examples of the backend "key" changes around when 2.1 was released:
-  * AWS: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.4.2...v0.5.0). `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
-  * Azurerm: [v0.6.2...v0.7.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.6.2...v0.7.0) `:LOCATION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
-  * Google: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.4.2...v0.5.0) `:REGION/:ENV/:BUILD_DIR` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION`
+  * AWS: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.4.2...v0.5.0). Updated to: `:PROJECT/:REGION/:APP/:ROLE/:ENV/:EXTRA/:BUILD_DIR/terraform.tfstate`
+  * Azurerm: [v0.6.2...v0.7.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.6.2...v0.7.0) Updated to: `:PROJECT/:LOCATION/:APP/:ROLE/:ENV/:EXTRA/:BUILD_DIR/terraform.tfstate`
+  * Google: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.4.2...v0.5.0) Updated to: `:PROJECT/:REGION/:APP/:ROLE/:ENV/:EXTRA/:BUILD_DIR`
 * More confident that this will be the default pattern for a while.
 * Note, again this will not affect terraspace projects that were generated from older versions of Terraspace. By design, you have to manually update the `config/terraform/backend.tf` since it will change your state file location.
 
