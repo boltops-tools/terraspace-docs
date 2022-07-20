@@ -12,6 +12,7 @@ The following table summarizes the releases. Only some highlighted releases are 
 
 Version | Notes
 --- | ---
+2.1.0 | The generated backend.tf has a new key pattern. See below.
 2.0.1 | The generated backend.tf has a new key pattern. See below.
 2.0.0 | The generated backend.tf has a new key pattern. See below.
 0.3.0 | Some config options where renamed. See below.
