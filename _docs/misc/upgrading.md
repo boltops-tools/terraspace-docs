@@ -21,8 +21,19 @@ Version | Notes
 
 The following section provides a little more detail on each version upgrade. Note, we'll not provide more details for all versions.
 
+### 2.1.0
+
+* The generated backend.tf for the different cloud provider plugins have a new pattern. The update is in the **plugins** themselves since they provide the template to the core terraspace framework.
+* Here are the GitHub Compares and some examples of the backend "key" changes around when 2.1 was released:
+  * AWS: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.4.2...v0.5.0). `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
+  * Azurerm: [v0.6.2...v0.7.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.6.2...v0.7.0) `:LOCATION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
+  * Google: [v0.4.2...v0.5.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.4.2...v0.5.0) `:REGION/:ENV/:BUILD_DIR` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION`
+* More confident that this will be the default pattern for a while.
+* Note, again this will not affect terraspace projects that were generated from older versions of Terraspace. By design, you have to manually update the `config/terraform/backend.tf` since it will change your state file location.
+
 ### 2.0.1
 
+* Here are the GitHub Compares and some examples of the backend "key" changes around when 2.0.1 was released and project was added:
 * The generated backend.tf for the different cloud provider plugins have a new pattern. It also includes `:PROJECT`. This accounts for different statefiles for different terraspace projects.
 * AWS: [v0.4.0...v0.4.1](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.4.0...v0.4.1).
 * Azurerm: [v0.6.0...v0.6.1](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.6.0...v0.6.1)
@@ -31,12 +42,14 @@ The following section provides a little more detail on each version upgrade. Not
 
 ### 2.0.0
 
-* The generated backend.tf for the different cloud provider plugins have a new pattern. The update is in the plugins themselves since they provide the template to the core terraspace framework.
-* This will not affect terraspace projects that were generated from older versions of Terraspace, IE: v1 and below. By design, you have to manually update the `config/terraform/backend.tf` since it will change your state file location. Here are the GitHub Compares and some examples of the backend "key" changes:
-  * AWS: [v0.3.8...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.3.8...v0.4.0). `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
-  * Azurerm: [v0.5.1...v0.6.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.5.1...v0.6.0) `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
+* The generated backend.tf for the different cloud provider plugins have a new pattern. The update is in the **plugins** themselves since they provide the template to the core terraspace framework.
+* This will not affect terraspace projects that were generated from older versions of Terraspace, IE: v1 and below. By design, you have to manually update the `config/terraform/backend.tf` since it will change your state file location.
+* Here are the GitHub Compares and some examples of the backend "key" changes right when 2.0 was released:
+  * AWS: [v0.3.8...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_aws/compare/v0.3.8...v0.4.0). `:REGION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION/terraform.tfstate`
+  * Azurerm: [v0.5.1...v0.6.0](https://github.com/boltops-tools/terraspace_plugin_azurerm/compare/v0.5.1...v0.6.0) `:LOCATION/:ENV/:BUILD_DIR/terraform.tfstate` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:LOCATION/terraform.tfstate`. There were also changes to the resource_group_name and storage_account_name. Look at compare to see the exact difference.
   * Google: [v0.3.5...v0.4.0](https://github.com/boltops-tools/terraspace_plugin_google/compare/v0.3.5...v0.4.0) `:REGION/:ENV/:BUILD_DIR` => `:PROJECT/:TYPE_DIR/:APP/:ROLE/:MOD_NAME/:ENV/:EXTRA/:REGION`
 * If you want to upgrade to take advantage of features like [app, role]({% link _docs/layering/app-layering.md %}), and [extra layering]({% link _docs/layering/extra.md %}), then you should update the keys and **move** your statefiles in your respective backend.
+* The default layering is simplified. It includes env and regions. It does not include namespace and provider layers. If you need to use how all the layers that was in Terraspace v1, you can enable it with `config.layering.mode = "provider"` More info: https://terraspace.cloud/docs/layering/full-layering/#layering-modes-simple-namespace-provider
 
 ### 0.3.0
 
