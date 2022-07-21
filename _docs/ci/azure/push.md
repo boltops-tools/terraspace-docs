@@ -130,7 +130,8 @@ The logs show that a `random_pet` resource was created. 🐶🎉
 
 Tip: You can also create the pipeline with the `az` CLI
 
-    az devops configure --defaults project=REPLACE_WITH_PROJECT
+    az devops configure --defaults organization=https://dev.azure.com/ORG/ project=PROJECT
+    az devops configure --list
     az pipelines create --name dev-up --yml-path .azure/pipelines/dev-up.yml # starts pipeline immediately
 
 Next, we'll look at the Branch Pipeline.
