@@ -4,17 +4,19 @@ You'll need to set up the following:
 
 {% if include.name == "Azure" -%}
 1. A Terraspace project repo on Azure Repos
+{% elsif include.vcs -%}
+1. A Terraspace project repo on {{ include.vcs }}
 {% else -%}
 1. A Terraspace project repo on {{ include.name }}
 {% endif -%}
 2. The ci plugin gem
 3. Configure Terraspace Cloud
 
-## A Terraspace project repo on {{ include.name }}
+## A Terraspace project repo on {{ include.vcs }}
 
 If you need a Terraspace project, you can go through one of the [Getting Started Guides]({% link getting-started.md %}).  For this guide, we'll use a simple stack that creates a `random_pet` resource.
 
-Create a {{ include.name }} repo and push the project to it. Here are some example commands
+Create a {{ include.vcs }} repo and push the project to it. Here are some example commands
 
     git init
     git add .
