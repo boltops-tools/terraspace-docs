@@ -2,6 +2,8 @@
 title: Branch Push Workflow
 ---
 
+{% include videos/learn/cloud/circleci.md %}
+
 Let's take a look at Branch Push Workflow.  This is what happens when a push is made to the any other branch except for `main`. Here's the relevant section.
 
 .circleci/config.yml

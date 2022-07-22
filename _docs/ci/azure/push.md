@@ -2,6 +2,8 @@
 title: Main Push Pipeline
 ---
 
+{% include videos/learn/cloud/azure.md %}
+
 We'll review the Main Push Pipeline. This is what happens when a push is made to the `main` branch. Here's the relevant YAML section.
 
 .azure/pipelines/dev-up.yml

@@ -2,6 +2,8 @@
 title: CircleCI Review
 ---
 
+{% include videos/learn/cloud/circleci.md %}
+
 We use CircleCI Workflows with Terraspace. The workflow we used was:
 
 1. **Feature Branch Push**: Shows previews of changes using `terraspace plan` on `TS_ENV=dev`.

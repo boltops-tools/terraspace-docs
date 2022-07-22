@@ -2,6 +2,8 @@
 title: Azure Review
 ---
 
+{% include videos/learn/cloud/azure.md %}
+
 We use Azure Pipelines with Terraspace. The pipelines we used was:
 
 1. **Branch Push Pipeline**: Shows previews of changes using `terraspace plan` on `TS_ENV=dev`.

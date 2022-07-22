@@ -2,6 +2,8 @@
 title: Azure Variables
 ---
 
+{% include videos/learn/cloud/azure.md %}
+
 The Azure pipelines we're creating use the same environment variables. To help reduce some of the duplication in the YAML pipeline definitions, we'll create and use an [Azure Pipelines Variable Group](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-devops&tabs=yaml).
 
 ## Environment Variables

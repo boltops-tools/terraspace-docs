@@ -2,6 +2,8 @@
 title: Main Push Workflow
 ---
 
+{% include videos/learn/cloud/circleci.md %}
+
 We'll review the when Main Push Workflow. This is what happens when a push is made to the `main` branch. Here's the relevant section.
 
 .circleci/config.yml

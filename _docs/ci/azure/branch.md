@@ -2,6 +2,8 @@
 title: Branch Push Pipeline
 ---
 
+{% include videos/learn/cloud/azure.md %}
+
 Let's take a look at Branch Push Pipeline.  This is what happens when a push is made to any other branch except for `main`. Here's the relevant YAML section.
 
 .azure/pipelines/dev-plan.yml

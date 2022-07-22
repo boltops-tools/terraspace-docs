@@ -2,6 +2,8 @@
 title: Manual Pipeline
 ---
 
+{% include videos/learn/cloud/azure.md %}
+
 The Manual Pipeline is a generalized pipeline designed to be run manually so a human can review the changes.  We'll use it to apply the changes to production. Let's take a look at it.
 
 .azure/pipelines/manual.yml
