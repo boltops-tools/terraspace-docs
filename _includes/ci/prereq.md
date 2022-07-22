@@ -39,7 +39,7 @@ source "https://rubygems.org"
 
 gem "terraspace"
 gem "rspec-terraspace"
-{% if include.name == "Azure" %-}
+{% if include.name == "Azure" -%}
 gem "terraspace_plugin_azurerm"
 {% else -%}
 gem "terraspace_plugin_aws"
