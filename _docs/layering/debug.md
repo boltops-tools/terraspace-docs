@@ -27,9 +27,9 @@ This will show the **found** layers.
 
 ## All Considered Layers
 
-If you want to also see all the considered layers use `TS_SHOW_ALL_LAYERS=1`.
+If you want to also see all the considered layers use `TS_LAYERING_SHOW_ALL=1`.
 
-    $ export TS_SHOW_ALL_LAYERS=1
+    $ export TS_LAYERING_SHOW_ALL=1
     $ terraspace build demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
         config/terraform/tfvars/base.tfvars

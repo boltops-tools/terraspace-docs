@@ -19,7 +19,7 @@ end
 
 Here's a concrete example:
 
-    $ export TS_SHOW_ALL_LAYERS=1
+    $ export TS_LAYERING_SHOW_ALL=1
     $ terraspace build demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
         app/stacks/demo/tfvars/base.tfvars (found)
