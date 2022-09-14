@@ -24,10 +24,44 @@ By default, the output value is formatted as JSON. The reason json is use is dis
 
 Here's a boiled down explanation of how Terraspace dependency resolution works.
 
-* Pass 1: Terraspace reads the tfvars in an initial pass. In this pass, Terraspace builds the dependency graph and stores it.
-* Pass 2: By the time the second pass occurs, dependencies have been resolved. Terraspace then replaces the `output` helper with the actual resolved values.
+* **Pass 1**: Terraspace reads the tfvars in an initial pass. In this pass, Terraspace builds the dependency graph and stores it.
+* **Pass 2**: By the time the second pass occurs, dependencies have been resolved. Terraspace then replaces the `output` helper with the actual resolved values.
 
 Knowing a little bit about how Terraspace internals will you help understand the rest of the considerations on this page.
+
+## Dependency Words
+
+Since Terraspace makes two passes of tfvars files to calculate the dependency graph, it does 2 ERB evaluations of the tfvars. Usually, this would mean helper methods like `aws_secret` would be called twice. It would make 2 API calls and take twice as long. If you use a lot of helper methods, it can add up.
+
+So Terraspace optimizes the tfvars processing by only evaluating `depends_on` and `output` helper methods in the 1st pass. In the 2nd pass, all of the ERB method calls are evaluated. This was introduced in Terraspace 2.2+.
+
+If you have more complicated logic in your tfvars files that also need to be evaluated in the 1st pass, you can tell Terraspace to evaluate all ERB calls with `config.build.dependency_words`.
+
+config/app.rb
+
+```ruby
+Terraspace.configure do |config|
+  config.build.dependency_words = "*"
+end
+```
+
+You can also include only specific words to be evaluated in the first pass with `config.build.dependency_words`
+
+config/app.rb
+
+```ruby
+Terraspace.configure do |config|
+  config.build.dependency_words = ["list", "end"]
+end
+```
+
+This results in the 1st pass to also evaluate the `list` and `end` ERB calls, and `item['name']` works.
+
+app/stacks/demo/tfvars/dev.tfvars
+
+    <% list.each do |item| %>
+    length<%= item['name'] %> = <%= output("demo.length") %>
+    <% end %>
 
 ## Dependency Must Be Defined in tfvars
 
@@ -47,3 +81,4 @@ Instead, you can:
 2. Use Ruby to access elements before passing to the Input Variables.
 
 Both methods are covered in the [Complex Types Docs]({% link _docs/dependencies/tfvars/complex.md %}).
+
