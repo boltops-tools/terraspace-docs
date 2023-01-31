@@ -13,17 +13,15 @@
   link: https://www.facebook.com/1585666404994430/posts/here-in-vshn-we-breathe-infrastructure-as-code-it-is-no-surprise-that-we-are-gre/2905736506320740/
   image: "vshn.png"
   image-title: "vshn"
-  # text2: "They are a great partner and we are glad to know they have an eye on our environment! BoltOps paid for themselves in only a few months."
-  # author2: "– Jon D of Acme"
-  # image2: "jon.jpg"
-  # image-title2: "Jon"
 
-- text: "Stumbled across a Terraspace when trying to solve an issue I was having with orchestrating the deployment of multiple environments but still keeping the automation DRY. Looks like it may solve a couple other problems Ive been having as well. "
+- text: "Stumbled across a Terraspace when trying to solve an issue I was having with orchestrating the deployment of multiple environments but still keeping the automation DRY. Looks like it may solve a couple other problems Ive been having as well."
   author: "– Dave S"
   link: https://www.linkedin.com/feed/update/urn:li:activity:6717239248522764288/?updateEntityUrn=urn%3Ali%3Afs_feedUpdate%3A%28V2%2Curn%3Ali%3Aactivity%3A6717239248522764288%29
   image: "dave.jpg"
   image-title: "Dave"
-  # text2: "They are a great partner and we are glad to know they have an eye on our environment! BoltOps paid for themselves in only a few months."
-  # author2: "– Jon D of Acme"
-  # image2: "jon.jpg"
-  # image-title2: "Jon"
+
+- text: "Hi, just wanted to say I've been using Terraspace the last week or so and am blown away so far by how intuitive and well organized it is while taming a beast like Terraform. Reminds me a lot of the magic I felt using Ruby on Rails a long time ago. Thanks for making it!"
+  author: "– Sahel J"
+  link: https://twitter.com/saheljalal
+  image: "sahel.jpg"
+  image-title: "Sahel"
