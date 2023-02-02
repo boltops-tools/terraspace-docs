@@ -5,7 +5,7 @@ reference: true
 
 ## Usage
 
-    terraspace import ADDR ID
+    terraspace import STACK ADDR ID
 
 ## Description
 
