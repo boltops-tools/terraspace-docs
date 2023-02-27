@@ -55,7 +55,7 @@ A shim is recommended when you have multiple versions of Terraspace installed on
 
 ## Long Answer: Why bundle exec?
 
-The key to understanding why `bundle exec` is needed sometimes is understadning Ruby, bundler, and system paths work. You see, when you run **any** cli command with `bundle exec` pretended, it affects the system load path.
+The key to understanding why `bundle exec` is needed sometimes is understanding Ruby, bundler, and system paths work. You see, when you run **any** cli command with `bundle exec` pretended, it affects the system load path.
 
 Example without:
 
