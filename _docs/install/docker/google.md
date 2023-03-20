@@ -10,13 +10,13 @@ Here's a guide to using Terraspace, Docker and Google.
 
 To use Cloud provider with Terraspace and Docker container you should mount the credentials.
 
-    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud boltops/terraspace
+    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud ghcr.io/boltops-tools/terraspace
 
 ## Editing Files
 
 It is useful to be able to edit files with an text editor in your normal OS. You can do this by mounting a folder from your current host to a volume. Here an example that mounts the current working directory to the `/work` folder within the Docker container.
 
-    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud -v `pwd`:/work boltops/terraspace
+    docker run --rm -ti -v $HOME/.config/gcloud:/root/.config/gcloud -v `pwd`:/work ghcr.io/boltops-tools/terraspace
 
 ## Env Variables
 
@@ -32,7 +32,7 @@ And how to use the env file.
         -v $HOME/.config/gcloud:/root/.config/gcloud \
         -v `pwd`:/work \
         --env-file dev.env \
-        boltops/terraspace
+        ghcr.io/boltops-tools/terraspace
 
 ## Test Terraspace
 
