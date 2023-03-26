@@ -8,7 +8,7 @@ Here's a list of the available config settings.
 Name | Description | Default
 --- | --- | ---
 all.concurrency | How many processes to run in parallel for each batch for the `terraspace all` commands. | 5
-all.exit_on_fail.down | Whether or not to exit if one of the down commands fails. Note: Other commands like show, validate, etc are also configurable and default to false. For `all down` , `TS_EXIT_ON_FAIL=0` will also tell Terraspace to continue on failures. | true
+all.exit_on_fail.down | Whether or not to exit if one of the down commands fails. Note: Other commands like show, validate, etc are also configurable and default to false. For `all down` , `TS_EXIT_ON_FAIL=0` will also tell Terraspace to continue on failures. | false
 all.exit_on_fail.plan | Whether or not to exit if one of the plan commands fails. | false
 all.exit_on_fail.up | Whether or not to exit if one of the up commands fails. | true
 all.include_stacks | Stacks to include and consider for the dependency graph. | nil
