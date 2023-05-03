@@ -19,8 +19,9 @@ autodetect.expander | The expander that Terraspace uses is determined by: 1) con
 auto_create_backend | Enable auto-creation of backend | true
 build.cache_dir | The relative dir for the module or stack cache. This can be a string that will be used for substitution, IE: `us-west-2/dev/stacks/demo` The option can also be Ruby object that responds to `call` or a class that has an instance method `call`. IE: `CustomCacheDir.call` or `CustomCacheDir#call`. The current stack/module is passed to the `call` method | :REGION/:APP/:ROLE/:ENV/:BUILD_DIR
 build.clean_cache | Whether to clean the cache at the beginning of the build process. Can be useful to turn off if using TFC VCS-Driven workflow. | true
-build.pass_files | List of string patterns use to tell Terraspace which files should use a pass build strategy. More docs: [Pass Files]({% link _docs/config/pass-files.md %}) | []
+build.copy_modules | Copies instead of compiling modules. This significantly improves `terraspace build`. Introduced in terraspace 2.2.5. By default, not set and will show a warning to user. In next terraspace major version, will default to true and warning will be removed. | nil
 build.dependency_words | List of words to tell Terraspace what methods should be evaluated as part of the first dependency pass. Note: `depends_on` and `output` is always in this list. More docs: [Dependencies Tfvars Considerations]({% link _docs/dependencies/tfvars/considerations.md %}) | []
+build.pass_files | List of string patterns use to tell Terraspace which files should use a pass build strategy. More docs: [Pass Files]({% link _docs/config/pass-files.md %}) | []
 bundle | This should be a Hash. It configures `terraspace bundle` settings. Options are passed straight through, allowing you to configure anything with the bundle command. See [terrafile config level options]({% link _docs/terrafile/options.md %}) for the options. | {logger: Terraspace.logger}
 {% include config/reference/cloud.md %}
 init.mode | Can be: auto, never, always. auto means init will only be called when .terraform doesnt exist yet. You can also override this with a env var. IE: `TS_INIT_MODE=always` | auto
