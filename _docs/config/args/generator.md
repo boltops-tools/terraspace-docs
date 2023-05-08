@@ -15,8 +15,8 @@ To help you get started quickly, you can generate starter arg code. Here are som
 ## Project
 
     $ terraspace new arg --type project
-          create  config/hooks
-          create  config/hooks/terraform.rb
+          create  config/args
+          create  config/args/terraform.rb
 
 Produces:
 
@@ -31,11 +31,11 @@ command("apply",
 ## Stack
 
     $ terraspace new arg demo --type stack
-          create  app/stacks/demo/config/hooks
-          create  app/stacks/demo/config/hooks/terraform.rb
+          create  app/stacks/demo/config/args
+          create  app/stacks/demo/config/args/terraform.rb
 
 ## Module
 
     $ terraspace new arg example --type module
-          create  app/modules/example/config/hooks
-          create  app/modules/example/config/hooks/terraform.rb
+          create  app/modules/example/config/args
+          create  app/modules/example/config/args/terraform.rb
