@@ -1,3 +1,15 @@
+- text: "Thank you for the add! I love the work you've done on the boltops apps, the documentation, visuals, simplicity, clarity, elegance of the way you think is evident in the products you have created. In a world where there is a sea of flashy apps on the front, but spaghetti code inside, just wanted to say thank you. I stumbled on Terraspace while looking for alternatives to Terragrunt and love your humility about it, that you aren't dogging it, but trying to enhance it. I recommended it to one of the teams I work with, and they are also really liking it. Anyway, thank you, and Happy Friday! From someone who is inspired by your work, and a fellow proud dad!"
+  author: "– Y Kravitz"
+  link: https://www.linkedin.com/in/yaffekravitz/
+  image: "kravitz.jpg"
+  image-title: "Kravitz"
+
+- text: "Hi, just wanted to say I've been using Terraspace the last week or so and am blown away so far by how intuitive and well organized it is while taming a beast like Terraform. Reminds me a lot of the magic I felt using Ruby on Rails a long time ago. Thanks for making it!"
+  author: "– Sahel J"
+  link: https://twitter.com/saheljalal
+  image: "sahel.jpg"
+  image-title: "Sahel"
+
 - text: "This could be a game changer for Terraform users. I just went through the AWS demo, very impressive!"
   author: "– Blake G"
   link: https://twitter.com/TSgt_Green/status/1298782816092782593
@@ -20,8 +32,3 @@
   image: "dave.jpg"
   image-title: "Dave"
 
-- text: "Hi, just wanted to say I've been using Terraspace the last week or so and am blown away so far by how intuitive and well organized it is while taming a beast like Terraform. Reminds me a lot of the magic I felt using Ruby on Rails a long time ago. Thanks for making it!"
-  author: "– Sahel J"
-  link: https://twitter.com/saheljalal
-  image: "sahel.jpg"
-  image-title: "Sahel"
