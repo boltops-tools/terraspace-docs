@@ -14,25 +14,28 @@ Terraspace will show you a preview of the changes and prompt you to update the i
     $ terraspace up demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
     Current directory: .terraspace-cache/us-west-2/dev/stacks/demo
-    => terraform init -get -input=false >> /tmp/terraspace/log/init/demo.log
-    Built in .terraspace-cache/us-west-2/dev/stacks/demo
-    => terraform apply
-    random_pet.bucket: Refreshing state... [id=liked-poodle]
-    module.bucket.aws_s3_bucket.this: Refreshing state... [id=bucket-liked-poodle]
+    => terraform apply -input=false
+    random_pet.this: Refreshing state... [id=discrete-quetzal]
+    module.bucket.aws_s3_bucket.this: Refreshing state... [id=bucket-discrete-quetzal]
 
-    An execution plan has been generated and is shown below.
-    Resource actions are indicated with the following symbols:
+    Terraform used the selected providers to generate the following execution
+    plan. Resource actions are indicated with the following symbols:
       ~ update in-place
 
     Terraform will perform the following actions:
 
-      # module.bucket.aws_s3_bucket_acl.this will be updated in-place
-      ~ resource "aws_s3_bucket_acl" "this" {
-          ~ acl    = "private" -> "public-read"
-            id     = "bucket-liked-poodle,private"
-            # (1 unchanged attribute hidden)
+      # module.bucket.aws_s3_bucket.this will be updated in-place
+      ~ resource "aws_s3_bucket" "this" {
+            id                          = "bucket-discrete-quetzal"
+          ~ tags                        = {
+              + "Name" = "my-bucket"
+            }
+          ~ tags_all                    = {
+              + "Name" = "my-bucket"
+            }
+            # (9 unchanged attributes hidden)
 
-            # (1 unchanged block hidden)
+            # (3 unchanged blocks hidden)
         }
 
     Plan: 0 to add, 1 to change, 0 to destroy.
@@ -46,15 +49,15 @@ Terraspace will show you a preview of the changes and prompt you to update the i
 Once again, we shown what will change and prompted to `Enter a value:`. Type `yes` and press enter.
 
       Enter a value: yes
-
-    module.bucket.aws_s3_bucket_acl.this: Modifying... [id=bucket-liked-poodle,private]
-    module.bucket.aws_s3_bucket_acl.this: Modifications complete after 1s [id=bucket-liked-poodle,public-read]
+    module.bucket.aws_s3_bucket.this: Modifying... [id=bucket-discrete-quetzal]
+    module.bucket.aws_s3_bucket.this: Modifications complete after 0s [id=bucket-discrete-quetzal]
 
     Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
 
+
     Outputs:
 
-    bucket_name = bucket-liked-poodle
+    bucket_name = "bucket-discrete-quetzal"
     $
 
 The modification has been applied.

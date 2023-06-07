@@ -17,25 +17,19 @@ resource "random_pet" "this" {
 module "bucket" {
   source     = "../../modules/example"
   bucket     = "bucket-${random_pet.this.id}"
-  acl        = var.acl
+  tags       = var.tags
 }
 ```
 
-As you can see there's a `var.acl` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
+As you can see there's a `var.tags` variable. One way to update the infrastructure is to change the variable in the `variables.tf` file directly.
 
 app/stacks/demo/variables.tf
 
 ```terraform
-variable "bucket" {
-  description = "The name of the bucket. If omitted, Terraform will assign a random, unique name." # IE: terraform-2020052606510241590000000
-  type        = string
-  default     = null
-}
-
-variable "acl" {
-  description = "The canned ACL to apply. Defaults to 'private'."
-  type        = string
-  default     = "private"
+variable "tags" {
+  description = "(Optional) A mapping of tags to assign to the bucket."
+  type        = map(string)
+  default     = {}
 }
 ```
 
@@ -56,8 +50,7 @@ app/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
 # Optional variables:
-# bucket = null
-# acl  = "private" # <= change this line
+# tags = {...} # map(string)
 ```
 
 Terraspace parses the `demo/variables.tf` file to generate the `tfvars/dev.tfvars` file.  It detected that all the variables are optional.  We'll uncomment acl and change it to `acl = "public-read"`.
@@ -66,8 +59,9 @@ app/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
 # Optional variables:
-# bucket = null
-acl = "public-read" # <= was changed
+tags = {
+  Name: "my-bucket", # <= CHANGED
+}
 ```
 
 Next, we'll update the infrastructure.
