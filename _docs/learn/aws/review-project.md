@@ -16,11 +16,7 @@ main.tf
 ```terraform
 resource "aws_s3_bucket" "this" {
   bucket = var.bucket # If omitted, Terraform will assign a random, unique name.
-}
-
-resource "aws_s3_bucket_acl" "this" {
-  bucket = aws_s3_bucket.this.id
-  acl    = var.acl
+  tags   = var.tags
 }
 ```
 
@@ -33,10 +29,10 @@ variable "bucket" {
   default     = null
 }
 
-variable "acl" {
-  description = "The canned ACL to apply. Defaults to 'private'."
-  type        = string
-  default     = "private"
+variable "tags" {
+  description = "(Optional) A mapping of tags to assign to the bucket."
+  type        = map(string)
+  default     = {}
 }
 ```
 
@@ -56,7 +52,7 @@ resource "random_pet" "this" {
 module "bucket" {
   source     = "../../modules/example"
   bucket     = "bucket-${random_pet.this.id}"
-  acl        = var.acl
+  tags       = var.tags
 }
 ```
 
