@@ -37,7 +37,7 @@ up_prod:
 ```
 {% endraw -%}
 
-* The `if: $CI_PIPELINE_SOURCE == "web"` condition is use to define a "web" pipeline that rusn a `terraspace plan` and then ``terraspace up` stage for `TS_ENV=prod`
+* The `if: $CI_PIPELINE_SOURCE == "web"` condition is use to define a "web" pipeline that runs a `terraspace plan` and then `terraspace up` stage for `TS_ENV=prod`
 * The `when: manual` is use so that the final apply requires a manual trigger.
 
 ## Run Pipeline
