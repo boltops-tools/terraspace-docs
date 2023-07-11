@@ -14,7 +14,7 @@ config/plugins/aws.rb
 ```ruby
 TerraspacePluginAws.configure do |config|
   config.auto_create = true # set to false to completely disable auto creation
-  config.tags = {key1: "value1". key2: "value2"} # set for both s3 bucket and dynamodb table
+  config.tags = {key1: "value1", key2: "value2"} # set for both s3 bucket and dynamodb table
   config.tag_existing = true # if bucket or dynamodb already exists will tag them. Tags are appended.
 
   config.s3.access_logging = false # false is the default setting
