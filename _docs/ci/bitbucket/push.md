@@ -36,8 +36,8 @@ A good bit of the logic is in the `.bitbucket/bin` supporting files. The install
     # install terraform
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv
     export PATH="$HOME/.tfenv/bin:$PATH"
-    tfenv install latest
-    tfenv use latest
+    tfenv install 1.5.5 # do not use later than 1.5.5
+    tfenv use 1.5.5
     terraform --version
     # install terraspace
     bundle

@@ -59,8 +59,8 @@ We then use two `script` steps to run bash scripts. The first script calls the s
     # install terraform
     git clone https://github.com/tfutils/tfenv.git ~/.tfenv
     export PATH="$HOME/.tfenv/bin:$PATH"
-    tfenv install latest
-    tfenv use latest
+    tfenv install 1.5.5 # do not use later than 1.5.5
+    tfenv use 1.5.5
     terraform --version
 
     # install terraspace

@@ -21,8 +21,8 @@ before_script: |
   git clone https://github.com/tfutils/tfenv.git ~/.tfenv
   echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.bash_profile
   export PATH="$HOME/.tfenv/bin:$PATH"
-  tfenv install latest
-  tfenv use latest
+  tfenv install 1.5.5 # do not use later than 1.5.5
+  tfenv use 1.5.5
   terraform --version
   # install terraspace
   bundle

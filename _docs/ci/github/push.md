@@ -59,8 +59,8 @@ The install script installs Terraform, Terraspace, and infracost. It looks somet
 
     # install terraform
     brew install tfenv
-    tfenv install latest
-    tfenv use latest
+    tfenv install 1.5.5 # do not use later than 1.5.5
+    tfenv use 1.5.5
     terraform --version
 
     # install terraspace
