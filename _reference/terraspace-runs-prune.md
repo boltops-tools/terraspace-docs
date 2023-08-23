@@ -41,7 +41,7 @@ This leaves the top run alone. The top run usually starts immediately planning o
 ## Options
 
 ```
-    [--noop], [--no-noop]  # Shows what would be cancelled/discarded.
-y, [--yes], [--no-yes]     # bypass are you sure prompt
+   [--noop], [--no-noop]  # Shows what would be cancelled/discarded.
+y, [--yes], [--no-yes]    # bypass are you sure prompt
 ```
 

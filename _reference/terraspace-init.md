@@ -53,8 +53,8 @@ Typically, Terraspace auto init should handle initialization. You can run init i
 ## Options
 
 ```
-i, [--instance=INSTANCE]         # Instance of stack
-    [--verbose], [--no-verbose]  
-    [--noop], [--no-noop]        
+i, [--instance=INSTANCE]        # Instance of stack
+   [--verbose], [--no-verbose]  
+   [--noop], [--no-noop]        
 ```
 

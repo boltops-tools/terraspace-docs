@@ -53,14 +53,14 @@ You can then use this later in terraspace up:
 ## Options
 
 ```
-    [--auto], [--no-auto]                  # Auto mode is useful for CI automation. It enables appropriate flags.
-    [--input], [--no-input]                # Ask for input for variables if not directly set.
-i, [--instance=INSTANCE]                   # Instance of stack
-o, [--out=OUT]                             # Output path. Can be a pattern like :MOD_NAME.plan
-    [--reconfigure], [--no-reconfigure]    # Add terraform -reconfigure option
-    [--copy-to-root], [--no-copy-to-root]  # Copy plan file generated in the cache folder back to project root
-                                           # Default: true
-    [--verbose], [--no-verbose]            
-    [--noop], [--no-noop]                  
+   [--auto], [--no-auto]                  # Auto mode is useful for CI automation. It enables appropriate flags.
+   [--input], [--no-input]                # Ask for input for variables if not directly set.
+i, [--instance=INSTANCE]                  # Instance of stack
+o, [--out=OUT]                            # Output path. Can be a pattern like :MOD_NAME.plan
+   [--reconfigure], [--no-reconfigure]    # Add terraform -reconfigure option
+   [--copy-to-root], [--no-copy-to-root]  # Copy plan file generated in the cache folder back to project root
+                                          # Default: true
+   [--verbose], [--no-verbose]            
+   [--noop], [--no-noop]                  
 ```
 

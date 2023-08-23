@@ -70,7 +70,7 @@ n, [--limit=N]                        # Number of lines to limit showing. Only a
                                       # Default: 10
 a, [--all], [--no-all]                # All mode turns off the limit. Defaults to all if a single log is specified. Only applies in no-follow mode.
 p, [--pid=PID]                        # Filter by pid. Defaults to the last pid at the bottom of the log file.
-    [--verbose], [--no-verbose]       
-    [--noop], [--no-noop]             
+   [--verbose], [--no-verbose]        
+   [--noop], [--no-noop]              
 ```
 

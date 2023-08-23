@@ -23,12 +23,12 @@ Build starer seed tfvars file.
 ## Options
 
 ```
-y, [--yes], [--no-yes]           # bypass prompts and force overwrite files
-    [--where=WHERE]              # where to create file. either under app or seed folder structure. values: seed or stack
-    [--init], [--no-init]        # Whether or not to run init
-                                 # Default: true
-i, [--instance=INSTANCE]         # Instance of stack
-    [--verbose], [--no-verbose]  
-    [--noop], [--no-noop]        
+y, [--yes], [--no-yes]          # bypass prompts and force overwrite files
+   [--where=WHERE]              # where to create file. either under app or seed folder structure. values: seed or stack
+   [--init], [--no-init]        # Whether or not to run init
+                                # Default: true
+i, [--instance=INSTANCE]        # Instance of stack
+   [--verbose], [--no-verbose]  
+   [--noop], [--no-noop]        
 ```
 

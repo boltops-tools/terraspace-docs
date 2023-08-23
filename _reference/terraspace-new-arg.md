@@ -35,10 +35,10 @@ Module-level arg:
 ## Options
 
 ```
-y, [--force]       # Bypass overwrite are you sure prompt for existing files
-    [--name=NAME]  # command name
-                   # Default: apply
-    [--type=TYPE]  # project, stack or module
-                   # Default: project
+y, [--force]      # Bypass overwrite are you sure prompt for existing files
+   [--name=NAME]  # command name
+                  # Default: apply
+   [--type=TYPE]  # project, stack or module
+                  # Default: project
 ```
 

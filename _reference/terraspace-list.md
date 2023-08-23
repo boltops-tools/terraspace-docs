@@ -36,9 +36,9 @@ List only modules.
 ## Options
 
 ```
-t, [--type=TYPE]                 # Type: stack, module, or all
-                                 # Default: all
-    [--verbose], [--no-verbose]  
-    [--noop], [--no-noop]        
+t, [--type=TYPE]                # Type: stack, module, or all
+                                # Default: all
+   [--verbose], [--no-verbose]  
+   [--noop], [--no-noop]        
 ```
 
