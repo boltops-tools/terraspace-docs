@@ -21,3 +21,13 @@ The [Terraform installation instructions](https://www.terraform.io/downloads.htm
 ## Terraform BSL License Change
 
 {% include terraform/license.md %}
+
+## Checking Terraform Version
+
+You can check if you have a permitted terraform version with:
+
+    $ terraspace check
+    terraspace version: 2.2.11
+    terraform bin: ~/.tfenv/bin/terraform
+    terraform version: 1.5.5
+    You're all set!

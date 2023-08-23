@@ -1,11 +1,11 @@
 ---
-title: terraspace setup check
+title: terraspace check
 reference: true
 ---
 
 ## Usage
 
-    terraspace setup check
+    terraspace check
 
 ## Description
 

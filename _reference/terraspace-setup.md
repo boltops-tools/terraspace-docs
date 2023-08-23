@@ -13,12 +13,12 @@ setup subcommands
 
 ## Subcommands
 
-* [terraspace setup check]({% link _reference/terraspace-setup-check.md %}) - Check setup is ok
+* [terraspace check]({% link _reference/terraspace-setup-check.md %}) - Check setup is ok
 
 ## Options
 
 ```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
+[--verbose], [--no-verbose]
+[--noop], [--no-noop]
 ```
 
