@@ -57,12 +57,12 @@ The tfvar structure files looks like this:
 
 The tfvars file for bob and kevin servers could have different variables like `instance_type`:
 
-app/stacks/server/tfvars/bob.tfvars
+config/stacks/server/tfvars/bob.tfvars
 
     name          = "bob"
     instance_type = "t3.small"
 
-app/stacks/server/tfvars/kevin.tfvars
+config/stacks/server/tfvars/kevin.tfvars
 
     name          = "kevin"
     instance_type = "t3.medium"
@@ -93,7 +93,7 @@ So:
 
 You can also organize the files in corresponding TS_ENV based folders. Here's an example of a different organization.
 
-    app/stacks/server/tfvars
+    config/stacks/server/tfvars
     ├── base.tfvars
     ├── dev
     │   ├── base.tfvars
@@ -119,7 +119,7 @@ The instance value is appended after a period (`.`). This allows multiple instan
 
 The terraspace CLI `options` are also available. Here's an interesting use of the options with the `--instance` option.
 
-app/stacks/server/tfvars/base.tfvars:
+config/stacks/server/tfvars/base.tfvars:
 
     name = "<%= options[:instance] %>-server"
 

@@ -26,9 +26,9 @@ The the tfvar files are processed and "layered".  Example:
 The `terraspace seed` command creates starter tfvars files for you. Examples:
 
     $ terraspace seed network
-          create  app/stacks/network/tfvars/dev.tfvars
+          create  config/stacks/network/tfvars/dev.tfvars
     $ TS_ENV=prod terraspace seed network
-          create  app/stacks/network/tfvars/prod.tfvars
+          create  config/stacks/network/tfvars/prod.tfvars
     $
 
 [Tfvars Seed Docs]({% link _docs/layering/seed.md %}).

@@ -11,7 +11,7 @@ The tfvars files get processed by ERB templating, providing some dynamic control
 
 A useful helper is `output`, it allows you to grab the output value from another stack and use it as an input variable for another stack.
 
-app/stacks/demo/tfvars/base.tfvars:
+config/stacks/demo/tfvars/base.tfvars:
 
     vpc_id = <%= output("vpc.vpc_id")" %>
 
@@ -24,7 +24,7 @@ Terraspace also uses this information to build the dependency graph and deploys 
 
 One example is maybe you want to use TS_ENV in your variables dynamically with the ERB.
 
-app/stacks/demo/tfvars/base.tfvars:
+config/stacks/demo/tfvars/base.tfvars:
 
     name = "<%= Terraspace.env %>-instance"
 

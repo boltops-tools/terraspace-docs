@@ -28,7 +28,7 @@ y, [--yes], [--no-yes]          # bypass prompts and force overwrite files
    [--init], [--no-init]        # Whether or not to run init
                                 # Default: true
 i, [--instance=INSTANCE]        # Instance of stack
-   [--verbose], [--no-verbose]  
-   [--noop], [--no-noop]        
+   [--verbose], [--no-verbose]
+   [--noop], [--no-noop]
 ```
 

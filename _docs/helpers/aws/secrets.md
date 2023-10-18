@@ -10,7 +10,7 @@ The `aws_secret` helper fetches secret data from AWS Secrets Manager.
 
 ## Example
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= aws_secret("demo-:ENV-user") %>"
     pass = "<%= aws_secret("demo-:ENV-pass") %>"
@@ -33,7 +33,7 @@ Notice how `:ENV` is expanded in the example above. Support for this was automat
 
 To selectively disable expansion you can provide the `expand: false` option.
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= aws_secret("demo-:ENV-user, expand: false") %>"
     pass = "<%= aws_secret("demo-:ENV-pass, expand: false") %>"

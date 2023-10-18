@@ -12,7 +12,7 @@ You can take advantage of the Terraspace layering to deploy the same infrastruct
 
 Here's a structure that takes advantage of layering and multiple-regions for AWS:
 
-    app/stacks/demo/tfvars
+    config/stacks/demo/tfvars
     ├── us-east-1
     │   ├── dev.tfvars
     │   └── prod.tfvars
@@ -34,7 +34,7 @@ You can use the same code for different environments in the different regions al
 
 Here's a structure that takes advantage of layering and multiple-locations for Azure:
 
-    app/stacks/demo/tfvars
+    config/stacks/demo/tfvars
     ├── eastus
     │   ├── dev.tfvars
     │   └── prod.tfvars
@@ -65,7 +65,7 @@ Note, to check the current Azure location, you can use:
 
 Here's a structure that takes advantage of layering and multiple-regions for Google Cloud:
 
-    app/stacks/demo/tfvars
+    config/stacks/demo/tfvars
     ├── us-central1
     │   ├── dev.tfvars
     │   └── prod.tfvars

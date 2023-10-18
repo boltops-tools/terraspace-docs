@@ -10,7 +10,7 @@ The `aws_ssm` helper fetches secret data from AWS SSM Parameter Store.
 
 ## Example
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= aws_ssm("/demo/:ENV/user") %>"
     pass = "<%= aws_ssm("/demo/:ENV/pass") %>"
@@ -33,7 +33,7 @@ Notice how `:ENV` is expanded in the example above. Support for this was automat
 
 To selectively disable expansion you can provide the `expand: false` option.
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= aws_ssm("/demo/:ENV/user", expand: false) %>"
     pass = "<%= aws_ssm("/demo/:ENV/pass", expand: false) %>"

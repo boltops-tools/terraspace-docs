@@ -33,6 +33,6 @@ Generates example.
 f, [--force]          # Force overwrite
    [--lang=LANG]      # Language to use: HCL/ERB or Ruby DSL
                       # Default: hcl
-p, [--plugin=PLUGIN]  
+p, [--plugin=PLUGIN]
 ```
 

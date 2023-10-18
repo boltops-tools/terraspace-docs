@@ -10,7 +10,7 @@ The `azure_secret` helper fetches secrets from Azure Key Vault Service.
 
 ## Example
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= azure_secret("demo-:ENV-user") %>"
     pass = "<%= azure_secret("demo-:ENV-pass") %>"
@@ -56,7 +56,7 @@ Notice how `:ENV` is expanded in the example above. Support for this was automat
 
 To selectively disable expansion you can provide the `expand: false` option.
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     user = "<%= azure_secret("demo-:ENV-user", expand: false) %>"
     pass = "<%= azure_secret("demo-:ENV-pass", expand: false) %>"

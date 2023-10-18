@@ -33,7 +33,7 @@ variable "tags" {
 }
 ```
 
-However, you can also use `tfvars` files. Terraspace will automatically use `app/stacks/demo/tfvars` files according the `TS_ENV` value. The default value is `TS_ENV=dev`. We'll use tfvars files so we can use the same code for different environments.
+However, you can also use `tfvars` files. Terraspace will automatically use `config/stacks/demo/tfvars` files according the `TS_ENV` value. The default value is `TS_ENV=dev`. We'll use tfvars files so we can use the same code for different environments.
 
 ## Generate Starter Tfvars Files
 
@@ -46,7 +46,7 @@ Addtionally, Terraspace can generate starter tfvar files for us with the `terras
 
 The produced file looks something like this:
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
 # Optional variables:
@@ -55,7 +55,7 @@ app/stacks/demo/tfvars/dev.tfvars
 
 Terraspace parses the `demo/variables.tf` file to generate the `tfvars/dev.tfvars` file.  It detected that all the variables are optional.  We'll uncomment acl and change it to `acl = "public-read"`.
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
 ```terraform
 # Optional variables:

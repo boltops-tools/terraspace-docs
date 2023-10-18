@@ -22,8 +22,8 @@ end
 This will show the **found** layers.
 
     $ terraspace build demo
-        app/stacks/demo/tfvars/base.tfvars
-        app/stacks/demo/tfvars/dev.tfvars
+        config/stacks/demo/tfvars/base.tfvars
+        config/stacks/demo/tfvars/dev.tfvars
 
 ## All Considered Layers
 
@@ -37,11 +37,11 @@ If you want to also see all the considered layers use `TS_LAYERING_SHOW_ALL=1`.
         config/terraform/tfvars/us-west-2.tfvars
         config/terraform/tfvars/us-west-2/base.tfvars
         config/terraform/tfvars/us-west-2/dev.tfvars
-        app/stacks/demo/tfvars/base.tfvars
-        app/stacks/demo/tfvars/dev.tfvars
-        app/stacks/demo/tfvars/us-west-2.tfvars
-        app/stacks/demo/tfvars/us-west-2/base.tfvars
-        app/stacks/demo/tfvars/us-west-2/dev.tfvars
+        config/stacks/demo/tfvars/base.tfvars
+        config/stacks/demo/tfvars/dev.tfvars
+        config/stacks/demo/tfvars/us-west-2.tfvars
+        config/stacks/demo/tfvars/us-west-2/base.tfvars
+        config/stacks/demo/tfvars/us-west-2/dev.tfvars
 
 {% include layering/provider-mode.md %}
 

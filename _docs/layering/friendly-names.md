@@ -20,7 +20,7 @@ end
 
 This maps the `111111111111` namespace to a friendly  name `dev-account`. So when you build or deploy it'll use the friendly name. Example:
 
-    $ ls app/stacks/demo/tfvars/dev-account/
+    $ ls config/stacks/demo/tfvars/dev-account/
     base.tfvars
     $ terraspace build demo
     $ ls .terraspace-cache/us-west-2/dev/stacks/demo/*.tfvars
@@ -29,7 +29,7 @@ This maps the `111111111111` namespace to a friendly  name `dev-account`. So whe
 
 Without the mapping, the paths would look like so:
 
-    $ ls app/stacks/demo/tfvars/111111111111/
+    $ ls config/stacks/demo/tfvars/111111111111/
     base.tfvars
     $ terraspace build demo
     $ ls .terraspace-cache/us-west-2/dev/stacks/demo/*.tfvars
