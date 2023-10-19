@@ -11,4 +11,5 @@ For example, the `app1` stack could be designed to use a `server` module. Anothe
 For example, the `app1` stack could be designed to use an `instance` module. Another, `app2` stack could use an `instance` and `rds` modules.
 {% endif %}
 
-There are no hard rules. Stacks can be reusable and you provide the tfvars config. It's up to you.
+There are no hard rules. Stacks can be reusable and you provide the tfvars config. It's up to you. Here are some more [Tfvars Location Thoughts]({% link _docs/layering/tfvars-location-thoughts.md %}).
+
