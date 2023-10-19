@@ -2,7 +2,7 @@
 
 Here's an example with the `TS_EXTRA` env var in a tfvars file.
 
-app/stacks/server/tfvars/base.tfvars:
+config/stacks/server/tfvars/base.tfvars:
 
     name = "<%= Terraspace.extra %>-server"
 

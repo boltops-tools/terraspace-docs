@@ -13,11 +13,11 @@ Here's an example with some concrete values:
 
     $ terraspace build demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
-        app/stacks/demo/tfvars/base.tfvars (found)
-        app/stacks/demo/tfvars/dev.tfvars (found)
-        app/stacks/demo/tfvars/us-west-2.tfvars
-        app/stacks/demo/tfvars/us-west-2/base.tfvars
-        app/stacks/demo/tfvars/us-west-2/dev.tfvars
+        config/stacks/demo/tfvars/base.tfvars (found)
+        config/stacks/demo/tfvars/dev.tfvars (found)
+        config/stacks/demo/tfvars/us-west-2.tfvars
+        config/stacks/demo/tfvars/us-west-2/base.tfvars
+        config/stacks/demo/tfvars/us-west-2/dev.tfvars
 
 This is an AWS example, if you're using another cloud provider plugin, the region/location will be specific to that plugin.
 
@@ -29,14 +29,14 @@ This is an AWS example, if you're using another cloud provider plugin, the regio
 
 A simple layering structure is having the files at the top-level like so:
 
-    app/stacks/server/tfvars
+    config/stacks/server/tfvars
     ├── base.tfvars
     ├── dev.tfvars
     └── prod.tfvars
 
 You can also structure your tfvars so that they are within env folders like so:
 
-    app/stacks/server/tfvars
+    config/stacks/server/tfvars
     ├── base.tfvars
     ├── dev
     │   └── base.tfvars
@@ -50,7 +50,7 @@ Generally, the simplier structure is should be used. Unless you're using [TS_EXT
 Layering is performed both at the project-level and stack-level.
 
 1. **Project-level Layering**: These are project-wide tfvars set for **every** stack. These files live in `config/terraform/tfvars`
-2. **Stack-level Layering**: This are targetted tfvars set the **specific** stack being deployed. These files can live in the specific stack folder, IE: `app/stacks/demo/tfvars`
+2. **Stack-level Layering**: This are targetted tfvars set the **specific** stack being deployed. These files can live in the specific stack folder, IE: `config/stacks/demo/tfvars`
 
 Here's a short example to explain. First, the **project-level** tfvars:
 
@@ -68,13 +68,13 @@ tags = ["tag-for-all-dev-envs"]
 
 Second, the **stack-level** tfvars.
 
-app/stacks/demo/tfvars/base.tfvars
+config/stacks/demo/tfvars/base.tfvars
 
 ```ruby
 labels = ["demo-stack-common-tag"]
 ```
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
 ```ruby
 labels = ["demo-stack-tag-for-all-dev-envs"]

@@ -28,6 +28,6 @@ Removes cache dirs.
 ## Options
 
 ```
-y, [--yes], [--no-yes]  # bypass are you sure prompt
+-y, [--yes], [--no-yes]  # bypass are you sure prompt
 ```
 

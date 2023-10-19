@@ -16,10 +16,4 @@ To use, add the following to your `~/.bashrc` or `~/.profile`
     eval $(terraspace completion_script)
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

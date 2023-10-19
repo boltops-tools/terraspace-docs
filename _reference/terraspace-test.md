@@ -48,10 +48,4 @@ Here's an example with output cleaned up to reduce noise:
     $
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

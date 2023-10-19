@@ -26,10 +26,4 @@ new subcommands
 * [terraspace new stack]({% link _reference/terraspace-new-stack.md %}) - Generates stack.
 * [terraspace new test]({% link _reference/terraspace-new-test.md %}) - Generates test.
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

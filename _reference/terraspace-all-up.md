@@ -53,8 +53,8 @@ You can then use this later in terraspace up:
 ## Options
 
 ```
-   [--plan=PLAN]                          # Plan path. Can be a pattern like :MOD_NAME.plan
-y, [--yes], [--no-yes]                    # auto approve all batch commands
-   [--exit-on-fail], [--no-exit-on-fail]  # whether or not to exit when one of the batch commands fails
+    [--plan=PLAN]                          # Plan path. Can be a pattern like :MOD_NAME.plan
+-y, [--yes], [--no-yes]                    # auto approve all batch commands
+    [--exit-on-fail], [--no-exit-on-fail]  # whether or not to exit when one of the batch commands fails
 ```
 

@@ -57,7 +57,7 @@ end
 
 This results in the 1st pass to also evaluate the `list` and `end` ERB calls, and `item['name']` works.
 
-app/stacks/demo/tfvars/dev.tfvars
+config/stacks/demo/tfvars/dev.tfvars
 
     <% list.each do |item| %>
     length<%= item['name'] %> = <%= output("demo.length") %>

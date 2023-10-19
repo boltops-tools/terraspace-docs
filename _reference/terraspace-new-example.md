@@ -30,9 +30,9 @@ Generates example.
 ## Options
 
 ```
-f, [--force]          # Force overwrite
-   [--lang=LANG]      # Language to use: HCL/ERB or Ruby DSL
-                      # Default: hcl
-p, [--plugin=PLUGIN]  
+-f, [--force]          # Force overwrite
+    [--lang=LANG]      # Language to use: HCL/ERB or Ruby DSL
+                       # Default: hcl
+-p, [--plugin=PLUGIN]  
 ```
 

@@ -52,9 +52,7 @@ Run show.
 ## Options
 
 ```
-i, [--instance=INSTANCE]        # Instance of stack
-   [--plan=PLAN]                # Plan path. Can be a pattern like :MOD_NAME.plan
-   [--verbose], [--no-verbose]  
-   [--noop], [--no-noop]        
+-i, [--instance=INSTANCE]  # Instance of stack
+    [--plan=PLAN]          # Plan path. Can be a pattern like :MOD_NAME.plan
 ```
 

@@ -37,10 +37,4 @@ You can import a module's example as a stack.
     terraspace bundle example MODULE EXAMPLE
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

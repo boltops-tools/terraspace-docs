@@ -42,10 +42,4 @@ Example with output:
     your Terraform state and will henceforth be managed by Terraform.
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

@@ -45,24 +45,24 @@ Now build a stack.
     $ terraspace build demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
         ...
-        app/stacks/demo/tfvars/deploy.tfvars
-        app/stacks/demo/tfvars/deploy/base.tfvars
-        app/stacks/demo/tfvars/deploy/dev.tfvars
-        app/stacks/demo/tfvars/deploy/us-west-2.tfvars
-        app/stacks/demo/tfvars/deploy/us-west-2/base.tfvars
-        app/stacks/demo/tfvars/deploy/us-west-2/dev.tfvars
-        app/stacks/demo/tfvars/app1.tfvars
-        app/stacks/demo/tfvars/app1/base.tfvars
-        app/stacks/demo/tfvars/app1/dev.tfvars
-        app/stacks/demo/tfvars/app1/us-west-2.tfvars
-        app/stacks/demo/tfvars/app1/us-west-2/base.tfvars
-        app/stacks/demo/tfvars/app1/us-west-2/dev.tfvars
-        app/stacks/demo/tfvars/app1/deploy.tfvars
-        app/stacks/demo/tfvars/app1/deploy/base.tfvars
-        app/stacks/demo/tfvars/app1/deploy/dev.tfvars
-        app/stacks/demo/tfvars/app1/deploy/us-west-2.tfvars
-        app/stacks/demo/tfvars/app1/deploy/us-west-2/base.tfvars
-        app/stacks/demo/tfvars/app1/deploy/us-west-2/dev.tfvars
+        config/stacks/demo/tfvars/deploy.tfvars
+        config/stacks/demo/tfvars/deploy/base.tfvars
+        config/stacks/demo/tfvars/deploy/dev.tfvars
+        config/stacks/demo/tfvars/deploy/us-west-2.tfvars
+        config/stacks/demo/tfvars/deploy/us-west-2/base.tfvars
+        config/stacks/demo/tfvars/deploy/us-west-2/dev.tfvars
+        config/stacks/demo/tfvars/app1.tfvars
+        config/stacks/demo/tfvars/app1/base.tfvars
+        config/stacks/demo/tfvars/app1/dev.tfvars
+        config/stacks/demo/tfvars/app1/us-west-2.tfvars
+        config/stacks/demo/tfvars/app1/us-west-2/base.tfvars
+        config/stacks/demo/tfvars/app1/us-west-2/dev.tfvars
+        config/stacks/demo/tfvars/app1/deploy.tfvars
+        config/stacks/demo/tfvars/app1/deploy/base.tfvars
+        config/stacks/demo/tfvars/app1/deploy/dev.tfvars
+        config/stacks/demo/tfvars/app1/deploy/us-west-2.tfvars
+        config/stacks/demo/tfvars/app1/deploy/us-west-2/base.tfvars
+        config/stacks/demo/tfvars/app1/deploy/us-west-2/dev.tfvars
 
 {% include layering/tip.md %}
 
@@ -74,7 +74,7 @@ Since layering is so powerful, you want to choose a few layers that make sense f
     $ export TS_ROLE=deploy
     $ terraspace build demo
     Building .terraspace-cache/us-west-2/dev/stacks/demo
-        app/stacks/demo/tfvars/base.tfvars
-        app/stacks/demo/tfvars/dev.tfvars
-        app/stacks/demo/tfvars/app1/base.tfvars
-        app/stacks/demo/tfvars/app1/dev.tfvars
+        config/stacks/demo/tfvars/base.tfvars
+        config/stacks/demo/tfvars/dev.tfvars
+        config/stacks/demo/tfvars/app1/base.tfvars
+        config/stacks/demo/tfvars/app1/dev.tfvars

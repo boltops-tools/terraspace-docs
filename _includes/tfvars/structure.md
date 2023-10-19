@@ -1,11 +1,9 @@
-Tfvar files should be place within the `app/stacks/MOD/tfvars` folder. Example:
+Tfvar files should be place within the `config/stacks/MOD/tfvars` folder. Example:
 
-    app/stacks/demo
-    ├── main.tf
-    ├── tfvars
-    │   ├── base.tfvars
-    │   ├── dev.tfvars
-    │   └── prod.tfvars
-    └── variables.tf
+    config/stacks/demo
+    └── tfvars
+        ├── base.tfvars
+        ├── dev.tfvars
+        └── prod.tfvars
 
 You don't have to specify the `-var-file` option, the tfvars files are automatically processed and used via layering.

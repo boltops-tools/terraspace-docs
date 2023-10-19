@@ -33,7 +33,7 @@ Truncate logs. IE: Keeps the files but removes contents and zero bytes the files
 ## Options
 
 ```
-t, [--truncate], [--no-truncate]  # Truncate instead of remove logs
-y, [--yes], [--no-yes]            # bypass are you sure prompt
+-t, [--truncate], [--no-truncate]  # Truncate instead of remove logs
+-y, [--yes], [--no-yes]            # bypass are you sure prompt
 ```
 

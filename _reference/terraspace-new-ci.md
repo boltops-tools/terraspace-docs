@@ -15,6 +15,6 @@ Generates ci starter structure.
 ## Options
 
 ```
-y, [--force]  # Bypass overwrite are you sure prompt for existing files
+-y, [--force]  # Bypass overwrite are you sure prompt for existing files
 ```
 

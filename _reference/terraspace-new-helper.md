@@ -55,9 +55,9 @@ Explictly name helper method. IE: custom here.
 ## Options
 
 ```
-y, [--force]      # Bypass overwrite are you sure prompt for existing files
-   [--name=NAME]  # Helper name used for the filename. Defaults to the project, module or stack name
-   [--type=TYPE]  # project, stack or module
-                  # Default: project
+-y, [--force]      # Bypass overwrite are you sure prompt for existing files
+    [--name=NAME]  # Helper name used for the filename. Defaults to the project, module or stack name
+    [--type=TYPE]  # project, stack or module
+                   # Default: project
 ```
 

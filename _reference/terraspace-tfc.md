@@ -18,10 +18,4 @@ tfc subcommands
 * [terraspace tfc runs]({% link _reference/terraspace-tfc-runs.md %}) - runs subcommands
 * [terraspace tfc sync]({% link _reference/terraspace-tfc-sync.md %}) - Sync all or multiple workspaces.
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

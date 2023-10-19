@@ -20,10 +20,4 @@ Check setup.
     You're all set!
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

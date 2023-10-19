@@ -81,12 +81,12 @@ The tfvar structure files looks like this:
 
 The tfvars file for dev-2 and dev-3 servers could have different TS_EXTRA:
 
-app/stacks/server/tfvars/dev-2.tfvars
+config/stacks/server/tfvars/dev-2.tfvars
 
     name          = "dev-2"
     instance_type = "t3.small"
 
-app/stacks/server/tfvars/dev-3.tfvars
+config/stacks/server/tfvars/dev-3.tfvars
 
     name          = "dev-3"
     instance_type = "t3.medium"
@@ -117,7 +117,7 @@ So:
 
 You can also organize the files in corresponding `TS_ENV` based folders. Here's an example of a different organization and how the extra layer also not include the env.
 
-    app/stacks/server/tfvars
+    config/stacks/server/tfvars
     ├── base.tfvars
     ├── dev
     │   ├── base.tfvars

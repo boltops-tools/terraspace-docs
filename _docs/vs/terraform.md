@@ -124,7 +124,7 @@ It's like building the [Winchester House](https://en.wikipedia.org/wiki/Winchest
 
 Terraspace answers and solves these questions right out of the gates. Here's an example of multiple-regions for AWS:
 
-    app/stacks/demo/tfvars
+    config/stacks/demo/tfvars
     ├── us-east-1
     │   ├── dev.tfvars
     │   └── prod.tfvars

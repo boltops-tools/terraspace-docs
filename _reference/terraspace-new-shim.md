@@ -37,7 +37,7 @@ Generates terraspace shim.
 ## Options
 
 ```
-p, [--path=PATH]  # path to save the shim script
-                  # Default: /usr/local/bin/terraspace
+-p, [--path=PATH]  # path to save the shim script
+                   # Default: /usr/local/bin/terraspace
 ```
 

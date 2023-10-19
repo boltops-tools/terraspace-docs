@@ -11,7 +11,7 @@ The `terraspace seed` command creates starter tfvars files for you. It does this
 
     $ terraspace seed network
     Seeding tfvar files for network
-          create  app/stacks/network/tfvars/dev.tfvars
+          create  config/stacks/network/tfvars/dev.tfvars
     $
 
 app/stacks/network/tfvars/dev.tfvars:
@@ -29,7 +29,7 @@ To create starter tfvars file for a different environment, use `TS_ENV`. Example
 
     $ TS_ENV=prod terraspace seed network
     Seeding tfvar files for network
-          create  app/stacks/network/tfvars/prod.tfvars
+          create  config/stacks/network/tfvars/prod.tfvars
     $
 
 ## Providing Example Values
@@ -49,17 +49,6 @@ The `terraspace seed` command will produce:
     cidr_block = "10.0.0.0/16"
 
 The code self-documents the starter variables!
-
-## Where Option
-
-By default, the `seed` command detects where the module came from IE: the `app/stacks` or `app/modules` folder. Based on this, it will generate starter files within the `app` or `seed` folder with a preference to the `app` folder per [TFVars Docs]({% link _docs/config/tfvars.md %}).
-
-You can override this with the `--where` option. Example:
-
-    $ terraspace seed network --where seed
-    Seeding tfvar files for network
-          create  seed/tfvars/stacks/network/dev.tfvars
-    $
 
 ## Parsing Errors
 

@@ -33,10 +33,4 @@ Auto-completion example usage:
     terraspace up name --[TAB]
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 
