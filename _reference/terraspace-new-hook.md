@@ -41,11 +41,11 @@ Module-level hook:
 ## Options
 
 ```
-y, [--force]      # Bypass overwrite are you sure prompt for existing files
-   [--kind=KIND]  # terraform or terraspace
-                  # Default: terraform
-   [--name=NAME]  # Command name. Defaults to apply for terraform kind and build for terraspace kind
-   [--type=TYPE]  # project, stack or module
-                  # Default: project
+-y, [--force]      # Bypass overwrite are you sure prompt for existing files
+    [--kind=KIND]  # terraform or terraspace
+                   # Default: terraform
+    [--name=NAME]  # Command name. Defaults to apply for terraform kind and build for terraspace kind
+    [--type=TYPE]  # project, stack or module
+                   # Default: project
 ```
 

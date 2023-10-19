@@ -15,6 +15,6 @@ Sync all or multiple workspaces.
 ## Options
 
 ```
-y, [--yes], [--no-yes]  # bypass are you sure prompt
+-y, [--yes], [--no-yes]  # bypass are you sure prompt
 ```
 

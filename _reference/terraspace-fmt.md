@@ -38,13 +38,21 @@ Format all, so both modules and stacks:
 
     $ terraspace fmt -t all
 
+Check format of all source files, but don't fix. Examples:
+
+    $ terraspace fmt demo -write=false -list
+    $ terraspace fmt demo -check
+    $ terraspace fmt -write=false -list
+
+## Some Notes
+
+The `terraspace fmt` will only format terraform source files that do not have any ERB templating logic in it. It will format the files directly in your source code. IE: app/stacks/demo
+
 
 ## Options
 
 ```
-t, [--type=TYPE]                # Type: stack, module, or all
-                                # Default: all
-   [--verbose], [--no-verbose]  
-   [--noop], [--no-noop]        
+-t, [--type=TYPE]  # Type: stack, module, or all
+                   # Default: all
 ```
 

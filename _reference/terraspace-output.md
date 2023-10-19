@@ -22,9 +22,7 @@ Run output.
 ## Options
 
 ```
-i, [--instance=INSTANCE]        # Instance of stack
-o, [--out=OUT]                  # Output path. Can be a pattern like :MOD_NAME.plan
-   [--verbose], [--no-verbose]  
-   [--noop], [--no-noop]        
+-i, [--instance=INSTANCE]  # Instance of stack
+-o, [--out=OUT]            # Output path. Can be a pattern like :MOD_NAME.plan
 ```
 

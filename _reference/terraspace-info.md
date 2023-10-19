@@ -59,10 +59,8 @@ You can also format the output in json:
 ## Options
 
 ```
-i, [--instance=INSTANCE]        # Instance of stack
-   [--format=FORMAT]            # Output formats: csv, equal, table, tab, json
-   [--path=PATH]                # Print path to built path
-   [--verbose], [--no-verbose]  
-   [--noop], [--no-noop]        
+-i, [--instance=INSTANCE]  # Instance of stack
+    [--format=FORMAT]      # Output formats: csv, equal, json, markdown, space, tab, table
+    [--path=PATH]          # Print path to built path
 ```
 

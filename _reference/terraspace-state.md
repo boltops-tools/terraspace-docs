@@ -43,10 +43,4 @@ This means we can use the `-id` or `--id` option and terraspace will pass it str
     random_pet.this
 
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

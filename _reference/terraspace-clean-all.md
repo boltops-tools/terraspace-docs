@@ -26,6 +26,6 @@ Runs all clean operations.
 ## Options
 
 ```
-y, [--yes], [--no-yes]  # bypass are you sure prompt
+-y, [--yes], [--no-yes]  # bypass are you sure prompt
 ```
 

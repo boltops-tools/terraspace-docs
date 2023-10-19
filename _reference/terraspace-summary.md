@@ -31,7 +31,5 @@ Also, check out `terraspace all show`.
 [--init], [--no-init]        # Whether or not to run init
                              # Default: true
 [--details], [--no-details]  # Show details of the listed resources
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
 ```
 

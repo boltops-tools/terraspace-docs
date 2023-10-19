@@ -52,8 +52,8 @@ You can provide a list of statuses to the `--status` filter option.
 ## Options
 
 ```
-[--format=FORMAT]         # Output formats: csv, equal, table, tab, json
+[--format=FORMAT]         # Output formats: csv, equal, json, markdown, space, tab, table
 [--status=one two three]  # Filter by statuses: pending, planned, all
-                          # Default: ["pending", "planned"]
+                          # Default: "pending" "planned"
 ```
 

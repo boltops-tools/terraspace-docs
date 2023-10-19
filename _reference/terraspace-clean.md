@@ -17,10 +17,4 @@ clean subcommands
 * [terraspace clean cache]({% link _reference/terraspace-clean-cache.md %}) - Removes cache dirs.
 * [terraspace clean logs]({% link _reference/terraspace-clean-logs.md %}) - Removes or truncate logs.
 
-## Options
-
-```
-[--verbose], [--no-verbose]  
-[--noop], [--no-noop]        
-```
 

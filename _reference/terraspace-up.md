@@ -54,16 +54,14 @@ You can then use this later in terraspace up:
 ## Options
 
 ```
-   [--auto], [--no-auto]                # Auto mode is useful for CI automation. It enables appropriate flags.
-   [--init], [--no-init]                # Whether or not to run init
-                                        # Default: true
-   [--input], [--no-input]              # Ask for input for variables if not directly set.
-i, [--instance=INSTANCE]                # Instance of stack
-y, [--yes], [--no-yes]                  # -auto-approve the terraform apply
-   [--reconfigure], [--no-reconfigure]  # Add terraform -reconfigure option
-   [--plan=PLAN]                        # Execution plan that can be used to only execute a pre-determined set of actions.
-   [--var-files=one two three]          # list of var files
-   [--verbose], [--no-verbose]          
-   [--noop], [--no-noop]                
+    [--auto], [--no-auto]                # Auto mode is useful for CI automation. It enables appropriate flags.
+    [--init], [--no-init]                # Whether or not to run init
+                                         # Default: true
+    [--input], [--no-input]              # Ask for input for variables if not directly set.
+-i, [--instance=INSTANCE]                # Instance of stack
+-y, [--yes], [--no-yes]                  # -auto-approve the terraform apply
+    [--reconfigure], [--no-reconfigure]  # Add terraform -reconfigure option
+    [--plan=PLAN]                        # Execution plan that can be used to only execute a pre-determined set of actions.
+    [--var-files=one two three]          # list of var files
 ```
 
