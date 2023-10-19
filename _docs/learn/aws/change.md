@@ -41,7 +41,7 @@ Addtionally, Terraspace can generate starter tfvar files for us with the `terras
 
     $ terraspace seed demo
     Reading: .terraspace-cache/us-west-2/dev/stacks/demo/variables.tf
-          create  app/stacks/demo/tfvars/dev.tfvars
+          create  config/stacks/demo/tfvars/dev.tfvars
     $
 
 The produced file looks something like this:
