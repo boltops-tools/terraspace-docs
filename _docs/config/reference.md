@@ -40,5 +40,6 @@ terraform.plugin_cache.enabled | Whether or not to enable a common cache folder 
 terraform.plugin_cache.purge_on_error | Whether or not to automatically purge the plugin_cache and retry when there are Terraform plugin cache errors like [this](https://gist.github.com/tongueroo/f3b44297228d420442a683fbe80e8937). Recommend enabling. | true
 test_framework | Test framework to use | rspec
 {% include config/reference/tfc.md %}
+up.plan_on_yes | Run plan when `-y` option is used for `up`. IE: `terraspace up STACK -y`. New versions of terraform automatically show a plan with `terraform apply -auto-approve`. Noticed this behavior in terraform v1.4.4. | false
 
 Here's also the [config/app.rb](https://github.com/boltops-tools/terraspace/blob/master/lib/terraspace/app.rb) source where these config options are defined.

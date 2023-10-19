@@ -1,11 +1,11 @@
 ---
-title: Updating Terraspace
+title: Updating Terraspace Install Guide
 nav_text: Updating
 category: install
 order: 9
 ---
 
-To update terraspace, you'll also need to update the pinned terraspace version in your Terraspace project's `Gemfile`. It looks something like this.
+To update or upgrade terraspace, you'll also need to update the pinned terraspace version in your Terraspace project's `Gemfile`. It looks something like this.
 
 Gemfile
 
@@ -53,3 +53,7 @@ Often, you want to update all gems, including implied dependencies, completely. 
 This generates a brand new `Gemfile.lock`. To see what versions are used:
 
     bundle list
+
+## Why Upgrade with bundle?
+
+You should always use bundle to upgrade or update Terraspace because it'll ensure that all of your project gem dependencies are installed, not just Terraspace. This applies to the standalone install also. The standalone installer installs an embedded version of ruby, bundle, and Terraspace in `/opt/terraspace/embedded`. It'll work on the first install on a clean machine, but is will likely not work when upgrading because the embedded install has a different set of gem dependencies than your project's `Gemfile.lock`. For more details see this GitHub Issue [217](https://github.com/boltops-tools/terraspace/issues/217#issuecomment-1162627382).

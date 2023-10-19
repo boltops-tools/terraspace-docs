@@ -16,6 +16,7 @@ The following table summarizes the releases. Only some highlighted releases are 
 
 Version | Notes
 --- | ---
+3.0.0 | Recommended tfvars location moved.
 2.2.15 | The recommend tfvars location is now within the config folder. See below.
 2.1.0 | The generated backend.tf has a new key pattern. See below.
 2.0.1 | The generated backend.tf has a new key pattern. See below.
@@ -26,6 +27,10 @@ Version | Notes
 ## Upgrade Details
 
 The following section provides a little more detail on each version upgrade. Note, we'll not provide more details for all versions.
+
+### 3.0.0
+
+The recommended tfvars location is now under `config/stacks` instead of `app/stacks`. Details: [Upgrading: Move Tfvars]({% link _docs/upgrading/move-tfvars.md %})
 
 ### 2.2.15
 

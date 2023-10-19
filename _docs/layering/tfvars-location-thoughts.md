@@ -33,11 +33,12 @@ Layering is performed in this order:
     app/stacks/demo/tfvars/dev.tfvars
     config/stacks/demo/tfvars/dev.tfvars <= highest precedence
 
-Notice how `app/stacks/demo/tfvars` still works and is layered. So this recommendation completely compatiable with older stack code that has tfvars in the same folder. 
+Notice how `app/stacks/demo/tfvars` still works and is layered. So this recommendation completely compatiable with older stack code that has tfvars in the same folder.
 
 ## Move Script
 
 If your tfvars files are in `app/stacks` and want to move them to `config/stacks`, here's a useful [move-tfvars.rb](https://gist.github.com/tongueroo/95a8e3c6d6d2e21c441cf7668e2b9117) script that you can use to quickly move your tfvars files from `app/stacks` to `config/stacks`. Although, the script will prompt you before moving the tfvars over, you should commit and backup your code before running the script.
+Notice how `app/stacks/demo/tfvars` still works and is layered. So this recommendation completely compatiable with existing code.
 
 **Usage**: To use the script download it and then run it from your terraspace project folder. Here's an example:
 
