@@ -14,12 +14,14 @@ Important: If you're using rvm or rbenv and already have Ruby installed, you sho
 
 Below are quickstart instructions for different OSes.
 
+<!--
 ## Mac OSX
 
     brew tap boltops-tools/software
     brew install terraspace
 
 More info on [Mac OSX Install]({% link _docs/install/standalone/macosx.md %})
+-->
 
 ## CentOS/RedHat/Fedora
 

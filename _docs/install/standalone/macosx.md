@@ -1,9 +1,11 @@
 ---
 title: "Install: Mac OSX"
 nav_text: MacOSX
-category: standalone
+category: archive-standalone
 order: 1
 ---
+
+{% include deprecated/standalone-install.md %}
 
 This page shows you how to install Terraspace on Mac OSX.
 
