@@ -1,7 +1,6 @@
 ---
 title: DSL
-category: top-level
-order: 17
+category: misc
 ---
 
 Terraspace supports an optional Ruby DSL.  It gives you access to the full power of Ruby, when HCL is not enough for your purposes.

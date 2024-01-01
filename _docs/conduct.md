@@ -1,7 +1,7 @@
 ---
 title: The Terraspace Community Conduct Guideline
 nav_text: Conduct
-category: next-steps
+category: policies
 order: 2
 ---
 
