@@ -1,5 +1,8 @@
 ---
 title: Branch Push Workflow
+nav_text: Branch Push
+category: ci-circleci
+order: 4
 ---
 
 {% include videos/learn/cloud/circleci.md %}

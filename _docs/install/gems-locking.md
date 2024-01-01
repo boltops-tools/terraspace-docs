@@ -1,6 +1,8 @@
 ---
 title: Gem Versions Locking
 nav_text: Gems Locking
+category: install
+order: 8
 ---
 
 Gem version locking is handled with [bundler](https://bundler.io/), `Gemfile` and `Gemfile.lock`.  The concept is similar to `package.json` and `package-lock.json` or `yarn.lock` in the nodejs world and sort of like `requirements.txt` and `pyenv` in the python world.

@@ -1,6 +1,8 @@
 ---
 title: Review Project
 search_title: Review Project AWS
+category: learn-aws
+order: 4
 ---
 
 {% include videos/learn/getting-started/aws.md %}

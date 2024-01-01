@@ -1,5 +1,9 @@
 ---
 title: Custom Args
+nav_text: Args
+category: config
+subcategory: args
+order: 7
 ---
 
 Terraspace supports customizing the args passed to the `terraform` commands:

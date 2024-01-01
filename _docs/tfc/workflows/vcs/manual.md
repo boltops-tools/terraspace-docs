@@ -1,5 +1,8 @@
 ---
 title: "VCS Workflow: Connect to VCS Manually"
+nav_text: Manual
+category: tfc-workflows-vcs
+order: 4
 ---
 
 These maual instructions will focus on GitHub. For other VCS providers, refer to the link in the resources section at the bottom.

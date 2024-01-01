@@ -1,5 +1,8 @@
 ---
 title: GitLab CI Review
+nav_text: Review
+category: ci-gitlab
+order: 6
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

@@ -1,5 +1,7 @@
 ---
 title: Configure AWS
+category: learn-aws
+order: 2
 ---
 
 {% include videos/learn/getting-started/aws.md %}

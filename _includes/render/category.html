@@ -1,0 +1,13 @@
+{% assign category = include.category -%}
+{% assign docs = site.docs | where: "categories", category | sort: "order" -%}
+{% for doc in docs -%}
+  <li>
+    {%- include render/link.html doc=doc %}
+    {%- assign subcategory = doc.subcategory -%}
+    {% if subcategory -%}
+    <ul>
+      {% include render/category.html category=subcategory %}
+    </ul>
+    {% endif -%}
+  </li>
+{% endfor -%}

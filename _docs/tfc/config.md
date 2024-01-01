@@ -1,5 +1,8 @@
 ---
 title: Terraform Cloud Config
+nav_text: Config
+category: tfc
+order: 4
 ---
 
 When using Terraform Cloud, Terraspace performs additional convenience logic to make it easier to use Terraform Cloud Workspaces. Some of the processing behavior can be configured.

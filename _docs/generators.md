@@ -1,5 +1,8 @@
 ---
 title: Generators
+category: top-level
+subcategory: generators
+order: 6
 ---
 
 Terraspace ships with a few generators to help you get building modules quickly. The common ones.

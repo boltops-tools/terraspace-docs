@@ -1,5 +1,7 @@
 ---
 title: Pull Request
+category: ci-bitbucket
+order: 4
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

@@ -1,5 +1,8 @@
 ---
 title: Dependency Graphs
+category: top-level
+subcategory: dependencies
+order: 8
 ---
 
 If you want to deploy multiple stacks, you can do so with a single command:

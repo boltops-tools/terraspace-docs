@@ -1,6 +1,8 @@
 ---
 title: Review Project
 search_title: Review Project Non-Cloud
+category: learn-onprem
+order: 4
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

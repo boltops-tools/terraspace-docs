@@ -1,5 +1,9 @@
 ---
 title: Standalone Package Installation
+nav_text: Standalone
+category: install
+subcategory: standalone
+order: 2
 ---
 
 You can install Terraspace as a standalone package.  The nice thing about this approach is that it is easy. You don't have to have Ruby installed. You don’t have to worry about compatible Ruby versions, gems, or conflicting system packages.

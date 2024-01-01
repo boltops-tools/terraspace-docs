@@ -1,5 +1,8 @@
 ---
 title: Configuring Terraspace with Existing Statefiles and Systems
+nav_text: Existing
+category: state
+order: 3
 ---
 
 If you have existing terraform state files and want to use them with terraspace, you can do that. Here are a couple of approaches to keep your existing statefile:

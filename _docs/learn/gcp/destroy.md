@@ -1,6 +1,8 @@
 ---
 title: Destroy Infrastructure
 search_title: Destroy Infrastructure Google
+category: learn-google
+order: 8
 ---
 
 {% include videos/learn/getting-started/google.md %}

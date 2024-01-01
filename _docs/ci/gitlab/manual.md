@@ -1,5 +1,8 @@
 ---
 title: Manual Web Pipeline
+nav_text: Manual Pipeline
+category: ci-gitlab
+order: 5
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

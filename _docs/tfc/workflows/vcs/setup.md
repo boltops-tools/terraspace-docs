@@ -1,5 +1,8 @@
 ---
 title: "VCS Workflow: Setup"
+nav_text: Setup
+category: tfc-workflows-vcs
+order: 1
 ---
 
 Terraspace can create the TFC workspace and set variables for you. Terraspace uses the backend.tf for the workspace name.

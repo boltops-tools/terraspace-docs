@@ -1,5 +1,8 @@
 ---
 title: Main Push Pipeline
+nav_text: Main Push
+category: ci-azure
+order: 4
 ---
 
 {% include videos/learn/cloud/azure.md %}

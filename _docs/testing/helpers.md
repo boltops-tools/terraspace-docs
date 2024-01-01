@@ -1,5 +1,8 @@
 ---
 title: Terraspace Helpers
+nav_text: Helpers
+category: testing
+order: 7
 ---
 
 ## Terraspace Object Helper Methods

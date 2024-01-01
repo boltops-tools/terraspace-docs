@@ -1,5 +1,8 @@
 ---
 title: Terraform Cloud Vars DSL
+nav_text: DSL
+category: tfc-vars
+order: 2
 ---
 
 ## Example

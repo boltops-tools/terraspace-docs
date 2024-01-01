@@ -1,5 +1,8 @@
 ---
 title: Install Terraform
+nav_text: Terraform
+category: install
+order: 6
 ---
 
 This pages shows you different ways to install Terraform.

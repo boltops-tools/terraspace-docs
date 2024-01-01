@@ -3,6 +3,7 @@ title: Azure Pipelines
 title: Azure
 order: 5
 category: ci
+subcategory: ci-azure
 ---
 
 {% include videos/learn/cloud/azure.md %}

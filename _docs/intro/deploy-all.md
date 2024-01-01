@@ -1,5 +1,7 @@
 ---
 title: Deploy All
+category: intro
+order: 4
 ---
 
 {% include videos/learn.md

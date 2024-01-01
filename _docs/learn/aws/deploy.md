@@ -1,6 +1,8 @@
 ---
 title: Deploy Infrastructure
 search_title: Deploy Infrastructure AWS
+category: learn-aws
+order: 5
 ---
 
 {% include videos/learn/getting-started/aws.md %}

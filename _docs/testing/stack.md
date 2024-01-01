@@ -1,5 +1,8 @@
 ---
 title: Stack-Level Testing
+nav_text: Stack
+category: testing
+order: 3
 ---
 
 Stack-level testing refers to testing specific stacks. Their tests live within the stack's folder itself and are meant to be ran independently.

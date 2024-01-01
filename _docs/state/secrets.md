@@ -1,5 +1,8 @@
 ---
 title: Secrets in State File
+nav_text: Secrets
+category: state
+order: 2
 ---
 
 Terraspace allows you to use helper methods to pull in secret data like passwords from Secret Storage providers like [AWS Secrets Manager]({% link _docs/helpers/aws/secrets.md %}), [AWS SSM Parameter Store]({% link _docs/helpers/aws/ssm.md %}), [Google Secrets Manager]({% link _docs/helpers/azure/secrets.md %}), [Azure KeyVault]({% link _docs/helpers/google/secrets.md %}), etc. These providers are specifically designed to store sensitive information.

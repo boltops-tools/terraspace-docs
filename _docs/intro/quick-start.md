@@ -1,5 +1,7 @@
 ---
 title: Quick Start
+category: archive-intro
+order: 4
 ---
 
 In a hurry? No problem!  Here's a quick start to get going.

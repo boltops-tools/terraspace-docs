@@ -1,5 +1,8 @@
 ---
 title: Test Harness Concept
+nav_text: Test Harness
+category: testing
+order: 1
 ---
 
 {% include videos/learn/testing-intro.md %}

@@ -1,5 +1,8 @@
 ---
 title: Terrafile
+category: top-level
+subcategory: terrafile
+order: 9
 ---
 
 {% include videos/learn/terrafile-intro.md %}

@@ -1,6 +1,9 @@
 ---
 title: Config Reference
+nav_text: Reference
 css: reference
+category: config
+order: 16
 ---
 
 Here's a list of the available config settings.

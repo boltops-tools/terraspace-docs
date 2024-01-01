@@ -1,5 +1,8 @@
 ---
 title: Terraform Config
+nav_text: Terraform
+category: config
+order: 6
 ---
 
 The `config/terraform/terraform.tf` is a good spot for general Terraform settings.  For example, you may want to lock the version of Terraform and providers. Terraform and providers sometime releases new versions that are not backwards compatiable.

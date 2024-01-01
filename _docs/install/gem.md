@@ -1,5 +1,9 @@
 ---
 title: Gem Installation
+nav_text: Gem
+category: install
+subcategory: gem
+order: 1
 ---
 
 To install terraspace via RubyGems.

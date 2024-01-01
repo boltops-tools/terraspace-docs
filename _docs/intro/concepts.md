@@ -1,5 +1,8 @@
 ---
 title: Terraspace Concepts
+nav_text: Concepts
+category: intro
+order: 2
 ---
 
 ## Up and Down

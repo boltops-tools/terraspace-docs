@@ -1,5 +1,9 @@
 ---
 title: Terrafile Options
+nav_text: Options
+category: terrafile
+subcategory: terrafile-options
+order: 2
 ---
 
 {% include videos/learn/terrafile-intro.md %}

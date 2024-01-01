@@ -3,6 +3,7 @@ title: CircleCI
 nav_text: CircleCI
 order: 4
 category: ci
+subcategory: ci-circleci
 ---
 
 {% include videos/learn/cloud/circleci.md %}

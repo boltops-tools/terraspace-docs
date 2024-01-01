@@ -1,5 +1,7 @@
 ---
 title: New CI
+category: ci-circleci
+order: 2
 ---
 
 {% include videos/learn/cloud/circleci.md %}

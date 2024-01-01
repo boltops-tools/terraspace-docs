@@ -1,5 +1,7 @@
 ---
 title: Initializers
+category: config
+order: 10
 ---
 
 Config initializers allow you to hook early into the Terraspace boot process.  This provides a way of customizing Terraspace beyond the [config/app.rb]({% link _docs/config/reference.md %}) options. Generally, recommend using config options when possible and reaching for config initializers for advanced usage.

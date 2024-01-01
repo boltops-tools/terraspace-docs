@@ -1,5 +1,7 @@
 ---
 title: Generators Cheatsheet Ruby
+nav_text: Ruby
+category: archive-generators-cheatsheet
 ---
 
 You can use

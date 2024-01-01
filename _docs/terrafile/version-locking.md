@@ -1,5 +1,8 @@
 ---
 title: Terrafile Version Locking
+nav_text: Version Locking
+category: terrafile
+order: 5
 ---
 
 Terraspace provides a lot of control over version locking.

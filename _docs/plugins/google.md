@@ -1,5 +1,8 @@
 ---
 title: Google Terraspace Plugin
+nav_text: Google
+category: plugins
+order: 3
 ---
 
 The Google Terraspace Plugin adds support for the automatic creation of the backend storage gcs bucket. By default:

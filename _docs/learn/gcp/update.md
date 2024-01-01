@@ -1,6 +1,8 @@
 ---
 title: Update Infrastructure
 search_title: Update Infrastructure Azure
+category: Update
+order: 7
 ---
 
 {% include videos/learn/getting-started/google.md %}

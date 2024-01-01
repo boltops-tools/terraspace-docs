@@ -1,5 +1,7 @@
 ---
 title: Env Vars
+category: config
+order: 13
 ---
 
 Here's a list of **some** env vars that can affect terraspace behavior. Not all env vars are listed as most are for internal usage, may change, and [config settings]({% link _docs/config/reference.md %}) are preferred.

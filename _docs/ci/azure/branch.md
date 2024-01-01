@@ -1,5 +1,8 @@
 ---
 title: Branch Push Pipeline
+nav_text: Branch Push
+category: ci-azure
+order: 5
 ---
 
 {% include videos/learn/cloud/azure.md %}

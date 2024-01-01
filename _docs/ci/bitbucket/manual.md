@@ -1,5 +1,8 @@
 ---
 title: Manual Custom Pipeline
+nav_text: Manual Pipeline
+category: ci-bitbucket
+order: 5
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

@@ -1,5 +1,9 @@
 ---
 title: Azure Terraspace Plugin
+nav_text: Azure
+category: plugins
+subcategory: plugins-azure
+order: 2
 ---
 
 The Azure Terraspace Plugin adds support for the automatic creation of the backend storage Azure storage account, storage container, and resource group. By default, as of v0.4.0:

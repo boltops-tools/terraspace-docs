@@ -1,5 +1,7 @@
 ---
 title: Pass Files
+category: config
+order: 12
 ---
 
 Terraspace builds a terraform project from files like `app/stacks`. {% include config/processing.md %}

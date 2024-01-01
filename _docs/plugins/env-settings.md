@@ -1,5 +1,8 @@
 ---
 title: Env Specific Settings
+nav_text: Env Settings
+category: plugins
+order: 4
 ---
 
 If you need env specific plugin settings, there are 2 ways to achieve that.

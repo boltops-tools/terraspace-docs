@@ -3,6 +3,7 @@ title: Bitbucket Pipelines
 nav_text: Bitbucket
 order: 3
 category: ci
+subcategory: ci-bitbucket
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

@@ -1,5 +1,8 @@
 ---
 title: Installation Dependencies
+nav_text: Dependencies
+category: install
+order: 5
 ---
 
 ## Terraform

@@ -1,5 +1,7 @@
 ---
 title: How Terraspace Works
+category: intro
+order: 1
 ---
 
 Here's a high-level explanation of how Terraspace works. It's pretty straightforward.

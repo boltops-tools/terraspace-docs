@@ -1,5 +1,7 @@
 ---
 title: Dot Env Files
+category: config
+order: 14
 ---
 
 Terraspace loads environment variables from `.env` files. The naming convention for these files is `.env.TS_ENV`.

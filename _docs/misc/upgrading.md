@@ -1,5 +1,7 @@
 ---
 title: Upgrading Guide
+category: misc
+order: 1
 ---
 
 This covers upgrading Terraspace. Notes about compatible dependent libraries may be listed here. For most versions updates, no upgrade steps are necessary. Please also refer to the [CHANGELOG](https://github.com/boltops-tools/terraspace/blob/master/CHANGELOG.md).

@@ -1,6 +1,8 @@
 ---
 title: Destroy Infrastructure
 search_title: Destroy Infrastructure Azure
+category: learn-azure
+order: 8
 ---
 
 {% include videos/learn/getting-started/azure.md %}

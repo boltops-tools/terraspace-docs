@@ -3,6 +3,7 @@ title: Azure Helpers
 nav_text: Azure
 order: 2
 category: helpers
+subcategory: helpers-azure
 ---
 
 List of Azure helpers:

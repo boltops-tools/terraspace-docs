@@ -1,5 +1,6 @@
 ---
 title: Security
+category: policies
 ---
 
 Terraspace takes security very seriously. This document outlines the Terraspace Security Policy.

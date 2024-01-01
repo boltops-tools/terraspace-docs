@@ -1,6 +1,8 @@
 ---
 title: Change Infrastructure
 search_title: Change Infrastructure AWS
+category: learn-onprem
+order: 6
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

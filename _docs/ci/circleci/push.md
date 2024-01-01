@@ -1,5 +1,8 @@
 ---
 title: Main Push Workflow
+nav_text: Main Push
+category: ci-circleci
+order: 3
 ---
 
 {% include videos/learn/cloud/circleci.md %}

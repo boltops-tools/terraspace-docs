@@ -1,5 +1,9 @@
 ---
 title: Terraspace Plugins
+nav_text: Plugins
+category: top-level
+subcategory: plugins
+order: 14
 ---
 
 Terraspace is a framework that adds conveniences to your Terraform workflow. For example, Terraspace automatically creates the backend storage like the s3 bucket, azure storage account, and gcs bucket. Each of these implementations are cloud-specific. Terraspace Plugins add cloud-specific functionality.

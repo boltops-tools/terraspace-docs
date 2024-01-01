@@ -1,5 +1,9 @@
 ---
 title: Terraspace Cloud
+nav_text: Cloud
+category: top-level
+subcategory: cloud
+order: 4
 ---
 
 [Terraspace Cloud](https://app.terraspace.cloud) adds additional features and conveniences to the [Terraspace Framework](https://terraspace.cloud). It's specifically designed for Terraspace.

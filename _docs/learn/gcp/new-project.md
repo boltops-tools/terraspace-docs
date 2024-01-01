@@ -1,6 +1,9 @@
 ---
 title: New Project
 search_title: New Project Azure
+nav_text: Create New Project
+category: learn-google
+order: 3
 ---
 
 {% include videos/learn/getting-started/google.md %}

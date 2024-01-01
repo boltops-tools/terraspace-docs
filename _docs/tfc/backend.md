@@ -1,5 +1,8 @@
 ---
 title: Terraform Cloud Backend
+nav_text: Backend
+category: tfc
+order: 3
 ---
 
 To use Terraform Cloud, we configure the backend to "remote".

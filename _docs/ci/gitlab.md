@@ -3,6 +3,7 @@ title: GitLab Pipelines
 nav_text: GitLab
 order: 2
 category: ci
+subcategory: ci-gitlab
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

@@ -1,6 +1,8 @@
 ---
 title: Deploy Infrastructure
 search_title: Deploy Infrastructure Google
+category: learn-google
+order: 5
 ---
 
 {% include videos/learn/getting-started/google.md %}

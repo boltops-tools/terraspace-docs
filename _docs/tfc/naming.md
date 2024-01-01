@@ -1,5 +1,8 @@
 ---
 title: Naming Considerations
+nav_text: Naming
+category: tfc
+order: 6
 ---
 
 Here are some naming consideration thoughts. First, we'll cover Terraform recommendations to help understand why Terraspace names things a certain way.

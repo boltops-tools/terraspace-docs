@@ -1,5 +1,9 @@
 ---
 title: Backend Config
+nav_text: Backend
+category: config
+subcategory: config-backend
+order: 2
 ---
 
 You can configure the backend for terraform to use with `config/terraform/backend.tf`.

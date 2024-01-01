@@ -1,5 +1,8 @@
 ---
 title: "VCS Workflow: Adjust Project Settings"
+nav_text: Adjust
+category: tfc-workflows-vcs
+order: 2
 ---
 
 ## Summary

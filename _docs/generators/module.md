@@ -1,5 +1,8 @@
 ---
 title: Module Generator
+nav_text: Module
+category: generators
+order: 2
 ---
 
 You can use `terraspace new module` to create the a starter module structure. Example:

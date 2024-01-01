@@ -1,5 +1,9 @@
 ---
 title: Terraspace with Docker
+nav_text: Docker
+category: install
+subcategory: docker-guides
+order: 3
 ---
 
 You can run Terraspace within a Docker container. The Docker images are published to Dockerhub within a few minutes of a gem release at [ghcr.io/boltops-tools/terraspace](https://github.com/orgs/boltops-tools/packages/container/package/terraspace). This provides you with an isolated throwaway environment to try out Terraspace.

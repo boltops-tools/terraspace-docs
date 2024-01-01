@@ -1,5 +1,8 @@
 ---
 title: GitHub CI Review
+nav_text: Review
+category: ci-github
+order: 6
 ---
 
 {% include videos/learn/cloud/github.md %}

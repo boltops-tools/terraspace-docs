@@ -1,5 +1,8 @@
 ---
 title: Azure Review
+nav_text: Review
+category: ci-azure
+order: 7
 ---
 
 {% include videos/learn/cloud/azure.md %}

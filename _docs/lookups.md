@@ -1,5 +1,8 @@
 ---
 title: Lookups
+nav_text: Lookup Paths
+category: top-level
+order: 16
 ---
 
 The [Project Structure]({% link _docs/intro/structure.md %}) docs explains how modules and stacks are generally defined in the `app` folder. Modules and stacks can also be defined in the `vendor` folder also.

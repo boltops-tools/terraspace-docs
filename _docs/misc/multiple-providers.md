@@ -1,5 +1,8 @@
 ---
 title: Multiple Cloud Provider Thoughts
+nav_text: Multiple Providers
+category: misc
+order: 3
 ---
 
 While Terraspace can support multiple Cloud Providers within one single project, the code can get complex.  So it is generally not recommended to mixed multiple Cloud Provider resources in a single Terraspace project, particularly if you're using the TFC VCS-Workflow and multiple regions.  First, we'll provide some context and then discuss some of the reasons.

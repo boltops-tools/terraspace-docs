@@ -1,5 +1,8 @@
 ---
 title: "VCS Workflow: Connect to VCS"
+nav_text: Connect
+category: tfc-workflows-vcs
+order: 3
 ---
 
 Terraspace supports automating most of the VCS connection setup for your workspaces.

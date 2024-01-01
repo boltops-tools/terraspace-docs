@@ -1,5 +1,7 @@
 ---
 title: Azure Auth Chain
+nav_text: Auth
+category: plugins-azure
 ---
 
 The Terraspace Azurerm Plugin can authenticate to the Azure REST API via the following mechanisms.

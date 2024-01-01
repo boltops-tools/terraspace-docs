@@ -1,5 +1,7 @@
 ---
 title: Configure Azure
+category: learn-azure
+order: 2
 ---
 
 {% include videos/learn/getting-started/azure.md %}

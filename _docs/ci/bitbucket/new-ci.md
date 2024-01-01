@@ -1,5 +1,7 @@
 ---
 title: New CI
+category: ci-bitbucket
+order: 2
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

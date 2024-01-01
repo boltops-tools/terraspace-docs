@@ -1,5 +1,9 @@
 ---
 title: Terraform Cloud Support
+nav_text: TFC
+category: top-level
+subcategory: tfc
+order: 10
 ---
 
 Terraspace supports Terraform Cloud and Terraform Enterprise. Terraform Enterprise is essentially the same software that runs Terraform Cloud.  One of the main differences:

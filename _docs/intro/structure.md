@@ -1,5 +1,7 @@
 ---
 title: Project Structure
+category: intro
+order: 3
 ---
 
 Here's an example project structure.

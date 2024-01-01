@@ -1,6 +1,8 @@
 ---
 title: Update Infrastructure
 search_title: Update Infrastructure AWS
+category: learn-aws
+order: 7
 ---
 
 {% include videos/learn/getting-started/aws.md %}

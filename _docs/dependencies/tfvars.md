@@ -2,6 +2,7 @@
 title: "Dependencies: Tfvars"
 nav_text: "Tfvars"
 categories: dependencies
+subcategory: dependencies-tfvars
 ---
 
 As mentioned in [Deploy Multiple]({% link _docs/intro/deploy-all.md %}), Terraspace allows you to deploy multiple stacks with a single command. Terraspace automatically detects the dependencies when you wire the outputs of one stack to another stack's input variables.

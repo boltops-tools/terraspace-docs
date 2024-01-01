@@ -1,5 +1,8 @@
 ---
 title: Config
+category: top-level
+subcategory: config
+order: 2
 ---
 
 The `config/terraform` folder is for common configurations. All files in the folder get built and included with the deployed module. Common examples:

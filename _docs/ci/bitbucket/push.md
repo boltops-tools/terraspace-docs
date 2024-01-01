@@ -1,5 +1,7 @@
 ---
 title: Push Workflow
+category: ci-bitbucket
+order: 3
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

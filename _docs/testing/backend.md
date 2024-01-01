@@ -1,5 +1,8 @@
 ---
 title: Remote Backend
+nav_text: Backend
+category: testing
+order: 6
 ---
 
 By default, the generated test harness does not configure a remote backend. You can easily configure the test harness to use a remote backend, though. This can make debugging the test harness easier because:

@@ -1,5 +1,9 @@
 ---
 title: AWS Terraspace Plugin
+nav_text: AWS
+category: plugins
+subcategory: plugins-aws
+order: 1
 ---
 
 The AWS Terraspace Plugin adds support for the automatic creation of the backend storage s3 bucket and dynamodb table. By default:

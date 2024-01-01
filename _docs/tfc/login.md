@@ -1,5 +1,8 @@
 ---
 title: Terraform Cloud Login
+nav_text: Login
+category: tfc
+order: 1
 ---
 
 When using Terraform Cloud, Terraspace performs additional convenience logic to make it easier to use Terraform Cloud Workspaces. In order for Terraspace to call the Terraform API, it needs to be authenticated.

@@ -1,6 +1,10 @@
 ---
 title: Backend Config DSL
+nav_text: DSL
+category: config-backend
+order: 3
 ---
+
 You can also optionally write your backend config in Ruby with `config/terraform/backend.rb`. With the DSL you do not have to use the `expansion` helper, Terraspace automatically runs it on each hash value. Below are some examples.
 
 ## S3 Backend

@@ -1,5 +1,8 @@
 ---
 title: Updating Terraspace
+nav_text: Updating
+category: install
+order: 9
 ---
 
 To update terraspace, you'll also need to update the pinned terraspace version in your Terraspace project's `Gemfile`. It looks something like this.

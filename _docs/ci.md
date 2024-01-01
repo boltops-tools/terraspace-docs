@@ -1,5 +1,9 @@
 ---
 title: "CI: Continuous Integration"
+nav_text: CI/CD
+category: top-level
+subcategory: ci
+order: 5
 ---
 
 You can set up Terraspace with your own choice of CI.

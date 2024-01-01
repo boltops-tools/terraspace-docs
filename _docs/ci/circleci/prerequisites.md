@@ -1,5 +1,7 @@
 ---
 title: Prerequisites
+category: ci-circleci
+order: 1
 ---
 
 {% include videos/learn/cloud/circleci.md %}

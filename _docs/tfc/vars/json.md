@@ -1,5 +1,8 @@
 ---
 title: Terraform Cloud Vars JSON
+nav_text: JSON
+category: tfc-vars
+order: 1
 ---
 
 ## Example

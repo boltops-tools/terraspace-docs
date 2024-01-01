@@ -1,5 +1,9 @@
 ---
 title: Installation
+nav_text: Install
+category: top-level
+subcategory: install
+order: 2
 ---
 
 There are several ways to install Terraspace.

@@ -1,5 +1,7 @@
 ---
 title: Merge Request
+category: ci-gitlab
+order: 4
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

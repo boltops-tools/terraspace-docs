@@ -1,5 +1,8 @@
 ---
 title: CircleCI Review
+nav_text: Review
+category: ci-circleci
+order: 6
 ---
 
 {% include videos/learn/cloud/circleci.md %}

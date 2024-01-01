@@ -1,6 +1,8 @@
 ---
 title: Next Steps
 search_title: Next Steps Google
+category: learn-google
+order: 9
 ---
 
 {% include learn/next-steps.md provider="Google Cloud" %}

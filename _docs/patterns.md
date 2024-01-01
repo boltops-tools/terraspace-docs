@@ -1,5 +1,9 @@
 ---
 title: Terraspace Patterns
+nav_text: Patterns
+category: top-level
+subcategory: patterns
+order: 15
 ---
 
 We'll cover some Terraspace and infrastructure-as-code patterns.

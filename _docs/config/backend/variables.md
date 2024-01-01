@@ -1,5 +1,8 @@
 ---
 title: Backend Config Variables
+nav_text: Variables
+category: config-backend
+order: 2
 ---
 
 Below is a list of variables available in with the expansion helper.

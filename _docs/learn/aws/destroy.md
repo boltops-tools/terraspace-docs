@@ -1,6 +1,8 @@
 ---
 title: Destroy Infrastructure
 search_title: Destroy Infrastructure AWS
+category: learn-aws
+order: 8
 ---
 
 {% include videos/learn/getting-started/aws.md %}

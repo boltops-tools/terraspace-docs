@@ -1,5 +1,9 @@
 ---
 title: What is Terraspace?
+nav_text: Intro
+category: top-level
+subcategory: intro
+order: 1
 ---
 
 Terraspace is a Terraform Framework that optimizes for infrastructure-as-code happiness. It provides an organized structure, conventions over configurations, keeps your code DRY, and adds convenient tooling. Terraspace makes working with Terraform easier and more fun.

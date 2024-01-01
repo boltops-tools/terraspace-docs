@@ -1,5 +1,8 @@
 ---
 title: Terraform Statefile Approaches and Thoughts
+nav_text: Approaches
+category: state
+order: 1
 ---
 
 {% include videos/learn.md

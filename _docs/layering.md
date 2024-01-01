@@ -1,5 +1,8 @@
 ---
 title: Tfvars & Layering
+category: top-level
+subcategory: layering
+order: 7
 ---
 
 {% include videos/learn.md

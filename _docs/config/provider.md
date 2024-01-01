@@ -1,5 +1,8 @@
 ---
 title: Provider Config
+nav_text: Provider
+category: config
+order: 3
 ---
 
 You can configure the backend for terraform to use with `config/terraform/provider.rb` or `config/terraform/provider.tf`. The files in the config folder get built with the module you deploy.

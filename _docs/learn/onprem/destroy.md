@@ -1,6 +1,8 @@
 ---
 title: Destroy Infrastructure
 search_title: Destroy Infrastructure AWS
+category: learn-onprem
+order: 8
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

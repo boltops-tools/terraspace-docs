@@ -1,6 +1,8 @@
 ---
 title: Change Infrastructure
 search_title: Change Infrastructure Google
+category: learn-google
+order: 6
 ---
 
 {% include videos/learn/getting-started/google.md %}

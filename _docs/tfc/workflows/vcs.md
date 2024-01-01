@@ -1,5 +1,9 @@
 ---
 title: VCS Workflow
+nav_text: VCS
+category: tfc-workflows
+subcategory: tfc-workflows-vcs
+order: 2
 ---
 
 The VCS workflow involves setting up your version control source provider, like GitHub, so Terraform will automatically run when code is pushed.

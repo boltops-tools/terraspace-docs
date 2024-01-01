@@ -1,5 +1,7 @@
 ---
 title: Workflow Dispatch
+category: ci-github
+order: 5
 ---
 
 {% include videos/learn/cloud/github.md %}

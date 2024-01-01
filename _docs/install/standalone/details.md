@@ -2,6 +2,7 @@
 title: "Standalone Details"
 nav_text: Details
 category: standalone
+subcategory: standalone-details
 order: 9
 ---
 

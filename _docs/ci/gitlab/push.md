@@ -1,5 +1,7 @@
 ---
 title: Push Workflow
+category: ci-gitlab
+order: 3
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

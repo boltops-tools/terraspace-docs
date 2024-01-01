@@ -1,5 +1,7 @@
 ---
 title: New CI
+category: ci-gitlab
+order: 2
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

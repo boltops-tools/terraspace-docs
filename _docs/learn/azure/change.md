@@ -1,6 +1,8 @@
 ---
 title: Change Infrastructure
 search_title: Change Infrastructure Azure
+category: learn-azure
+order: 6
 ---
 
 {% include videos/learn/getting-started/azure.md %}

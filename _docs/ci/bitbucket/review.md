@@ -1,5 +1,8 @@
 ---
 title: Bitbucket CI Review
+nav_text: Review
+category: ci-bitbucket
+order: 6
 ---
 
 {% include videos/learn/cloud/bitbucket.md %}

@@ -1,6 +1,8 @@
 ---
 title: Review Project
 search_title: Review Project Azure
+category: learn-google
+order: 4
 ---
 
 {% include videos/learn/getting-started/google.md %}

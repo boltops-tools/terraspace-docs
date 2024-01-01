@@ -3,6 +3,7 @@ title: AWS Helpers
 nav_text: AWS
 order: 2
 category: helpers
+subcategory: helpers-aws
 ---
 
 List of AWS helpers:

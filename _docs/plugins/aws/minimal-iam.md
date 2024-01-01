@@ -1,5 +1,7 @@
 ---
 title: AWS Minimal IAM Policy
+nav_text: Minimal IAM
+category: plugins-aws
 ---
 
 The IAM user you use to run the `terraspace up` commands needs a minimal set of IAM policies. Here is a table of the baseline services needed:

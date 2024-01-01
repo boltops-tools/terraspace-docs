@@ -1,5 +1,9 @@
 ---
 title: Terraform Cloud Workflows
+nav_text: Workflows
+category: tfc
+subcategory: tfc-workflows
+order: 2
 ---
 
 Terraform Cloud supports [different workflows](https://www.terraform.io/cloud-docs/run/cli). Terraspace integrates and supports 2 main workflows:

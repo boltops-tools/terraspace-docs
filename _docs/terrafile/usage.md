@@ -1,5 +1,7 @@
 ---
 title: Terrafile Usage
+category: terrafile
+order: 1
 ---
 
 {% include videos/learn/terrafile-intro.md %}

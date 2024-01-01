@@ -1,5 +1,8 @@
 ---
 title: Terraspace Versioning Strategy
+nav_text: Terraspace Versioning
+category: misc
+order: 2
 ---
 
 Terraspace follows semantic version only loosely. Other projects like [Rails](https://rubyonrails.org/) also does this. Some may find this surprising because people tend to think in black-and-white terms about how to handle versioning. In the real world, life’s not that simple, and it depends. Strict semantic versioning isn't always the best fit. Parts of this Matz interview has relevant thoughts about versioning: [Evrone Yukihiro Matsumoto Interview](https://evrone.com/yukihiro-matsumoto-interview-2021)

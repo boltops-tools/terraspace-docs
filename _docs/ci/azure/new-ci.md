@@ -1,5 +1,7 @@
 ---
 title: New CI
+category: ci-azure
+order: 2
 ---
 
 {% include videos/learn/cloud/azure.md %}

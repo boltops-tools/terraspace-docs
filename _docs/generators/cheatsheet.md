@@ -1,5 +1,8 @@
 ---
 title: Generators Cheatsheet
+nav_text: Cheatsheet
+category: generators
+order: 4
 ---
 
 Here's a cheatsheet for generators. Refer to the cli reference for more docs: [terraspace new]({% link _reference/terraspace-new.md %})

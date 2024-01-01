@@ -2,6 +2,7 @@
 title: Terraspace Cloud Permissions
 nav_text: Permissions
 category: cloud
+subcategory: permissions
 order: 5
 ---
 

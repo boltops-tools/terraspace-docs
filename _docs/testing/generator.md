@@ -1,5 +1,8 @@
 ---
 title: Test Generators
+nav_text: Generators
+category: testing
+order: 5
 ---
 
 To help you get started quickly, you can generate starter test code. Here are some examples:

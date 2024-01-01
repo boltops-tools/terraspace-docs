@@ -1,5 +1,7 @@
 ---
 title: Terraform Notation
+category: terrafile
+order: 6
 ---
 
 Terraform-like source notation for subfolder and ref are supported for sources.

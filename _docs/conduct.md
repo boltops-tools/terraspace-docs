@@ -1,5 +1,8 @@
 ---
 title: The Terraspace Community Conduct Guideline
+nav_text: Conduct
+category: next-steps
+order: 2
 ---
 
 We have picked the following conduct guideline based on Ruby's.  We wish for the Terraspace community to be safe, productive, and collaborative. Each Terraspace related community may pick their own Conduct Guideline or Code.

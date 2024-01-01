@@ -1,6 +1,8 @@
 ---
 title: Next Steps
 search_title: Next Steps Non-Cloud
+category: learn-onprem
+order: 9
 ---
 
 {% include learn/next-steps.md provider="none" %}

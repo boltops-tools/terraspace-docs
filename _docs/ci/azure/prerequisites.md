@@ -1,5 +1,7 @@
 ---
 title: Prerequisites
+category: ci-azure
+order: 1
 ---
 
 {% include videos/learn/cloud/azure.md %}

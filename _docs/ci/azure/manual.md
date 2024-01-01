@@ -1,5 +1,8 @@
 ---
 title: Manual Pipeline
+nav_text: Manual Pipeline
+category: ci-azure
+order: 6
 ---
 
 {% include videos/learn/cloud/azure.md %}

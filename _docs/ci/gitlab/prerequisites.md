@@ -1,5 +1,7 @@
 ---
 title: Prerequisites
+category: ci-gitlab
+order: 1
 ---
 
 {% include videos/learn/cloud/gitlab.md %}

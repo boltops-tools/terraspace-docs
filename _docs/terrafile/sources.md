@@ -1,5 +1,8 @@
 ---
 title: Sources
+category: terrafile
+subcategory: sources
+order: 3
 ---
 
 Terrafile supports a variety of sources.

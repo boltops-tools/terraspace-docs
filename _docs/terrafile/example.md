@@ -1,5 +1,8 @@
 ---
 title: Terraspace Bundle Example Command
+nav_text: Example
+category: terrafile
+order: 4
 ---
 
 Terraspace bundler has the ability to import example from a module's examples folder with:

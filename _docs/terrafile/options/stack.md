@@ -1,5 +1,7 @@
 ---
 title: Terrafile Stack Options
+nav_text: Stack
+category: terrafile-options
 ---
 
 Terraspace can copy starter examples within the downloaded module to the `app/stacks` folder.  This is controlled with the `stack` option. Terraspace is also smart enough to rewrite the module `source` attribute to point to the correct location.  It practically writes code for you, saving you time. 😁

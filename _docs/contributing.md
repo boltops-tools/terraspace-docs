@@ -1,5 +1,7 @@
 ---
 title: Contributing
+category: next-steps
+order: 1
 ---
 
 Hi there! Interested in contributing to Terraspace? We'd love your help. Terraspace is an open source project, built one contribution at a time by users like you.

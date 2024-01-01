@@ -3,6 +3,7 @@ title: Google Helpers
 nav_text: Google
 order: 3
 category: helpers
+subcategory: helpers-google
 ---
 
 List of Google helpers:

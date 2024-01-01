@@ -1,5 +1,8 @@
 ---
 title: Manual Workflow Pipeline
+nav_text: Manual Workflow
+category: ci-circleci
+order: 5
 ---
 
 {% include videos/learn/cloud/circleci.md %}

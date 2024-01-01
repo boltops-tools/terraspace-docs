@@ -1,5 +1,8 @@
 ---
 title: Build Cache Dir
+nav_text: Cache Dir
+category: config
+order: 11
 ---
 
 The `build.cache_dir` setting controls where the generated terraform project will be built. It's set to a reasonable and conventional default. If you wish, you also can override and fully control the path. Here's the default:

@@ -1,6 +1,8 @@
 ---
 title: Change Infrastructure
 search_title: Change Infrastructure AWS
+category: learn-aws
+order: 6
 ---
 
 {% include videos/learn/getting-started/aws.md %}

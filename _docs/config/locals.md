@@ -1,5 +1,7 @@
 ---
 title: Locals
+category: config
+order: 5
 ---
 
 A useful example might be to create a global `locals.tf` file.

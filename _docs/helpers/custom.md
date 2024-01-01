@@ -3,6 +3,7 @@ title: Custom Helpers
 nav_text: Custom
 order: 4
 category: helpers
+subcategory: helpers-custom
 ---
 
 You can add your own custom helper methods to Terraspace. This is powerful because you can extend and change Terraspace itself.

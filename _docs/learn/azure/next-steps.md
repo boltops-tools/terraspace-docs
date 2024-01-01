@@ -1,6 +1,8 @@
 ---
 title: Next Steps
 search_title: Next Steps Azure
+category: learn-azure
+order: 9
 ---
 
 {% include learn/next-steps.md provider="Azure" %}

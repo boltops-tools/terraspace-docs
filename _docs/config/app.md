@@ -1,5 +1,8 @@
 ---
 title: App Config
+nav_text: App
+category: config
+order: 1
 ---
 
 You can configure terraspace itself with `config/app.rb`. This file is directly within the `config` folder.

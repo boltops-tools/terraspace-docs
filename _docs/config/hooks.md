@@ -1,5 +1,9 @@
 ---
 title: Custom Hooks
+nav_text: Hooks
+category: config
+subcategory: hooks
+order: 8
 ---
 
 {% include videos/learn/hooks.md %}

@@ -1,5 +1,8 @@
 ---
 title: Install Ruby
+nav_text: Ruby
+category: install
+order: 4
 ---
 
 ## Ruby Recommendations

@@ -1,5 +1,8 @@
 ---
 title: Stack Generator
+nav_text: Stack
+category: generators
+order: 3
 ---
 
 You can use `terraspace new stack` to create the a starter stack structure. Example:

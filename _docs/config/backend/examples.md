@@ -1,5 +1,9 @@
 ---
 title: Backend Examples
+nav_text: Examples
+category: config-backend
+subcategory: backend-examples
+order: 1
 ---
 
 Here are several backend examples:

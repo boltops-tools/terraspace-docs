@@ -1,6 +1,8 @@
 ---
 title: Deploy Infrastructure
 search_title: Deploy Infrastructure Azure
+category: learn-azure
+order: 5
 ---
 
 {% include videos/learn/getting-started/azure.md %}

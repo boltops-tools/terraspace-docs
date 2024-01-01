@@ -1,5 +1,8 @@
 ---
 title: Project-Level Testing
+nav_text: Project
+category: testing
+order: 4
 ---
 
 Project-level testing belongs with the terraspace project itself. Their tests live within the spec folder at the root of the terraspace project structure. Project tests test things are project-specific like helpers. Generally, these are like normal unit tests.

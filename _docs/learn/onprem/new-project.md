@@ -1,6 +1,9 @@
 ---
 title: New Project
 search_title: New Project Non-Cloud
+nav_text: Create New Project
+category: learn-onprem
+order: 3
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

@@ -1,5 +1,8 @@
 ---
 title: Azure Variables
+nav_text: Variables
+category: ci-azure
+order: 3
 ---
 
 {% include videos/learn/cloud/azure.md %}

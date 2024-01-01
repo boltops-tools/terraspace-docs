@@ -1,6 +1,9 @@
 ---
 title: New Project
 search_title: New Project AWS
+nav_text: Create New Project
+category: learn-aws
+order: 3
 ---
 
 {% include videos/learn/getting-started/aws.md %}

@@ -1,5 +1,7 @@
 ---
 title: Boot Hooks
+category: config
+order: 9
 ---
 
 If you need to hook into the Terraspace boot process super-early on, Terraspace boot hooks are designed for that.

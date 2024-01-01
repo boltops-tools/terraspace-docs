@@ -1,6 +1,8 @@
 ---
 title: Next Steps
 search_title: Next Steps AWS
+category: learn-aws
+order: 9
 ---
 
 {% include learn/next-steps.md provider="AWS" %}

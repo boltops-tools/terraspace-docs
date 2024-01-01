@@ -1,5 +1,8 @@
 ---
 title: Shim Wrapper
+nav_text: Shim
+category: install
+order: 7
 ---
 
 Terraspace projects have a `Gemfile.lock`. This file ensures that gem dependencies for are pinned. The concept is similar to `package.json` and `package-lock.json` in the nodejs world and sort of like `requirements.txt` and `pyenv` in the python world.

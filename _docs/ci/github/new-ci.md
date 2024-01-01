@@ -1,5 +1,7 @@
 ---
 title: New CI
+category: ci-github
+order: 2
 ---
 
 {% include videos/learn/cloud/github.md %}

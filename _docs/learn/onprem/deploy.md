@@ -1,6 +1,8 @@
 ---
 title: Deploy Infrastructure
 search_title: Deploy Infrastructure AWS
+category: learn-onprem
+order: 5
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

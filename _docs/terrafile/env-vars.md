@@ -1,5 +1,7 @@
 ---
 title: Env Vars
+category: terrafile
+order: 7
 ---
 
 There is one notable env var that allows you to affect the `git clone` command that `terraspace bundle` calls.

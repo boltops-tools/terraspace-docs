@@ -3,6 +3,7 @@ title: GitHub Actions
 nav_text: GitHub
 order: 1
 category: ci
+subcategory: ci-github
 ---
 
 {% include videos/learn/cloud/github.md %}

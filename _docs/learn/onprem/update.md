@@ -1,6 +1,8 @@
 ---
 title: Update Infrastructure
 search_title: Update Infrastructure Non-Cloud
+category: learn-onprem
+order: 7
 ---
 
 {% include videos/learn/getting-started/onprem.md %}

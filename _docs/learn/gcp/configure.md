@@ -1,5 +1,7 @@
 ---
 title: Configure Google Cloud
+category: learn-google
+order: 2
 ---
 
 {% include videos/learn/getting-started/google.md %}

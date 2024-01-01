@@ -1,5 +1,9 @@
 ---
 title: Handling Terraform State File
+nav_text: State File
+category: top-level
+subcategory: state
+order: 12
 ---
 
 {% include state/preamble.md %}

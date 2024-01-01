@@ -1,5 +1,8 @@
 ---
 title: Project Generator
+nav_text: Project
+category: generators
+order: 1
 ---
 
 The project generator creates a starter Terraspace project structure.
