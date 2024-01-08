@@ -35,9 +35,9 @@ With the rbenv git approach, you'll be able to use the latest available rubies b
 
 Then install different ruby versions. Example:
 
-    rbenv install 3.0.3
-    rbenv global 3.0.3
-    echo 3.0.3 > ~/.ruby-version # on some systems this is needed
+    rbenv install 3.2.2
+    rbenv global 3.2.2
+    echo 3.2.2 > ~/.ruby-version # on some systems this is needed
 
 Start a new terminal and confirm that you're using ruby provided by rbenv. You should see something like this:
 
@@ -80,9 +80,9 @@ And start a new terminal. You should be able see something like this:
 
 Then install different ruby versions. Example:
 
-    rbenv install 3.0.3
-    rbenv global 3.0.3
-    echo 3.0.3 > ~/.ruby-version # on some systems this is needed
+    rbenv install 3.2.2
+    rbenv global 3.2.2
+    echo 3.2.2 > ~/.ruby-version # on some systems this is needed
 
 ### Uninstall Ruby and rbenv
 
