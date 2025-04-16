@@ -76,12 +76,6 @@ You can click on the Details to see the Workflow Logging output.
 
 A `plan` was run and provided a preview of what would happen. Any additional `git push` to the PR branch will provide updated previews.
 
-## Pull Request Comment
-
-Also, PR comment with a Terraspace Cloud link was added. It looks something like this.
-
-![](https://img.boltops.com/images/terraspace/cloud/costs/github-pr-comment-v2.png)
-
 If you merge the PR, the [Push Workflow]({% link _docs/ci/github/push.md %}) that we covered earlier will automatically apply the preview.
 
 Next, we'll cover the manual workflow dispatch.

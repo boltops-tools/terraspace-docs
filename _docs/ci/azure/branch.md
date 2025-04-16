@@ -80,10 +80,6 @@ Click on Details to see the Pipeline Logging output.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/azure/branch/ci-results-output.png)
 
-You can also see the output on Terraspace Cloud:
-
-![](https://img.boltops.com/images/terraspace/cloud/ci/azure/branch/logging-output.png)
-
 A `plan` was run and provides a preview of the changes. Any additional `git push` to the `feature` branch will provide updated previews.
 
 If you merge the branch, the [Push Pipeline]({% link _docs/ci/azure/push.md %}) that we covered earlier will automatically apply the preview.

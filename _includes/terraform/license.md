@@ -5,7 +5,6 @@ To address this, Terraspace errs on the side of [prudence](https://community.bol
 1. We're telling users to use [OpenTofu](https://opentofu.org/) fork of Terraform.
 2. If you're using Terraform, we recommend using Terraform 1.5.5 and below with Terraspace.
 3. The Terraspace framework CLI checks on the client side and only allows Terraform 1.5.5 and below usage by default. You can bypass the check if your usage is acceptable with the BSL license, but you must explicitly do so.
-4. For [Terraspace Cloud](https://app.terraspace.cloud/), you cannot use newer Terraform versions. Whether or not you bypass the check, Terraspace Cloud does not allow the use of any Terraform versions greater than 1.5.5. The API denies requests with the Hashicorp terraform binary and prevent data from saving on the Cloud backend side entirely. Terraform forks with a more permissive license are allowed.
 
 You have **full** control over the Terraform installation since `terraspace` and `terraform` run entirely from your machine. It's just a matter of installing the Terraform version that Hashicorp considers acceptable for your use case.
 

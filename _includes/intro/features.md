@@ -14,7 +14,3 @@
 * [Configurable CLI]({% link _docs/config/hooks.md %}) Configurable [CLI Hooks]({% link _docs/config/hooks.md %}) and [CLI Args]({% link _docs/config/args.md %}) allow you to adjust the underlying terraform command.
 
 * [Testing]({% link _docs/testing.md %}) A testing framework that allows you to create test harnesses, deploy real-resources, and have higher confidence that your code works.
-
-* [Terraform Cloud and Terraform Enterprise Support]({% link _docs/tfc.md %}) TFC and TFE are both supported. Terraspace adds additional conveniences to make working with Terraform Cloud Workspaces easier.
-
-* [Terraspace Cloud]({% link _docs/cloud.md %}) [Terraspace Cloud]({% link _docs/cloud.md %}) adds additional features like [Team and Permissions Management]({% link _docs/cloud/permissions.md %}), [Dashboard and History]({% link _docs/cloud/setup.md %}), and [CI/CD Integration]({% link _docs/ci.md %}).

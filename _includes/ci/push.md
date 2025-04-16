@@ -11,7 +11,6 @@ We should set these environment variables. Note that the AWS variables are requi
 {% elsif include.name == "CircleCI" %}
 * **GH_TOKEN**: This allows Terraspace to post PR comments with a summary of the changes and cost estimates. The GitHub Actions token should have necessary permissions. The token should have "repo" permissions so it can create the PR comment.
 {% endif %}
-{% include ci/common-vars.md %}
 
 {% endif %}
 

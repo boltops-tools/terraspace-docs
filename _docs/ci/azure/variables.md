@@ -18,7 +18,6 @@ Here are the variables we'll be setting.
 * **ARM_CLIENT_SECRET**: Azure client secret. The client secret is on the *App Registration / Certificates & secrets* page, under the *Client secret* tab.
 * **ARM_SUBSCRIPTION_ID**: Azure subscription id. This is under the *Subscriptions* portal page. Note, this is a different page than the *App Registrations* pages.
 * **ARM_TENANT_ID**: Azure client id. Like the client id, the tenant is also available on the *App Registration / Overview* page.
-{% include ci/common-vars.md %}
 
 Here's the *App Registration / Overview* page.
 

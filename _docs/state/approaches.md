@@ -87,8 +87,6 @@ The [terraspace all](https://terraspace.cloud/reference/terraspace-all/) command
 
 An interesting point here is how we design the stacks, and group modules together affect the required level of coordination. For example, a fully distributed system with thousands of tiny microservices will require more coordination than a monolith. Ideally, stacks should be as self-sufficient as possible, else the cost of coordination will be high.
 
-Remembering which cloud resources belong to which terraform statefile is can also be difficult. Using [Terraspace Cloud]({% link _docs/cloud.md %}) helps. It provides a GUI dashboard to visualize which stacks have been deployed.
-
 All that being said, here's an example of this setup with terraspace:
 
 config/terraform/backend.rb

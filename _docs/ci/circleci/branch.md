@@ -77,21 +77,11 @@ We'll see another build.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/circleci/branch/build-started.png)
 
-## Pull Request Comment
-
-You'll also see  PR comment with a preview of changes and a Terraspace Cloud link.
-
-![](https://img.boltops.com/images/terraspace/cloud/ci/circleci/branch/pr-comment.png)
-
 ## Logging Details
 
 Click on Details to see the Pipeline Logging output.
 
 ![](https://img.boltops.com/images/terraspace/cloud/ci/circleci/branch/ci-results-output.png)
-
-You can also see the output on Terraspace Cloud:
-
-![](https://img.boltops.com/images/terraspace/cloud/ci/circleci/branch/logging-output.png)
 
 A `plan` was run and provided a preview of what would happen. Any additional `git push` to the PR branch will provide updated previews.
 

@@ -36,6 +36,6 @@ Here's an example with output:
 
 ## Reasoning
 
-Here are some thoughts on the new recommended location. After deploying many stacks, it can get confusing to remember which stack has been deployed. I've found that looking at `config/stacks` provides a pretty good idea of what's been deployed. Note: [Terraspace Cloud](https://blog.boltops.com/2022/06/10/terraspace-cloud/) can also help by tracking the stacks deployed.
+Here are some thoughts on the new recommended location. After deploying many stacks, it can get confusing to remember which stack has been deployed. I've found that looking at `config/stacks` provides a pretty good idea of what's been deployed.
 
 Another reason it's useful to have your custom tfvars in `config/stacks` because it allows the stacks to be reusable. You can download stacks via [Terrafile]({% link _docs/terrafile.md %}) into `vendor/stacks` and the separated `config/stacks` tfvars files can still be used.
