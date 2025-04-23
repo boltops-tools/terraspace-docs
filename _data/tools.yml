@@ -10,17 +10,17 @@
   title: 'Jets: The Ruby Serverless Framework'
   description: 'Ruby on Jets allows you to create and deploy serverless services with ease, and to seamlessly glue AWS services together with the most beautiful dynamic language: Ruby. It includes everything you need to build an API and deploy it to AWS Lambda. Jets leverages the power of Ruby to make serverless joyful for everyone.'
 
+- link: https://blossom-cloud.com
+  image: blossom.svg
+  image-title: Blossom
+  title: 'Blossom: DevOps Platform'
+  description: 'Blossom lets you deploy apps to your own servers with ease — like Heroku, but with full control and lower costs.'
+
 - link: https://lono.cloud/
   image: lono.svg
   image-title: Lono
   title: 'Lono: The CloudFormation Framework'
   description: 'Building infrastructure-as-code is challenging. Lono makes it much easier and fun. It includes everything you need to manage and deploy infrastructure-as-code.'
-
-- link: https://sonic-screwdriver.cloud
-  image: sonic.png
-  image-title: Sonic
-  title: 'SONIC SCREWDRIVER: Multi-functional tool to manage AWS infrastructure'
-  description: 'Sonic Screwdriver is a multi-functional tool to manage AWS infrastructure. Its a swiss army knife type of tool and has a variety of uses. Mainly its focus is to automate mundane repetitive tasks into simple one line commands. With it you are able to debug environments and issues quickly.'
 
 - link: https://jack-eb.com
   image: jack.svg
